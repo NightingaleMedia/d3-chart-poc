@@ -4,12 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
   <body>
-    <div id="test-div"></div>
-    <svg class="sigman-bar" height="250" width="1000"></svg>
+    <div id="test-div" style="height: 200px"></div>
+    <button id="show-all">Show All</button>
     <br />
+    <svg class="sigman-bar" height="450" width="1000"></svg>
+    <br />
+    <svg class="demand-genius" height="450" width="1000"></svg>
+    <br />
+    <svg class="demand-genius-past" height="650" width="1000"></svg>
+    <br />
+
     <svg class="old-bar" height="580" width="1000"></svg>
     <br />
     <div id="tauTest" style="height: 500px"></div>
@@ -37,4 +45,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
   <script type="module" src="tauChart.js"></script>
   <script type="module" src="chart.js"></script>
+  <script type="module" src="./demandGenius/makeChart.js"></script>
 </html>

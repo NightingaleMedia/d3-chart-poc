@@ -1,0 +1,39 @@
+html {
+  background-color: black;
+  font-family: sans-serif;
+}
+
+div.energy-breakdown-chart--tooltip {
+  position: absolute;
+  text-align: left;
+  width: 120px;
+  min-height: 30px;
+  padding: 16px;
+  font: 16px sans-serif;
+  background: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.energy-line {
+  fill: none;
+  stroke-width: 4px;
+  stroke-opacity: 0.8;
+}
+.setpoint-line {
+  fill: none;
+  stroke-width: 4px;
+  stroke-opacity: 0.8;
+}
+
+.chart-g {
+  background-color: white;
+}
+
+div.dg-tooltip {
+  height: 120px;
+  width: 200px;
+  background-color: orange;
+}

@@ -1,0 +1,231 @@
+[
+  {
+    "Date": "1/16/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [
+      { "id": 0, "type": "AbnormallyCold" },
+      { "id": 1, "type": "AbnormallyCold" }
+    ],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "1/17/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [
+      { "id": 0, "type": "AbnormallyCold" },
+      { "id": 1, "type": "AbnormallyCold" }
+    ],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "1/18/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "1/19/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [
+      { "id": 0, "type": "RoomRefresh" },
+      { "id": 1, "type": "RoomRefresh" }
+    ],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "1/20/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "1/21/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "1/22/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [
+      { "id": 0, "type": "AbnormallyHot" },
+      { "id": 1, "type": "AbnormallyHot" }
+    ],
+    "AbnormallyCold": [
+      { "id": 0, "type": "AbnormallyCold" },
+      { "id": 1, "type": "AbnormallyCold" }
+    ],
+    "RoomRefresh": [
+      { "id": 0, "type": "RoomRefresh" },
+      { "id": 1, "type": "RoomRefresh" },
+      { "id": 2, "type": "RoomRefresh" },
+      { "id": 3, "type": "RoomRefresh" }
+    ],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "1/23/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "1/24/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "1/25/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "1/26/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "1/27/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "1/28/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "1/29/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "1/30/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "1/31/2022",
+    "UtilityDR": [
+      { "id": 0, "type": "UtilityDR" },
+      { "id": 1, "type": "UtilityDR" }
+    ],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "2/1/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": [
+      { "id": 0, "type": "GreenEnergy" },
+      { "id": 1, "type": "GreenEnergy" }
+    ]
+  },
+  {
+    "Date": "2/2/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [
+      { "id": 0, "type": "RoomRefresh" },
+      { "id": 1, "type": "RoomRefresh" },
+      { "id": 2, "type": "RoomRefresh" },
+      { "id": 3, "type": "RoomRefresh" },
+      { "id": 4, "type": "RoomRefresh" },
+      { "id": 5, "type": "RoomRefresh" },
+      { "id": 6, "type": "RoomRefresh" }
+    ],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "2/3/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "2/4/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "2/5/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "2/6/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "2/7/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  },
+  {
+    "Date": "2/8/2022",
+    "UtilityDR": [],
+    "AbnormallyHot": [],
+    "AbnormallyCold": [
+      { "id": 0, "type": "AbnormallyCold" },
+      { "id": 1, "type": "AbnormallyCold" }
+    ],
+    "RoomRefresh": [],
+    "GreenEnergy": []
+  }
+]
