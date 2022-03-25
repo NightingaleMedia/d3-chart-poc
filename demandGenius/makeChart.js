@@ -29,14 +29,23 @@ export function dgChart() {
   const ENERGY_LINE_COLOR = "#38feaf";
   const SETPOINT_LINE_COLOR = "#fecc38";
   const FAN_COLOR = "steelBlue";
+
+  const dateParser = d3.timeParse("%I:%M %p");
+  const dateFormat = d3.timeFormat("%I:%M %p");
+  const xAccessor = (d) => {
+    if (d) {
+      const titleString = dateParser(d.Time);
+      return titleString;
+    }
+  };
+
   const render = (data) => {
     // format month as a date
     data.forEach(function (d, i) {
-      const format = d3.timeFormat("%I:%M %p");
       d.index = i;
       d.EventWindow = d.EventWindow.toLowerCase() == "true" ? true : false;
-      const parseTime = d3.timeParse("%I:%M %p");
-      d.timeset = parseTime(d.Time);
+
+      d.timeset = dateParser(d.Time);
     });
 
     const START_TIME_ENTRY = data.find((d) => {
@@ -112,24 +121,20 @@ export function dgChart() {
           .attr("stroke", "white"),
       );
 
-    //   .attr("transform", `translate(${margin.left}, ${margin.top})`);
-
+    function addTracer() {}
     // START END
     const startEnd = fullChart
-      .selectAll("rect")
-      .data([1])
-      .enter()
       .append("rect")
       .attr("class", "test-square")
       .attr("fill", "rgba(255,255,255,0.2)")
-      .attr("height", height - yScale(78))
+      .attr("height", height - yScale(77))
       .attr("width", () => {
         const start = xScale(START_TIME_ENTRY.timeset);
         const end = xScale(END_TIME_ENTRY.timeset);
         return end - start;
       })
-      .attr("x", xScale(data[4].timeset))
-      .attr("y", yScale(78));
+      .attr("x", xScale(START_TIME_ENTRY.timeset))
+      .attr("y", yScale(77));
     const energyLine = d3
       .line()
       .curve(d3.curveNatural)
@@ -305,7 +310,6 @@ export function dgChart() {
       .data(LegendKeys)
       .enter()
       .append("text")
-
       .text((d) => d)
       .attr("x", (d, i) => {
         return legendScale(d) + margin.left + 20;
@@ -315,8 +319,67 @@ export function dgChart() {
         return val + 28;
       })
       .attr("fill", "white");
-  };
 
+    const updateLegendText = (datapoint) => {
+      legendText.text((u) => {
+        if (u == "Setpoint") {
+          return `Setpoint: ${datapoint["SetPoint"]}°`;
+        }
+        if (u == "Energy") {
+          return `Energy: ${datapoint["EnergyUsage"]}KWH`;
+        }
+        if (u == "Fan") {
+          return `Fan: ${datapoint["Fan"]}`;
+        }
+      });
+    };
+
+    const tracer = chartG.append("g");
+
+    const tracerLine = tracer
+      .append("rect")
+      .attr("class", "track-line")
+      .attr("height", height)
+      .attr("width", 1)
+      .attr("stroke", "rgba(255,255,255,0.6)")
+      .attr("stroke-width", 1)
+      .attr("y", yScale(78));
+
+    const tracerText = tracer
+      .append("text")
+      .attr("fill", "white")
+      .text("test")
+      .attr("text-anchor", "middle")
+      .attr("x", tracerLine.attr("x"));
+
+    chartG
+      .append("rect")
+      .attr("width", width)
+      .attr("height", height)
+      .style("cursor", "crosshair")
+      .attr("fill", "rgba(0,0,0,0)")
+      .on("mousemove", function (d) {
+        const mousePosition = d3.mouse(this);
+        const hoveredDate = xScale.invert(mousePosition[0]);
+
+        const getDistanceFromHoveredDate = (d) =>
+          Math.abs(xAccessor(d) - hoveredDate);
+
+        const closestIndex = d3.scan(data, (a, b) => {
+          return getDistanceFromHoveredDate(a) - getDistanceFromHoveredDate(b);
+        });
+
+        const closestDataPoint = data[closestIndex];
+
+        // const closestXValue = dateFormat(d.timeset);
+        tracerLine.attr("x", d3.event.pageX - 60);
+        tracerText.attr("x", d3.event.pageX - 60).text(closestDataPoint.Time);
+
+        updateLegendText(closestDataPoint);
+
+        return;
+      });
+  };
   d3.csv("../data/demand-genius.csv", function (d) {
     render(d);
   });

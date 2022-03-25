@@ -2,7 +2,7 @@
   "data": [
     {
       "id": "1",
-      "SiteName": "Site1",
+      "SiteName": "Columbia",
       "KwH": 150,
       "children": [
         { "id": "1.1", "SiteName": "Site1.1", "KwH": 50 },
@@ -13,7 +13,7 @@
     },
     {
       "id": "2",
-      "SiteName": "Site2",
+      "SiteName": "EastVillage",
       "KwH": 100,
       "children": [
         { "id": "2.1", "SiteName": "Site2.1", "KwH": 80 },
@@ -23,7 +23,7 @@
     },
     {
       "id": "2",
-      "SiteName": "Site55",
+      "SiteName": "Greenpoint",
       "KwH": 280,
       "children": [
         { "id": "2.1", "SiteName": "Site2.1", "KwH": 150 },
@@ -34,7 +34,7 @@
     },
     {
       "id": "2",
-      "SiteName": "Site24",
+      "SiteName": "HighlandPark",
       "KwH": 250,
       "children": [
         { "id": "2.1", "SiteName": "Site2.1", "KwH": 150 },
@@ -44,7 +44,7 @@
     },
     {
       "id": "236",
-      "SiteName": "AnotherSite",
+      "SiteName": "Manhattan",
       "KwH": 415,
       "children": [
         { "id": "2.1", "SiteName": "Site2.1", "KwH": 20 },

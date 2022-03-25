@@ -10,7 +10,7 @@ div.energy-breakdown-chart--tooltip {
   min-height: 30px;
   padding: 16px;
   font: 16px sans-serif;
-  background: black;
+  background: #0076fd;
   color: white;
   border: 1px solid black;
   border-radius: 3px;
@@ -28,12 +28,47 @@ div.energy-breakdown-chart--tooltip {
   stroke-opacity: 0.8;
 }
 
-.chart-g {
-  background-color: white;
+.dg-past-event--tooltip::after {
+  content: "";
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  background-color: #0076fd;
+  top: -2px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transform: rotate(45deg);
 }
 
-div.dg-tooltip {
-  height: 120px;
-  width: 200px;
-  background-color: orange;
+.dg-past-event--tooltip {
+  opacity: 0;
+  position: absolute;
+  text-align: left;
+  width: 180px;
+  min-height: 30px;
+  text-align: center;
+  font: 14px sans-serif;
+  background: #0076fd;
+  color: white;
+  border-radius: 3px;
+  pointer-events: none;
+}
+.dg-past-event--tooltip__footer,
+.dg-past-event--tooltip__content {
+  padding: 0.5rem;
+}
+.dg-past-event--tooltip__content > div {
+  line-height: 1.25rem;
+}
+
+.dg-past-event--tooltip__footer {
+  cursor: pointer;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background: #0b3e9e;
+  font-weight: 400;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }

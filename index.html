@@ -11,12 +11,21 @@
     <div id="test-div" style="height: 200px"></div>
     <button id="show-all">Show All</button>
     <br />
-    <svg class="sigman-bar" height="450" width="1000"></svg>
+    <svg class="sigman-bar" height="450" width="1200"></svg>
     <br />
-    <svg class="demand-genius" height="450" width="1000"></svg>
+    <svg class="demand-genius" height="450" width="1200"></svg>
     <br />
-    <svg class="demand-genius-past" height="650" width="1000"></svg>
-    <br />
+    <div style="position: relative">
+      <svg class="demand-genius-past" height="400" width="1200"></svg>
+      <br />
+      <div class="dg-past-event--tooltip">
+        <div class="dg-past-event--tooltip__content">
+          <div id="dg-past-event--tooltip__date"></div>
+          <div id="dg-past-event--tooltip__name"></div>
+        </div>
+        <div class="dg-past-event--tooltip__footer">Show Summary</div>
+      </div>
+    </div>
 
     <svg class="old-bar" height="580" width="1000"></svg>
     <br />
