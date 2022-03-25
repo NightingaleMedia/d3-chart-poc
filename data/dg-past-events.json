@@ -177,10 +177,13 @@
   },
   {
     "Date": "6/3/2022",
-    "UtilityDR": [],
-    "AbnormallyHot": [],
-    "AbnormallyCold": [],
-    "RoomRefresh": [],
+    "UtilityDR": [{ "id": 0, "type": "UtilityDR" }],
+    "AbnormallyHot": [{ "id": 0, "type": "AbnormallyHot" }],
+    "AbnormallyCold": [{ "id": 0, "type": "AbnormallyCold" }],
+    "RoomRefresh": [
+      { "id": 0, "type": "RoomRefresh" },
+      { "id": 1, "type": "RoomRefresh" }
+    ],
     "GreenEnergy": [
       { "id": 0, "type": "GreenEnergy" },
       { "id": 1, "type": "GreenEnergy" }

@@ -1,6 +1,6 @@
 // import { utcMonth } from "d3.js";
 import { colorMap, iconMap } from "./icons.js";
-
+import { eventTypes } from "./eventTypes.js";
 export const generateDGPastEventChart = () => {
   var svg = d3.select("svg.demand-genius-past"),
     margin = { top: 50, right: 20, bottom: 30, left: 20 },
@@ -61,13 +61,8 @@ export const generateDGPastEventChart = () => {
     const yScale = d3
       .scaleBand()
       .range([height, 0])
-      .domain([
-        "UtilityDR",
-        "AbnormallyHot",
-        "AbnormallyCold",
-        "RoomRefresh",
-        "GreenEnergy",
-      ]);
+      .domain([1, 2, 3, 4, 5])
+      .padding(0);
 
     const xAxis = d3
       .axisBottom()
@@ -171,14 +166,23 @@ export const generateDGPastEventChart = () => {
 
     const flattenData = () => {
       const allData = [];
-      const keys = Object.keys(data[0]).filter((d) =>
-        yScale.domain().includes(d),
-      );
+      const keys = Object.keys(data[0]).filter((d) => eventTypes.includes(d));
       data.map((d, index) => {
+        let keyIndex = 1;
+
         keys.map((key) => {
+          // if there are some events in there
+          const dt = [...allData];
+          const otherEvents = dt.filter((ad) => ad.Date === d.Date).length;
+          //see if there is another for that day in our existing array
+
+          console.log("found: ", otherEvents, "events");
           if (d[key].length > 0) {
+            console.log(d[key]);
             allData.push({
+              Date: d.Date,
               id: Date.parse(d.Date) + index,
+              keyIndex: keyIndex + otherEvents,
               type: key,
               timeset: d.timeset,
               count: d[key].length,
@@ -200,9 +204,11 @@ export const generateDGPastEventChart = () => {
       .enter()
       .append("g");
 
+    console.log({ flatData });
+
     squareG
       .append("rect")
-      .attr("y", (d) => yScale(d.type))
+      .attr("y", (d) => yScale(d.keyIndex))
       .attr("x", (d) => xScale(d.timeset) + 22)
       .attr("ry", 3)
       .attr("width", SINGLE_EVENT_LW - 5)
@@ -234,7 +240,7 @@ export const generateDGPastEventChart = () => {
       .attr("height", SINGLE_EVENT_LW)
       .style("cursor", "pointer")
       .attr("viewBox", `0 0 35 35`)
-      .attr("y", (d) => yScale(d.type))
+      .attr("y", (d) => yScale(d.keyIndex))
       .attr("x", (d) => xScale(d.timeset) + 22);
 
     icon
@@ -243,7 +249,7 @@ export const generateDGPastEventChart = () => {
       .attr("transform", "translate(3,3)")
       .attr("width", SINGLE_EVENT_LW)
       .attr("height", SINGLE_EVENT_LW)
-      .attr("d", (d) => iconMap(d));
+      .attr("d", (d) => iconMap(d.type));
 
     const circles = squareG
       .append("circle")
@@ -251,7 +257,7 @@ export const generateDGPastEventChart = () => {
       .attr("stroke", "#181818")
       .attr("stroke-width", 2)
       .attr("r", (d) => (d.count > 1 ? 9 : 0))
-      .attr("cy", (d) => yScale(d.type) + 3)
+      .attr("cy", (d) => yScale(d.keyIndex))
       .attr("cx", (d) => xScale(d.timeset) + 55);
 
     squareG
@@ -262,7 +268,7 @@ export const generateDGPastEventChart = () => {
       .attr("stroke", 0)
       .attr("font-size", "13")
       .attr("font-weight", "600")
-      .attr("y", (d) => yScale(d.type) + 7)
+      .attr("y", (d) => yScale(d.keyIndex) + 5)
       .attr("x", (d) => xScale(d.timeset) + 55);
     // .on("mouseout", function (d) {
     //   console.log("out");

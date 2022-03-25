@@ -22,8 +22,8 @@
   },
   {
     "Time": "11:45 AM",
-    "EnergyUsage": "76",
-    "SetPoint": "66",
+    "EnergyUsage": null,
+    "SetPoint": null,
     "Fan": "0",
     "EventWindow": "false"
   },
