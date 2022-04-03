@@ -2,6 +2,7 @@ import { makeXAxis, makeYAxis } from "./energyBreakdown/makeAxis.js";
 import { flattenData } from "./energyBreakdown/flattenEnergyData.js";
 import { dgChart } from "./demandGenius/makeChart.js";
 import { generateDGPastEventChart } from "./dgPastEvents/makeChart.js";
+import { generateDateRangeChart } from "./date-changer/dateChange.js";
 
 export function generateEnergyBreakdownChart(id) {
   console.log("id: ", id);
@@ -48,7 +49,7 @@ async function energyChart() {
     BELOW_THRESHOLD_COLOR = "#00c564";
 
   var svg = d3.select("svg.sigman-bar"),
-    margin = { top: 30, right: 50, bottom: 30, left: 50 },
+    margin = { top: 0, right: 0, bottom: 0, left: 0 },
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom;
 
@@ -196,12 +197,14 @@ function showAll(e) {
 // generateEnergyBreakdownChart();
 // makeBar();
 
-const button = document.querySelector("#show-all");
+// const button = document.querySelector("#show-all");
 
-button.addEventListener("click", function (e) {
-  showAll(e);
-});
-energyChart();
-dgChart();
+// button.addEventListener("click", function (e) {
+//   showAll(e);
+// });
+
+// energyChart();
+// dgChart();
 generateDGPastEventChart();
+// generateDateRangeChart("date-range");
 // tryAgain();

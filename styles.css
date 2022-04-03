@@ -28,6 +28,14 @@ div.energy-breakdown-chart--tooltip {
   stroke-opacity: 0.8;
 }
 
+div.dg-past--wrap {
+  height: 600px;
+  width: 100%;
+  overflow-x: scroll;
+  position: relative;
+  margin: 0;
+}
+
 .dg-past-event--tooltip::after {
   content: "";
   height: 30px;

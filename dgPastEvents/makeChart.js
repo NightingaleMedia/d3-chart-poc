@@ -1,9 +1,9 @@
 // import { utcMonth } from "d3.js";
-import { colorMap, iconMap } from "./icons.js";
-import { eventTypes } from "./eventTypes.js";
+import { colorMap, iconMap } from "./utils/icons.js";
+import { eventTypes } from "./utils/eventTypes.js";
 export const generateDGPastEventChart = () => {
   var svg = d3.select("svg.demand-genius-past"),
-    margin = { top: 50, right: 20, bottom: 30, left: 20 },
+    margin = { top: 50, right: 50, bottom: 30, left: 50 },
     tooltipHeight = 110,
     tooltipWidth = svg.attr("width") - margin.left - margin.right,
     width = +svg.attr("width") - margin.left - margin.right,
@@ -55,7 +55,7 @@ export const generateDGPastEventChart = () => {
     var dataXrange = d3.extent(data, function (d) {
       return d.timeset;
     });
-    const SINGLE_EVENT_LW = 40;
+
     const xScale = d3.scaleUtc().domain(dataXrange).range([0, width]).nice();
 
     const yScale = d3
@@ -63,6 +63,8 @@ export const generateDGPastEventChart = () => {
       .range([height, 0])
       .domain([1, 2, 3, 4, 5])
       .padding(0);
+
+    const SINGLE_EVENT_LW = yScale.bandwidth();
 
     const xAxis = d3
       .axisBottom()
@@ -79,7 +81,7 @@ export const generateDGPastEventChart = () => {
       .axisTop()
       .scale(xScale)
       .ticks(d3.utcMonth)
-      .tickFormat(d3.utcFormat("%B"))
+      .tickFormat(d3.utcFormat("%B %Y"))
       .tickSize(-height - margin.bottom - margin.top);
 
     chartG
@@ -141,10 +143,10 @@ export const generateDGPastEventChart = () => {
         g.selectAll(".tick text")
           .attr("fill", "white")
           // .attr("stroke", "white")
-          .attr("opacity", "0.1")
+          .attr("opacity", "1")
           .attr("text-anchor", "start")
-          .attr("transform", "translate(16,233)")
-          .style("font-size", "10rem");
+          .attr("transform", "translate(20,30)")
+          .style("font-size", "1rem");
 
         g.selectAll(".domain")
           .attr("stroke-width", 0)
@@ -175,10 +177,7 @@ export const generateDGPastEventChart = () => {
           const dt = [...allData];
           const otherEvents = dt.filter((ad) => ad.Date === d.Date).length;
           //see if there is another for that day in our existing array
-
-          console.log("found: ", otherEvents, "events");
           if (d[key].length > 0) {
-            console.log(d[key]);
             allData.push({
               Date: d.Date,
               id: Date.parse(d.Date) + index,
@@ -194,8 +193,7 @@ export const generateDGPastEventChart = () => {
     };
 
     const flatData = flattenData();
-
-    console.log(flatData);
+    console.log({ flatData });
     // individual events
 
     const squareG = chartG
@@ -203,8 +201,6 @@ export const generateDGPastEventChart = () => {
       .data(flatData)
       .enter()
       .append("g");
-
-    console.log({ flatData });
 
     squareG
       .append("rect")
@@ -221,7 +217,7 @@ export const generateDGPastEventChart = () => {
           .transition()
           .duration(500)
           .style("opacity", 1)
-          .style("left", `${xScale(d.timeset) - 35}px`);
+          .style("left", `${xScale(d.timeset)}px`);
 
         toolTipDateDiv.text(() => {
           const f = d3.timeFormat("%m/%d/%y");
@@ -252,15 +248,21 @@ export const generateDGPastEventChart = () => {
       .attr("d", (d) => iconMap(d.type));
 
     const circles = squareG
+      .selectAll("circle")
+      .data(flatData)
+      .enter()
       .append("circle")
       .attr("fill", "#ff0e00")
       .attr("stroke", "#181818")
       .attr("stroke-width", 2)
-      .attr("r", (d) => (d.count > 1 ? 9 : 0))
+      .attr("r", (d) => (d.count > 1 ? 10 : 0))
       .attr("cy", (d) => yScale(d.keyIndex))
-      .attr("cx", (d) => xScale(d.timeset) + 55);
+      .attr("cx", (d) => xScale(d.timeset) + 56);
 
     squareG
+      .selectAll("number-label")
+      .data(flatData)
+      .enter()
       .append("text")
       .text((d) => (d.count > 1 ? d.count : ""))
       .attr("fill", "white")
@@ -268,15 +270,18 @@ export const generateDGPastEventChart = () => {
       .attr("stroke", 0)
       .attr("font-size", "13")
       .attr("font-weight", "600")
-      .attr("y", (d) => yScale(d.keyIndex) + 5)
-      .attr("x", (d) => xScale(d.timeset) + 55);
-    // .on("mouseout", function (d) {
-    //   console.log("out");
-    //   toolTipInner.transition().duration(500).delay(1000).attr("opacity", 0);
-    // });
+      .attr("y", (d) => yScale(d.keyIndex) + 4)
+      .attr("x", (d) => xScale(d.timeset) + 56);
   }
 
+  const makeDataDiv = (data) => {
+    const dataDiv = document.querySelector("div#dg-past-event-data");
+
+    dataDiv.dataset.dgData = JSON.stringify(data);
+    render(JSON.parse(dataDiv.dataset.dgData));
+  };
+
   d3.json("../data/dg-past-events.json", function (d) {
-    render(d);
+    makeDataDiv(d);
   });
 };
