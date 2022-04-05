@@ -19,12 +19,18 @@ div.energy-breakdown-chart--tooltip {
 
 .energy-line {
   fill: none;
-  stroke-width: 4px;
+  stroke-width: 2px;
   stroke-opacity: 0.8;
+  stroke-dasharray: 30, 5;
 }
 .setpoint-line {
   fill: none;
-  stroke-width: 4px;
+  stroke-width: 2px;
+  stroke-opacity: 0.8;
+}
+.fan-line {
+  fill: none;
+  stroke-width: 2px;
   stroke-opacity: 0.8;
 }
 
@@ -79,4 +85,49 @@ div.dg-past--wrap {
   font-weight: 400;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
+}
+
+/* MANY EVENTS */
+.many-events--wrap {
+  display: grid;
+  grid-template-columns: 220px auto;
+  align-items: center;
+}
+
+.site--selector {
+  background-color: white;
+  margin: 1rem;
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+.site--selector .title {
+  font-size: 14px;
+  padding: 0.25rem 0;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.site--selector.deselected {
+  outline: 1px solid white;
+}
+
+table.site--details {
+  font-size: 12px;
+  text-align: center;
+  table-layout: fixed;
+  width: 100%;
+  margin: 0.25rem auto;
+  border-collapse: collapse;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+th {
+  padding-top: 4px;
+}
+
+td {
+  padding: 5px;
 }

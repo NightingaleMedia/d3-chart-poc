@@ -31,7 +31,7 @@ export function dgChart() {
   const FAN_COLOR = "steelBlue";
 
   const dateParser = d3.timeParse("%I:%M %p");
-  const dateFormat = d3.timeFormat("%I:%M %p");
+  const dateFormat = d3.timeFormat("%-I:%M %p");
   const xAccessor = (d) => {
     if (d) {
       const titleString = dateParser(d.Time);
@@ -60,41 +60,82 @@ export function dgChart() {
       return d.timeset;
     });
 
-    var dataYrange = [64, 79];
+    var tempRange = [64, 79];
+
+    const kwhRange = [
+      d3.min(data.map((d) => d.EnergyUsage)),
+      d3.max(data.map((d) => d.EnergyUsage)),
+    ];
 
     const xScale = d3.scaleTime().domain(dataXrange).range([0, width]).nice();
 
-    const yScale = d3.scaleLinear().range([height, 0]).domain(dataYrange);
+    const tempYScale = d3.scaleLinear().range([height, 0]).domain(tempRange);
+
+    const kwhYScale = d3.scaleLinear().range([height, 0]).domain(kwhRange);
 
     const fanScaleY = d3
       .scaleLinear()
       .domain([0, 3])
       .range([40, height / 3]);
 
-    const fanScaleX = d3
-      .scaleBand()
-      .domain(data.map((d) => d.timeset))
-      .range([0, width]);
     // AXES
-    var xAxis = d3.axisBottom().scale(xScale).tickSizeOuter(0);
+    var xAxis = d3
+      .axisBottom()
+      .scale(xScale)
+      .tickSizeOuter(0)
+      .tickFormat((d) => dateFormat(d));
 
-    var yAxis = d3
+    var yRightAxis = d3
+      .axisRight()
+      .scale(tempYScale)
+      .ticks(10)
+      .tickFormat((d) => d + "°")
+      // .tickSize(-width)
+      .tickSizeOuter(0);
+
+    var yLeftAxis = d3
       .axisLeft()
-      .scale(yScale)
+      .scale(kwhYScale)
+      .tickFormat((d) => d + " kwh")
       .ticks(9)
-      .tickSize(-width)
+      .tickSize(-width + 28)
       .tickSizeOuter(0);
 
     chartG
       .append("g")
-      .attr("class", "y axis")
-      .call(yAxis)
+      .attr("class", "y axis right")
+      .call(yRightAxis)
+      .call((g) =>
+        g
+          .selectAll(".tick text")
+          .attr("stroke-width", 0.2)
+          .attr("stroke-opacity", 1)
+          .attr("stroke", "white")
+      )
+      .call((g) => {
+        g.selectAll(".tick line")
+          .attr("stroke-width", 0)
+          .attr("stroke-opacity", 0);
+        g.selectAll(
+          ".tick:last-of-type line, .tick:last-of-type text, .tick:first-of-type line, .tick:first-of-type text"
+        )
+          .attr("stroke-width", 0)
+          .attr("stroke-opacity", 0)
+          .attr("stroke", "white");
+      })
+      .attr("transform", `translate(${width - 28},0)`);
+
+    // KWH Line
+    chartG
+      .append("g")
+      .attr("class", "y axis left")
+      .call(yLeftAxis)
       .call((g) =>
         g
           .selectAll(".tick line, .tick text")
-          .attr("stroke-width", 1)
+          .attr("stroke-width", 0.5)
           .attr("stroke-opacity", 0.6)
-          .attr("stroke", "white"),
+          .attr("stroke", "white")
       )
       .call((g) => {
         g.selectAll(".tick:first-of-type line, .tick:first-of-type text")
@@ -106,19 +147,20 @@ export function dgChart() {
           .attr("stroke-opacity", 0)
           .attr("stroke", "white");
       });
+
     //   .attr("transform", "translate(" + width + ", 0)");
 
     chartG
       .append("g")
       .attr("class", "x axis")
-      .attr("transform", `translate(0, ${height})`)
+      .attr("transform", `translate(0, ${height + 10})`)
       .call(xAxis)
       .call((g) =>
         g
           .selectAll(".tick line, .tick text")
-          .attr("stroke-width", 1)
+          .attr("stroke-width", 0.3)
           .attr("stroke-opacity", 0.6)
-          .attr("stroke", "white"),
+          .attr("stroke", "white")
       );
 
     function addTracer() {}
@@ -126,31 +168,37 @@ export function dgChart() {
     const startEnd = fullChart
       .append("rect")
       .attr("class", "test-square")
-      .attr("fill", "rgba(255,255,255,0.2)")
-      .attr("height", height - yScale(77))
+      .attr("fill", "rgba(255,255,255,0.1)")
+      .attr("height", height - kwhYScale(kwhRange[1] - 20))
       .attr("width", () => {
         const start = xScale(START_TIME_ENTRY.timeset);
         const end = xScale(END_TIME_ENTRY.timeset);
         return end - start;
       })
       .attr("x", xScale(START_TIME_ENTRY.timeset))
-      .attr("y", yScale(77));
+      .attr("y", kwhYScale(kwhRange[1] - 20));
+
+    // ENERGY LINE
     const energyLine = d3
       .line()
       .curve(d3.curveNatural)
       .x((d) => xScale(d.timeset))
-      .y((d) => yScale(d.EnergyUsage));
+      .y((d) => kwhYScale(d.EnergyUsage));
+
+    // SETPOINT LINE
     const setpointLine = d3
       .line()
       .curve(d3.curveNatural)
       .x((d) => xScale(d.timeset))
-      .y((d) => yScale(d.SetPoint));
+      .y((d) => tempYScale(d.SetPoint));
 
+    // FANLINE
     const fanLine = d3
       .line()
+      .curve(d3.curveStep)
       .x((d) => xScale(d.timeset))
       .y((d) => {
-        return fanScale(d.Fan);
+        return -fanScaleY(d.Fan);
       });
 
     var area = d3
@@ -162,18 +210,12 @@ export function dgChart() {
 
     // FANLINE
     chartG
-      .selectAll("rect")
-      .data(data)
-      .enter()
-      .append("rect")
-      .attr("fill", "rgba(0, 80, 180, 0.5)")
-      .attr("stroke-width", 0.7)
+      .append("path")
+      .datum(data)
+      .attr("class", "fan-line")
+      .attr("d", fanLine)
       .attr("stroke", FAN_COLOR)
-      .attr("stroke-opacity", 0)
-      .attr("x", (d) => fanScaleX(d.timeset))
-      .attr("y", (d) => height - fanScaleY(d.Fan))
-      .attr("height", (d) => fanScaleY(d.Fan))
-      .attr("width", width / data.length);
+      .attr("transform", `translate(0, ${height + 38})`);
 
     //   ENERGY LINE
     chartG
@@ -211,7 +253,7 @@ export function dgChart() {
           return xScale(END_TIME_ENTRY.timeset) - 25;
         }
       })
-      .attr("y", yScale(78) - 15);
+      .attr("y", kwhYScale(kwhRange[1] - 20) - 15);
 
     startEndLabels
       .append("text")
@@ -222,7 +264,7 @@ export function dgChart() {
           return xScale(END_TIME_ENTRY.timeset) - 25;
         }
       })
-      .attr("y", yScale(78) - 15)
+      .attr("y", kwhYScale(kwhRange[1] - 20) - 15)
       .style("text-anchor", "middle")
       .attr("fill", "white")
       .attr("dy", 20)
@@ -238,7 +280,7 @@ export function dgChart() {
       .attr("fill", "grey")
       .attr("class", "triangle")
       .attr("transform", (d, i) => {
-        const y = yScale(78) + 15;
+        const y = kwhYScale(kwhRange[1] - 20) + 15;
         let x;
         if (i === 1) {
           x = xScale(START_TIME_ENTRY.timeset);
@@ -254,7 +296,7 @@ export function dgChart() {
           return xScale(END_TIME_ENTRY.timeset) - 25;
         }
       })
-      .attr("y", yScale(78));
+      .attr("y", kwhYScale(kwhRange[1] - 20));
     // chartG
     //   .append("path")
     //   .datum(data)
@@ -343,7 +385,7 @@ export function dgChart() {
       .attr("width", 1)
       .attr("stroke", "rgba(255,255,255,0.6)")
       .attr("stroke-width", 1)
-      .attr("y", yScale(78));
+      .attr("y", tempYScale(78));
 
     const tracerText = tracer
       .append("text")

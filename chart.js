@@ -3,6 +3,7 @@ import { flattenData } from "./energyBreakdown/flattenEnergyData.js";
 import { dgChart } from "./demandGenius/makeChart.js";
 import { generateDGPastEventChart } from "./dgPastEvents/makeChart.js";
 import { generateDateRangeChart } from "./date-changer/dateChange.js";
+import { makeManyEvents } from "./demandGenius/manyEvents/makeManyEvents.js";
 
 export function generateEnergyBreakdownChart(id) {
   console.log("id: ", id);
@@ -103,7 +104,7 @@ async function energyChart() {
       .attr("fill", (d) =>
         xScale(d.KwH) > xScale(THRESHOLD)
           ? ABOVE_THRESHOLD_COLOR
-          : BELOW_THRESHOLD_COLOR,
+          : BELOW_THRESHOLD_COLOR
       )
       .attr("rx", 3)
       .attr("stroke", "#181818")
@@ -156,7 +157,7 @@ async function energyChart() {
               kwh: ${d.KwH} 
             </div>
             </div>
-          `,
+          `
           )
           .style("left", d3.event.pageX - 50 + "px")
           .style("top", TOP + "px");
@@ -203,8 +204,9 @@ function showAll(e) {
 //   showAll(e);
 // });
 
-// energyChart();
-// dgChart();
+energyChart();
+dgChart();
 generateDGPastEventChart();
+makeManyEvents();
 // generateDateRangeChart("date-range");
 // tryAgain();
