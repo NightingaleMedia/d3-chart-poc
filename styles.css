@@ -43,7 +43,7 @@ div.energy-breakdown-chart--tooltip {
 div.dg-past--wrap {
   height: 600px;
   width: 100%;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
   position: relative;
   margin: 0;
 }
@@ -96,14 +96,14 @@ div.dg-past--wrap {
 /* MANY EVENTS */
 .many-events--wrap {
   display: grid;
-  grid-template-columns: 220px auto;
+  grid-template-columns: 200px auto;
   align-items: center;
 }
 
 .site--selector {
   background-color: white;
   margin: 1rem;
-  padding: 0.25rem;
+  padding: 0.15rem;
   border-radius: 4px;
 }
 
@@ -126,7 +126,7 @@ table.site--details {
   width: 100%;
   margin: 0.25rem auto;
   border-collapse: collapse;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 

@@ -77,6 +77,7 @@ const makeLines = (selection, props) => {
     .attr("id", id)
     .attr("d", fanLine)
     .attr("stroke", lineColor)
+    .attr("stroke-width", "2px")
     .attr("fill", "none")
     .attr("transform", `translate(0, ${height + 38})`);
 
@@ -87,6 +88,7 @@ const makeLines = (selection, props) => {
     .attr("class", "energy-line")
     .attr("id", id)
     .attr("d", energyLine)
+    .attr("stroke-width", "2px")
     .attr("fill", "none")
     .attr("stroke", lineColor);
 
@@ -98,7 +100,8 @@ const makeLines = (selection, props) => {
     .attr("id", id)
     .attr("d", setpointLine)
     .attr("fill", "none")
-    .attr("stroke", lineColor);
+    .attr("stroke", lineColor)
+    .attr("stroke-width", "2px");
 };
 
 export function makeManyEvents() {
@@ -126,15 +129,7 @@ export function makeManyEvents() {
       `translate(${margin.left + selectionWidth}, ${margin.top})`
     );
 
-  const fullChart = chartG
-    .append("g")
-    .attr("height", height)
-    .attr("width", chartWidth);
   // clipPath is used to keep line and area from moving outside of plot area when user zooms/scrolls/brushes
-
-  const ENERGY_LINE_COLOR = "#38feaf";
-  const SETPOINT_LINE_COLOR = "#fecc38";
-  const FAN_COLOR = "steelBlue";
 
   const dateParser = d3.timeParse("%I:%M %p");
   const dateFormat = d3.timeFormat("%-I:%M %p");
@@ -158,8 +153,9 @@ export function makeManyEvents() {
       return d.timeset;
     });
 
-    var tempRange = [64, 79]; //TODO get a better range
+    var tempRange = [60, 80]; //TODO get a better range
 
+    const NUM_TICKS = 12;
     const kwhRange = [
       d3.min(data.map((d) => d.EnergyUsage)),
       d3.max(data.map((d) => d.EnergyUsage)),
@@ -190,7 +186,7 @@ export function makeManyEvents() {
     var yRightAxis = d3
       .axisRight()
       .scale(tempYScale)
-      .ticks(10)
+      .ticks(NUM_TICKS)
       .tickFormat((d) => d + "°")
       // .tickSize(-width)
       .tickSizeOuter(0);
@@ -199,10 +195,11 @@ export function makeManyEvents() {
       .axisLeft()
       .scale(kwhYScale)
       .tickFormat((d) => d + " kwh")
-      .ticks(9)
-      .tickSize(-chartWidth + 28)
+      .ticks(NUM_TICKS)
+      .tickSize(-chartWidth + 100)
       .tickSizeOuter(0);
 
+    // TEMP AXIS
     chartG
       .append("g")
       .attr("class", "y axis right")
@@ -213,14 +210,13 @@ export function makeManyEvents() {
           .attr("stroke-width", 0.2)
           .attr("stroke-opacity", 1)
           .attr("stroke", "white")
+          .attr("transform", "translate(-10,0)")
       )
       .call((g) => {
         g.selectAll(".tick line")
           .attr("stroke-width", 0)
           .attr("stroke-opacity", 0);
-        g.selectAll(
-          ".tick:last-of-type line, .tick:last-of-type text, .tick:first-of-type line, .tick:first-of-type text"
-        )
+        g.selectAll(" .tick:first-of-type line, .tick:first-of-type text")
           .attr("stroke-width", 0)
           .attr("stroke-opacity", 0)
           .attr("stroke", "white");
@@ -233,14 +229,31 @@ export function makeManyEvents() {
       .attr("class", "y axis left")
       .attr("transform", `translate(${30},0)`)
       .call(yLeftAxis)
-      .call((g) =>
-        g
-          .selectAll(".tick line, .tick text")
+      .call((g) => {
+        g.selectAll(".tick line, .tick text")
           .attr("stroke-width", 0.5)
           .attr("stroke-opacity", 0.8)
-          .attr("stroke", "white")
-      )
+          .attr("stroke", "white");
+        g.selectAll(".tick line").attr("transform", "translate(15,0)");
+      })
       .call((g) => {
+        g.selectAll(".tick:first-of-type line, .tick:first-of-type text")
+          .attr("stroke-width", 0)
+          .attr("stroke-opacity", 0)
+          .attr("stroke", "white");
+      });
+
+    // X AXIS
+    chartG
+      .append("g")
+      .attr("class", "x axis")
+      .attr("transform", `translate(0, ${height})`)
+      .call(xAxis)
+      .call((g) => {
+        g.selectAll(".tick line, .tick text")
+          .attr("stroke-width", 0.3)
+          .attr("stroke-opacity", 0.8)
+          .attr("stroke", "white");
         g.selectAll(".tick:first-of-type line, .tick:first-of-type text")
           .attr("stroke-width", 0)
           .attr("stroke-opacity", 0)
@@ -250,19 +263,6 @@ export function makeManyEvents() {
           .attr("stroke-opacity", 0)
           .attr("stroke", "white");
       });
-
-    chartG
-      .append("g")
-      .attr("class", "x axis")
-      .attr("transform", `translate(0, ${height + 10})`)
-      .call(xAxis)
-      .call((g) =>
-        g
-          .selectAll(".tick line, .tick text")
-          .attr("stroke-width", 0.3)
-          .attr("stroke-opacity", 0.8)
-          .attr("stroke", "white")
-      );
 
     // Make data for each
     const datasets = d3
