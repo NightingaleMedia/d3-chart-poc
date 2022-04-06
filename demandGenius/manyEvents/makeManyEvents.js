@@ -16,15 +16,15 @@ const makeTimeWindow = (selection, props) => {
     .attr("class", `start-end--boundary`)
     .attr("id", id)
     .attr("fill", `${lineColor}`)
-    .attr("opacity", 0.09)
-    .attr("height", height - kwhYScale(kwhRange[1] - 20))
+    .attr("opacity", 0.15)
+    .attr("height", height)
     .attr("width", () => {
       const start = xScale(START_TIME_ENTRY.timeset);
       const end = xScale(END_TIME_ENTRY.timeset);
       return end - start;
     })
     .attr("x", xScale(START_TIME_ENTRY.timeset))
-    .attr("y", kwhYScale(kwhRange[1] - 20));
+    .attr("y", 0);
 };
 
 const makeLines = (selection, props) => {
@@ -126,13 +126,14 @@ export function makeManyEvents() {
     .append("g")
     .attr(
       "transform",
-      `translate(${margin.left + selectionWidth}, ${margin.top})`
+      `translate(${margin.left + selectionWidth}, ${margin.top})`,
     );
 
   // clipPath is used to keep line and area from moving outside of plot area when user zooms/scrolls/brushes
 
-  const dateParser = d3.timeParse("%I:%M %p");
-  const dateFormat = d3.timeFormat("%-I:%M %p");
+  const dateParser = d3.timeParse("%-I:%M %p");
+  const dateFormat = d3.timeFormat("%-I:%M%p");
+
   const xAccessor = (d) => {
     if (d) {
       const titleString = dateParser(d.Time);
@@ -149,11 +150,11 @@ export function makeManyEvents() {
       d.siteId = btoa(d.Site);
     });
 
-    var dataXrange = d3.extent(data, function (d) {
-      return d.timeset;
-    });
+    var dataXrange = d3.extent(data, (d) => d.timeset);
 
-    var tempRange = [60, 80]; //TODO get a better range
+    var tempRange = [60, 80];
+
+    //TODO get a better range
 
     const NUM_TICKS = 12;
     const kwhRange = [
@@ -164,7 +165,7 @@ export function makeManyEvents() {
     const xScale = d3
       .scaleTime()
       .domain(dataXrange)
-      .range([0, chartWidth])
+      .rangeRound([0, chartWidth])
       .nice();
 
     const tempYScale = d3.scaleLinear().range([height, 0]).domain(tempRange);
@@ -181,7 +182,11 @@ export function makeManyEvents() {
       .axisBottom()
       .scale(xScale)
       .tickSizeOuter(0)
-      .tickFormat((d) => dateFormat(d));
+      .ticks(d3.timeMinute.every(90))
+      .tickFormat((d) => {
+        // console.log({ d });
+        return dateFormat(d);
+      });
 
     var yRightAxis = d3
       .axisRight()
@@ -210,7 +215,7 @@ export function makeManyEvents() {
           .attr("stroke-width", 0.2)
           .attr("stroke-opacity", 1)
           .attr("stroke", "white")
-          .attr("transform", "translate(-10,0)")
+          .attr("transform", "translate(-10,0)"),
       )
       .call((g) => {
         g.selectAll(".tick line")
@@ -345,7 +350,7 @@ export function makeManyEvents() {
             .transition()
             .duration(200)
             .delay(200)
-            .attr("opacity", 0.1)
+            .attr("opacity", 0.15)
             .ease();
           d3.select(this).style("background-color", (d) => d.color);
         }
@@ -381,19 +386,19 @@ export function makeManyEvents() {
       (d) => `
       <div class="title">${d.key}</div>
       <table class="site--details">
-    <tbody>
-    <tr class="table--header">
-        <th>KWH</th>
-        <th>Setpoint</th>
-        <th>Fan</th>
-    </tr>
-    <tr class="table--body" id="table-values--${d.id}">
-        <td>--</td>
-        <td>--</td>
-        <td>--</td>
-    </tr>
-    </tbody>
-    </table>`
+        <tbody>
+        <tr class="table--header">
+            <th>KWH</th>
+            <th>Setpoint</th>
+            <th>Fan</th>
+        </tr>
+        <tr class="table--body" id="table-values--${d.id}">
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+        </tr>
+        </tbody>
+    </table>`,
     );
 
     const legend = svg.selectAll("legendBox").data([1]).enter().append("g");
@@ -426,13 +431,23 @@ export function makeManyEvents() {
       .attr("width", 1)
       .attr("stroke", "rgba(255,255,255,0.6)")
       .attr("stroke-width", 1)
-      .attr("y", tempYScale(78));
+      .attr("y", 0);
+
+    const tracerTextBg = tracer
+      .append("rect")
+      .attr("fill", "var(--zen-blue)")
+      .attr("ry", 3)
+      .attr("width", 80)
+      .attr("height", 30)
+      .attr("y", -20)
+      .attr("x", -width);
 
     const tracerText = tracer
       .append("text")
       .attr("fill", "white")
       .attr("text-anchor", "middle")
-      .attr("x", tracerLine.attr("x"));
+      .attr("x", tracerLine.attr("x"))
+      .attr("y", 0);
 
     chartG
       .append("rect")
@@ -454,10 +469,11 @@ export function makeManyEvents() {
         const closestDataPoint = data[closestIndex];
 
         // const closestXValue = dateFormat(d.timeset);
+        tracerTextBg.attr("x", d3.mouse(this)[0] - 40);
         tracerLine.attr("x", d3.mouse(this)[0]);
         tracerText.attr("x", d3.mouse(this)[0]).text(closestDataPoint.Time);
         const allDataAtTime = data.filter(
-          (d) => d.Time == closestDataPoint.Time
+          (d) => d.Time == closestDataPoint.Time,
         );
 
         updateSiteBoxes(allDataAtTime, data);
@@ -480,13 +496,13 @@ function updateSiteBoxes(siteArray, data) {
     const values = d3.selectAll(`#table-values--${site.siteId}`);
 
     const dataValues = data.filter(
-      (d) => d.siteId === site.siteId && d.Time === site.Time
+      (d) => d.siteId === site.siteId && d.Time === site.Time,
     )[0];
 
     values.html(
       `<td>${dataValues.EnergyUsage}</td>
          <td>${dataValues.SetPoint}</td>
-         <td>${dataValues.Fan}</td>`
+         <td>${dataValues.Fan}</td>`,
     );
   });
 }
