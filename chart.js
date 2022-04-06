@@ -1,6 +1,6 @@
 import { makeXAxis, makeYAxis } from "./energyBreakdown/makeAxis.js";
 import { flattenData } from "./energyBreakdown/flattenEnergyData.js";
-import { dgChart } from "./demandGenius/makeChart.js";
+import { dgChart } from "./demandGenius/singleEvent/makeChart.js";
 import { generateDGPastEventChart } from "./dgPastEvents/makeChart.js";
 import { generateDateRangeChart } from "./date-changer/dateChange.js";
 import { makeManyEvents } from "./demandGenius/manyEvents/makeManyEvents.js";
@@ -50,7 +50,7 @@ async function energyChart() {
     BELOW_THRESHOLD_COLOR = "#00c564";
 
   var svg = d3.select("svg.sigman-bar"),
-    margin = { top: 0, right: 0, bottom: 0, left: 0 },
+    margin = { top: 20, right: 20, bottom: 20, left: 20 },
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom;
 
@@ -83,8 +83,14 @@ async function energyChart() {
       .padding(0.7);
 
     // AXES
-    const xAxis = d3.axisTop(xScale).tickSize(height).tickSizeOuter(0).ticks(7);
+    const xAxis = d3
+      .axisTop(xScale)
+      .tickSize(height - 20)
+      .tickSizeOuter(0)
+      .ticks(7);
+
     const yAxis = d3.axisLeft(yScale).tickSizeOuter(0).tickSizeInner(0);
+
     makeXAxis(chartG, xAxis, height);
     makeYAxis(chartG, yAxis);
 

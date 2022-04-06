@@ -2,7 +2,7 @@ export function makeXAxis(appendTo, caller, height) {
   appendTo
     .append("g")
     .call(caller)
-    .attr("transform", `translate(0, ${height + 10})`)
+    .attr("transform", `translate(0, ${height - 15})`)
     .attr("stroke", "white")
     .call((g) =>
       g
@@ -10,7 +10,7 @@ export function makeXAxis(appendTo, caller, height) {
         .attr("transform", `translate(0, 10)`)
         .attr("stroke-width", 0.4)
         .attr("stroke-opacity", 0.5)
-        .attr("stroke", "white"),
+        .attr("stroke", "white")
     )
     .select(".domain")
     .remove();
@@ -23,7 +23,7 @@ export function makeYAxis(appendTo, caller) {
     .style("text-color", "white")
     .style("fill", "none")
     .style("stroke", "#5A5A5A")
-    .style("stroke-width", "0px")
+    .style("stroke-width", "0")
     .style("font-size", "16px")
     .attr("fill", "#5A5A5A")
     .attr("transform", "translate(10,-30)")

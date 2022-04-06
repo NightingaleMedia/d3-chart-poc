@@ -1,10 +1,8 @@
-import { makeXAxis, makeYAxis } from "../energyBreakdown/makeAxis.js";
-
 export function dgChart() {
   var svg = d3.select("svg.demand-genius"),
     margin = { top: 30, right: 50, bottom: 30, left: 50 },
     legendHeight = 50,
-    legendWidth = +svg.attr("width") / 2,
+    legendWidth = 800,
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom - legendHeight;
 
@@ -27,6 +25,7 @@ export function dgChart() {
   // clipPath is used to keep line and area from moving outside of plot area when user zooms/scrolls/brushes
 
   const ENERGY_LINE_COLOR = "#38feaf";
+  const AMBIENT_TEMP_COLOR = "tomato";
   const SETPOINT_LINE_COLOR = "#fecc38";
   const FAN_COLOR = "steelBlue";
 
@@ -60,7 +59,21 @@ export function dgChart() {
       return d.timeset;
     });
 
-    var tempRange = [64, 79];
+    // Get the range depending on setpoint / ambient temp
+
+    const HighAmb = Number(d3.max(data.map((d) => d.AmbientTemp)));
+    const LowAmb = Number(d3.min(data.map((d) => d.AmbientTemp)));
+
+    const HighSet = Number(d3.max(data.map((d) => d.SetPoint)));
+    const LowSet = Number(d3.min(data.map((d) => d.SetPoint)));
+
+    const RangeHigh = HighAmb > HighSet ? HighAmb : HighSet;
+    const RangeLow = LowAmb < LowSet ? LowAmb : LowSet;
+
+    var tempRange = [
+      Math.floor(Number(RangeLow) / 10) * 10,
+      Math.ceil(Number(RangeHigh) / 10) * 10,
+    ];
 
     const kwhRange = [
       d3.min(data.map((d) => d.EnergyUsage)),
@@ -73,6 +86,7 @@ export function dgChart() {
 
     const kwhYScale = d3.scaleLinear().range([height, 0]).domain(kwhRange);
 
+    const NUM_Y_LINES = 10;
     const fanScaleY = d3
       .scaleLinear()
       .domain([0, 3])
@@ -88,17 +102,17 @@ export function dgChart() {
     var yRightAxis = d3
       .axisRight()
       .scale(tempYScale)
-      .ticks(10)
+      .ticks(NUM_Y_LINES)
       .tickFormat((d) => d + "°")
-      // .tickSize(-width)
-      .tickSizeOuter(0);
+      // .tickSize(width)
+      .tickSizeOuter(1);
 
     var yLeftAxis = d3
       .axisLeft()
       .scale(kwhYScale)
       .tickFormat((d) => d + " kwh")
-      .ticks(9)
-      .tickSize(-width + 28)
+      .ticks(NUM_Y_LINES / 2)
+      // .tickSize(10)
       .tickSizeOuter(0);
 
     chartG
@@ -108,22 +122,23 @@ export function dgChart() {
       .call((g) =>
         g
           .selectAll(".tick text")
-          .attr("stroke-width", 0.2)
+          .attr("stroke-width", 0.6)
           .attr("stroke-opacity", 1)
           .attr("stroke", "white")
       )
       .call((g) => {
         g.selectAll(".tick line")
-          .attr("stroke-width", 0)
-          .attr("stroke-opacity", 0);
-        g.selectAll(
-          ".tick:last-of-type line, .tick:last-of-type text, .tick:first-of-type line, .tick:first-of-type text"
-        )
-          .attr("stroke-width", 0)
+          .attr("stroke-width", 1)
+          .attr("stroke-opacity", 1)
+          .attr("stroke-width", 1)
+          .attr("stroke-opacity", 1)
+          .attr("stroke", "white");
+        g.selectAll(".tick:first-of-type line, .tick:first-of-type text")
+          .attr("stroke-width", 1)
           .attr("stroke-opacity", 0)
           .attr("stroke", "white");
       })
-      .attr("transform", `translate(${width - 28},0)`);
+      .attr("transform", `translate(${width},0)`);
 
     // KWH Line
     chartG
@@ -133,22 +148,20 @@ export function dgChart() {
       .call((g) =>
         g
           .selectAll(".tick line, .tick text")
-          .attr("stroke-width", 0.5)
-          .attr("stroke-opacity", 0.6)
+          .attr("stroke-width", 0.6)
+          .attr("stroke-opacity", 1)
           .attr("stroke", "white")
       )
       .call((g) => {
         g.selectAll(".tick:first-of-type line, .tick:first-of-type text")
-          .attr("stroke-width", 0)
+          .attr("stroke-width", 1)
           .attr("stroke-opacity", 0)
           .attr("stroke", "white");
-        g.selectAll(".tick:last-of-type line, .tick:last-of-type text")
-          .attr("stroke-width", 0)
-          .attr("stroke-opacity", 0)
-          .attr("stroke", "white");
+        // g.selectAll(".tick:last-of-type line, .tick:last-of-type text")
+        //   .attr("stroke-width", 0)
+        //   .attr("stroke-opacity", 0)
+        //   .attr("stroke", "white");
       });
-
-    //   .attr("transform", "translate(" + width + ", 0)");
 
     chartG
       .append("g")
@@ -159,7 +172,7 @@ export function dgChart() {
         g
           .selectAll(".tick line, .tick text")
           .attr("stroke-width", 0.3)
-          .attr("stroke-opacity", 0.6)
+          .attr("stroke-opacity", 1)
           .attr("stroke", "white")
       );
 
@@ -167,16 +180,16 @@ export function dgChart() {
     // START END
     const startEnd = fullChart
       .append("rect")
-      .attr("class", "test-square")
-      .attr("fill", "rgba(255,255,255,0.1)")
-      .attr("height", height - kwhYScale(kwhRange[1] - 20))
+      .attr("class", "single-event--event-window")
+      .attr("fill", "rgba(105,105,115,0.1)")
+      .attr("height", height - 55)
       .attr("width", () => {
         const start = xScale(START_TIME_ENTRY.timeset);
         const end = xScale(END_TIME_ENTRY.timeset);
         return end - start;
       })
       .attr("x", xScale(START_TIME_ENTRY.timeset))
-      .attr("y", kwhYScale(kwhRange[1] - 20));
+      .attr("y", kwhYScale(kwhRange[1]) + 55);
 
     // ENERGY LINE
     const energyLine = d3
@@ -191,6 +204,12 @@ export function dgChart() {
       .curve(d3.curveNatural)
       .x((d) => xScale(d.timeset))
       .y((d) => tempYScale(d.SetPoint));
+
+    const ambientTempLine = d3
+      .line()
+      .curve(d3.curveNatural)
+      .x((d) => xScale(d.timeset))
+      .y((d) => tempYScale(d.AmbientTemp));
 
     // FANLINE
     const fanLine = d3
@@ -212,7 +231,7 @@ export function dgChart() {
     chartG
       .append("path")
       .datum(data)
-      .attr("class", "fan-line")
+      .attr("class", "single-event--fan-line")
       .attr("d", fanLine)
       .attr("stroke", FAN_COLOR)
       .attr("transform", `translate(0, ${height + 38})`);
@@ -221,17 +240,28 @@ export function dgChart() {
     chartG
       .append("path")
       .datum(data)
-      .attr("class", "energy-line")
+      .attr("class", "single-event--energy-line")
       .attr("d", energyLine)
-      .attr("stroke", ENERGY_LINE_COLOR);
+      .attr("stroke", ENERGY_LINE_COLOR)
+      .attr("fill", "none");
 
     //   SET LINE
     chartG
       .append("path")
       .datum(data)
-      .attr("class", "setpoint-line")
+      .attr("class", "single-event--setpoint-line")
       .attr("d", setpointLine)
-      .attr("stroke", SETPOINT_LINE_COLOR);
+      .attr("stroke", SETPOINT_LINE_COLOR)
+      .attr("fill", "none");
+
+    //   SET LINE
+    chartG
+      .append("path")
+      .datum(data)
+      .attr("class", "single-event--ambient-temp-line")
+      .attr("d", ambientTempLine)
+      .attr("stroke", AMBIENT_TEMP_COLOR)
+      .attr("fill", "none");
 
     const startEndLabels = fullChart
       .selectAll("g")
@@ -310,7 +340,7 @@ export function dgChart() {
       .attr("x", 0 + margin.left)
       .attr("y", height + legendHeight + 10);
 
-    const LegendKeys = ["Energy", "Setpoint", "Fan"];
+    const LegendKeys = ["Usage", "Setpoint", "Fan", "Ambient Temp"];
 
     const legendScale = d3
       .scaleBand()
@@ -332,9 +362,10 @@ export function dgChart() {
       .attr("ry", 3)
       .attr("fill", (d) => {
         return {
-          Energy: ENERGY_LINE_COLOR,
+          Usage: ENERGY_LINE_COLOR,
           Setpoint: SETPOINT_LINE_COLOR,
           Fan: FAN_COLOR,
+          "Ambient Temp": AMBIENT_TEMP_COLOR,
         }[d];
       })
       .attr("height", 20)
@@ -365,34 +396,54 @@ export function dgChart() {
     const updateLegendText = (datapoint) => {
       legendText.text((u) => {
         if (u == "Setpoint") {
-          return `Setpoint: ${datapoint["SetPoint"]}°`;
+          return `Setpoint: ${datapoint["SetPoint"]}° F`;
         }
-        if (u == "Energy") {
-          return `Energy: ${datapoint["EnergyUsage"]}KWH`;
+        if (u == "Usage") {
+          return `Usage: ${datapoint["EnergyUsage"]}KWH`;
         }
         if (u == "Fan") {
           return `Fan: ${datapoint["Fan"]}`;
+        }
+        if (u == "Ambient Temp") {
+          return `Ambient Temp: ${datapoint["AmbientTemp"]}° F`;
         }
       });
     };
 
     const tracer = chartG.append("g");
 
-    const tracerLine = tracer
+    const tracerLineY = tracer
       .append("rect")
-      .attr("class", "track-line")
+      .attr("class", "single-event--track-line-y")
       .attr("height", height)
       .attr("width", 1)
-      .attr("stroke", "rgba(255,255,255,0.6)")
-      .attr("stroke-width", 1)
-      .attr("y", tempYScale(78));
+      .attr("y", 0);
+
+    const tracerLineX = tracer
+      .append("rect")
+      .attr("class", "single-event--track-line-x")
+      .attr("height", 1)
+      .attr("width", width)
+      .attr("y", -100)
+      .attr("stroke", "rgba(255,255,255,0.4)")
+      .attr("stroke-width", 1);
+
+    const tracerTextBg = tracer
+      .append("rect")
+      .attr("fill", "var(--zen-blue)")
+      .attr("width", 75)
+      .attr("height", 35)
+      .attr("ry", 6)
+      .attr("text-anchor", "middle")
+      .attr("x", -width)
+      .attr("y", -10);
 
     const tracerText = tracer
       .append("text")
       .attr("fill", "white")
-      .text("test")
       .attr("text-anchor", "middle")
-      .attr("x", tracerLine.attr("x"));
+      .attr("x", tracerLineY.attr("x"))
+      .attr("y", 13);
 
     chartG
       .append("rect")
@@ -414,8 +465,15 @@ export function dgChart() {
         const closestDataPoint = data[closestIndex];
 
         // const closestXValue = dateFormat(d.timeset);
-        tracerLine.attr("x", d3.event.pageX - 60);
-        tracerText.attr("x", d3.event.pageX - 60).text(closestDataPoint.Time);
+        tracerLineX.attr("y", d3.mouse(this)[1]);
+        tracerLineY
+          .attr("x", d3.mouse(this)[0])
+          .attr("stroke", "rgba(255,255,255,0.4)")
+          .attr("stroke-width", 1);
+        tracerText.attr("x", d3.mouse(this)[0]).text(closestDataPoint.Time);
+        tracerTextBg
+          .attr("x", d3.mouse(this)[0] - 38)
+          .text(closestDataPoint.Time);
 
         updateLegendText(closestDataPoint);
 

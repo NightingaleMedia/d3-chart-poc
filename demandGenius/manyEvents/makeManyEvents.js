@@ -77,6 +77,7 @@ const makeLines = (selection, props) => {
     .attr("id", id)
     .attr("d", fanLine)
     .attr("stroke", lineColor)
+    .attr("fill", "none")
     .attr("transform", `translate(0, ${height + 38})`);
 
   //   ENERGY LINE
@@ -86,6 +87,7 @@ const makeLines = (selection, props) => {
     .attr("class", "energy-line")
     .attr("id", id)
     .attr("d", energyLine)
+    .attr("fill", "none")
     .attr("stroke", lineColor);
 
   //   SET LINE
@@ -95,6 +97,7 @@ const makeLines = (selection, props) => {
     .attr("class", "setpoint-line")
     .attr("id", id)
     .attr("d", setpointLine)
+    .attr("fill", "none")
     .attr("stroke", lineColor);
 };
 
@@ -451,8 +454,8 @@ export function makeManyEvents() {
         const closestDataPoint = data[closestIndex];
 
         // const closestXValue = dateFormat(d.timeset);
-        tracerLine.attr("x", d3.event.pageX - 250);
-        tracerText.attr("x", d3.event.pageX - 250).text(closestDataPoint.Time);
+        tracerLine.attr("x", d3.mouse(this)[0]);
+        tracerText.attr("x", d3.mouse(this)[0]).text(closestDataPoint.Time);
         const allDataAtTime = data.filter(
           (d) => d.Time == closestDataPoint.Time
         );
