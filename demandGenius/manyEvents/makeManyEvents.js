@@ -1,6 +1,15 @@
 const makeTimeWindow = (selection, props) => {
-  const { data, siteName, lineColor, height, kwhYScale, kwhRange, xScale, id } =
-    props;
+  const {
+    data,
+    siteName,
+    lineColor,
+    colors,
+    height,
+    kwhYScale,
+    kwhRange,
+    xScale,
+    id,
+  } = props;
 
   const START_TIME_ENTRY = data.find((d) => {
     return d.EventWindow == true;
@@ -15,7 +24,7 @@ const makeTimeWindow = (selection, props) => {
     .append("rect")
     .attr("class", `start-end--boundary`)
     .attr("id", id)
-    .attr("fill", `${lineColor}`)
+    .attr("fill", `${colors.timeColor}`)
     .attr("opacity", 0.15)
     .attr("height", height)
     .attr("width", () => {
@@ -31,6 +40,7 @@ const makeLines = (selection, props) => {
   const {
     data,
     lineColor,
+    colors,
     id,
     height,
     kwhYScale,
@@ -73,10 +83,10 @@ const makeLines = (selection, props) => {
   selection
     .append("path")
     .datum(data)
-    .attr("class", "fan-line")
+    .attr("class", "many-events--fan-line")
     .attr("id", id)
     .attr("d", fanLine)
-    .attr("stroke", lineColor)
+    .attr("stroke", colors.fanColor)
     .attr("stroke-width", "2px")
     .attr("fill", "none")
     .attr("transform", `translate(0, ${height + 38})`);
@@ -85,28 +95,29 @@ const makeLines = (selection, props) => {
   selection
     .append("path")
     .datum(data)
-    .attr("class", "energy-line")
+    .attr("class", "many-events--energy-line")
     .attr("id", id)
     .attr("d", energyLine)
+    .attr("stroke-dasharray", "30 5")
     .attr("stroke-width", "2px")
     .attr("fill", "none")
-    .attr("stroke", lineColor);
+    .attr("stroke", colors.kwhColor);
 
   //   SET LINE
   selection
     .append("path")
     .datum(data)
-    .attr("class", "setpoint-line")
+    .attr("class", "many-events--setpoint-line")
     .attr("id", id)
     .attr("d", setpointLine)
     .attr("fill", "none")
-    .attr("stroke", lineColor)
+    .attr("stroke", colors.setpointColor)
     .attr("stroke-width", "2px");
 };
 
 export function makeManyEvents() {
   var svg = d3.select("svg.demand-genius--many"),
-    margin = { top: 30, right: 20, bottom: 30, left: 20 },
+    margin = { top: 30, right: 20, bottom: 60, left: 40 },
     legendHeight = 0,
     legendWidth = +svg.attr("width") / 2,
     width = +svg.attr("width") - margin.left - margin.right,
@@ -128,6 +139,13 @@ export function makeManyEvents() {
       "transform",
       `translate(${margin.left + selectionWidth}, ${margin.top})`,
     );
+  chartG
+    .append("rect")
+    .attr("height", height + 0)
+    .attr("width", width - 50)
+    .attr("fill", "var(--chart-bg)")
+    .attr("ry", 5)
+    .attr("transform", `translate(24, -0)`);
 
   // clipPath is used to keep line and area from moving outside of plot area when user zooms/scrolls/brushes
 
@@ -152,14 +170,14 @@ export function makeManyEvents() {
 
     var dataXrange = d3.extent(data, (d) => d.timeset);
 
-    var tempRange = [60, 80];
+    var tempRange = [60, 90];
 
     //TODO get a better range
 
-    const NUM_TICKS = 12;
+    const NUM_TICKS = 8;
     const kwhRange = [
-      d3.min(data.map((d) => d.EnergyUsage)),
-      d3.max(data.map((d) => d.EnergyUsage)),
+      Number(d3.min(data.map((d) => d.EnergyUsage))) - 20,
+      Number(d3.max(data.map((d) => d.EnergyUsage))) + 20,
     ];
 
     const xScale = d3
@@ -168,9 +186,17 @@ export function makeManyEvents() {
       .rangeRound([0, chartWidth])
       .nice();
 
-    const tempYScale = d3.scaleLinear().range([height, 0]).domain(tempRange);
+    const tempYScale = d3
+      .scaleLinear()
+      .range([height, 0])
+      .domain(tempRange)
+      .nice();
 
-    const kwhYScale = d3.scaleLinear().range([height, 0]).domain(kwhRange);
+    const kwhYScale = d3
+      .scaleLinear()
+      .range([height, 0])
+      .domain(kwhRange)
+      .nice();
 
     const fanScaleY = d3
       .scaleLinear()
@@ -178,7 +204,7 @@ export function makeManyEvents() {
       .range([40, height / 3]);
 
     // AXES
-    var xAxis = d3
+    var x = d3
       .axisBottom()
       .scale(xScale)
       .tickSizeOuter(0)
@@ -201,10 +227,12 @@ export function makeManyEvents() {
       .scale(kwhYScale)
       .tickFormat((d) => d + " kwh")
       .ticks(NUM_TICKS)
-      .tickSize(-chartWidth + 100)
+      .tickSize(-chartWidth + 80)
       .tickSizeOuter(0);
 
     // TEMP AXIS
+    const AXIS_COLOR = "rgb(130, 130, 130)";
+    const AXIS_LABEL_COLOR = "white";
     chartG
       .append("g")
       .attr("class", "y axis right")
@@ -212,19 +240,15 @@ export function makeManyEvents() {
       .call((g) =>
         g
           .selectAll(".tick text")
-          .attr("stroke-width", 0.2)
-          .attr("stroke-opacity", 1)
-          .attr("stroke", "white")
-          .attr("transform", "translate(-10,0)"),
+          .attr("text-rendering", "optimizeLegibility")
+          .attr("fill", AXIS_LABEL_COLOR),
       )
       .call((g) => {
-        g.selectAll(".tick line")
-          .attr("stroke-width", 0)
-          .attr("stroke-opacity", 0);
-        g.selectAll(" .tick:first-of-type line, .tick:first-of-type text")
-          .attr("stroke-width", 0)
-          .attr("stroke-opacity", 0)
-          .attr("stroke", "white");
+        g.selectAll(".tick line").attr("stroke-width", 0);
+        g.selectAll(".tick:first-of-type line, .tick:first-of-type text").attr(
+          "opacity",
+          0,
+        );
       })
       .attr("transform", `translate(${chartWidth - 28},0)`);
 
@@ -232,41 +256,42 @@ export function makeManyEvents() {
     chartG
       .append("g")
       .attr("class", "y axis left")
-      .attr("transform", `translate(${30},0)`)
+      .attr("transform", `translate(15, 0)`)
       .call(yLeftAxis)
       .call((g) => {
-        g.selectAll(".tick line, .tick text")
-          .attr("stroke-width", 0.5)
-          .attr("stroke-opacity", 0.8)
-          .attr("stroke", "white");
+        g.selectAll(".tick text")
+          .attr("fill", AXIS_LABEL_COLOR)
+          .attr("text-rendering", "optimizeLegibility");
+        g.selectAll(".tick line")
+          .attr("stroke", "rgba(45,45,45,1)")
+          .attr("text-rendering", "optimizeLegibility");
         g.selectAll(".tick line").attr("transform", "translate(15,0)");
       })
       .call((g) => {
-        g.selectAll(".tick:first-of-type line, .tick:first-of-type text")
-          .attr("stroke-width", 0)
-          .attr("stroke-opacity", 0)
-          .attr("stroke", "white");
+        g.selectAll(
+          ".tick:nth-of-type(odd) line, .tick:first-of-type text, .tick:nth-of-type(2) line",
+        ).attr("opacity", 0);
       });
 
     // X AXIS
-    chartG
+    const xAxis = chartG
       .append("g")
       .attr("class", "x axis")
       .attr("transform", `translate(0, ${height})`)
-      .call(xAxis)
+      .call(x)
       .call((g) => {
         g.selectAll(".tick line, .tick text")
-          .attr("stroke-width", 0.3)
-          .attr("stroke-opacity", 0.8)
-          .attr("stroke", "white");
-        g.selectAll(".tick:first-of-type line, .tick:first-of-type text")
-          .attr("stroke-width", 0)
-          .attr("stroke-opacity", 0)
-          .attr("stroke", "white");
-        g.selectAll(".tick:last-of-type line, .tick:last-of-type text")
-          .attr("stroke-width", 0)
-          .attr("stroke-opacity", 0)
-          .attr("stroke", "white");
+          .attr("text-rendering", "optimizeLegibility")
+          .attr("fill", AXIS_LABEL_COLOR);
+        g.selectAll(".tick:first-of-type line, .tick:first-of-type text").attr(
+          "opacity",
+          0,
+        );
+
+        g.selectAll(".tick:last-of-type line, .tick:last-of-type text").attr(
+          "opacity",
+          0,
+        );
       });
 
     // Make data for each
@@ -281,8 +306,17 @@ export function makeManyEvents() {
         .domain([0, datasets.length])
         .range([0, 1]);
 
+      const getColor = (number) => d3.interpolateCool(colorDomain(number));
+      const colors = {
+        fanColor: getColor(index + 0.33),
+        setpointColor: getColor(index + 0.66),
+        kwhColor: getColor(index + 0.99),
+        timeColor: getColor(index),
+      };
+
       const color = d3.interpolateCool(colorDomain(index));
       d.color = color;
+      d.colors = colors;
       d.id = btoa(d.key);
     });
 
@@ -292,6 +326,7 @@ export function makeManyEvents() {
         data: d.values,
         id: d.id,
         lineColor: d.color,
+        colors: d.colors,
         siteName: d.key,
         height,
         kwhYScale,
@@ -308,6 +343,7 @@ export function makeManyEvents() {
         data: d.values,
         lineColor: d.color,
         siteName: d.key,
+        colors: d.colors,
         id: d.id,
         height,
         kwhYScale,
@@ -428,9 +464,8 @@ export function makeManyEvents() {
       .append("rect")
       .attr("class", "track-line")
       .attr("height", height)
-      .attr("width", 1)
-      .attr("stroke", "rgba(255,255,255,0.6)")
-      .attr("stroke-width", 1)
+      .attr("width", 0.6)
+      .attr("fill", "white")
       .attr("y", 0);
 
     const tracerTextBg = tracer

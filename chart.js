@@ -5,45 +5,6 @@ import { generateDGPastEventChart } from "./dgPastEvents/makeChart.js";
 import { generateDateRangeChart } from "./date-changer/dateChange.js";
 import { makeManyEvents } from "./demandGenius/manyEvents/makeManyEvents.js";
 
-export function generateEnergyBreakdownChart(id) {
-  console.log("id: ", id);
-
-  c3.generate({
-    bindto: "#test-div-c3",
-    data: {
-      x: "x",
-      rows: [
-        ["x", "site1", "site2", "site3"],
-        ["x", 15, 25, 25],
-        ["x", 10, 12, 16],
-        ["d", 2, 5, 15, 25],
-      ],
-      type: "bar",
-      groups: [["site1", "site2", "site3"]],
-    },
-    axis: {
-      rotated: true,
-      x: { type: "category" },
-    },
-    grid: {
-      y: {
-        lines: [
-          { value: 0 },
-          { value: 10 },
-          { value: 20 },
-          { value: 30 },
-          { value: 40 },
-          { value: 50 },
-          { value: 60 },
-          { value: 70 },
-          { value: 80 },
-          { value: 90 },
-        ],
-      },
-    },
-  });
-}
-
 async function energyChart() {
   const THRESHOLD = 80,
     ABOVE_THRESHOLD_COLOR = "#ea212d",
@@ -68,6 +29,8 @@ async function energyChart() {
   const render = (data) => {
     data.sort((x, y) => d3.descending(x.KwH, y.KwH));
 
+    data.forEach((d, i) => (d.index = i));
+
     const flatData = flattenData(data);
 
     const xScale = d3
@@ -80,7 +43,7 @@ async function energyChart() {
       .scaleBand()
       .domain(data.map((d) => d.SiteName))
       .range([0, height])
-      .padding(0.7);
+      .padding(0.6);
 
     // AXES
     const xAxis = d3
@@ -99,7 +62,7 @@ async function energyChart() {
       .data(data)
       .enter()
       .append("g")
-      .attr("class", "barGroup");
+      .attr("class", "grey-bars");
 
     chartG
       .selectAll("rect")
@@ -110,7 +73,7 @@ async function energyChart() {
       .attr("fill", (d) =>
         xScale(d.KwH) > xScale(THRESHOLD)
           ? ABOVE_THRESHOLD_COLOR
-          : BELOW_THRESHOLD_COLOR
+          : BELOW_THRESHOLD_COLOR,
       )
       .attr("rx", 3)
       .attr("stroke", "#181818")
@@ -136,22 +99,30 @@ async function energyChart() {
       .attr("width", (d) => xScale(d.KwH))
       .style("transition", "all 100ms ease");
 
-    barGroup
+    const greyBars = barGroup
       .append("g")
       .append("rect")
       .attr("y", (d) => yScale(d.SiteName))
       .attr("rx", 3)
       .attr("id", (d) => d.id)
-      .attr("width", (d) => xScale(d.KwH))
+      .attr("class", "grey-bar")
+      .attr("width", 0)
       .attr("height", yScale.bandwidth())
-      .attr("fill", "grey");
+      .attr("fill", "rgba(100,100,100,1)");
+
+    barGroup
+      .selectAll("rect.grey-bar")
+      .transition()
+      .duration(1000)
+      .delay((d, i) => d.index * 120)
+
+      .attr("width", (d) => xScale(d.KwH))
+      .ease();
 
     // ANIMATIONS
     chartG
       .selectAll("rect")
       .on("mouseover", function (d, i) {
-        let TOP = yScale(d.SiteName) - 100;
-        TOP += height;
         div.transition().duration(500).style("opacity", 0.9);
         div
           .html(
@@ -163,10 +134,10 @@ async function energyChart() {
               kwh: ${d.KwH} 
             </div>
             </div>
-          `
+          `,
           )
-          .style("left", d3.event.pageX - 50 + "px")
-          .style("top", TOP + "px");
+          .style("left", d3.mouse(this)[0] + "px")
+          .style("top", d3.mouse(this)[1] + 100 + "px");
 
         d3.selectAll(`.${d.SiteName}`)
           .transition()
