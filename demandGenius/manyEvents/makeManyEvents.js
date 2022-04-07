@@ -277,7 +277,7 @@ export function makeManyEvents() {
     const xAxis = chartG
       .append("g")
       .attr("class", "x axis")
-      .attr("transform", `translate(0, ${height})`)
+      .attr("transform", `translate(0, ${height + 4})`)
       .call(x)
       .call((g) => {
         g.selectAll(".tick line, .tick text")
@@ -290,7 +290,7 @@ export function makeManyEvents() {
 
         g.selectAll(".tick:last-of-type line, .tick:last-of-type text").attr(
           "opacity",
-          0,
+          1,
         );
       });
 
@@ -439,24 +439,40 @@ export function makeManyEvents() {
 
     const legend = svg.selectAll("legendBox").data([1]).enter().append("g");
 
-    const legendBox = legend
-      .append("g")
-      .attr("x", 0 + margin.left + selectionWidth)
-      .attr("y", height + legendHeight + 10);
+    const LEGEND_OFFSET_Y = 75;
+    const LEGEND_OFFSET_X = 65;
+    legend
+      .append("line")
+      .attr("x1", 0 + LEGEND_OFFSET_X) // x position of the first end of the line
+      .attr("y1", height + LEGEND_OFFSET_Y) // y position of the first end of the line
+      .attr("x2", 30 + LEGEND_OFFSET_X) // x position of the second end of the line
+      .attr("y2", height + LEGEND_OFFSET_Y)
+      .attr("stroke", "white")
+      .attr("stroke-dasharray", "10 3")
+      .attr("stroke-width", "2px");
 
-    const LegendKeys = ["Energy", "Setpoint", "Fan"];
+    legend
+      .append("text")
+      .text("kwh")
+      .attr("fill", "white")
+      .attr("y", height + LEGEND_OFFSET_Y + 4)
+      .attr("x", LEGEND_OFFSET_X + 40);
 
-    const legendScale = d3
-      .scaleBand()
-      .domain(LegendKeys)
-      .range([0, legendWidth]);
+    legend
+      .append("line")
+      .attr("x1", 100 + LEGEND_OFFSET_X) // x position of the first end of the line
+      .attr("y1", height + LEGEND_OFFSET_Y) // y position of the first end of the line
+      .attr("x2", 130 + LEGEND_OFFSET_X) // x position of the second end of the line
+      .attr("y2", height + LEGEND_OFFSET_Y)
+      .attr("stroke", "white")
+      .attr("stroke-width", "2px");
 
-    const legendSection = legend
-      .selectAll("labels")
-      .data(LegendKeys)
-      .enter()
-      .append("g")
-      .attr("width", legendScale.bandwidth());
+    legend
+      .append("text")
+      .text("Setpoint")
+      .attr("fill", "white")
+      .attr("y", height + LEGEND_OFFSET_Y + 4)
+      .attr("x", LEGEND_OFFSET_X + 140);
 
     const tracer = chartG.append("g");
 
@@ -466,7 +482,8 @@ export function makeManyEvents() {
       .attr("height", height)
       .attr("width", 0.6)
       .attr("fill", "white")
-      .attr("y", 0);
+      .attr("y", 0)
+      .attr("x", -100);
 
     const tracerTextBg = tracer
       .append("rect")
