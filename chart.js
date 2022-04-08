@@ -108,7 +108,8 @@ async function energyChart() {
       .attr("class", "grey-bar")
       .attr("width", 0)
       .attr("height", yScale.bandwidth())
-      .attr("fill", "rgba(100,100,100,1)");
+      .attr("fill", "var(--zen-blue)")
+      .attr("opacity", 0.7);
 
     barGroup
       .selectAll("rect.grey-bar")
