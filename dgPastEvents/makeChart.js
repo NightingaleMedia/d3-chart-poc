@@ -281,7 +281,5 @@ export const generateDGPastEventChart = () => {
     render(JSON.parse(dataDiv.dataset.dgData));
   };
 
-  d3.json("../data/dg-past-events.json", function (d) {
-    makeDataDiv(d);
-  });
+  d3.json("../data/dg-past-events.json").then((d) => render(d));
 };

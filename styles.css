@@ -5,7 +5,10 @@ html {
   font-family: sans-serif;
   padding: 2rem;
 }
-
+h1 {
+  color: white;
+  margin-bottom: 2rem;
+}
 svg {
   background-color: black;
   padding: 0.25rem;

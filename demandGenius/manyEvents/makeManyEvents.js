@@ -1,3 +1,4 @@
+import { nest } from "d3-collection";
 const makeTimeWindow = (selection, props) => {
   const {
     data,
@@ -295,8 +296,7 @@ export function makeManyEvents() {
       });
 
     // Make data for each
-    const datasets = d3
-      .nest()
+    const datasets = nest()
       .key((d) => d.Site)
       .entries(data);
 
@@ -507,8 +507,8 @@ export function makeManyEvents() {
       .attr("height", height)
       .style("cursor", "crosshair")
       .attr("fill", "rgba(0,0,0,0)")
-      .on("mousemove", function (d) {
-        const mousePosition = d3.mouse(this);
+      .on("mousemove", function (event) {
+        const mousePosition = d3.pointer(event);
         const hoveredDate = xScale.invert(mousePosition[0]);
 
         const getDistanceFromHoveredDate = (d) =>
@@ -521,9 +521,9 @@ export function makeManyEvents() {
         const closestDataPoint = data[closestIndex];
 
         // const closestXValue = dateFormat(d.timeset);
-        tracerTextBg.attr("x", d3.mouse(this)[0] - 40);
-        tracerLine.attr("x", d3.mouse(this)[0]);
-        tracerText.attr("x", d3.mouse(this)[0]).text(closestDataPoint.Time);
+        tracerTextBg.attr("x", mousePosition[0] - 40);
+        tracerLine.attr("x", mousePosition[0]);
+        tracerText.attr("x", mousePosition[0]).text(closestDataPoint.Time);
         const allDataAtTime = data.filter(
           (d) => d.Time == closestDataPoint.Time,
         );
@@ -534,7 +534,7 @@ export function makeManyEvents() {
         return;
       });
   };
-  d3.json("../../data/dg-many-events.json", function (d) {
+  d3.json("../../data/dg-many-events.json").then((d) => {
     render(d.data);
   });
 }

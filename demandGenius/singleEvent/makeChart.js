@@ -455,9 +455,8 @@ export function dgChart() {
       .attr("height", height)
       .style("cursor", "crosshair")
       .attr("fill", "rgba(0,0,0,0)")
-      .on("mousemove", function (d) {
-        const mousePosition = d3.mouse(this);
-        const hoveredDate = xScale.invert(mousePosition[0]);
+      .on("mousemove", function (event) {
+        const hoveredDate = xScale.invert(d3.pointer(event)[0]);
 
         const getDistanceFromHoveredDate = (d) =>
           Math.abs(xAccessor(d) - hoveredDate);
@@ -469,12 +468,12 @@ export function dgChart() {
         const closestDataPoint = data[closestIndex];
 
         // const closestXValue = dateFormat(d.timeset);
-        tracerLineX.attr("y", d3.mouse(this)[1]);
-        tracerLineY.attr("x", d3.mouse(this)[0]);
+        tracerLineX.attr("y", d3.pointer(event)[1]);
+        tracerLineY.attr("x", d3.pointer(event)[0]);
 
-        tracerText.attr("x", d3.mouse(this)[0]).text(closestDataPoint.Time);
+        tracerText.attr("x", d3.pointer(event)[0]).text(closestDataPoint.Time);
         tracerTextBg
-          .attr("x", d3.mouse(this)[0] - 38)
+          .attr("x", d3.pointer(event)[0] - 38)
           .text(closestDataPoint.Time);
 
         updateLegendText(closestDataPoint);
@@ -482,9 +481,7 @@ export function dgChart() {
         return;
       });
   };
-  d3.csv("../data/demand-genius.csv", function (d) {
-    render(d);
-  });
+  d3.csv("../data/demand-genius.csv").then((d) => render(d));
 }
 
 // tryAgain();

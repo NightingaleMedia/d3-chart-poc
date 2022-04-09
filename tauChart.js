@@ -1,4 +1,4 @@
-import { flattenData } from "./flattenEnergyData.js";
+import { flattenData } from "./energyBreakdown/flattenEnergyData.js";
 
 export function tauChart(id) {
   d3.json("energyChildren.json", function (err, d) {
