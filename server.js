@@ -8,11 +8,6 @@ const httpsAgent = new https.Agent({
   rejectUnauthorized: false,
 });
 
-app.use(
-  cors({
-    origin: ["http://localhost:5000"],
-  }),
-);
 app.use(express.json());
 
 app.use(express.static(__dirname + "/build"));
