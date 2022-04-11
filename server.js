@@ -14,7 +14,6 @@ app.use(
   }),
 );
 app.use(express.json());
-
 app.all((req, res) => {
   return res.sendFile("index.html");
 });
