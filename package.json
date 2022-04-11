@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "snowpack dev",
     "deploy": "snowpack build",
-    "start": "node server.js",
+    "start": "node build/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
