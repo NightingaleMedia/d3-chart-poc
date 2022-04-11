@@ -22,6 +22,7 @@ app.get("*", function (req, res) {
 });
 
 const run = async (port) => {
+  console.log("attempting to listen on ", port);
   app.listen(port, () => {
     console.log(`App is running on port ${port}`);
   });
