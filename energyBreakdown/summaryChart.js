@@ -39,6 +39,8 @@ export const generateSummaryChart = () => {
   svg.attr("viewBox", [0, 0, width, height]);
   svg.style("cursor", "crosshair");
 
+  const chartG = svg.append("g").attr("height", height).attr("width", width);
+
   const tooltipDiv = d3
     .select(".energy-summary--tooltip")
     .style("top", `${height + tooltipHeight}px`)
@@ -121,9 +123,10 @@ export const generateSummaryChart = () => {
           .tickSize(-width + 70)
           .ticks(3),
       );
-      g.selectAll(".tick text, .tick line")
-        .attr("fill", "white")
-        .attr("stroke", "rgba(80,80,80,0.4)");
+      g.selectAll(".tick line, .domain line")
+        .attr("fill", "none")
+        .attr("stroke", "0");
+      g.selectAll(".tick text, .tick line").attr("fill", "white");
 
       g.selectAll(".tick text").attr("transform", "translate(-10,0)");
     };
@@ -162,7 +165,7 @@ export const generateSummaryChart = () => {
     const gx = svg.append("g").call(xAxis, x);
     const gy = svg.append("g").call(yAxis, y);
 
-    const barsG = svg.append("g").attr("class", "data-bars");
+    const barsG = chartG.append("g").attr("class", "data-bars");
 
     const bars = barsG
       .selectAll("rolled-rect")
@@ -188,7 +191,7 @@ export const generateSummaryChart = () => {
         d3.select(this).attr("opacity", 1);
       });
 
-    const granBarsG = svg.append("g").attr("class", "granular-data-bars");
+    const granBarsG = chartG.append("g").attr("class", "granular-data-bars");
 
     const granBars = granBarsG
       .selectAll("granular-rect")
