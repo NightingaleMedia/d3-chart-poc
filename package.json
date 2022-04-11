@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "snowpack dev",
     "build": "snowpack build",
+    "heroku-post-build": "snowpack build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

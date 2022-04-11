@@ -1,6 +1,7 @@
 html {
   background-color: rgb(17, 17, 17);
   --zen-blue: #0076fd;
+  --zen-warning: #ffdc15;
   --chart-bg: rgb(12, 12, 12);
   font-family: sans-serif;
   padding: 2rem;
