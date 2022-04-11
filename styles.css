@@ -14,7 +14,31 @@ svg {
   background-color: black;
   padding: 0.25rem;
 }
+/* ENERGY SUMMARY */
+.energy-summary--wrap {
+  position: relative;
+}
+.energy-summary--tooltip {
+  position: absolute;
+}
+.energy-summary--tooltip__content {
+  color: white;
+  text-align: center;
+  background: var(--zen-blue);
+  color: white;
+  border: 1px solid black;
+  width: 120px;
+  min-height: 20px;
+  border-radius: 6px;
+  padding: 12px;
+}
+#energy-summary--tooltip__date {
+  font-weight: 800;
+}
+#energy-summary--tooltip__usage {
+}
 
+/* ENERGY BREAKDOWN */
 div.energy-breakdown-chart--tooltip {
   position: absolute;
   text-align: left;
