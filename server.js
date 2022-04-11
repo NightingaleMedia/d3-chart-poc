@@ -14,8 +14,11 @@ app.use(
   }),
 );
 app.use(express.json());
-app.all((req, res) => {
-  return res.sendFile("index.html");
+
+app.use(express.static(__dirname + "/build"));
+
+app.get("*", function (req, res) {
+  res.sendFile(__dirname + "/build/index.html");
 });
 
 const run = async (port) => {
