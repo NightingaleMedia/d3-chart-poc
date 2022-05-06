@@ -2,16 +2,22 @@ export function makeXAxis(appendTo, caller, height) {
   appendTo
     .append("g")
     .call(caller)
-    .attr("transform", `translate(0, ${height - 15})`)
+    .attr("transform", `translate(0, ${height - 30})`)
     .attr("stroke", "white")
-    .call((g) =>
-      g
-        .selectAll(".tick line")
+    .call((g) => {
+      g.selectAll(".tick line")
         .attr("transform", `translate(0, 10)`)
         .attr("stroke-width", 0.4)
         .attr("stroke-opacity", 0.5)
-        .attr("stroke", "white")
-    )
+        .attr("stroke", "white");
+
+      g.selectAll(
+        ".tick:first-of-type line, .tick:last-of-type line, .tick:first-of-type text, .tick:last-of-type text",
+      )
+        .attr("transform", `translate(0, 10)`)
+        .attr("opacity", 0)
+        .attr("stroke", "none");
+    })
     .select(".domain")
     .remove();
 }

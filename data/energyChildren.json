@@ -55,6 +55,20 @@
         { "id": "2.6", "SiteName": "Site2.6", "KwH": 15 },
         { "id": "2.8", "SiteName": "Site2.8", "KwH": 150 }
       ]
+    },
+    {
+      "id": "2136",
+      "SiteName": "Moscow",
+      "KwH": 215,
+      "children": [
+        { "id": "2.1", "SiteName": "Site2.1", "KwH": 20 },
+        { "id": "2.2", "SiteName": "Site2.2", "KwH": 80 },
+        { "id": "2.3", "SiteName": "Site2.3", "KwH": 20 },
+        { "id": "2.4", "SiteName": "Site2.4", "KwH": 20 },
+        { "id": "2.5", "SiteName": "Site2.5", "KwH": 10 },
+        { "id": "2.6", "SiteName": "Site2.6", "KwH": 15 },
+        { "id": "2.8", "SiteName": "Site2.8", "KwH": 50 }
+      ]
     }
   ]
 }

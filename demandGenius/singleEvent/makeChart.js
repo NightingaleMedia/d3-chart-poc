@@ -1,3 +1,4 @@
+import demandGenius from "../../data/demand-genius.csv";
 export function dgChart() {
   var svg = d3.select("svg.demand-genius"),
     margin = { top: 30, right: 50, bottom: 30, left: 50 },
@@ -27,7 +28,7 @@ export function dgChart() {
     .append("rect")
     .attr("height", height + 0)
     .attr("width", width - 20)
-    .attr("fill", "var(--chart-bg)")
+    .attr("fill", "var(--zen-chart-bg)")
     .attr("ry", 5)
     .attr("transform", `translate(10, -0)`);
   // clipPath is used to keep line and area from moving outside of plot area when user zooms/scrolls/brushes
@@ -481,7 +482,8 @@ export function dgChart() {
         return;
       });
   };
-  d3.csv("../data/demand-genius.csv").then((d) => render(d));
+  d3.csv(demandGenius).then((d) => render(d));
+  // render(demandGenius);
 }
 
 // tryAgain();

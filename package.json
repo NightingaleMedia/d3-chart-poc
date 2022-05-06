@@ -20,11 +20,8 @@
   },
   "homepage": "https://github.com/NightingaleMedia/d3-chart-poc#readme",
   "dependencies": {
-    "cors": "^2.8.5",
     "d3-collection": "^1.0.7",
-    "express": "^4.17.3",
-    "https": "^1.0.0",
-    "snowpack": "^3.8.8"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "snowpack": "^3.8.8"

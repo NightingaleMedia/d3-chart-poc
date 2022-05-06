@@ -2880,5 +2880,5 @@
     { "usage": 19, "time": "04-07-2022 22:00" },
     { "usage": 49, "time": "04-07-2022 23:00" }
   ],
-  "threshold": { "hourly": 35, "daily": 800 }
+  "threshold": { "hourly": 35, "daily": 850 }
 }

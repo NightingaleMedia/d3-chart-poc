@@ -1,6 +1,7 @@
 // import { utcMonth } from "d3.js";
 import { colorMap, iconMap } from "./utils/icons.js";
 import { eventTypes } from "./utils/eventTypes.js";
+import pastEvents from "../data/dg-past-events.json";
 export const generateDGPastEventChart = () => {
   var svg = d3.select("svg.demand-genius-past"),
     margin = { top: 50, right: 50, bottom: 30, left: 50 },
@@ -17,7 +18,7 @@ export const generateDGPastEventChart = () => {
 
   const bg = chartG
     .append("rect")
-    .style("fill", "#232828")
+    .style("fill", "var(--zen-chart-bg)")
     .attr("rx", 6)
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -212,7 +213,7 @@ export const generateDGPastEventChart = () => {
       .style("cursor", "pointer")
       .attr("fill", (d) => colorMap(d.type))
 
-      .on("mouseover", function (d) {
+      .on("mouseover", function (event, d) {
         tooltipDiv
           .transition()
           .duration(500)
@@ -252,7 +253,7 @@ export const generateDGPastEventChart = () => {
       .data(flatData)
       .enter()
       .append("circle")
-      .attr("fill", "#ff0e00")
+      .attr("fill", "var(--zen-blue)")
       .attr("stroke", "#181818")
       .attr("stroke-width", 2)
       .attr("r", (d) => (d.count > 1 ? 10 : 0))
@@ -281,5 +282,6 @@ export const generateDGPastEventChart = () => {
     render(JSON.parse(dataDiv.dataset.dgData));
   };
 
-  d3.json("../data/dg-past-events.json").then((d) => render(d));
+  // d3.json(JSON.stringify(pastEvents)).then((d) => render(d));
+  render(pastEvents);
 };

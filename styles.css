@@ -1,8 +1,21 @@
 html {
-  background-color: rgb(17, 17, 17);
-  --zen-blue: #0076fd;
-  --zen-warning: #ffdc15;
-  --chart-bg: rgb(12, 12, 12);
+  background-color: rgb(9, 9, 9);
+  --zen-blue: #2d7ce0;
+  --zen-nominal: rgb(90, 93, 97);
+  --zen-warning: #f16441;
+  --zen-chart-bg: rgb(16, 16, 16);
+  --zen-dark-blue: #0b3e9e;
+  --zen-green: #09da6e;
+  /* --zss-dg-weatherEvent--cold: rgb(0, 144, 163);
+  --zss-dg-weatherEvent--warm: rgb(255, 174, 23);
+  --zss-dg-greenEnergy: #09da6e;
+  --zss-dg-roomRefresh: #005ea7;
+  --zss-dg-drEvent: rgb(67, 0, 44); */
+  --zss-dg-weatherEvent--cold: rgb(90, 93, 97);
+  --zss-dg-weatherEvent--warm: rgb(90, 93, 97);
+  --zss-dg-greenEnergy: rgb(90, 93, 97);
+  --zss-dg-roomRefresh: rgb(90, 93, 97);
+  --zss-dg-drEvent: rgb(90, 93, 97);
   font-family: sans-serif;
   padding: 2rem;
 }
@@ -11,7 +24,7 @@ h1 {
   margin-bottom: 2rem;
 }
 svg {
-  background-color: black;
+  background-color: rgb(9, 9, 9);
   padding: 0.25rem;
 }
 /* ENERGY SUMMARY */
@@ -46,7 +59,7 @@ div.energy-breakdown-chart--tooltip {
   min-height: 30px;
   padding: 16px;
   font: 16px sans-serif;
-  background: #0076fd;
+  background: var(--zen-blue);
   color: white;
   border: 1px solid black;
   border-radius: 3px;
@@ -82,7 +95,7 @@ div.dg-past--wrap {
   height: 30px;
   width: 30px;
   position: absolute;
-  background-color: #0076fd;
+  background-color: var(--zen-blue);
   top: -2px;
   margin: auto;
   left: 0;
@@ -99,7 +112,7 @@ div.dg-past--wrap {
   min-height: 30px;
   text-align: center;
   font: 14px sans-serif;
-  background: #0076fd;
+  background: var(--zen-blue);
   color: white;
   border-radius: 3px;
   pointer-events: none;
@@ -116,7 +129,7 @@ div.dg-past--wrap {
   cursor: pointer;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  background: #0b3e9e;
+  background: var(--zen-dark-blue);
   font-weight: 400;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;

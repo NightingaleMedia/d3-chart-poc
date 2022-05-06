@@ -9,9 +9,9 @@ export const iconMap = (eventType) =>
 
 export const colorMap = (eventType) =>
   ({
-    AbnormallyCold: "#0000FF",
-    AbnormallyHot: "#FF6005",
-    GreenEnergy: "#03832E",
-    RoomRefresh: "#100B8B",
-    UtilityDR: "#510383",
+    AbnormallyCold: "var(--zss-dg-weatherEvent--cold)",
+    AbnormallyHot: "var(--zss-dg-weatherEvent--warm)",
+    GreenEnergy: "var(--zss-dg-greenEnergy)",
+    RoomRefresh: "var(--zss-dg-roomRefresh)",
+    UtilityDR: "var(--zss-dg-drEvent)",
   }[eventType]);

@@ -1,4 +1,5 @@
 import { nest } from "d3-collection";
+import manyEvents from "../../data/dg-many-events.json";
 const makeTimeWindow = (selection, props) => {
   const {
     data,
@@ -144,7 +145,7 @@ export function makeManyEvents() {
     .append("rect")
     .attr("height", height + 0)
     .attr("width", width - 50)
-    .attr("fill", "var(--chart-bg)")
+    .attr("fill", "var(--zen-chart-bg)")
     .attr("ry", 5)
     .attr("transform", `translate(24, -0)`);
 
@@ -320,7 +321,6 @@ export function makeManyEvents() {
       d.id = btoa(d.key);
     });
 
-    console.log({ datasets });
     datasets.forEach((d, index) => {
       const props = {
         data: d.values,
@@ -367,7 +367,7 @@ export function makeManyEvents() {
       .attr("class", `site--selector`)
       .attr("id", (d) => d.id)
       .attr("data-selected", true)
-      .on("click", function (d) {
+      .on("click", function (event, d) {
         const allElems = d3.selectAll(`#${d.id}`);
 
         if (this.dataset.selected === "true") {
@@ -391,7 +391,7 @@ export function makeManyEvents() {
           d3.select(this).style("background-color", (d) => d.color);
         }
       })
-      .on("mouseover", function (d) {
+      .on("mouseover", function (event, d) {
         const notData = datasets
           .filter((da) => da.id !== d.id)
           .map((d) => `#${d.id}`)
@@ -404,7 +404,7 @@ export function makeManyEvents() {
           .style("filter", "saturate(0) opacity(40%) ")
           .ease();
       })
-      .on("mouseout", function (d) {
+      .on("mouseout", function (event, d) {
         const notData = datasets
           .filter((da) => da.id !== d.id)
           .map((d) => `#${d.id}`)
@@ -534,9 +534,10 @@ export function makeManyEvents() {
         return;
       });
   };
-  d3.json("../../data/dg-many-events.json").then((d) => {
-    render(d.data);
-  });
+  // d3.json("../../data/dg-many-events.json").then((d) => {
+  //   render(d.data);
+  // });
+  render(manyEvents.data);
 }
 
 function updateSiteBoxes(siteArray, data) {
