@@ -23,7 +23,7 @@ import {
   getXTicks,
   getXWidth,
 } from "../../utils/chartUtils";
-import energyUsage from "../../../data/energyUsage.json";
+import energyUsage from "../../data/energyUsage.json";
 import {
   AggregateDataItem,
   EnergySummaryDataItem,

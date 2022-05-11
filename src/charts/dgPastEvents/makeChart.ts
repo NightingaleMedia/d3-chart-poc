@@ -1,15 +1,30 @@
+import {
+  axisBottom,
+  axisLeft,
+  axisTop,
+  extent,
+  scaleBand,
+  scaleUtc,
+  select,
+  timeFormat,
+  timeParse,
+  utcFormat,
+  utcMonth,
+} from "d3";
+
 // import { utcMonth } from "d3.js";
 import { colorMap, iconMap } from "./utils/icons.js";
-import pastEvents from "../../../data/dg-past-events.json";
-import * as d3 from "d3";
+import pastEvents from "../../data/dg-past-events.json";
+
 import {
   DGFlatDataItem,
   DGPastEvent,
   DGPastEventDataItem,
 } from "../types/DGPastEvents";
 import { flattenData } from "./utils/flattenData.js";
+
 export const generateDGPastEventChart = () => {
-  var svg = d3.select("svg.demand-genius-past"),
+  var svg = select("svg.demand-genius-past"),
     margin = { top: 50, right: 50, bottom: 30, left: 50 },
     tooltipHeight = 110,
     tooltipWidth = Number(svg.attr("width")) - margin.left - margin.right,
@@ -45,14 +60,15 @@ export const generateDGPastEventChart = () => {
     .attr("ry", 3)
     .attr("y", Number(chartG.attr("height")) + margin.top + 10);
 
-  const tooltipDiv = d3
-    .select(".dg-past-event--tooltip")
-    .style("top", `${Number(chartG.attr("height")) + margin.top + 40}px`);
+  const tooltipDiv = select(".dg-past-event--tooltip").style(
+    "top",
+    `${Number(chartG.attr("height")) + margin.top + 40}px`,
+  );
   const toolTipDateDiv = tooltipDiv.select("#dg-past-event--tooltip__date");
   const toolTipNameDiv = tooltipDiv.select("#dg-past-event--tooltip__name");
 
   function render(jsonData: DGPastEvent[]) {
-    const parseTime = d3.timeParse("%m/%d/%Y");
+    const parseTime = timeParse("%m/%d/%Y");
     // Transform data
     const data: DGPastEventDataItem[] = jsonData.map((d, i) => ({
       index: i,
@@ -60,38 +76,34 @@ export const generateDGPastEventChart = () => {
       ...d,
     }));
 
-    var dataXrange = d3.extent(data, (d) => d.timeset);
+    var dataXrange = extent(data, (d) => d.timeset);
 
-    const xScale = d3
-      .scaleUtc()
+    const xScale = scaleUtc()
       .domain([dataXrange[0] ?? new Date(), dataXrange[1] ?? new Date()])
       .range([0, width])
       .nice();
 
-    const yScale = d3
-      .scaleBand()
+    const yScale = scaleBand()
       .range([height, 0])
       .domain(["1", "2", "3", "4", "5"])
       .padding(0);
 
     const SINGLE_EVENT_LW = yScale.bandwidth();
 
-    const xAxis = d3
-      .axisBottom(xScale)
+    const xAxis = axisBottom(xScale)
       .scale(xScale)
       .ticks(data.length)
       .tickSize(-5)
       .tickFormat((d) => {
-        const f = d3.timeFormat("%-m/%d");
+        const f = timeFormat("%-m/%d");
         return f(d as Date);
       });
-    const yAxis = d3.axisLeft(yScale).scale(yScale).tickSize(-width);
+    const yAxis = axisLeft(yScale).scale(yScale).tickSize(-width);
 
-    const x1MonthAxis = d3
-      .axisTop(xScale)
+    const x1MonthAxis = axisTop(xScale)
       .scale(xScale)
-      .ticks(d3.utcMonth)
-      .tickFormat(d3.utcFormat("%B %Y"))
+      .ticks(utcMonth)
+      .tickFormat(utcFormat("%B %Y"))
       .tickSize(-height - margin.bottom - margin.top);
 
     chartG
@@ -204,7 +216,7 @@ export const generateDGPastEventChart = () => {
           .style("left", `${xScale(d.timeset)}px`);
 
         toolTipDateDiv.text(() => {
-          const f = d3.timeFormat("%m/%d/%y");
+          const f = timeFormat("%m/%d/%y");
           return f(d.timeset);
         });
         if (Number(d.count) > 1) {
@@ -265,7 +277,7 @@ export const generateDGPastEventChart = () => {
   //   render(JSON.parse(dataDiv.dataset.dgData));
   // };
 
-  // d3.json(JSON.stringify(pastEvents)).then((d) => render(d));
+  //  json(JSON.stringify(pastEvents)).then((d) => render(d));
   // TODO figure out why this isnt registering
   render(pastEvents as unknown as DGPastEvent[]);
 };

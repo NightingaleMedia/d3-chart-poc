@@ -36,3 +36,10 @@ export enum DGEventType {
   RoomRefresh = "RoomRefresh",
   GreenEnergy = "GreenEnergy",
 }
+
+export type DGColors = {
+  fanColor: string;
+  kwhColor: string;
+  setpointColor: string;
+  timeColor: string;
+};

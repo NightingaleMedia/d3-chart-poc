@@ -25,7 +25,7 @@ import {
   DGEventDataPoint,
   DGEventDataPointItem,
 } from "../../types/DGSingleEvent";
-import singleEvent from "../../../../data/dg-single-event.json";
+import singleEvent from "../../../data/dg-single-event.json";
 import getColor, { ColorAccessor } from "./utils/getColor";
 export function singleDGEventReport() {
   var svg = select("svg.demand-genius"),

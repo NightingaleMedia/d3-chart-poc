@@ -1,9 +1,10 @@
 import * as d3 from "d3";
-import mapData from "../../../../data/groups.json";
+import { geoEquirectangular } from "d3";
+import mapData from "../../../data/groups.json";
 
 export const makeMapChart = () => {
   function render(data) {
-    d3.geoEquirectangular;
+    geoEquirectangular;
     console.log("map data:", data);
   }
 

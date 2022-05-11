@@ -1,6 +1,6 @@
 import { singleDGEventReport } from "./demandGenius/singleDGEventReport/singleDGEventReport.js";
 import { generateDGPastEventChart } from "./dgPastEvents/makeChart.js";
-import { makeManyEvents } from "./demandGenius/manyEvents/makeManyEvents.js";
+import { makeManyEvents } from "./demandGenius/manyDGEventsComparison/manyDGEventsComparison";
 import { generateEnergySummaryChart } from "./energySummary/energySummaryChart.js";
 import { makeBreakdownChart } from "./energySummary/energySiteBreakdownChart";
 import { makeMapChart } from "./devices/devicesMap/makeMapChart.js";

@@ -1,6 +1,34 @@
+import {
+  area,
+  axisBottom,
+  axisLeft,
+  axisRight,
+  curveNatural,
+  curveStep,
+  extent,
+  interpolateCool,
+  leastIndex,
+  line,
+  max,
+  min,
+  pointer,
+  scaleLinear,
+  scaleTime,
+  select,
+  selectAll,
+  timeFormat,
+  timeMinute,
+  timeParse,
+} from "d3";
 import { nest } from "d3-collection";
-import manyEvents from "../../../../data/dg-many-events.json";
-import * as d3 from "d3";
+import {
+  DGEventComparisonDataset,
+  DGSiteEventDataPoint,
+  DGSiteEventDataPointDataItem,
+  MakeLines__Props,
+} from "../../types/DGManyEventsComparison";
+import manyEvents from "../../../data/dg-many-events.json";
+// import * as d3 from "d3";
 const makeTimeWindow = (selection, props) => {
   const {
     data,
@@ -14,10 +42,12 @@ const makeTimeWindow = (selection, props) => {
     id,
   } = props;
 
-  const START_TIME_ENTRY = data.find((d) => {
-    return d.EventWindow == true;
-  });
+  const START_TIME_ENTRY =
+    data.find((d) => {
+      return d.EventWindow == true;
+    }) ?? data[0];
 
+  console.log({ START_TIME_ENTRY });
   const END_TIME_ENTRY = data.find((d) => {
     return d.index > START_TIME_ENTRY.index && d.EventWindow == false;
   });
@@ -39,7 +69,7 @@ const makeTimeWindow = (selection, props) => {
     .attr("y", 0);
 };
 
-const makeLines = (selection, props) => {
+const makeLines = (selection, props: MakeLines__Props) => {
   const {
     data,
     lineColor,
@@ -53,34 +83,30 @@ const makeLines = (selection, props) => {
   } = props;
 
   // ENERGY LINE
-  const energyLine = d3
-    .line()
-    .curve(d3.curveNatural)
-    .x((d) => xScale(d.timeset))
-    .y((d) => kwhYScale(d.EnergyUsage));
+  const energyLine = line()
+    .curve(curveNatural)
+    .x((d: any) => xScale(d.timeset))
+    .y((d: any) => kwhYScale(d.EnergyUsage));
 
   // SETPOINT LINE
-  const setpointLine = d3
-    .line()
-    .curve(d3.curveNatural)
-    .x((d) => xScale(d.timeset))
-    .y((d) => tempYScale(d.SetPoint));
+  const setpointLine = line()
+    .curve(curveNatural)
+    .x((d: any) => xScale(d.timeset))
+    .y((d: any) => tempYScale(d.SetPoint));
 
   // FANLINE
-  const fanLine = d3
-    .line()
-    .curve(d3.curveStep)
-    .x((d) => xScale(d.timeset))
-    .y((d) => {
+  const fanLine = line()
+    .curve(curveStep)
+    .x((d: any) => xScale(d.timeset))
+    .y((d: any) => {
       return -fanScaleY(d.Fan);
     });
 
-  var area = d3
-    .area()
-    .x((d) => d.timeset)
-    .y((d) => d.EnergyUsage);
+  var areaFunc = area()
+    .x((d: any) => d.timeset)
+    .y((d: any) => d.EnergyUsage);
 
-  selection.append("path").datum(data).attr("d", area);
+  selection.append("path").datum(data).attr("d", areaFunc);
 
   // FANLINE
   selection
@@ -92,7 +118,7 @@ const makeLines = (selection, props) => {
     .attr("stroke", colors.fanColor)
     .attr("stroke-width", "2px")
     .attr("fill", "none")
-    .attr("transform", `translate(0, ${height + 38})`);
+    .attr("transform", `translate(0, ${Number(height) + 38})`);
 
   //   ENERGY LINE
   selection
@@ -119,7 +145,7 @@ const makeLines = (selection, props) => {
 };
 
 export function makeManyEvents() {
-  var svg = d3.select("svg.demand-genius--many"),
+  var svg = select("svg.demand-genius--many"),
     margin = { top: 30, right: 20, bottom: 60, left: 40 },
     legendHeight = 0,
     legendWidth = +svg.attr("width") / 2,
@@ -152,26 +178,25 @@ export function makeManyEvents() {
 
   // clipPath is used to keep line and area from moving outside of plot area when user zooms/scrolls/brushes
 
-  const dateParser = d3.timeParse("%-I:%M %p");
-  const dateFormat = d3.timeFormat("%-I:%M%p");
+  const dateParser = timeParse("%-I:%M %p");
+  const dateFormat = timeFormat("%-I:%M%p");
 
-  const xAccessor = (d) => {
+  const xAccessor = (d): Date => {
     if (d) {
-      const titleString = dateParser(d.Time);
+      const titleString = dateParser(d.Time) ?? new Date();
       return titleString;
-    }
+    } else return new Date();
   };
 
-  const render = (data) => {
+  const render = (jsonData: DGSiteEventDataPoint[]) => {
     // format month as a date
-    data.forEach(function (d, i) {
-      d.index = i;
-      d.EventWindow = d.EventWindow.toLowerCase() == "true" ? true : false;
-      d.timeset = dateParser(d.Time);
-      d.siteId = btoa(d.Site);
-    });
+    const data: DGSiteEventDataPointDataItem[] = jsonData.map((d, i) => ({
+      index: i,
+      timeset: dateParser(d.Time) ?? new Date(),
+      ...d,
+    }));
 
-    var dataXrange = d3.extent(data, (d) => d.timeset);
+    var dataXrange = extent(data, (d) => d.timeset);
 
     var tempRange = [60, 90];
 
@@ -179,54 +204,44 @@ export function makeManyEvents() {
 
     const NUM_TICKS = 8;
     const kwhRange = [
-      Number(d3.min(data.map((d) => d.EnergyUsage))) - 20,
-      Number(d3.max(data.map((d) => d.EnergyUsage))) + 20,
+      Number(min(data.map((d) => d.EnergyUsage))) - 20,
+      Number(max(data.map((d) => d.EnergyUsage))) + 20,
     ];
 
-    const xScale = d3
-      .scaleTime()
-      .domain(dataXrange)
+    const xScale = scaleTime()
+      .domain([dataXrange[0] ?? new Date(), dataXrange[1] ?? new Date()])
       .rangeRound([0, chartWidth])
       .nice();
 
-    const tempYScale = d3
-      .scaleLinear()
+    const tempYScale = scaleLinear()
       .range([height, 0])
       .domain(tempRange)
       .nice();
 
-    const kwhYScale = d3
-      .scaleLinear()
-      .range([height, 0])
-      .domain(kwhRange)
-      .nice();
+    const kwhYScale = scaleLinear().range([height, 0]).domain(kwhRange).nice();
 
-    const fanScaleY = d3
-      .scaleLinear()
+    const fanScaleY = scaleLinear()
       .domain([0, 3])
       .range([40, height / 3]);
 
     // AXES
-    var x = d3
-      .axisBottom()
+    var x = axisBottom(xScale)
       .scale(xScale)
       .tickSizeOuter(0)
-      .ticks(d3.timeMinute.every(90))
+      .ticks(timeMinute.every(90))
       .tickFormat((d) => {
         // console.log({ d });
-        return dateFormat(d);
+        return dateFormat(d as Date);
       });
 
-    var yRightAxis = d3
-      .axisRight()
+    var yRightAxis = axisRight(tempYScale)
       .scale(tempYScale)
       .ticks(NUM_TICKS)
       .tickFormat((d) => d + "°")
       // .tickSize(-width)
       .tickSizeOuter(0);
 
-    var yLeftAxis = d3
-      .axisLeft()
+    var yLeftAxis = axisLeft(kwhYScale)
       .scale(kwhYScale)
       .tickFormat((d) => d + " kwh")
       .ticks(NUM_TICKS)
@@ -298,31 +313,34 @@ export function makeManyEvents() {
       });
 
     // Make data for each
-    const datasets = nest()
+    let datasets = nest()
       .key((d) => d.Site)
       .entries(data);
 
-    datasets.forEach((d, index) => {
-      const colorDomain = d3
-        .scaleLinear()
-        .domain([0, datasets.length])
-        .range([0, 1]);
+    const createdDataset: DGEventComparisonDataset[] = datasets.map(
+      (d, index) => {
+        console.log(index);
+        const colorDomain = scaleLinear()
+          .domain([0, datasets.length])
+          .range([0, 1]);
 
-      const getColor = (number) => d3.interpolateCool(colorDomain(number));
-      const colors = {
-        fanColor: getColor(index + 0.33),
-        setpointColor: getColor(index + 0.66),
-        kwhColor: getColor(index + 0.99),
-        timeColor: getColor(index),
-      };
+        const getColor = (number) => interpolateCool(colorDomain(number));
 
-      const color = d3.interpolateCool(colorDomain(index));
-      d.color = color;
-      d.colors = colors;
-      d.id = btoa(d.key);
-    });
+        const colors = {
+          fanColor: getColor(index + 0.33),
+          setpointColor: getColor(index + 0.66),
+          kwhColor: getColor(index + 0.99),
+          timeColor: getColor(index),
+        };
 
-    datasets.forEach((d, index) => {
+        const color = interpolateCool(colorDomain(index));
+        return { ...d, color, colors, id: btoa(d.key) };
+      },
+    );
+
+    console.log({ datasets });
+
+    createdDataset.forEach((d, index) => {
       const props = {
         data: d.values,
         id: d.id,
@@ -339,8 +357,8 @@ export function makeManyEvents() {
       makeTimeWindow(chartG, props);
     });
 
-    datasets.forEach((d, index) => {
-      const props = {
+    createdDataset.forEach((d, index) => {
+      const props: MakeLines__Props = {
         data: d.values,
         lineColor: d.color,
         siteName: d.key,
@@ -356,10 +374,9 @@ export function makeManyEvents() {
       makeLines(chartG, props);
     });
 
-    const selectionBox = d3
-      .select(".selection--wrap")
+    const selectionBox = select(".selection--wrap")
       .selectAll("div")
-      .data(datasets)
+      .data(createdDataset)
       .enter()
       .append("div")
       .style("background-color", (d) => d.color)
@@ -369,18 +386,18 @@ export function makeManyEvents() {
       .attr("id", (d) => d.id)
       .attr("data-selected", true)
       .on("click", function (event, d) {
-        const allElems = d3.selectAll(`#${d.id}`);
+        const allElems = selectAll(`#${d.id}`);
 
         if (this.dataset.selected === "true") {
           this.dataset.selected = "false";
           allElems.transition().duration(200).attr("opacity", 0).ease();
           this.classList.add("deselected");
-          d3.select(this).style("background-color", "unset");
+          select(this).style("background-color", "unset");
         } else {
           this.dataset.selected = "true";
           this.classList.remove("deselected");
-          const startEnd = d3.selectAll(`#${d.id}.start-end--boundary`);
-          const allLines = d3.selectAll(`path#${d.id}`);
+          const startEnd = selectAll(`#${d.id}.start-end--boundary`);
+          const allLines = selectAll(`path#${d.id}`);
           console.log({ allLines });
           allLines.transition().duration(200).attr("opacity", 1).ease();
           startEnd
@@ -389,7 +406,10 @@ export function makeManyEvents() {
             .delay(200)
             .attr("opacity", 0.15)
             .ease();
-          d3.select(this).style("background-color", (d) => d.color);
+          select(this).style(
+            "background-color",
+            (d: DGEventComparisonDataset) => d.color,
+          );
         }
       })
       .on("mouseover", function (event, d) {
@@ -398,7 +418,7 @@ export function makeManyEvents() {
           .map((d) => `#${d.id}`)
           .join();
 
-        const notItems = d3.selectAll(notData);
+        const notItems = selectAll(notData);
         notItems
           .transition()
           .duration(200)
@@ -411,7 +431,7 @@ export function makeManyEvents() {
           .map((d) => `#${d.id}`)
           .join();
 
-        const notItems = d3.selectAll(notData);
+        const notItems = selectAll(notData);
         notItems
           .transition()
           .duration(200)
@@ -509,24 +529,29 @@ export function makeManyEvents() {
       .style("cursor", "crosshair")
       .attr("fill", "rgba(0,0,0,0)")
       .on("mousemove", function (event) {
-        const mousePosition = d3.pointer(event);
+        const mousePosition = pointer(event);
         const hoveredDate = xScale.invert(mousePosition[0]);
 
         const getDistanceFromHoveredDate = (d) =>
-          Math.abs(xAccessor(d) - hoveredDate);
+          Math.abs((xAccessor(d) as any) - (hoveredDate as any));
 
-        const closestIndex = d3.scan(data, (a, b) => {
-          return getDistanceFromHoveredDate(a) - getDistanceFromHoveredDate(b);
-        });
+        const closestIndex =
+          leastIndex(data, (a, b) => {
+            return (
+              getDistanceFromHoveredDate(a) - getDistanceFromHoveredDate(b)
+            );
+          }) ?? 0;
 
         const closestDataPoint = data[closestIndex];
 
         // const closestXValue = dateFormat(d.timeset);
         tracerTextBg.attr("x", mousePosition[0] - 40);
         tracerLine.attr("x", mousePosition[0]);
-        tracerText.attr("x", mousePosition[0]).text(closestDataPoint.Time);
+        tracerText
+          .attr("x", mousePosition[0])
+          .text(closestDataPoint?.Time ?? "");
         const allDataAtTime = data.filter(
-          (d) => d.Time == closestDataPoint.Time,
+          (d) => d.Time == closestDataPoint?.Time ?? "",
         );
 
         updateSiteBoxes(allDataAtTime, data);
@@ -535,22 +560,22 @@ export function makeManyEvents() {
         return;
       });
   };
-  // d3.json("../../data/dg-many-events.json").then((d) => {
+  //  json("../../data/dg-many-events.json").then((d) => {
   //   render(d.data);
   // });
-  render(manyEvents.data);
+  render(manyEvents.data as unknown as DGSiteEventDataPoint[]);
 }
 
 function updateSiteBoxes(siteArray, data) {
-  d3.selectAll(".table--body").html(`<td>--</td>
+  selectAll(".table--body").html(`<td>--</td>
       <td>--</td>
       <td>--</td>`);
 
   siteArray.forEach((site) => {
-    const values = d3.selectAll(`#table-values--${site.siteId}`);
+    const values = selectAll(`#table-values--${site.SiteId}`);
 
     const dataValues = data.filter(
-      (d) => d.siteId === site.siteId && d.Time === site.Time,
+      (d) => d.SiteId === site.SiteId && d.Time === site.Time,
     )[0];
 
     values.html(

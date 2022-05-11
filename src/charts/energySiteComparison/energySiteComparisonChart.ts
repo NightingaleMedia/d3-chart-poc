@@ -22,7 +22,7 @@ import {
   ScaleLinear,
   curveNatural,
 } from "d3";
-import siteEvents from "../../../data/energySiteBreakdown.json";
+import siteEvents from "../../data/energySiteBreakdown.json";
 import _ from "lodash";
 import {
   EnergySiteComparisonResponse,
@@ -185,8 +185,6 @@ export const generateSiteComparison = () => {
 
     const groupedData = group(data, (d) => d.siteName);
 
-    groupedData.forEach((d, key) => console.log({ key, d }));
-
     const colorDomain = scaleLinear()
       .domain([0, groupedData.size])
       .range([0, 1]);
@@ -325,16 +323,14 @@ export const generateSiteComparison = () => {
       .on("mousemove", function (event) {
         const hoveredDate = x.invert(pointer(event)[0]);
         tracerLineY.attr("x", pointer(event)[0]);
-        // console.log({ hoveredDate });
+
         return;
       });
   }
 
   // d3.json("../data/energyUsage.json").then((d) => render(d.data, d.threshold));
   setTimeout(() => {
-    // console.log(siteEvents);
     const dataToRender: EnergySiteComparisonResponse = siteEvents;
     render(dataToRender.data);
-    console.log({ dataToRender });
   }, 10);
 };

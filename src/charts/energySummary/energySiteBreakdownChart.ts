@@ -1,7 +1,7 @@
 import * as d3 from "d3";
 import { makeXAxis, makeYAxis } from "./makeAxis.js";
 import { flattenData } from "./flattenEnergyData.js";
-import energyChildren from "../../../data/energyChildren.json";
+import energyChildren from "../../data/energyChildren.json";
 import {
   EnergySiteBreakdownResponse,
   EnergySiteChild,
