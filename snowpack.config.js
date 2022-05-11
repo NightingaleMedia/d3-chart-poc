@@ -4,7 +4,7 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    /* ... */
+    src: "/",
   },
   plugins: [
     /* ... */
@@ -19,5 +19,18 @@ module.exports = {
   },
   buildOptions: {
     /* ... */
+    clean: true,
+    ssr: true,
   },
+  exclude: [
+    ".git/",
+    ".gitignore",
+    "package.json",
+    "scripts/*",
+    "node_modules/*",
+    "package-lock.json",
+    "Procfile",
+    "static.json",
+    ".env",
+  ],
 };

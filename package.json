@@ -23,6 +23,7 @@
   "dependencies": {
     "@snowpack/plugin-typescript": "^1.2.1",
     "@types/d3": "^7.1.0",
+    "countup.js": "^2.1.0",
     "d3": "^7.4.4",
     "d3-collection": "^1.0.7",
     "lodash": "^4.17.21"
