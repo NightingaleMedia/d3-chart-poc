@@ -5,7 +5,7 @@
   "extra": {
     "heroku": {
       "document-root": "build",
-      "index-document": "index.php",
+      "index-document": "build/index.php",
       "php-config": [
         "short_open_tag=on",
         "date.timezone=Europe/Vienna",
