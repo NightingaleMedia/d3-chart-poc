@@ -10,6 +10,6 @@ makeBreakdownChart();
 singleDGEventReport();
 generateDGPastEventChart();
 makeManyEvents();
-generateEnergySummaryChart();
+generateEnergySummaryChart("#energy-summary");
 makeMapChart();
 generateSiteComparison();

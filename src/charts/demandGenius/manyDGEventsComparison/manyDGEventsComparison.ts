@@ -172,7 +172,7 @@ export function makeManyEvents() {
     .append("rect")
     .attr("height", height + 0)
     .attr("width", width - 50)
-    .attr("fill", "var(--zen-chart-bg)")
+    .attr("fill", "var(--zss-chart-bg)")
     .attr("ry", 5)
     .attr("transform", `translate(24, -0)`);
 

@@ -1,33 +1,12 @@
-import {
-  axisBottom,
-  axisLeft,
-  axisTop,
-  extent,
-  scaleBand,
-  scaleUtc,
-  select,
-  timeFormat,
-  timeParse,
-  utcFormat,
-  utcMonth,
-} from "d3";
-
+import * as d3 from "d3";
 // import { utcMonth } from "d3.js";
 import { colorMap, iconMap } from "./utils/icons.js";
-import pastEvents from "../../data/dg-past-events.json";
-
-import {
-  DGFlatDataItem,
-  DGPastEvent,
-  DGPastEventDataItem,
-} from "../types/DGPastEvents";
-import { flattenData } from "./utils/flattenData.js";
-
-export const generateDGPastEventChart = () => {
-  var svg = select("svg.demand-genius-past"),
-    margin = { top: 50, right: 50, bottom: 30, left: 50 },
+import { eventTypes } from "./utils/eventTypes.js";
+export const generateDGPastEventChart = (id) => {
+  var svg = d3.select(`svg#${id}`),
+    margin = { top: 50, right: 20, bottom: 30, left: 20 },
     tooltipHeight = 110,
-    tooltipWidth = Number(svg.attr("width")) - margin.left - margin.right,
+    tooltipWidth = svg.attr("width") - margin.left - margin.right,
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom - tooltipHeight;
 
@@ -39,7 +18,7 @@ export const generateDGPastEventChart = () => {
 
   const bg = chartG
     .append("rect")
-    .style("fill", "var(--zss-chart-bg)")
+    .style("fill", "#232828")
     .attr("rx", 6)
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -60,50 +39,50 @@ export const generateDGPastEventChart = () => {
     .attr("ry", 3)
     .attr("y", Number(chartG.attr("height")) + margin.top + 10);
 
-  const tooltipDiv = select(".dg-past-event--tooltip").style(
-    "top",
-    `${Number(chartG.attr("height")) + margin.top + 40}px`,
-  );
+  const tooltipDiv = d3
+    .select(".dg-past-event--tooltip")
+    .style("top", `${Number(chartG.attr("height")) + margin.top + 40}px`);
   const toolTipDateDiv = tooltipDiv.select("#dg-past-event--tooltip__date");
   const toolTipNameDiv = tooltipDiv.select("#dg-past-event--tooltip__name");
 
-  function render(jsonData: DGPastEvent[]) {
-    const parseTime = timeParse("%m/%d/%Y");
+  function render(data) {
     // Transform data
-    const data: DGPastEventDataItem[] = jsonData.map((d, i) => ({
-      index: i,
-      timeset: parseTime(d.Date) ?? new Date(),
-      ...d,
-    }));
+    data.forEach(function (d, i) {
+      d.index = i;
+      const parseTime = d3.timeParse("%m/%d/%Y");
+      d.timeset = parseTime(d.Date);
+    });
 
-    var dataXrange = extent(data, (d) => d.timeset);
+    var dataXrange = d3.extent(data, function (d) {
+      return d.timeset;
+    });
 
-    const xScale = scaleUtc()
-      .domain([dataXrange[0] ?? new Date(), dataXrange[1] ?? new Date()])
-      .range([0, width])
-      .nice();
+    const xScale = d3.scaleUtc().domain(dataXrange).range([0, width]).nice();
 
-    const yScale = scaleBand()
+    const yScale = d3
+      .scaleBand()
       .range([height, 0])
-      .domain(["1", "2", "3", "4", "5"])
+      .domain([1, 2, 3, 4, 5])
       .padding(0);
 
     const SINGLE_EVENT_LW = yScale.bandwidth();
 
-    const xAxis = axisBottom(xScale)
+    const xAxis = d3
+      .axisBottom()
       .scale(xScale)
       .ticks(data.length)
       .tickSize(-5)
-      .tickFormat((d) => {
-        const f = timeFormat("%-m/%d");
-        return f(d as Date);
+      .tickFormat((d, i) => {
+        const f = d3.timeFormat("%-m/%d");
+        return f(d);
       });
-    const yAxis = axisLeft(yScale).scale(yScale).tickSize(-width);
+    const yAxis = d3.axisLeft().scale(yScale).tickSize(-width);
 
-    const x1MonthAxis = axisTop(xScale)
+    const x1MonthAxis = d3
+      .axisTop()
       .scale(xScale)
-      .ticks(utcMonth)
-      .tickFormat(utcFormat("%B %Y"))
+      .ticks(d3.utcMonth)
+      .tickFormat(d3.utcFormat("%B %Y"))
       .tickSize(-height - margin.bottom - margin.top);
 
     chartG
@@ -116,7 +95,7 @@ export const generateDGPastEventChart = () => {
           .attr("stroke-width", 0)
           .style("display", "none")
           .attr("stroke-opacity", 0)
-          .attr("stroke", "0"),
+          .attr("stroke", "0")
       )
       .call((g) => {
         g.selectAll(".tick:first-of-type line")
@@ -179,7 +158,7 @@ export const generateDGPastEventChart = () => {
         g
           // .selectAll(".tick:not(:first-of-type) line")
           .selectAll(
-            ".tick:not(:last-of-type) line, .tick:not(:last-of-type):not(:first-of-type) text ",
+            ".tick:not(:last-of-type) line, .tick:not(:last-of-type):not(:first-of-type) text "
           )
           .attr("fill", "none")
           .attr("stroke", 0)
@@ -188,8 +167,34 @@ export const generateDGPastEventChart = () => {
           .style("font-size", "16px");
       });
 
-    const flatData = flattenData(data);
+    const flattenData = () => {
+      const allData = [];
+      const keys = Object.keys(data[0]).filter((d) => eventTypes.includes(d));
+      data.map((d, index) => {
+        let keyIndex = 1;
 
+        keys.map((key) => {
+          // if there are some events in there
+          const dt = [...allData];
+          const otherEvents = dt.filter((ad) => ad.Date === d.Date).length;
+          //see if there is another for that day in our existing array
+          if (d[key].length > 0) {
+            allData.push({
+              Date: d.Date,
+              id: Date.parse(d.Date) + index,
+              keyIndex: keyIndex + otherEvents,
+              type: key,
+              timeset: d.timeset,
+              count: d[key].length,
+            });
+          }
+        });
+      });
+      return allData;
+    };
+
+    const flatData = flattenData();
+    console.log({ flatData });
     // individual events
 
     const squareG = chartG
@@ -200,7 +205,7 @@ export const generateDGPastEventChart = () => {
 
     squareG
       .append("rect")
-      .attr("y", (d) => yScale(d.keyIndex) ?? "0")
+      .attr("y", (d) => yScale(d.keyIndex))
       .attr("x", (d) => xScale(d.timeset) + 22)
       .attr("ry", 3)
       .attr("width", SINGLE_EVENT_LW - 5)
@@ -208,15 +213,17 @@ export const generateDGPastEventChart = () => {
       .style("cursor", "pointer")
       .attr("fill", (d) => colorMap(d.type))
 
-      .on("mouseover", function (event, d) {
+      .on("mouseover", function (d) {
+        console.log({ mouseover: d });
         tooltipDiv
           .transition()
           .duration(500)
           .style("opacity", 1)
-          .style("left", `${xScale(d.timeset)}px`);
+          .style("left", `${xScale(d.timeset) - 35}px`);
 
         toolTipDateDiv.text(() => {
-          const f = timeFormat("%m/%d/%y");
+          const f = d3.timeFormat("%m/%d/%y");
+          console.log({ d });
           return f(d.timeset);
         });
         if (Number(d.count) > 1) {
@@ -232,7 +239,7 @@ export const generateDGPastEventChart = () => {
       .attr("height", SINGLE_EVENT_LW)
       .style("cursor", "pointer")
       .attr("viewBox", `0 0 35 35`)
-      .attr("y", (d) => yScale(d.keyIndex) ?? "0")
+      .attr("y", (d) => yScale(d.keyIndex))
       .attr("x", (d) => xScale(d.timeset) + 22);
 
     icon
@@ -244,21 +251,15 @@ export const generateDGPastEventChart = () => {
       .attr("d", (d) => iconMap(d.type));
 
     const circles = squareG
-      .selectAll("circle")
-      .data(flatData)
-      .enter()
       .append("circle")
-      .attr("fill", "var(--zen-blue)")
+      .attr("fill", "#ff0e00")
       .attr("stroke", "#181818")
       .attr("stroke-width", 2)
-      .attr("r", (d) => (d.count > 1 ? 10 : 0))
-      .attr("cy", (d) => yScale(d.keyIndex) ?? "0")
-      .attr("cx", (d) => xScale(d.timeset) + 56);
+      .attr("r", (d) => (d.count > 1 ? 9 : 0))
+      .attr("cy", (d) => yScale(d.keyIndex))
+      .attr("cx", (d) => xScale(d.timeset) + 55);
 
     squareG
-      .selectAll("number-label")
-      .data(flatData)
-      .enter()
       .append("text")
       .text((d) => (d.count > 1 ? d.count : ""))
       .attr("fill", "white")
@@ -266,18 +267,16 @@ export const generateDGPastEventChart = () => {
       .attr("stroke", 0)
       .attr("font-size", "13")
       .attr("font-weight", "600")
-      .attr("y", (d) => `${(yScale(d.keyIndex) ?? 0) + 4.5}`)
-      .attr("x", (d) => xScale(d.timeset) + 56);
+      .attr("y", (d) => yScale(d.keyIndex) + 5)
+      .attr("x", (d) => xScale(d.timeset) + 55);
   }
-  // this is to take the data from the domstring
-  // const makeDataDiv = (data) => {
-  //   const dataDiv = document.querySelector("div#dg-past-event-data");
 
-  //   dataDiv.dataset.dgData = JSON.stringify(data);
-  //   render(JSON.parse(dataDiv.dataset.dgData));
-  // };
+  const dataDiv = document.querySelector("div#dg-past-event-data");
+  console.log(dataDiv.dataset);
 
-  //  json(JSON.stringify(pastEvents)).then((d) => render(d));
-  // TODO figure out why this isnt registering
-  render(pastEvents as unknown as DGPastEvent[]);
+  render(JSON.parse(dataDiv.dataset.dgdata));
+
+  //   d3.json("../data/dg-past-events.json", function (d) {
+  //     makeDataDiv(d);
+  //   });
 };

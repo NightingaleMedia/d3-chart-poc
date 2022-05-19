@@ -54,7 +54,7 @@ export const generateSiteComparison = () => {
     .append("rect")
     .attr("width", width)
     .attr("height", height + margin.top)
-    .attr("fill", "var(--zen-chart-bg)")
+    .attr("fill", "var(--zss-chart-bg)")
     .attr("transform", `translate(0, -${margin.top + margin.bottom})`);
 
   const hourFormat = timeFormat("%-I%p");

@@ -3,7 +3,7 @@ html {
   --zen-blue: #2d7ce0;
   --zen-nominal: rgb(90, 93, 97);
   --zen-warning: #f16441;
-  --zen-chart-bg: rgb(16, 16, 16);
+  --zss-chart-bg: rgb(16, 16, 16);
   --zen-dark-blue: #0b3e9e;
   --zen-green: #09da6e;
   /* --zss-dg-weatherEvent--cold: rgb(0, 144, 163);

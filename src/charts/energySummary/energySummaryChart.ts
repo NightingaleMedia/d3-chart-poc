@@ -15,6 +15,7 @@ import {
   zoom,
   D3ZoomEvent,
   rollups,
+  pointer,
 } from "d3";
 
 import {
@@ -23,7 +24,7 @@ import {
   getXTicks,
   getXWidth,
 } from "../../utils/chartUtils";
-import energyUsage from "../../data/energyUsage.json";
+import energyUsage from "../../data/energySummary.json";
 import {
   AggregateDataItem,
   EnergySummaryDataItem,
@@ -31,8 +32,8 @@ import {
   EnergySummaryTimeset,
 } from "../types/EnergySummary";
 
-export const generateEnergySummaryChart = () => {
-  var svg = select("svg.energy-summary"),
+export const generateEnergySummaryChart = (selector) => {
+  var svg = select(`svg${selector}`),
     margin = { top: 30, right: 50, bottom: 30, left: 50 },
     tooltipHeight = 80,
     tooltipWidth = Number(svg.attr("width")) - margin.left - margin.right,
@@ -48,10 +49,10 @@ export const generateEnergySummaryChart = () => {
     .append("rect")
     .attr("width", width)
     .attr("height", height + margin.top)
-    .attr("fill", "var(--zen-chart-bg)")
+    .attr("fill", "var(--zss-chart-bg)")
     .attr("transform", `translate(0, -${margin.top + margin.bottom})`);
 
-  const tooltipDiv = select(".energy-summary--tooltip")
+  const tooltipDiv = select(`.energy-summary--tooltip${selector}`)
     .style("top", `${height + tooltipHeight}px`)
     .style("left", "0")
     .style("opacity", 0);
@@ -61,7 +62,10 @@ export const generateEnergySummaryChart = () => {
 
   const hourFormat = timeFormat("%-I%p");
 
-  function render(jsonData: EnergySummaryTimeset[], threshold) {
+  function render(renderedData) {
+    const jsonData: EnergySummaryTimeset[] = renderedData.data;
+    const { threshold } = renderedData;
+
     const parseTime = timeParse("%m-%d-%Y %H:%M");
     const parseDayOfYear = timeFormat("%j-%Y");
     // Transform data
@@ -189,7 +193,7 @@ export const generateEnergySummaryChart = () => {
             .transition()
             .duration(500)
             .style("opacity", 1)
-            .style("left", `${event.pageX - 120}px`);
+            .style("left", `${pointer(event)[0]}px`);
 
           toolTipDateDiv.text(() => {
             const f = timeFormat("%m/%d");
@@ -271,11 +275,11 @@ export const generateEnergySummaryChart = () => {
             (d: EnergySummaryDataItem) => y(d.usage) + height - margin.bottom,
           )
           .attr("width", (d) => getXWidth(d, xz, "width", isGranular))
-          .attr("fill", "var(--zen-blue)")
+          .attr("fill", "var(--zss-blue)")
           .attr("height", (d: EnergySummaryDataItem) => -y(d.usage));
 
         threshBar
-          .attr("fill", "var(--zen-warning)")
+          .attr("fill", "var(--zss-warning)")
           .attr("height", (d) => {
             if (d.usage > threshold.hourly) {
               return -y(d.usage) + y(threshold.hourly);
@@ -312,13 +316,12 @@ export const generateEnergySummaryChart = () => {
         x(data[data.length - 1]?.timeset || new Date()),
         0,
       ]);
-
     svg.call(drag());
   }
 
   // d3.json("../data/energyUsage.json").then((d) => render(d.data, d.threshold));
   setTimeout(() => {
     const dataToRender: EnergySummaryResponse = energyUsage;
-    render(dataToRender.data, dataToRender.threshold);
+    render(dataToRender);
   }, 1000);
 };

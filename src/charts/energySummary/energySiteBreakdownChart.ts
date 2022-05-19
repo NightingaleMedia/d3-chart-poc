@@ -44,7 +44,7 @@ export function makeBreakdownChart() {
       .append("rect")
       .attr("width", width)
       .attr("height", height - margin.bottom - margin.top)
-      .attr("fill", "var(--zen-chart-bg)")
+      .attr("fill", "var(--zss-chart-bg)")
       .attr("transform", `translate(0, -${0})`)
       .attr("ry", 8);
 

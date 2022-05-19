@@ -20,6 +20,7 @@ import {
   leastIndex,
   curveStep,
   Area,
+  curveStepBefore,
 } from "d3";
 import {
   DGEventDataPoint,
@@ -56,7 +57,7 @@ export function singleDGEventReport() {
     .append("rect")
     .attr("height", height + 0)
     .attr("width", width - 20)
-    .attr("fill", "var(--zen-chart-bg)")
+    .attr("fill", "var(--zss-chart-bg)")
     .attr("ry", 5)
     .attr("transform", `translate(10, -0)`);
   // clipPath is used to keep line and area from moving outside of plot area when user zooms/scrolls/brushes
@@ -224,7 +225,7 @@ export function singleDGEventReport() {
 
     // SETPOINT LINE
     const setpointLine = line()
-      .curve(curveNatural)
+      .curve(curveStep)
       .x((d: any) => xScale(d.timeset))
       .y((d: any) => tempYScale(d.SetPoint));
 

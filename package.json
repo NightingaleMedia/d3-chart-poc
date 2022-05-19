@@ -21,12 +21,17 @@
   },
   "homepage": "https://github.com/NightingaleMedia/d3-chart-poc#readme",
   "dependencies": {
+    "@kurkle/color": "^0.1.9",
     "@snowpack/plugin-typescript": "^1.2.1",
     "@types/d3": "^7.1.0",
+    "c3": "^0.7.20",
+    "chart.js": "^3.7.1",
+    "chartjs-adapter-luxon": "^1.1.0",
     "countup.js": "^2.1.0",
     "d3": "^7.4.4",
     "d3-collection": "^1.0.7",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "luxon": "^2.4.0"
   },
   "devDependencies": {
     "snowpack": "^3.8.8",
