@@ -90,7 +90,7 @@ const makeLines = (selection, props: MakeLines__Props) => {
 
   // SETPOINT LINE
   const setpointLine = line()
-    .curve(curveNatural)
+    .curve(curveStep)
     .x((d: any) => xScale(d.timeset))
     .y((d: any) => tempYScale(d.SetPoint));
 
