@@ -193,7 +193,7 @@ export const generateEnergySummaryChart = (selector) => {
             .transition()
             .duration(500)
             .style("opacity", 1)
-            .style("left", `${pointer(event)[0]}px`);
+            .style("left", `${pointer(event)[0] - 10}px`);
 
           toolTipDateDiv.text(() => {
             const f = timeFormat("%m/%d");
@@ -222,7 +222,7 @@ export const generateEnergySummaryChart = (selector) => {
             .transition()
             .duration(500)
             .style("opacity", 1)
-            .style("left", `${event.pageX - 120}px`);
+            .style("left", `${pointer(event)[0] - 10}px`);
 
           toolTipDateDiv.text(() => hourFormat(d.timeset ?? new Date()));
 
@@ -302,8 +302,8 @@ export const generateEnergySummaryChart = (selector) => {
           .attr("x", (d) => getXWidth(d, xz, "x", isGranular))
           .attr("fill", (d) =>
             d.usage > threshold.daily
-              ? "var(--zen-warning)"
-              : "var(--zen-nominal)",
+              ? "var(--zss-warning)"
+              : "var(--zss-nominal)",
           );
       }
     }

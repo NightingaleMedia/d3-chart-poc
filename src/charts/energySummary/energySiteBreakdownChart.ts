@@ -10,8 +10,8 @@ import {
 } from "../types/EnergySiteBreakdown.js";
 export function makeBreakdownChart() {
   const THRESHOLD = 80,
-    ABOVE_THRESHOLD_COLOR = "var(--zen-warning)",
-    BELOW_THRESHOLD_COLOR = "var(--zen-green)";
+    ABOVE_THRESHOLD_COLOR = "var(--zss-warning)",
+    BELOW_THRESHOLD_COLOR = "var(--zss-green)";
 
   var svg = d3.select("svg.sigman-bar"),
     margin = { top: 40, right: 20, bottom: 40, left: 20 },
@@ -93,8 +93,8 @@ export function makeBreakdownChart() {
           : BELOW_THRESHOLD_COLOR,
       )
       .attr("rx", 3)
-      .attr("stroke", "#181818")
-      .attr("stroke-width", "1")
+      .attr("stroke", "var(--zss-chart-bg)")
+      .attr("stroke-width", "3")
       .attr("opacity", 0)
       .attr("x", (d, i) => {
         if (d.index == 0) {
@@ -125,7 +125,7 @@ export function makeBreakdownChart() {
       .attr("class", "site-bar")
       .attr("width", 0)
       .attr("height", yScale.bandwidth())
-      .attr("fill", "var(--zen-blue)")
+      .attr("fill", "var(--zss-blue)")
       .attr("opacity", 1);
 
     barGroup

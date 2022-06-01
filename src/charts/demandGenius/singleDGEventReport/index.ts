@@ -21,6 +21,9 @@ import {
   curveStep,
   Area,
   curveStepBefore,
+  curveBundle,
+  curveCardinal,
+  curveCatmullRom,
 } from "d3";
 import {
   DGEventDataPoint,
@@ -28,14 +31,15 @@ import {
 } from "../../types/DGSingleEvent";
 import singleEvent from "../../../data/dg-single-event.json";
 import getColor, { ColorAccessor } from "./utils/getColor";
-export function singleDGEventReport() {
-  var svg = select("svg.demand-genius"),
+export function makeChart(svgId = "svg.demand-genius") {
+  var svg = select(svgId),
     margin = { top: 30, right: 50, bottom: 30, left: 50 },
     legendHeight = 50,
-    legendWidth = 660,
+    legendWidth = 728,
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom - legendHeight;
 
+  const SHOW_FAN = false;
   const defs = svg
     .append("defs")
     .append("clipPath")
@@ -97,8 +101,8 @@ export function singleDGEventReport() {
 
     // Get the range depending on setpoint / ambient temp
 
-    const HighAmb = Number(max(data.map((d) => d.AmbientTemp)));
-    const LowAmb = Number(min(data.map((d) => d.AmbientTemp)));
+    const HighOutdoor = Number(max(data.map((d) => d.OutdoorTemp)));
+    const LowOutdoor = Number(min(data.map((d) => d.OutdoorTemp)));
 
     const HighSet = Number(max(data.map((d) => d.SetPoint)));
     const LowSet = Number(min(data.map((d) => d.SetPoint)));
@@ -106,8 +110,8 @@ export function singleDGEventReport() {
     // const RangeHigh = HighAmb > HighSet ? HighAmb : HighSet;
     // const RangeLow = LowAmb < LowSet ? LowAmb : LowSet;
 
-    const RangeHigh = max([HighAmb, HighSet]);
-    const RangeLow = min([LowAmb, LowSet]);
+    const RangeHigh = max([HighOutdoor, HighSet]);
+    const RangeLow = min([LowOutdoor, LowSet]);
 
     var tempRange = [
       Math.floor(Number(RangeLow) / 10) * 10,
@@ -219,7 +223,7 @@ export function singleDGEventReport() {
 
     // ENERGY LINE
     const energyLine = line()
-      .curve(curveNatural)
+      .curve(curveCatmullRom)
       .x((d: any) => xScale(d.timeset))
       .y((d: any) => kwhYScale(d.EnergyUsage));
 
@@ -229,10 +233,17 @@ export function singleDGEventReport() {
       .x((d: any) => xScale(d.timeset))
       .y((d: any) => tempYScale(d.SetPoint));
 
+    // Ambient Temp Line
     const ambientTempLine = line()
       .curve(curveNatural)
       .x((d: any) => xScale(d.timeset))
       .y((d: any) => tempYScale(d.AmbientTemp));
+
+    // outdoorTemp
+    const outdoorTempLine = line()
+      .curve(curveNatural)
+      .x((d: any) => xScale(d.timeset))
+      .y((d: any) => tempYScale(d.OutdoorTemp));
 
     // FANLINE
     const fanLine = line()
@@ -252,13 +263,22 @@ export function singleDGEventReport() {
       .attr("d", areaFunc as any);
 
     // FANLINE
+    if (SHOW_FAN) {
+      chartG
+        .append("path")
+        .datum(data)
+        .attr("class", "single-event--fan-line")
+        .attr("d", fanLine as any)
+        .attr("stroke", getColor(ColorAccessor.FAN_COLOR))
+        .attr("transform", `translate(0, ${height + 38})`);
+    }
+    // OutdoorTemp
     chartG
       .append("path")
       .datum(data)
       .attr("class", "single-event--fan-line")
-      .attr("d", fanLine as any)
-      .attr("stroke", getColor(ColorAccessor.FAN_COLOR))
-      .attr("transform", `translate(0, ${height + 38})`);
+      .attr("d", outdoorTempLine as any)
+      .attr("stroke", getColor(ColorAccessor.OUTDOOR_TEMP_COLOR));
 
     //   ENERGY LINE
     chartG
@@ -364,8 +384,10 @@ export function singleDGEventReport() {
       .attr("x", 0)
       .attr("y", height + legendHeight + 10);
 
-    const LegendKeys = ["Usage", "Setpoint", "Outside", "Fan"];
-
+    const LegendKeys = ["Usage", "Setpoint", "Ambient Temp", "Outdoor Temp"];
+    if (SHOW_FAN) {
+      LegendKeys.push("FAN");
+    }
     const legendScale = scaleBand().domain(LegendKeys).range([0, legendWidth]);
 
     legendBox
@@ -373,7 +395,7 @@ export function singleDGEventReport() {
       .attr("fill", "rgba(50,50,50,0.6)")
       .attr("ry", 6)
       .attr("height", 34)
-      .attr("width", legendWidth - 50)
+      .attr("width", legendWidth)
       .attr("y", Number(legendBox.attr("y")) + 15)
       .attr("x", legendWidth / 4 + 55);
 
@@ -396,7 +418,8 @@ export function singleDGEventReport() {
           Usage: getColor(ColorAccessor.ENERGY_LINE_COLOR),
           Setpoint: getColor(ColorAccessor.SETPOINT_LINE_COLOR),
           Fan: getColor(ColorAccessor.FAN_COLOR),
-          Outside: getColor(ColorAccessor.AMBIENT_TEMP_COLOR),
+          "Ambient Temp": getColor(ColorAccessor.AMBIENT_TEMP_COLOR),
+          "Outdoor Temp": getColor(ColorAccessor.OUTDOOR_TEMP_COLOR),
         }[d];
       })
       .attr("height", 20)
@@ -437,8 +460,11 @@ export function singleDGEventReport() {
         if (u == "Fan") {
           return `Fan:  ${datapoint["Fan"]}`;
         }
-        if (u == "Outside") {
-          return `Outside:  ${datapoint["AmbientTemp"]}° F`;
+        if (u == "Ambient Temp") {
+          return `Indoor:  ${datapoint["AmbientTemp"]}° F`;
+        }
+        if (u == "Outdoor Temp") {
+          return `Outdoor:  ${datapoint["OutdoorTemp"]}° F`;
         }
       });
     };
@@ -509,7 +535,6 @@ export function singleDGEventReport() {
           .text(closestDataPoint?.Time ?? "");
 
         updateLegendText(closestDataPoint as DGEventDataPointItem);
-
         return;
       });
   };
@@ -518,8 +543,6 @@ export function singleDGEventReport() {
   if (theData.length > 0) {
     render(theData);
   }
-
-  // render(demandGenius);
 }
 
 // tryAgain();

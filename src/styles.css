@@ -1,21 +1,25 @@
 html {
   background-color: rgb(9, 9, 9);
-  --zen-blue: #2d7ce0;
-  --zen-nominal: rgb(90, 93, 97);
-  --zen-warning: #f16441;
+  --zss-blue: #2d7ce0;
+  --zss-nominal: rgb(90, 93, 97);
+  --zss-warning: #f16441;
   --zss-chart-bg: rgb(16, 16, 16);
-  --zen-dark-blue: #0b3e9e;
-  --zen-green: #09da6e;
+  --zss-dark-blue: #0b3e9e;
+  --zss-green: #09da6e;
+  --zss-energy-line: #38feaf;
+  --zss-setpoint-line: #fecc38;
+  --zss-chart-axis-line: rgba(255, 255, 255, 0.1);
+  --zss-chart-axis-text: white;
   /* --zss-dg-weatherEvent--cold: rgb(0, 144, 163);
   --zss-dg-weatherEvent--warm: rgb(255, 174, 23);
   --zss-dg-greenEnergy: #09da6e;
   --zss-dg-roomRefresh: #005ea7;
   --zss-dg-drEvent: rgb(67, 0, 44); */
-  --zss-dg-weatherEvent--cold: rgb(90, 93, 97);
-  --zss-dg-weatherEvent--warm: rgb(90, 93, 97);
-  --zss-dg-greenEnergy: rgb(90, 93, 97);
-  --zss-dg-roomRefresh: rgb(90, 93, 97);
-  --zss-dg-drEvent: rgb(90, 93, 97);
+  --zss-dg-roomRefresh: #71cac4;
+  --zss-dg-weatherEvent--cold: #2d7ce0;
+  --zss-dg-weatherEvent--warm: #ed7f48;
+  --zss-dg-greenEnergy: #74bb00;
+  --zss-dg-drEvent: #869d9c;
   font-family: sans-serif;
   padding: 2rem;
 }
@@ -37,7 +41,7 @@ svg {
 .energy-summary--tooltip__content {
   color: white;
   text-align: center;
-  background: var(--zen-blue);
+  background: var(--zss-blue);
   color: white;
   border: 1px solid black;
   width: 120px;
@@ -59,7 +63,7 @@ div.energy-breakdown-chart--tooltip {
   min-height: 30px;
   padding: 16px;
   font: 16px sans-serif;
-  background: var(--zen-blue);
+  background: var(--zss-blue);
   color: white;
   border: 1px solid black;
   border-radius: 3px;
@@ -95,7 +99,7 @@ div.dg-past--wrap {
   height: 30px;
   width: 30px;
   position: absolute;
-  background-color: var(--zen-blue);
+  background-color: var(--zss-blue);
   top: -2px;
   margin: auto;
   left: 0;
@@ -112,7 +116,7 @@ div.dg-past--wrap {
   min-height: 30px;
   text-align: center;
   font: 14px sans-serif;
-  background: var(--zen-blue);
+  background: var(--zss-blue);
   color: white;
   border-radius: 3px;
   pointer-events: none;
@@ -129,7 +133,7 @@ div.dg-past--wrap {
   cursor: pointer;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  background: var(--zen-dark-blue);
+  background: var(--zss-dark-blue);
   font-weight: 400;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;

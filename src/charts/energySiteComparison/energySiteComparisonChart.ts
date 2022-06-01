@@ -127,7 +127,7 @@ export const generateSiteComparison = () => {
           }),
       );
       g.selectAll(".tick text, .tick line")
-        .attr("fill", "white")
+        .attr("fill", "var(--zss-chart-axis-text)")
         .style("text-align", "left")
         .attr("stroke", "none");
     };
@@ -145,7 +145,10 @@ export const generateSiteComparison = () => {
       g.selectAll(".tick line, .domain")
         .attr("fill", "none")
         .attr("stroke", "0");
-      g.selectAll(".tick text, .tick line").attr("fill", "white");
+      g.selectAll(".tick text, .tick line").attr(
+        "fill",
+        "var(--zss-chart-axis-text)",
+      );
       g.selectAll(".tick:first-of-type text").attr("fill", "none");
       g.selectAll(".tick text").attr("transform", "translate(-40,0)");
     };
@@ -163,12 +166,11 @@ export const generateSiteComparison = () => {
         .attr("transform", `translate(${0}, ${-30})`)
         .attr("stroke-width", 1)
         .attr("stroke-opacity", 1)
-        .attr("stroke", "rgba(255,255,255,0.3)")
+        .attr("stroke", " var(--zss-chart-axis-line)")
         .style("font-size", "14px");
 
       g.selectAll(".tick text")
-        .attr("fill", "white")
-        // .attr("stroke", "white")
+        .attr("fill", "var(--zss-chart-axis-text)")
         .attr("opacity", "1")
         .attr("text-anchor", "start")
         .attr("transform", "translate(10,-10)")

@@ -281,7 +281,7 @@ export function makeManyEvents() {
           .attr("fill", AXIS_LABEL_COLOR)
           .attr("text-rendering", "optimizeLegibility");
         g.selectAll(".tick line")
-          .attr("stroke", "rgba(45,45,45,1)")
+          .attr("stroke", "var(--zss-chart-axis-line)")
           .attr("text-rendering", "optimizeLegibility");
         g.selectAll(".tick line").attr("transform", "translate(15,0)");
       })

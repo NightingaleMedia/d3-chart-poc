@@ -1,200 +1,222 @@
 [
   {
     "Time": "11:00 AM",
-    "EnergyUsage": 200,
-    "SetPoint": 72,
+    "EnergyUsage": 230,
+    "SetPoint": 74,
     "Fan": 1,
     "EventWindow": false,
-    "AmbientTemp": 80,
-    "TempScale": "F"
+    "AmbientTemp": 73,
+    "TempScale": "F",
+    "OutdoorTemp": 83
   },
   {
     "Time": "11:15 AM",
-    "EnergyUsage": 220,
-    "SetPoint": 70,
+    "EnergyUsage": 245,
+    "SetPoint": 73,
     "Fan": 2,
     "EventWindow": false,
-    "AmbientTemp": 81,
-    "TempScale": "F"
+    "AmbientTemp": 73,
+    "TempScale": "F",
+    "OutdoorTemp": 84
   },
   {
     "Time": "11:30 AM",
-    "EnergyUsage": 270,
-    "SetPoint": 68,
+    "EnergyUsage": 260,
+    "SetPoint": 72,
     "Fan": 0,
     "EventWindow": false,
-    "AmbientTemp": 82,
-    "TempScale": "F"
+    "AmbientTemp": 72,
+    "TempScale": "F",
+    "OutdoorTemp": 85
   },
   {
     "Time": "11:45 AM",
-    "EnergyUsage": 315,
-    "SetPoint": 66,
+    "EnergyUsage": 265,
+    "SetPoint": 70,
     "Fan": 0,
     "EventWindow": false,
-    "AmbientTemp": 83,
-    "TempScale": "F"
+    "AmbientTemp": 71,
+    "TempScale": "F",
+    "OutdoorTemp": 84
   },
   {
     "Time": "12:00 PM",
-    "EnergyUsage": 310,
-    "SetPoint": 66,
+    "EnergyUsage": 280,
+    "SetPoint": 68,
     "Fan": 2,
-    "EventWindow": true,
-    "AmbientTemp": 82,
-    "TempScale": "F"
+    "EventWindow": false,
+    "AmbientTemp": 69,
+    "TempScale": "F",
+    "OutdoorTemp": 83
   },
   {
     "Time": "12:15 PM",
     "EnergyUsage": 280,
-    "SetPoint": 67,
+    "SetPoint": 69,
     "Fan": 1,
     "EventWindow": true,
-    "AmbientTemp": 83,
-    "TempScale": "F"
+    "AmbientTemp": 67,
+    "TempScale": "F",
+    "OutdoorTemp": 84
   },
   {
     "Time": "12:30 PM",
-    "EnergyUsage": 200,
-    "SetPoint": 68,
+    "EnergyUsage": 210,
+    "SetPoint": 70,
     "Fan": 0,
     "EventWindow": true,
-    "AmbientTemp": 81,
-    "TempScale": "F"
+    "AmbientTemp": 67,
+    "TempScale": "F",
+    "OutdoorTemp": 83
   },
   {
     "Time": "12:45 PM",
     "EnergyUsage": 190,
-    "SetPoint": 68,
+    "SetPoint": 72,
     "Fan": 2,
     "EventWindow": true,
-    "AmbientTemp": 80,
-    "TempScale": "F"
+    "AmbientTemp": 68,
+    "TempScale": "F",
+    "OutdoorTemp": 84
   },
   {
     "Time": "1:00 PM",
-    "EnergyUsage": 180,
-    "SetPoint": 69,
+    "EnergyUsage": 190,
+    "SetPoint": 73,
     "Fan": 1,
     "EventWindow": true,
-    "AmbientTemp": 80,
-    "TempScale": "F"
+    "AmbientTemp": 69,
+    "TempScale": "F",
+    "OutdoorTemp": 83
   },
   {
     "Time": "1:15 PM",
-    "EnergyUsage": 180,
-    "SetPoint": 70,
+    "EnergyUsage": 190,
+    "SetPoint": 74,
     "Fan": 1,
     "EventWindow": true,
-    "AmbientTemp": 80,
-    "TempScale": "F"
+    "AmbientTemp": 70,
+    "TempScale": "F",
+    "OutdoorTemp": 84
   },
   {
     "Time": "1:30 PM",
     "EnergyUsage": 200,
-    "SetPoint": 69,
+    "SetPoint": 74,
     "Fan": 1,
     "EventWindow": true,
-    "AmbientTemp": 81,
-    "TempScale": "F"
+    "AmbientTemp": 70.5,
+    "TempScale": "F",
+    "OutdoorTemp": 85
   },
   {
     "Time": "1:45 PM",
-    "EnergyUsage": 230,
-    "SetPoint": 69,
+    "EnergyUsage": 205,
+    "SetPoint": 74,
     "Fan": 0,
     "EventWindow": true,
-    "AmbientTemp": 82,
-    "TempScale": "F"
+    "AmbientTemp": 71,
+    "TempScale": "F",
+    "OutdoorTemp": 85
   },
   {
     "Time": "2:00 PM",
-    "EnergyUsage": 240,
-    "SetPoint": 68,
+    "EnergyUsage": 210,
+    "SetPoint": 74,
     "Fan": 0,
     "EventWindow": true,
-    "AmbientTemp": 82,
-    "TempScale": "F"
+    "AmbientTemp": 72,
+    "TempScale": "F",
+    "OutdoorTemp": 86
   },
   {
     "Time": "2:15 PM",
-    "EnergyUsage": 240,
-    "SetPoint": 68,
+    "EnergyUsage": 215,
+    "SetPoint": 74,
     "Fan": 1,
     "EventWindow": true,
-    "AmbientTemp": 81,
-    "TempScale": "F"
+    "AmbientTemp": 72.5,
+    "TempScale": "F",
+    "OutdoorTemp": 85
   },
   {
     "Time": "2:30 PM",
-    "EnergyUsage": 240,
-    "SetPoint": 69,
+    "EnergyUsage": 220,
+    "SetPoint": 74,
     "Fan": 1,
     "EventWindow": true,
-    "AmbientTemp": 80,
-    "TempScale": "F"
+    "AmbientTemp": 72.5,
+    "TempScale": "F",
+    "OutdoorTemp": 85
   },
   {
     "Time": "2:45 PM",
-    "EnergyUsage": 220,
-    "SetPoint": 70,
+    "EnergyUsage": 225,
+    "SetPoint": 74,
     "Fan": 2,
     "EventWindow": true,
-    "AmbientTemp": 80,
-    "TempScale": "F"
+    "AmbientTemp": 73,
+    "TempScale": "F",
+    "OutdoorTemp": 84
   },
   {
     "Time": "3:00 PM",
-    "EnergyUsage": 220,
-    "SetPoint": 70,
+    "EnergyUsage": 230,
+    "SetPoint": 74,
     "Fan": 0,
     "EventWindow": true,
-    "AmbientTemp": 80,
-    "TempScale": "F"
+    "AmbientTemp": 73.5,
+    "TempScale": "F",
+    "OutdoorTemp": 84
   },
   {
     "Time": "3:15 PM",
-    "EnergyUsage": 200,
-    "SetPoint": 71,
+    "EnergyUsage": 235,
+    "SetPoint": 74.5,
     "Fan": 0,
     "EventWindow": true,
-    "AmbientTemp": 81,
-    "TempScale": "F"
+    "AmbientTemp": 73.5,
+    "TempScale": "F",
+    "OutdoorTemp": 84
   },
   {
     "Time": "3:30 PM",
-    "EnergyUsage": 190,
-    "SetPoint": 72,
+    "EnergyUsage": 249,
+    "SetPoint": 75,
     "Fan": 1,
     "EventWindow": false,
-    "AmbientTemp": 82,
-    "TempScale": "F"
+    "AmbientTemp": 73.5,
+    "TempScale": "F",
+    "OutdoorTemp": 83
   },
   {
     "Time": "3:45 PM",
-    "EnergyUsage": 180,
-    "SetPoint": 72,
+    "EnergyUsage": 275,
+    "SetPoint": 76,
     "Fan": 0,
     "EventWindow": false,
-    "AmbientTemp": 82,
-    "TempScale": "F"
+    "AmbientTemp": 74,
+    "TempScale": "F",
+    "OutdoorTemp": 83
   },
   {
     "Time": "4:00 PM",
-    "EnergyUsage": 180,
-    "SetPoint": 71,
+    "EnergyUsage": 280,
+    "SetPoint": 75,
     "Fan": 0,
     "EventWindow": false,
-    "AmbientTemp": 82,
-    "TempScale": "F"
+    "AmbientTemp": 74,
+    "TempScale": "F",
+    "OutdoorTemp": 84
   },
   {
     "Time": "4:15 PM",
-    "EnergyUsage": 190,
-    "SetPoint": 73,
+    "EnergyUsage": 240,
+    "SetPoint": 74,
     "Fan": 0,
     "EventWindow": false,
-    "AmbientTemp": 81,
-    "TempScale": "F"
+    "AmbientTemp": 73,
+    "TempScale": "F",
+    "OutdoorTemp": 81
   }
 ]

@@ -7,24 +7,22 @@ import {
   scaleUtc,
   select,
   timeFormat,
+  timeMonth,
   timeParse,
   utcFormat,
   utcMonth,
 } from "d3";
-
 // import { utcMonth } from "d3.js";
 import { colorMap, iconMap } from "./utils/icons.js";
-import pastEvents from "../../data/dg-past-events.json";
-
-import {
-  DGFlatDataItem,
-  DGPastEvent,
-  DGPastEventDataItem,
-} from "../types/DGPastEvents";
+import allEvents from "../../data/dg-events.json";
+import { DGPastEvent, DGPastEventDataItem } from "../types/DGPastEvents";
 import { flattenData } from "./utils/flattenData.js";
+import { filterResponse } from "./utils/filterResponseToChartData.js";
 
-export const generateDGPastEventChart = () => {
-  var svg = select("svg.demand-genius-past"),
+export const generateDGPastEventChart = (
+  svgSelector = "svg.demand-genius-past",
+) => {
+  var svg = select(svgSelector),
     margin = { top: 50, right: 50, bottom: 30, left: 50 },
     tooltipHeight = 110,
     tooltipWidth = Number(svg.attr("width")) - margin.left - margin.right,
@@ -86,13 +84,13 @@ export const generateDGPastEventChart = () => {
     const yScale = scaleBand()
       .range([height, 0])
       .domain(["1", "2", "3", "4", "5"])
-      .padding(0);
+      .padding(0.1);
 
     const SINGLE_EVENT_LW = yScale.bandwidth();
 
     const xAxis = axisBottom(xScale)
       .scale(xScale)
-      .ticks(data.length)
+      .ticks(30)
       .tickSize(-5)
       .tickFormat((d) => {
         const f = timeFormat("%-m/%d");
@@ -132,13 +130,13 @@ export const generateDGPastEventChart = () => {
     chartG
       .append("g")
       .attr("class", "x axis")
-      .attr("transform", `translate(0, ${height + 10})`)
+      .attr("transform", `translate(8, ${height + 10})`)
       .call(xAxis)
       .call((g) => {
         g.selectAll(".tick text")
           .attr("stroke", "none")
           .attr("fill", "white")
-          .attr("font-size", "13px")
+          .attr("font-size", "11px")
           .attr("letter-spacing", 0.5);
         g.selectAll(".tick line")
           .attr("stroke-width", 0)
@@ -248,7 +246,7 @@ export const generateDGPastEventChart = () => {
       .data(flatData)
       .enter()
       .append("circle")
-      .attr("fill", "var(--zen-blue)")
+      .attr("fill", "var(--zss-blue)")
       .attr("stroke", "#181818")
       .attr("stroke-width", 2)
       .attr("r", (d) => (d.count > 1 ? 10 : 0))
@@ -269,15 +267,5 @@ export const generateDGPastEventChart = () => {
       .attr("y", (d) => `${(yScale(d.keyIndex) ?? 0) + 4.5}`)
       .attr("x", (d) => xScale(d.timeset) + 56);
   }
-  // this is to take the data from the domstring
-  // const makeDataDiv = (data) => {
-  //   const dataDiv = document.querySelector("div#dg-past-event-data");
-
-  //   dataDiv.dataset.dgData = JSON.stringify(data);
-  //   render(JSON.parse(dataDiv.dataset.dgData));
-  // };
-
-  //  json(JSON.stringify(pastEvents)).then((d) => render(d));
-  // TODO figure out why this isnt registering
-  render(pastEvents as unknown as DGPastEvent[]);
+  render(filterResponse(allEvents as any) as unknown as DGPastEvent[]);
 };

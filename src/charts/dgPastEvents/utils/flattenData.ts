@@ -1,12 +1,11 @@
-import {
-  DGEventType,
-  DGFlatDataItem,
-  DGPastEventDataItem,
-} from "../../types/DGPastEvents";
+import { DGEventType, OldDGType } from "../../types/DGEvents";
+import { DGFlatDataItem, DGPastEventDataItem } from "../../types/DGPastEvents";
+
+import { getNewTypeFromOld, oldTypes } from "./dgEventMap";
 
 export const flattenData = (data: DGPastEventDataItem[]) => {
   const allData: Array<DGFlatDataItem> = [];
-  const keys = Object.values(DGEventType);
+  const keys: OldDGType[] = oldTypes;
   data.map((d, index) => {
     let keyIndex = 1;
 
@@ -20,7 +19,7 @@ export const flattenData = (data: DGPastEventDataItem[]) => {
           Date: d.Date,
           id: Date.parse(d.Date) + index,
           keyIndex: String(keyIndex + otherEvents),
-          type: key,
+          type: getNewTypeFromOld(key),
           timeset: d.timeset,
           count: d[key].length,
         });

@@ -3,9 +3,10 @@ export type DGEventDataPoint = {
   EnergyUsage: number;
   SetPoint: Number;
   TempScale: "F" | "C";
-  Fan: number;
+  Fan?: number;
   EventWindow: boolean;
   AmbientTemp: number;
+  OutdoorTemp: number;
 };
 
 export interface DGEventDataPointItem extends DGEventDataPoint {

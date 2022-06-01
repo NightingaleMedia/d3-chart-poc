@@ -8,13 +8,12 @@ export function makeXAxis(
     .append("g")
     .call(caller)
     .attr("transform", `translate(0, ${height - 30})`)
-    .attr("stroke", "white")
+    .attr("stroke", "var(--zss-chart-axis-text)")
     .call((g) => {
       g.selectAll(".tick line")
         .attr("transform", `translate(0, 10)`)
-        .attr("stroke-width", 0.4)
-        .attr("stroke-opacity", 0.5)
-        .attr("stroke", "white");
+        .attr("stroke-width", "1")
+        .attr("stroke", "var(--zss-chart-axis-line)");
 
       g.selectAll(
         ".tick:first-of-type line, .tick:last-of-type line, .tick:first-of-type text, .tick:last-of-type text",
@@ -34,13 +33,10 @@ export function makeYAxis(
     .append("g")
     .attr("class", "x axis")
     .style("text-anchor", "start")
-    .style("text-color", "white")
-    .style("fill", "none")
-    .style("stroke", "#5A5A5A")
-    .style("stroke-width", "0")
     .style("font-size", "16px")
-    .attr("fill", "#5A5A5A")
     .attr("transform", "translate(10,-30)")
     .call(caller)
-    .call((g) => g.selectAll(".tick text").attr("fill", "white"));
+    .call((g) =>
+      g.selectAll(".tick text").attr("fill", "var(--zss-chart-axis-text)"),
+    );
 }

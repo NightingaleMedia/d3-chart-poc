@@ -1,3 +1,5 @@
+import { DGEventType } from "./DGEvents";
+
 export type DGPastEvent = {
   Date: string;
   UtilityDR: PastEventChild[] | [];
@@ -7,13 +9,19 @@ export type DGPastEvent = {
   GreenEnergy: PastEventChild[] | [];
 };
 
+export type PastEventChild = {
+  id: number;
+  groupId: string;
+  dateTimeFrom: Date;
+  dateTimeTo: Date;
+  type: DGEventType;
+};
+
 export interface DGPastEventDataItem extends DGPastEvent {
   index: number;
   timeset: Date;
 }
-export type Test = {
-  hasDone: boolean;
-};
+
 export type DGFlatDataItem = {
   Date: string;
   id: number;
@@ -23,19 +31,6 @@ export type DGFlatDataItem = {
   timeset: Date;
   count: number;
 };
-
-export type PastEventChild = {
-  id: number;
-  type: DGEventType;
-};
-
-export enum DGEventType {
-  UtilityDR = "UtilityDR",
-  AbnormallyHot = "AbnormallyHot",
-  AbnormallyCold = "AbnormallyCold",
-  RoomRefresh = "RoomRefresh",
-  GreenEnergy = "GreenEnergy",
-}
 
 export type DGColors = {
   fanColor: string;
