@@ -7,11 +7,12 @@ export function makeXAxis(
   appendTo
     .append("g")
     .call(caller)
-    .attr("transform", `translate(0, ${height - 30})`)
+    .attr("transform", `translate(0, ${height - 20})`)
     .attr("stroke", "var(--zss-chart-axis-text)")
     .call((g) => {
+      g.selectAll(".domain").attr("fill", "none").attr("stroke", "none");
       g.selectAll(".tick line")
-        .attr("transform", `translate(0, 10)`)
+        .attr("transform", `translate(0, 20)`)
         .attr("stroke-width", "1")
         .attr("stroke", "var(--zss-chart-axis-line)");
 
@@ -36,7 +37,12 @@ export function makeYAxis(
     .style("font-size", "16px")
     .attr("transform", "translate(10,-30)")
     .call(caller)
-    .call((g) =>
-      g.selectAll(".tick text").attr("fill", "var(--zss-chart-axis-text)"),
-    );
+    .call((g) => {
+      g.selectAll(".domain").attr("fill", "none").attr("stroke", "none");
+      g.selectAll(".tick line")
+        .attr("stroke-width", "0")
+        .attr("stroke", "none");
+
+      g.selectAll(".tick text").attr("fill", "var(--zss-chart-axis-text)");
+    });
 }

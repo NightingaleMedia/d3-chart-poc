@@ -1,4 +1,3 @@
-import * as d3 from "d3";
 import { makeXAxis, makeYAxis } from "./makeAxis.js";
 import { flattenData } from "./flattenEnergyData.js";
 import energyChildren from "../../data/energyChildren.json";
@@ -8,12 +7,22 @@ import {
   EnergySiteChildDataItem,
   EnergySiteDataItem,
 } from "../types/EnergySiteBreakdown.js";
-export function makeBreakdownChart() {
+import {
+  axisLeft,
+  axisTop,
+  descending,
+  max,
+  scaleBand,
+  scaleLinear,
+  select,
+  selectAll,
+} from "d3";
+export function makeBreakdownChart(id = "#sigman-bar") {
   const THRESHOLD = 80,
     ABOVE_THRESHOLD_COLOR = "var(--zss-warning)",
     BELOW_THRESHOLD_COLOR = "var(--zss-green)";
 
-  var svg = d3.select("svg.sigman-bar"),
+  var svg = select(`svg${id}`),
     margin = { top: 40, right: 20, bottom: 40, left: 20 },
     width = +svg.attr("width") - margin.left - margin.right;
 
@@ -23,19 +32,21 @@ export function makeBreakdownChart() {
     .append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-  var div = d3
-    .select("body")
+  var div = select("body")
     .append("div")
     .attr("class", "energy-breakdown-chart--tooltip")
     .style("opacity", 0);
 
   const render = (jsonData: EnergySiteChild[]) => {
-    jsonData.sort((x, y) => d3.descending(x.KwH, y.KwH));
+    jsonData.sort((x, y) => descending(x.KwH, y.KwH));
 
     const data: EnergySiteDataItem[] = jsonData.map((d, i) => ({
       ...d,
+
       index: i,
     }));
+
+    const flatData = flattenData(data);
 
     const height = 80 * data.length - margin.top - margin.bottom + 100;
     svg.attr("height", height);
@@ -48,30 +59,25 @@ export function makeBreakdownChart() {
       .attr("transform", `translate(0, -${0})`)
       .attr("ry", 8);
 
-    const flatData = flattenData(data);
-
-    const xScale = d3
-      .scaleLinear()
-      .domain([0, d3.max(data, (d) => d.KwH) ?? 1500])
+    const xScale = scaleLinear()
+      .domain([0, max(data, (d) => Number(d.KwH) + 50) ?? 1500])
       .range([0, width])
       .nice();
 
-    const yScale = d3
-      .scaleBand()
+    const yScale = scaleBand()
       .domain(data.map((d) => d.SiteName))
       .range([0, height - margin.top - margin.top])
       .padding(0.6);
 
     // AXES
-    const xAxis = d3
-      .axisTop(xScale)
-      .tickSize(height - 20)
+    const xAxis = axisTop(xScale)
+      .tickSize(height - margin.top - margin.bottom)
       .tickSizeOuter(0)
       .ticks(7);
 
-    const yAxis = d3.axisLeft(yScale).tickSizeOuter(0).tickSizeInner(0);
+    const yAxis = axisLeft(yScale).tickSizeOuter(0).tickSizeInner(0);
 
-    makeXAxis(chartG, xAxis, height);
+    makeXAxis(chartG, xAxis, height - margin.top - margin.bottom);
     makeYAxis(chartG, yAxis);
 
     const barGroup = chartG
@@ -86,7 +92,10 @@ export function makeBreakdownChart() {
       .data(flatData)
       .enter()
       .append("rect")
-      .attr("class", (d) => `${d.SiteName} chart-child`)
+      .attr("class", (d) => {
+        console.log({ d });
+        return `${d.parentId} chart-child`;
+      })
       .attr("fill", (d) =>
         xScale(d.KwH) > xScale(THRESHOLD)
           ? ABOVE_THRESHOLD_COLOR
@@ -120,6 +129,7 @@ export function makeBreakdownChart() {
       .append("g")
       .append("rect")
       .attr("y", (d) => yScale(d.SiteName) ?? 0)
+      .attr("x", 5)
       .attr("rx", 3)
       .attr("id", (d) => d.id)
       .attr("class", "site-bar")
@@ -157,7 +167,7 @@ export function makeBreakdownChart() {
           .style("left", e.pageX + "px")
           .style("top", e.pageY + "px");
 
-        d3.selectAll(`.${d.SiteName}`)
+        selectAll(`.${d.parentId}`)
           .transition()
           .duration(50)
           .attr("opacity", "1")
@@ -165,7 +175,7 @@ export function makeBreakdownChart() {
       })
       .on("mouseout", function (e, d: EnergySiteDataItem) {
         div.style("opacity", 0);
-        d3.selectAll(`.${d.SiteName}`)
+        selectAll(`.${d.parentId}`)
           .transition()
           .duration(50)
           .attr("opacity", "0");
@@ -174,18 +184,4 @@ export function makeBreakdownChart() {
 
   const jsonData: EnergySiteBreakdownResponse = energyChildren;
   render(jsonData.data);
-}
-
-function showAll(e) {
-  console.log("show All...");
-  var svg = d3.select("svg.sigman-bar");
-  const children = svg.selectAll(".chart-child");
-  console.log(children);
-  if (children.attr("opacity") === "0") {
-    children.attr("opacity", "1");
-    e.target.innerText = "Hide All";
-  } else {
-    children.attr("opacity", "0");
-    e.target.innerText = "Show All";
-  }
 }
