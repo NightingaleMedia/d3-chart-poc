@@ -6,7 +6,9 @@ import {
   scaleBand,
   scaleUtc,
   select,
+  selectAll,
   timeFormat,
+  timeHour,
   timeMonth,
   timeParse,
   utcFormat,
@@ -18,11 +20,13 @@ import allEvents from "../../data/dg-events.json";
 import { DGPastEvent, DGPastEventDataItem } from "../types/DGPastEvents";
 import { flattenData } from "./utils/flattenData.js";
 import { filterResponse } from "./utils/filterResponseToChartData.js";
+import { getDisplayNameFromType } from "./utils/dgEventMap.js";
 
 export const generateDGPastEventChart = (
-  svgSelector = "svg.demand-genius-past",
+  svgId = "svg.demand-genius-past",
+  data: any,
 ) => {
-  var svg = select(svgSelector),
+  var svg = select(`svg#${svgId}`),
     margin = { top: 50, right: 50, bottom: 30, left: 50 },
     tooltipHeight = 110,
     tooltipWidth = Number(svg.attr("width")) - margin.left - margin.right,
@@ -130,7 +134,7 @@ export const generateDGPastEventChart = (
     chartG
       .append("g")
       .attr("class", "x axis")
-      .attr("transform", `translate(8, ${height + 10})`)
+      .attr("transform", `translate(0, ${height + 10})`)
       .call(xAxis)
       .call((g) => {
         g.selectAll(".tick text")
@@ -150,14 +154,14 @@ export const generateDGPastEventChart = (
       .attr("class", "xMonthAxis")
       // .attr("x", 200)
       // .attr("height", height)
-      .attr("transform", `translate(${24}, ${-50})`)
+      .attr("transform", `translate(${26}, ${-50})`)
       .call(x1MonthAxis)
       .call((g) => {
         g.selectAll(".tick line")
           .attr("stroke-width", 2)
           .attr("stroke-opacity", 1)
           .attr("fill", "white")
-          .attr("stroke", "black")
+          .attr("stroke", "var(--zss-chart-axis-line)")
           .style("font-size", "14px");
 
         g.selectAll(".tick text")
@@ -165,8 +169,8 @@ export const generateDGPastEventChart = (
           // .attr("stroke", "white")
           .attr("opacity", "1")
           .attr("text-anchor", "start")
-          .attr("transform", "translate(20,30)")
-          .style("font-size", "1rem");
+          .attr("transform", "translate(20,40)")
+          .style("font-size", "var(--mud-typography-h6-size)");
 
         g.selectAll(".domain")
           .attr("stroke-width", 0)
@@ -198,15 +202,16 @@ export const generateDGPastEventChart = (
 
     squareG
       .append("rect")
+      .attr("transform-origin", "center")
       .attr("y", (d) => yScale(d.keyIndex) ?? "0")
-      .attr("x", (d) => xScale(d.timeset) + 22)
+      .attr("x", (d) => xScale(d.timeset) + SINGLE_EVENT_LW / 2)
       .attr("ry", 3)
       .attr("width", SINGLE_EVENT_LW - 5)
       .attr("height", SINGLE_EVENT_LW - 5)
       .style("cursor", "pointer")
       .attr("fill", (d) => colorMap(d.type))
-
-      .on("mouseover", function (event, d) {
+      .attr("class", "dg-square")
+      .on("mouseover", function (event, d: any) {
         tooltipDiv
           .transition()
           .duration(500)
@@ -218,9 +223,11 @@ export const generateDGPastEventChart = (
           return f(d.timeset);
         });
         if (Number(d.count) > 1) {
-          toolTipNameDiv.text(`${d.type} (${d.count})`);
+          toolTipNameDiv.text(
+            `${getDisplayNameFromType(d.type)}s (${d.count})`,
+          );
         } else {
-          toolTipNameDiv.text(`${d.type}`);
+          toolTipNameDiv.text(`${getDisplayNameFromType(d.type)}`);
         }
       });
 
@@ -231,11 +238,12 @@ export const generateDGPastEventChart = (
       .style("cursor", "pointer")
       .attr("viewBox", `0 0 35 35`)
       .attr("y", (d) => yScale(d.keyIndex) ?? "0")
-      .attr("x", (d) => xScale(d.timeset) + 22);
+      .attr("x", (d) => xScale(d.timeset) + SINGLE_EVENT_LW / 2);
 
     icon
       .append("path")
       .attr("fill", "white")
+      .attr("class", "dg-icon")
       .attr("transform", "translate(3,3)")
       .attr("width", SINGLE_EVENT_LW)
       .attr("height", SINGLE_EVENT_LW)
@@ -246,8 +254,9 @@ export const generateDGPastEventChart = (
       .data(flatData)
       .enter()
       .append("circle")
+
       .attr("fill", "var(--zss-blue)")
-      .attr("stroke", "#181818")
+      .attr("stroke", "var(--zss-chart-bg)")
       .attr("stroke-width", 2)
       .attr("r", (d) => (d.count > 1 ? 10 : 0))
       .attr("cy", (d) => yScale(d.keyIndex) ?? "0")
@@ -266,6 +275,13 @@ export const generateDGPastEventChart = (
       .attr("font-weight", "600")
       .attr("y", (d) => `${(yScale(d.keyIndex) ?? 0) + 4.5}`)
       .attr("x", (d) => xScale(d.timeset) + 56);
+
+    selectAll(".dg-icon, .dg-square").on("click", function (d, e: any) {
+      let a = document.createElement("a");
+      a.target = "_blank";
+      a.href = `/demand-genius/${e.events[0]?.id ?? "12345"}`;
+      a.click();
+    });
   }
   render(filterResponse(allEvents as any) as unknown as DGPastEvent[]);
 };

@@ -31,8 +31,9 @@ import {
 } from "../../types/DGSingleEvent";
 import singleEvent from "../../../data/dg-single-event.json";
 import getColor, { ColorAccessor } from "./utils/getColor";
-export function makeChart(svgId = "svg.demand-genius") {
-  var svg = select(svgId),
+
+export function makeSingleDGChart(svgId: string, data: any) {
+  var svg = select(`svg#${svgId}`),
     margin = { top: 30, right: 50, bottom: 30, left: 50 },
     legendHeight = 50,
     legendWidth = 728,

@@ -22,3 +22,12 @@ export const getNewTypeFromOld = (value: OldDGType): DGEventType => {
   };
   return v[value];
 };
+
+export const getDisplayNameFromType = (type: string) =>
+  ({
+    drEvent: "Demand Response Event",
+    "weatherEvent--warm": "Warm Weather Event",
+    "weatherEvent--cold": "Cold Weather Event",
+    greenEnergy: "Green Energy Event",
+    roomRefresh: "Room Refresh Event",
+  }[type]);

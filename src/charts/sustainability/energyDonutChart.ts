@@ -1,4 +1,5 @@
-import Chart from "chart.js/auto";
+import Chart, { ChartConfiguration } from "chart.js/auto";
+
 const data = {
   labels: ["Carbon", "Solar", "Wind", "Other"],
   datasets: [
@@ -28,9 +29,11 @@ const config: ChartConfiguration = {
     },
   },
 };
-export const generateDonutEnergyChart = () => {
+export const generateDonutEnergyChart = (svgId: string = "", data) => {
   console.log("chart donut...");
-  const ctx = document?.getElementById("donut-energy-chart").getContext("2d");
+
+  let ctx = document.getElementById(svgId) as HTMLCanvasElement;
+  ctx = ctx.getContext("2d") as any;
   const myChart = new Chart(ctx, config);
   //   myChart.show();
 };

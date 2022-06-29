@@ -18,6 +18,7 @@ export const flattenData = (data: DGPastEventDataItem[]) => {
         allData.push({
           Date: d.Date,
           id: Date.parse(d.Date) + index,
+          events: d[key],
           keyIndex: String(keyIndex + otherEvents),
           type: getNewTypeFromOld(key),
           timeset: d.timeset,
@@ -26,5 +27,6 @@ export const flattenData = (data: DGPastEventDataItem[]) => {
       }
     });
   });
+  console.log(allData);
   return allData;
 };

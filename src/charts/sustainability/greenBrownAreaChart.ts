@@ -6,6 +6,7 @@ import {
 } from "chart.js";
 import Chart from "chart.js/auto";
 import moment from "moment";
+
 import { getBrownData, getGreenData } from "./utils/getData";
 
 var datasets: ChartDataset[] = [
@@ -64,7 +65,7 @@ const config: ChartConfiguration = {
           callback: function (val, index) {
             // Hide every 2nd tick label
 
-            return moment(this.getLabelForValue(val)).format("M/D");
+            return moment(this.getLabelForValue(Number(val))).format("M/D");
           },
         },
       },
@@ -79,9 +80,10 @@ const config: ChartConfiguration = {
     },
   },
 };
-
-export const generateBrownAreaChart = () => {
-  const ctx = document?.getElementById("green-brown-chart").getContext("2d");
-  const myChart = new Chart(ctx, config);
+let myChart;
+export const generateBrownAreaChart = (canvasId) => {
+  let ctx = document?.getElementById(canvasId) as HTMLCanvasElement;
+  ctx = ctx.getContext("2d") as any;
+  myChart = new Chart(ctx, config);
   //   myChart.show();
 };

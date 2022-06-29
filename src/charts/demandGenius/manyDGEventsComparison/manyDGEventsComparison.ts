@@ -28,6 +28,7 @@ import {
   MakeLines__Props,
 } from "../../types/DGManyEventsComparison";
 import manyEvents from "../../../data/dg-many-events.json";
+
 // import * as d3 from "d3";
 const makeTimeWindow = (selection, props) => {
   const {
@@ -144,8 +145,8 @@ const makeLines = (selection, props: MakeLines__Props) => {
     .attr("stroke-width", "2px");
 };
 
-export function makeManyEvents() {
-  var svg = select("svg.demand-genius--many"),
+export function makeManyEvents(svgId: string, data: any) {
+  var svg = select(`svg#${svgId}`),
     margin = { top: 30, right: 20, bottom: 60, left: 40 },
     legendHeight = 0,
     legendWidth = +svg.attr("width") / 2,
@@ -585,5 +586,3 @@ function updateSiteBoxes(siteArray, data) {
     );
   });
 }
-
-// tryAgain();

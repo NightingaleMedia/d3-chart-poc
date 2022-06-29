@@ -32,8 +32,8 @@ import {
   EnergySummaryTimeset,
 } from "../types/EnergySummary";
 
-export const generateEnergySummaryChart = (selector) => {
-  var svg = select(`svg${selector}`),
+export const generateEnergySummaryChart = (svgId: string, data: any) => {
+  var svg = select(`svg${svgId}`),
     margin = { top: 30, right: 50, bottom: 30, left: 50 },
     tooltipHeight = 80,
     tooltipWidth = Number(svg.attr("width")) - margin.left - margin.right,
@@ -52,7 +52,7 @@ export const generateEnergySummaryChart = (selector) => {
     .attr("fill", "var(--zss-chart-bg)")
     .attr("transform", `translate(0, -${margin.top + margin.bottom})`);
 
-  const tooltipDiv = select(`.energy-summary--tooltip${selector}`)
+  const tooltipDiv = select(`.energy-summary--tooltip${svgId}`)
     .style("top", `${height + tooltipHeight}px`)
     .style("left", "0")
     .style("opacity", 0);

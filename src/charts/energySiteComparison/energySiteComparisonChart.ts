@@ -37,8 +37,11 @@ import {
 } from "../../utils/chartUtils";
 import { makeLine } from "./makeLine";
 
-export const generateSiteComparison = () => {
-  var svg = select("svg.energy-site-comparison"),
+export const generateEnergySiteComparisonChart = (
+  svgId: string = "#energy-site-comparison",
+  data: Record<string, any>,
+) => {
+  var svg = select(`svg#${svgId}`),
     margin = { top: 30, right: 50, bottom: 30, left: 50 },
     legendHeight = 80,
     tooltipWidth = Number(svg.attr("width")) - margin.left - margin.right,

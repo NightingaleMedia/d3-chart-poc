@@ -1,4 +1,4 @@
-import { DGEventType } from "./DGEvents";
+import { DGEventType, DGEventBase } from "./DGEvents";
 
 export type DGPastEvent = {
   Date: string;
@@ -30,6 +30,7 @@ export type DGFlatDataItem = {
   type: DGEventType;
   timeset: Date;
   count: number;
+  events: PastEventChild[];
 };
 
 export type DGColors = {

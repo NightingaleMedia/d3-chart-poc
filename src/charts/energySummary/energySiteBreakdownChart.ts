@@ -17,13 +17,14 @@ import {
   select,
   selectAll,
 } from "d3";
-export function makeBreakdownChart(id = "#sigman-bar") {
+
+export function makeBreakdownChart(id, data: any) {
   const THRESHOLD = 80,
     ABOVE_THRESHOLD_COLOR = "var(--zss-warning)",
-    BELOW_THRESHOLD_COLOR = "var(--zss-green)";
+    BELOW_THRESHOLD_COLOR = "var(--zss-nominal)";
 
-  var svg = select(`svg${id}`),
-    margin = { top: 40, right: 20, bottom: 40, left: 20 },
+  var svg = select(`svg#${id}`),
+    margin = { top: 20, right: 20, bottom: 20, left: 20 },
     width = +svg.attr("width") - margin.left - margin.right;
 
   // let height = 10000 - margin.top - margin.bottom;
@@ -67,7 +68,7 @@ export function makeBreakdownChart(id = "#sigman-bar") {
     const yScale = scaleBand()
       .domain(data.map((d) => d.SiteName))
       .range([0, height - margin.top - margin.top])
-      .padding(0.6);
+      .padding(0.5);
 
     // AXES
     const xAxis = axisTop(xScale)
@@ -104,10 +105,10 @@ export function makeBreakdownChart(id = "#sigman-bar") {
       .attr("rx", 3)
       .attr("stroke", "var(--zss-chart-bg)")
       .attr("stroke-width", "3")
-      .attr("opacity", 0)
+      .attr("opacity", "0.8")
       .attr("x", (d, i) => {
         if (d.index == 0) {
-          return xScale(0);
+          return xScale(0) + 5;
         }
         const allChildren = flatData.filter((ch) => ch.SiteName == d.SiteName);
         let offset = 0;
@@ -119,6 +120,7 @@ export function makeBreakdownChart(id = "#sigman-bar") {
         return xScale(offset);
       })
       .attr("y", (d) => yScale(d.SiteName) ?? 0)
+
       .attr("height", yScale.bandwidth())
       .attr("data-id", (d) => d.ChildName)
       .attr("data-parentId", (d) => d.SiteName)
@@ -136,14 +138,13 @@ export function makeBreakdownChart(id = "#sigman-bar") {
       .attr("width", 0)
       .attr("height", yScale.bandwidth())
       .attr("fill", "var(--zss-blue)")
-      .attr("opacity", 1);
+      .attr("opacity", 0);
 
     barGroup
       .selectAll(".site-bar")
       .transition()
       .duration(1000)
       .delay((d: EnergySiteDataItem) => d.index * 120)
-
       .attr("width", (d: EnergySiteDataItem) => xScale(d.KwH))
       .ease();
 
@@ -174,11 +175,11 @@ export function makeBreakdownChart(id = "#sigman-bar") {
           .attr("cursor", "pointer");
       })
       .on("mouseout", function (e, d: EnergySiteDataItem) {
-        div.style("opacity", 0);
+        div.style("opacity", "0");
         selectAll(`.${d.parentId}`)
           .transition()
           .duration(50)
-          .attr("opacity", "0");
+          .attr("opacity", "0.8");
       });
   };
 
