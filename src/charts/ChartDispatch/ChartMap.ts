@@ -2,7 +2,10 @@ import { makeManyEvents } from "../demandGenius/manyDGEventsComparison/manyDGEve
 import { makeSingleDGChart } from "../demandGenius/singleDGEventReport";
 import { generateDGPastEventChart } from "../dgPastEvents/makeChart";
 import { generateEnergySiteComparisonChart } from "../energySiteComparison/energySiteComparisonChart";
-import { makeBreakdownChart } from "../energySummary/energySiteBreakdownChart";
+import {
+  makeBreakdownChart,
+  updateEnergySiteBreakdownChart,
+} from "../energySummary/energySiteBreakdownChart";
 import { generateEnergySummaryChart } from "../energySummary/energySummaryChart";
 import { ChartBase } from "./ChartBase";
 import { ChartMap, ChartName } from "./types";
@@ -36,7 +39,9 @@ const energySiteBreakdownChart__Class = new ChartBase({
   chartRender: (id, data) => {
     makeBreakdownChart(id, data);
   },
-  chartUpdate: (data: any) => {},
+  chartUpdate: (data: any, id) => {
+    updateEnergySiteBreakdownChart(id, data);
+  },
 });
 
 const generateEnergySummaryChart__Class = new ChartBase({
@@ -58,10 +63,6 @@ const generateEnergySiteComparisonChart__Class = new ChartBase({
   },
 });
 
-export const getChartImpl = (name: ChartName): ChartBase => {
-  return chartMap[name];
-};
-
 const chartMap: ChartMap = {
   // single dg report
   dgSingleReportChart: singleDGChart__Class,
@@ -72,4 +73,8 @@ const chartMap: ChartMap = {
   // brownAreaChart: generateBrownAreaChart__Class,
   // energyDonutChart: generateDonutEnergyChart__Class,
   energySiteComparison: generateEnergySiteComparisonChart__Class,
+};
+
+export const getChartImpl = (name: ChartName): ChartBase => {
+  return chartMap[name];
 };

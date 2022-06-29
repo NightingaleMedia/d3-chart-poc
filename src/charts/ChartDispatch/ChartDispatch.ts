@@ -18,17 +18,22 @@ export class ChartDispatch {
     this._chartId = id;
     this._dataElementId = dataElementId;
     this._chartBase = chartBase;
+
     this._dataElement = document.querySelector(
       `#${this._dataElementId}`,
     ) as Element;
-    this.callChart(this._chartId);
-    chartObserver(this._dataElement, (v: MutationRecord) =>
-      this.updateChart(v),
-    );
+
     this.data = this.getData();
+    // console.log("this data: ", this.data);
+    this.callChart();
+    chartObserver(this._dataElement, (v: MutationRecord) => {
+      this.data = this.getData();
+      this.updateChart(v);
+    });
   }
 
-  callChart(chartName: string) {
+  callChart() {
+    console.log("call chart: ", this.data);
     this._chartBase.render(this._chartId, this.data);
   }
 
@@ -39,6 +44,7 @@ export class ChartDispatch {
 
   updateChart(d: MutationRecord) {
     console.log("updating: " + this._chartBase._name);
-    this._chartBase.update(this.data);
+    console.log("with data: ", this.data);
+    this._chartBase.update(this.data, this._chartId);
   }
 }

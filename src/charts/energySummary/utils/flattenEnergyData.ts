@@ -1,4 +1,4 @@
-import { EnergySiteChildDataItem } from "../types/EnergySiteBreakdown";
+import { EnergySiteChildDataItem } from "../../types/EnergySiteBreakdown";
 
 export function flattenData(data): EnergySiteChildDataItem[] {
   return data.reduce((arr, item) => {
