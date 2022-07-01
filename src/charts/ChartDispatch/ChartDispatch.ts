@@ -39,7 +39,7 @@ export class ChartDispatch {
 
   getData(): Record<string, any> {
     const value = document.querySelector(`#${this._dataElementId}`) as any;
-    return JSON.parse(value.dataset.fakeData);
+    return JSON.parse(value.dataset.chartData);
   }
 
   updateChart(d: MutationRecord) {

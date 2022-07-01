@@ -17,3 +17,6 @@ export const getDatasets = (initialData: EnergySiteBreakdownResponse) => {
 
   return { flatData, groupData, jsonData };
 };
+
+export const getDataSum = (d: EnergySiteDataItem) =>
+  d.children?.reduce((num, item) => (num = item.KwH + num), 0);

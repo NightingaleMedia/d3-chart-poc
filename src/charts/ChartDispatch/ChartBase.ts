@@ -19,7 +19,7 @@ export class ChartBase {
     // console.log("render: " + this._name);
     this._render(svgId, data);
   }
-  update(data: any, svgId?: string) {
+  update(data: any, svgId: string = "") {
     // console.log("update: " + this._name);
     this._update(svgId, data);
   }

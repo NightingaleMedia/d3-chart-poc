@@ -1,6 +1,9 @@
 import { makeManyEvents } from "../demandGenius/manyDGEventsComparison/manyDGEventsComparison";
 import { makeSingleDGChart } from "../demandGenius/singleDGEventReport";
-import { generateDGPastEventChart } from "../dgPastEvents/makeChart";
+import {
+  makeDGPastEventChart,
+  updateDgPastEventsChart,
+} from "../dgPastEvents/dgPastEventsChart";
 import { generateEnergySiteComparisonChart } from "../energySiteComparison/energySiteComparisonChart";
 import {
   makeBreakdownChart,
@@ -27,11 +30,14 @@ const singleDGChart__Class = new ChartBase({
 });
 
 const dgPastEventChart__Class = new ChartBase({
-  name: "Energy Site Breakdown Chart",
+  name: "DG Past Event Chart",
   chartRender: (id, data) => {
-    generateDGPastEventChart(id, data);
+    makeDGPastEventChart(id, data);
   },
-  chartUpdate: (data: any) => {},
+  chartUpdate: (id, data) => {
+    console.log({ id, data });
+    updateDgPastEventsChart(id, data);
+  },
 });
 
 const energySiteBreakdownChart__Class = new ChartBase({
@@ -39,7 +45,7 @@ const energySiteBreakdownChart__Class = new ChartBase({
   chartRender: (id, data) => {
     makeBreakdownChart(id, data);
   },
-  chartUpdate: (data: any, id) => {
+  chartUpdate: (id: any, data) => {
     updateEnergySiteBreakdownChart(id, data);
   },
 });
@@ -49,7 +55,7 @@ const generateEnergySummaryChart__Class = new ChartBase({
   chartRender: (id, data) => {
     generateEnergySummaryChart(id, data);
   },
-  chartUpdate: (data: any) => {},
+  chartUpdate: (data: any, id) => {},
 });
 
 const generateEnergySiteComparisonChart__Class = new ChartBase({
