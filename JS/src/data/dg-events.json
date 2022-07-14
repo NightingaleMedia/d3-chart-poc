@@ -1,0 +1,940 @@
+{
+  "data": [
+    {
+      "id": "0",
+      "groupId": "c15b35fe-3aa2-4c2c-9b7e-204861382bac",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-07-08T00:45:00.000Z",
+      "dateTimeTo": "2022-07-08T04:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "1",
+      "groupId": "b3c6ae02-0528-44d8-ad83-b24daad394fc",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-07-25T03:30:00.000Z",
+      "dateTimeTo": "2022-07-25T07:30:00.000Z",
+      "isEnabled": false,
+      "isRecurring": true
+    },
+    {
+      "id": "2",
+      "groupId": "45df2b25-bd72-4ae1-9853-b75ceaac6997",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-06-04T18:45:00.000Z",
+      "dateTimeTo": "2022-06-04T22:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "3",
+      "groupId": "093db448-73f4-426f-8bd1-a7b2be781649",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-04-12T23:00:00.000Z",
+      "dateTimeTo": "2022-04-13T03:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "4",
+      "groupId": "227303ba-f1d6-44e2-8744-9a55901d4e0b",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-07-24T20:45:00.000Z",
+      "dateTimeTo": "2022-07-25T00:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "5",
+      "groupId": "155568a9-136c-498c-9926-7969f2922de9",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-05-14T02:15:00.000Z",
+      "dateTimeTo": "2022-05-14T06:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "6",
+      "groupId": "ff727422-35ce-4361-9a18-19b0d37e80c4",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-07-11T20:30:00.000Z",
+      "dateTimeTo": "2022-07-12T00:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "7",
+      "groupId": "38d189cf-4c45-44c7-a17d-796724ee5e27",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-03-17T04:45:00.000Z",
+      "dateTimeTo": "2022-03-17T08:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "8",
+      "groupId": "4678d8bb-015a-459c-bbef-143903537e39",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-08-13T17:30:00.000Z",
+      "dateTimeTo": "2022-08-13T21:30:00.000Z",
+      "isEnabled": false,
+      "isRecurring": false
+    },
+    {
+      "id": "9",
+      "groupId": "652cd56a-aaaa-4652-8960-44da9ed9cf9c",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-08-04T16:30:00.000Z",
+      "dateTimeTo": "2022-08-04T20:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "10",
+      "groupId": "7041edcf-491a-4d61-a0f7-833152569cf5",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-05-12T23:00:00.000Z",
+      "dateTimeTo": "2022-05-13T03:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "11",
+      "groupId": "bca83e3c-f625-4edc-8616-67119e2b3ca6",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-08-09T02:45:00.000Z",
+      "dateTimeTo": "2022-08-09T06:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "12",
+      "groupId": "b58eb7eb-ba94-466b-9c35-0ae92b8ea075",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-06-18T04:15:00.000Z",
+      "dateTimeTo": "2022-06-18T08:15:00.000Z",
+      "isEnabled": false,
+      "isRecurring": true
+    },
+    {
+      "id": "13",
+      "groupId": "ea14c29a-3782-4b8f-ae9f-0eb704abc177",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-06-22T04:00:00.000Z",
+      "dateTimeTo": "2022-06-22T08:00:00.000Z",
+      "isEnabled": false,
+      "isRecurring": false
+    },
+    {
+      "id": "14",
+      "groupId": "73ea6cf1-88df-475c-8579-3a52f173141e",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-04-27T11:15:00.000Z",
+      "dateTimeTo": "2022-04-27T15:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "15",
+      "groupId": "99f756a3-b70e-46dd-8bf2-baeb3c9ee917",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-07-24T12:30:00.000Z",
+      "dateTimeTo": "2022-07-24T16:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "16",
+      "groupId": "dc74c8e7-c693-4a36-aa26-6ca38eaf2116",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-04-07T21:30:00.000Z",
+      "dateTimeTo": "2022-04-08T01:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "17",
+      "groupId": "ec68366f-7183-4fc1-938b-864aeb817723",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-06-01T12:30:00.000Z",
+      "dateTimeTo": "2022-06-01T16:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "18",
+      "groupId": "4ed9cfff-b063-438c-9a77-3298c14af03d",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-06-30T21:45:00.000Z",
+      "dateTimeTo": "2022-07-01T01:45:00.000Z",
+      "isEnabled": false,
+      "isRecurring": false
+    },
+    {
+      "id": "19",
+      "groupId": "99f3e648-8a66-467f-8a48-b433ed35c34d",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-05-28T19:45:00.000Z",
+      "dateTimeTo": "2022-05-28T23:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "20",
+      "groupId": "35afe10e-88f4-4562-bc6a-02c7f9617ba7",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-04-30T03:45:00.000Z",
+      "dateTimeTo": "2022-04-30T07:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "21",
+      "groupId": "de2779f3-46eb-4d18-8e7a-e16feec9df7d",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-06-17T22:30:00.000Z",
+      "dateTimeTo": "2022-06-18T02:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "22",
+      "groupId": "1b8993d5-2d9b-4f60-bb13-e0aa7fe83485",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-04-28T14:30:00.000Z",
+      "dateTimeTo": "2022-04-28T18:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "23",
+      "groupId": "e419198b-4394-4424-93e4-6b6968d400af",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-08-06T09:30:00.000Z",
+      "dateTimeTo": "2022-08-06T13:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "24",
+      "groupId": "1e3cc739-17e0-4f78-b4e2-e6df391c9b88",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-08-15T09:30:00.000Z",
+      "dateTimeTo": "2022-08-15T13:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "25",
+      "groupId": "49bb70a3-94c2-4ded-bfd4-d813b3c98124",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-08-13T00:00:00.000Z",
+      "dateTimeTo": "2022-08-13T04:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "26",
+      "groupId": "c3b82587-1e82-41aa-a365-9c8a8dbc7906",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-04-05T16:00:00.000Z",
+      "dateTimeTo": "2022-04-05T20:00:00.000Z",
+      "isEnabled": false,
+      "isRecurring": false
+    },
+    {
+      "id": "27",
+      "groupId": "e9777c74-9325-477b-9f32-83d6f0f29e32",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-07-13T14:45:00.000Z",
+      "dateTimeTo": "2022-07-13T18:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "28",
+      "groupId": "661bdf25-f230-40a6-85dc-6e11232d3322",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-06-05T07:00:00.000Z",
+      "dateTimeTo": "2022-06-05T11:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "29",
+      "groupId": "57c13bee-d6f4-4e6e-b0c3-86e4ed952232",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-07-09T23:30:00.000Z",
+      "dateTimeTo": "2022-07-10T03:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "30",
+      "groupId": "0fe63b81-8f9f-42e1-964a-64fcb784eb60",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-03-30T11:45:00.000Z",
+      "dateTimeTo": "2022-03-30T15:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "31",
+      "groupId": "aa74b984-e1fa-4c62-9c4a-9ed6ae67798b",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-06-17T12:00:00.000Z",
+      "dateTimeTo": "2022-06-17T16:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "32",
+      "groupId": "64198c65-7ad0-41fa-b4ec-5e9efb0fd7ba",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-04-16T07:30:00.000Z",
+      "dateTimeTo": "2022-04-16T11:30:00.000Z",
+      "isEnabled": false,
+      "isRecurring": true
+    },
+    {
+      "id": "33",
+      "groupId": "7b8b65c7-67f5-434c-a5f1-afc1db647100",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-06-03T00:45:00.000Z",
+      "dateTimeTo": "2022-06-03T04:45:00.000Z",
+      "isEnabled": false,
+      "isRecurring": true
+    },
+    {
+      "id": "34",
+      "groupId": "0ff2ab8d-5016-4d30-8e75-ded5345257cf",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-05-25T20:15:00.000Z",
+      "dateTimeTo": "2022-05-26T00:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "35",
+      "groupId": "883c68f7-a55c-4485-858c-8c2bd45fd034",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-06-18T02:00:00.000Z",
+      "dateTimeTo": "2022-06-18T06:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "36",
+      "groupId": "c667a14c-7e51-4753-91f2-6471558c3ac1",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-06-05T12:15:00.000Z",
+      "dateTimeTo": "2022-06-05T16:15:00.000Z",
+      "isEnabled": false,
+      "isRecurring": false
+    },
+    {
+      "id": "37",
+      "groupId": "5b84783c-087e-4ba2-9844-bdef36452c83",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-03-27T10:30:00.000Z",
+      "dateTimeTo": "2022-03-27T14:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "38",
+      "groupId": "ff2a21a1-3822-4b3c-a472-684de4dff44f",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-06-05T00:15:00.000Z",
+      "dateTimeTo": "2022-06-05T04:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "39",
+      "groupId": "fb94f56d-e1da-49b8-a670-7a75ea73e28b",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-05-26T19:45:00.000Z",
+      "dateTimeTo": "2022-05-26T23:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "40",
+      "groupId": "f680ea0d-294d-4ab4-bca2-d88d5050217a",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-05-28T04:15:00.000Z",
+      "dateTimeTo": "2022-05-28T08:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "41",
+      "groupId": "d984fc78-5cdd-46b0-8a7e-e179fc5778f8",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-04-20T02:45:00.000Z",
+      "dateTimeTo": "2022-04-20T06:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "42",
+      "groupId": "af70efde-d54f-405a-bbfc-138181a3cad8",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-06-25T06:15:00.000Z",
+      "dateTimeTo": "2022-06-25T10:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "43",
+      "groupId": "d478f356-05b0-4313-b8d7-9dd09b07a6bb",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-07-30T13:15:00.000Z",
+      "dateTimeTo": "2022-07-30T17:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "44",
+      "groupId": "93316284-d65b-4cfc-a352-349e1983f417",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-06-08T14:45:00.000Z",
+      "dateTimeTo": "2022-06-08T18:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "45",
+      "groupId": "66af06bc-e55f-425a-92e9-3c04d1afa51c",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-06-05T14:30:00.000Z",
+      "dateTimeTo": "2022-06-05T18:30:00.000Z",
+      "isEnabled": false,
+      "isRecurring": false
+    },
+    {
+      "id": "46",
+      "groupId": "ebaec4da-cf8a-4946-9e82-22592084e223",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-07-26T01:30:00.000Z",
+      "dateTimeTo": "2022-07-26T05:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "47",
+      "groupId": "405098ee-de73-4778-9f3c-c703ff50607e",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-05-26T06:45:00.000Z",
+      "dateTimeTo": "2022-05-26T10:45:00.000Z",
+      "isEnabled": false,
+      "isRecurring": false
+    },
+    {
+      "id": "48",
+      "groupId": "c71ee813-ce7b-4d6b-bd0c-c022b7c97fd0",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-07-17T15:45:00.000Z",
+      "dateTimeTo": "2022-07-17T19:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "49",
+      "groupId": "ffd37913-9c42-4fd8-a810-346a496e9ed1",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-05-21T03:30:00.000Z",
+      "dateTimeTo": "2022-05-21T07:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "50",
+      "groupId": "3939cfda-1fa7-4cdb-848b-b48128603f55",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-04-14T06:45:00.000Z",
+      "dateTimeTo": "2022-04-14T10:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "51",
+      "groupId": "10fc2ec7-9089-4acf-9e14-649b21497d98",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-07-11T13:45:00.000Z",
+      "dateTimeTo": "2022-07-11T17:45:00.000Z",
+      "isEnabled": false,
+      "isRecurring": true
+    },
+    {
+      "id": "52",
+      "groupId": "07efd699-4941-48ed-933e-7e2efa474aec",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-04-11T14:00:00.000Z",
+      "dateTimeTo": "2022-04-11T18:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "53",
+      "groupId": "b6429965-8958-411d-ad08-51de860e3a4f",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-04-14T17:00:00.000Z",
+      "dateTimeTo": "2022-04-14T21:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "54",
+      "groupId": "0b373b8d-a395-4615-b84e-df4675ff7841",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-06-30T04:15:00.000Z",
+      "dateTimeTo": "2022-06-30T08:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "55",
+      "groupId": "f24a0b03-b6c3-4c42-bbe4-078d21a16deb",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-04-13T05:15:00.000Z",
+      "dateTimeTo": "2022-04-13T09:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "56",
+      "groupId": "3f588407-d157-4560-b3bf-af7306fd7fde",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-04-13T01:15:00.000Z",
+      "dateTimeTo": "2022-04-13T05:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "57",
+      "groupId": "9d3ba9b9-db82-4715-95e9-6ca595428a50",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-05-01T11:15:00.000Z",
+      "dateTimeTo": "2022-05-01T15:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "58",
+      "groupId": "d0e5b4ef-2fde-41e8-9baf-f14efc40a945",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-07-07T02:00:00.000Z",
+      "dateTimeTo": "2022-07-07T06:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "59",
+      "groupId": "ac5bd3ac-79a1-4287-89a2-e14ef6560ba7",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-06-29T01:00:00.000Z",
+      "dateTimeTo": "2022-06-29T05:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "60",
+      "groupId": "7b5c4ed2-8bf9-4f19-8194-52c57dcdb95d",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-04-24T16:30:00.000Z",
+      "dateTimeTo": "2022-04-24T20:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "61",
+      "groupId": "860eeae2-c780-4b74-ac73-e8e6744a794c",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-04-06T22:15:00.000Z",
+      "dateTimeTo": "2022-04-07T02:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "62",
+      "groupId": "cff0440d-7a31-4353-8bd0-86fa3fa30762",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-05-27T21:00:00.000Z",
+      "dateTimeTo": "2022-05-28T01:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "63",
+      "groupId": "cd5c0fd4-350b-4e03-a0e5-b2b26f8721de",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-08-11T07:45:00.000Z",
+      "dateTimeTo": "2022-08-11T11:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "64",
+      "groupId": "e908bbe9-fb8b-47de-a79c-285fdaa7bbeb",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-07-17T05:15:00.000Z",
+      "dateTimeTo": "2022-07-17T09:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "65",
+      "groupId": "f0a735cb-8c5e-4c05-b208-5ca15de949ab",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-03-21T11:30:00.000Z",
+      "dateTimeTo": "2022-03-21T15:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "66",
+      "groupId": "d73d5fae-0a3e-461a-96c5-e28f95ca4ebd",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-05-14T12:30:00.000Z",
+      "dateTimeTo": "2022-05-14T16:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "67",
+      "groupId": "f4e2b64b-b00b-4891-8f57-d439d39c54a2",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-05-04T12:30:00.000Z",
+      "dateTimeTo": "2022-05-04T16:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "672",
+      "groupId": "f4e2b64b-b00b-4891-8f57-d439d39c54a2",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-05-04T12:30:00.000Z",
+      "dateTimeTo": "2022-05-04T16:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "671",
+      "groupId": "f4e2b64b-b00b-4891-8f57-d439d39c54a2",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-05-04T12:30:00.000Z",
+      "dateTimeTo": "2022-05-04T16:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "670",
+      "groupId": "f4e2b64b-b00b-4891-8f57-d439d39c54a2",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-05-04T12:30:00.000Z",
+      "dateTimeTo": "2022-05-04T16:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "68",
+      "groupId": "662588a1-bf9d-4e91-a664-68fb18a17039",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-07-05T07:00:00.000Z",
+      "dateTimeTo": "2022-07-05T11:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "69",
+      "groupId": "b7fa6238-c298-47d8-83a6-629a4ec965a9",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-06-16T14:45:00.000Z",
+      "dateTimeTo": "2022-06-16T18:45:00.000Z",
+      "isEnabled": false,
+      "isRecurring": false
+    },
+    {
+      "id": "70",
+      "groupId": "e8c787d5-f56a-4128-b4a6-103eee205dc8",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-07-20T01:45:00.000Z",
+      "dateTimeTo": "2022-07-20T05:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "71",
+      "groupId": "446df0e6-8d12-48a4-81e2-50b9230d85d9",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-04-13T12:45:00.000Z",
+      "dateTimeTo": "2022-04-13T16:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "72",
+      "groupId": "9b532369-9922-4a8f-8ee0-640a7e8db9f4",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-08-12T06:00:00.000Z",
+      "dateTimeTo": "2022-08-12T10:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "73",
+      "groupId": "94f505f1-5fab-4415-9a4d-fddd03add7b2",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-08-10T12:30:00.000Z",
+      "dateTimeTo": "2022-08-10T16:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "74",
+      "groupId": "e14c0192-0ead-4b8a-9a92-ffc3b782b96f",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-05-17T06:15:00.000Z",
+      "dateTimeTo": "2022-05-17T10:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "75",
+      "groupId": "c909d28b-60c9-4a86-aa32-085af21b03c4",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-03-25T06:00:00.000Z",
+      "dateTimeTo": "2022-03-25T10:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "76",
+      "groupId": "8a684ecd-485c-4ec9-ae5c-b7e991a35913",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-05-31T08:15:00.000Z",
+      "dateTimeTo": "2022-05-31T12:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "77",
+      "groupId": "3c77e286-1be6-4e29-8d70-d914f6e9fd4a",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-07-27T23:15:00.000Z",
+      "dateTimeTo": "2022-07-28T03:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "78",
+      "groupId": "3f52edc7-c927-4366-b2ba-7c5ac164864c",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-04-08T12:00:00.000Z",
+      "dateTimeTo": "2022-04-08T16:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "79",
+      "groupId": "879597c1-9604-446a-a90c-988277c28e97",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-06-12T02:00:00.000Z",
+      "dateTimeTo": "2022-06-12T06:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "80",
+      "groupId": "92aa2f1d-f8a9-410b-9e8a-ce4c4f4cd4ed",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-07-28T21:30:00.000Z",
+      "dateTimeTo": "2022-07-29T01:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "81",
+      "groupId": "d30f5d00-e18b-48bc-adae-0b57adf6df6e",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-06-20T06:15:00.000Z",
+      "dateTimeTo": "2022-06-20T10:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "82",
+      "groupId": "adb903f4-c126-4025-a3d6-e17c90c6dec5",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-06-20T00:15:00.000Z",
+      "dateTimeTo": "2022-06-20T04:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "83",
+      "groupId": "41aa2d85-499e-41d6-a30a-8cebedd2ef2c",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-03-28T18:45:00.000Z",
+      "dateTimeTo": "2022-03-28T22:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "84",
+      "groupId": "e6f632de-bc4c-4aa3-a962-ed6c315e3bde",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-03-26T03:30:00.000Z",
+      "dateTimeTo": "2022-03-26T07:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "85",
+      "groupId": "cefcb00a-af87-474f-850c-fa3b3eeae5be",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-06-29T09:00:00.000Z",
+      "dateTimeTo": "2022-06-29T13:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "86",
+      "groupId": "436a8e03-32d0-4a97-b6ba-f38d135cdf88",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-07-01T10:15:00.000Z",
+      "dateTimeTo": "2022-07-01T14:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "87",
+      "groupId": "3e10aefe-dc86-48a3-a724-b5038356733f",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-06-17T19:45:00.000Z",
+      "dateTimeTo": "2022-06-17T23:45:00.000Z",
+      "isEnabled": false,
+      "isRecurring": true
+    },
+    {
+      "id": "88",
+      "groupId": "b79b4243-b334-4101-b6dd-d6e9c8f80eff",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-04-11T04:30:00.000Z",
+      "dateTimeTo": "2022-04-11T08:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "89",
+      "groupId": "c36f878e-2188-439f-8e18-3131a5cc4406",
+      "type": "drEvent",
+      "dateTimeFrom": "2022-03-20T10:15:00.000Z",
+      "dateTimeTo": "2022-03-20T14:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "90",
+      "groupId": "ed79c902-50b8-4985-a91b-d96804224ed7",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-05-10T00:00:00.000Z",
+      "dateTimeTo": "2022-05-10T04:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "91",
+      "groupId": "7506e3b7-8529-4032-b480-3295aef58528",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-06-30T22:30:00.000Z",
+      "dateTimeTo": "2022-07-01T02:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "92",
+      "groupId": "54c22a15-6101-4efd-aa2f-8bc2b0df6463",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-04-27T17:45:00.000Z",
+      "dateTimeTo": "2022-04-27T21:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "922",
+      "groupId": "54c22a15-6101-4efd-aa2f-8bc2b0df6463",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-04-27T17:45:00.000Z",
+      "dateTimeTo": "2022-04-27T21:45:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "93",
+      "groupId": "e7d6079a-fdf7-4462-aa3a-5411ea1e306a",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-04-09T21:00:00.000Z",
+      "dateTimeTo": "2022-04-10T01:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "94",
+      "groupId": "886f24d1-6484-4536-b7fb-b1db4c9c12dc",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-07-30T23:15:00.000Z",
+      "dateTimeTo": "2022-07-31T03:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "95",
+      "groupId": "a5018fe7-d397-4c51-8d73-89f9c2162726",
+      "type": "greenEnergy",
+      "dateTimeFrom": "2022-03-16T11:30:00.000Z",
+      "dateTimeTo": "2022-03-16T15:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "96",
+      "groupId": "e6ad7370-dc96-47bf-943f-aaabdeb52925",
+      "type": "roomRefresh",
+      "dateTimeFrom": "2022-07-07T02:00:00.000Z",
+      "dateTimeTo": "2022-07-07T06:00:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    },
+    {
+      "id": "97",
+      "groupId": "7cb64df6-300e-4a07-aa35-7bd4fc707806",
+      "type": "weatherEvent--warm",
+      "dateTimeFrom": "2022-08-10T17:30:00.000Z",
+      "dateTimeTo": "2022-08-10T21:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "98",
+      "groupId": "aefeb2f6-d338-4d43-941f-d828ee75a8c7",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-06-26T16:30:00.000Z",
+      "dateTimeTo": "2022-06-26T20:30:00.000Z",
+      "isEnabled": true,
+      "isRecurring": false
+    },
+    {
+      "id": "99",
+      "groupId": "ece65a4e-93eb-4438-b187-7ce56ee94fa8",
+      "type": "weatherEvent--cold",
+      "dateTimeFrom": "2022-07-19T16:15:00.000Z",
+      "dateTimeTo": "2022-07-19T20:15:00.000Z",
+      "isEnabled": true,
+      "isRecurring": true
+    }
+  ]
+}

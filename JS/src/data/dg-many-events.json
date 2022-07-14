@@ -1,0 +1,664 @@
+{
+  "data": [
+    {
+      "Time": "11:00 AM",
+      "EnergyUsage": 200,
+      "SetPoint": 70,
+      "Fan": 1,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": false
+    },
+    {
+      "Time": "11:15 AM",
+      "EnergyUsage": 250,
+      "SetPoint": 71,
+      "Fan": 2,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": false
+    },
+    {
+      "Time": "11:30 AM",
+      "EnergyUsage": 340,
+      "SetPoint": 70,
+      "Fan": 0,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": false
+    },
+    {
+      "Time": "11:45 AM",
+      "EnergyUsage": 360,
+      "SetPoint": 69,
+      "Fan": 0,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": false
+    },
+    {
+      "Time": "12:00 PM",
+      "EnergyUsage": 360,
+      "SetPoint": 69,
+      "Fan": 2,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": true
+    },
+    {
+      "Time": "12:15 PM",
+      "EnergyUsage": 280,
+      "SetPoint": 68,
+      "Fan": 1,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": true
+    },
+    {
+      "Time": "12:30 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 68,
+      "Fan": 0,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": true
+    },
+    {
+      "Time": "12:45 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 68,
+      "Fan": 2,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": true
+    },
+    {
+      "Time": "1:00 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 68,
+      "Fan": 1,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": true
+    },
+    {
+      "Time": "1:15 PM",
+      "EnergyUsage": 220,
+      "SetPoint": 69,
+      "Fan": 1,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": true
+    },
+    {
+      "Time": "1:30 PM",
+      "EnergyUsage": 220,
+      "SetPoint": 69,
+      "Fan": 1,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": true
+    },
+    {
+      "Time": "1:45 PM",
+      "EnergyUsage": 220,
+      "SetPoint": 69,
+      "Fan": 0,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": true
+    },
+    {
+      "Time": "2:00 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 68,
+      "Fan": 0,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": true
+    },
+    {
+      "Time": "2:15 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 68,
+      "Fan": 1,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": true
+    },
+    {
+      "Time": "2:30 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 69,
+      "Fan": 1,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": true
+    },
+    {
+      "Time": "2:45 PM",
+      "EnergyUsage": 220,
+      "SetPoint": 70,
+      "Fan": 2,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": true
+    },
+    {
+      "Time": "3:00 PM",
+      "EnergyUsage": 220,
+      "SetPoint": 70,
+      "Fan": 0,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": true
+    },
+    {
+      "Time": "3:15 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 71,
+      "Fan": 0,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": true
+    },
+    {
+      "Time": "3:30 PM",
+      "EnergyUsage": 190,
+      "SetPoint": 72,
+      "Fan": 1,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": false
+    },
+    {
+      "Time": "3:45 PM",
+      "EnergyUsage": 180,
+      "SetPoint": 72,
+      "Fan": 0,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": false
+    },
+    {
+      "Time": "4:00 PM",
+      "EnergyUsage": 180,
+      "SetPoint": 71,
+      "Fan": 1,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": false
+    },
+    {
+      "Time": "4:15 PM",
+      "EnergyUsage": 170,
+      "SetPoint": 73,
+      "Fan": 0,
+      "Site": "Site 1",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAx",
+      "EventWindow": false
+    },
+    {
+      "Time": "2:30 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 70,
+      "Fan": 1,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": false
+    },
+    {
+      "Time": "2:45 PM",
+      "EnergyUsage": 250,
+      "SetPoint": 71,
+      "Fan": 2,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": false
+    },
+    {
+      "Time": "3:00 PM",
+      "EnergyUsage": 340,
+      "SetPoint": 70,
+      "Fan": 0,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": false
+    },
+    {
+      "Time": "3:15 PM",
+      "EnergyUsage": 360,
+      "SetPoint": 69,
+      "Fan": 0,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": false
+    },
+    {
+      "Time": "3:30 PM",
+      "EnergyUsage": 360,
+      "SetPoint": 69,
+      "Fan": 2,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": false
+    },
+    {
+      "Time": "3:45 PM",
+      "EnergyUsage": 280,
+      "SetPoint": 68,
+      "Fan": 1,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": true
+    },
+    {
+      "Time": "4:00 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 68,
+      "Fan": 0,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": true
+    },
+    {
+      "Time": "4:15 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 68,
+      "Fan": 2,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": true
+    },
+    {
+      "Time": "4:30 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 68,
+      "Fan": 1,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": true
+    },
+    {
+      "Time": "4:45 PM",
+      "EnergyUsage": 220,
+      "SetPoint": 69,
+      "Fan": 1,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": true
+    },
+    {
+      "Time": "5:00 PM",
+      "EnergyUsage": 220,
+      "SetPoint": 69,
+      "Fan": 1,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": true
+    },
+    {
+      "Time": "5:15 PM",
+      "EnergyUsage": 220,
+      "SetPoint": 69,
+      "Fan": 0,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": true
+    },
+    {
+      "Time": "5:30 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 68,
+      "Fan": 0,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": true
+    },
+    {
+      "Time": "5:45 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 68,
+      "Fan": 1,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": true
+    },
+    {
+      "Time": "6:00 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 69,
+      "Fan": 1,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": true
+    },
+    {
+      "Time": "6:15 PM",
+      "EnergyUsage": 220,
+      "SetPoint": 70,
+      "Fan": 2,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": true
+    },
+    {
+      "Time": "6:30 PM",
+      "EnergyUsage": 220,
+      "SetPoint": 70,
+      "Fan": 0,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": true
+    },
+    {
+      "Time": "6:45 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 71,
+      "Fan": 0,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": true
+    },
+    {
+      "Time": "7:00 PM",
+      "EnergyUsage": 190,
+      "SetPoint": 72,
+      "Fan": 1,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": false
+    },
+    {
+      "Time": "7:15 PM",
+      "EnergyUsage": 180,
+      "SetPoint": 72,
+      "Fan": 0,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": false
+    },
+    {
+      "Time": "7:30 PM",
+      "EnergyUsage": 180,
+      "SetPoint": 71,
+      "Fan": 1,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": false
+    },
+    {
+      "Time": "7:45 PM",
+      "EnergyUsage": 170,
+      "SetPoint": 73,
+      "Fan": 0,
+      "Site": "Site 2",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAy",
+      "EventWindow": false
+    },
+    {
+      "Time": "10:15 AM",
+      "EnergyUsage": 200,
+      "SetPoint": 68,
+      "Fan": 0,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": false
+    },
+    {
+      "Time": "10:30 AM",
+      "EnergyUsage": 250,
+      "SetPoint": 69,
+      "Fan": 0,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": false
+    },
+    {
+      "Time": "10:45 AM",
+      "EnergyUsage": 340,
+      "SetPoint": 75,
+      "Fan": 2,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": false
+    },
+    {
+      "Time": "11:00 AM",
+      "EnergyUsage": 360,
+      "SetPoint": 78,
+      "Fan": 2,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": false
+    },
+    {
+      "Time": "11:15 AM",
+      "EnergyUsage": 360,
+      "SetPoint": 76,
+      "Fan": 2,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": true
+    },
+    {
+      "Time": "11:30 AM",
+      "EnergyUsage": 280,
+      "SetPoint": 75,
+      "Fan": 1,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": true
+    },
+    {
+      "Time": "11:45 AM",
+      "EnergyUsage": 200,
+      "SetPoint": 74,
+      "Fan": 0,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": true
+    },
+    {
+      "Time": "12:00 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 74,
+      "Fan": 0,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": true
+    },
+    {
+      "Time": "12:15 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 74,
+      "Fan": 0,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": true
+    },
+    {
+      "Time": "12:30 PM",
+      "EnergyUsage": 220,
+      "SetPoint": 74,
+      "Fan": 0,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": true
+    },
+    {
+      "Time": "12:45 PM",
+      "EnergyUsage": 220,
+      "SetPoint": 74,
+      "Fan": 0,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": true
+    },
+    {
+      "Time": "1:00 PM",
+      "EnergyUsage": 220,
+      "SetPoint": 72,
+      "Fan": 1,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": true
+    },
+    {
+      "Time": "1:15 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 68,
+      "Fan": 1,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": true
+    },
+    {
+      "Time": "1:30 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 70,
+      "Fan": 2,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": true
+    },
+    {
+      "Time": "1:45 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 70,
+      "Fan": 1,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": true
+    },
+    {
+      "Time": "2:00 PM",
+      "EnergyUsage": 220,
+      "SetPoint": 70,
+      "Fan": 0,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": true
+    },
+    {
+      "Time": "2:15 PM",
+      "EnergyUsage": 220,
+      "SetPoint": 70,
+      "Fan": 0,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": true
+    },
+    {
+      "Time": "2:30 PM",
+      "EnergyUsage": 200,
+      "SetPoint": 71,
+      "Fan": 0,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": true
+    },
+    {
+      "Time": "2:45 PM",
+      "EnergyUsage": 190,
+      "SetPoint": 72,
+      "Fan": 0,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": false
+    },
+    {
+      "Time": "3:00 PM",
+      "EnergyUsage": 180,
+      "SetPoint": 72,
+      "Fan": 0,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": false
+    },
+    {
+      "Time": "3:15 PM",
+      "EnergyUsage": 180,
+      "SetPoint": 71,
+      "Fan": 1,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": false
+    },
+    {
+      "Time": "3:30 PM",
+      "EnergyUsage": 170,
+      "SetPoint": 72,
+      "Fan": 0,
+      "Site": "Site 3",
+      "TempScale": "F",
+      "SiteId": "U2l0ZSAz",
+      "EventWindow": false
+    }
+  ]
+}

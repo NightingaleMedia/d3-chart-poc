@@ -1,0 +1,156 @@
+[
+  {
+    "Time": "11:00 AM",
+    "EnergyUsage": "200",
+    "SetPoint": "70",
+    "Fan": "1",
+    "EventWindow": "false"
+  },
+  {
+    "Time": "11:15 AM",
+    "EnergyUsage": "250",
+    "SetPoint": "71",
+    "Fan": "2",
+    "EventWindow": "false"
+  },
+  {
+    "Time": "11:30 AM",
+    "EnergyUsage": "340",
+    "SetPoint": "70",
+    "Fan": "0",
+    "EventWindow": "false"
+  },
+  {
+    "Time": "11:45 AM",
+    "EnergyUsage": "360",
+    "SetPoint": "69",
+    "Fan": "0",
+    "EventWindow": "false"
+  },
+  {
+    "Time": "12:00 PM",
+    "EnergyUsage": "360",
+    "SetPoint": "69",
+    "Fan": "2",
+    "EventWindow": "true"
+  },
+  {
+    "Time": "12:15 PM",
+    "EnergyUsage": "280",
+    "SetPoint": "68",
+    "Fan": "2",
+    "EventWindow": "true"
+  },
+  {
+    "Time": "12:30 PM",
+    "EnergyUsage": "200",
+    "SetPoint": "68",
+    "Fan": "0",
+    "EventWindow": "true"
+  },
+  {
+    "Time": "12:45 PM",
+    "EnergyUsage": "200",
+    "SetPoint": "68",
+    "Fan": "0",
+    "EventWindow": "true"
+  },
+  {
+    "Time": "1:00 PM",
+    "EnergyUsage": "200",
+    "SetPoint": "68",
+    "Fan": "1",
+    "EventWindow": "true"
+  },
+  {
+    "Time": "1:15 PM",
+    "EnergyUsage": "220",
+    "SetPoint": "69",
+    "Fan": "1",
+    "EventWindow": "true"
+  },
+  {
+    "Time": "1:30 PM",
+    "EnergyUsage": "220",
+    "SetPoint": "69",
+    "Fan": "1",
+    "EventWindow": "true"
+  },
+  {
+    "Time": "1:45 PM",
+    "EnergyUsage": "220",
+    "SetPoint": "69",
+    "Fan": "0",
+    "EventWindow": "true"
+  },
+  {
+    "Time": "2:00 PM",
+    "EnergyUsage": "200",
+    "SetPoint": "68",
+    "Fan": "0",
+    "EventWindow": "true"
+  },
+  {
+    "Time": "2:15 PM",
+    "EnergyUsage": "200",
+    "SetPoint": "68",
+    "Fan": "1",
+    "EventWindow": "true"
+  },
+  {
+    "Time": "2:30 PM",
+    "EnergyUsage": "200",
+    "SetPoint": "69",
+    "Fan": "1",
+    "EventWindow": "true"
+  },
+  {
+    "Time": "2:45 PM",
+    "EnergyUsage": "220",
+    "SetPoint": "70",
+    "Fan": "2",
+    "EventWindow": "true"
+  },
+  {
+    "Time": "3:00 PM",
+    "EnergyUsage": "220",
+    "SetPoint": "70",
+    "Fan": "0",
+    "EventWindow": "true"
+  },
+  {
+    "Time": "3:15 PM",
+    "EnergyUsage": "200",
+    "SetPoint": "71",
+    "Fan": "0",
+    "EventWindow": "false"
+  },
+  {
+    "Time": "3:30 PM",
+    "EnergyUsage": "190",
+    "SetPoint": "72",
+    "Fan": "1",
+    "EventWindow": "false"
+  },
+  {
+    "Time": "3:45 PM",
+    "EnergyUsage": "180",
+    "SetPoint": "72",
+    "Fan": "0",
+    "EventWindow": "false"
+  },
+  {
+    "Time": "4:00 PM",
+    "EnergyUsage": "180",
+    "SetPoint": "71",
+    "Fan": "1",
+    "EventWindow": "false"
+  },
+  {
+    "Time": "4:15 PM",
+    "EnergyUsage": "170",
+    "SetPoint": "73",
+    "Fan": "0",
+    "EventWindow": "false"
+  }
+]

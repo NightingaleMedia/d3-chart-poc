@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "id": "ss234qldls1",
+      "SiteName": "Chicago",
+      "KwH": 150,
+      "children": [
+        { "id": "234qldls1sld", "SiteName": "Apartment #102", "KwH": 50 },
+        { "id": "asdlfk", "SiteName": "Apartment #104", "KwH": 80 },
+        { "id": "pwoelsd", "SiteName": "Apartment #102", "KwH": 10 },
+        { "id": "sdlckdls", "SiteName": "Apartment #402", "KwH": 10 }
+      ]
+    },
+    {
+      "id": "dd2asldgk2ld",
+      "SiteName": "New York",
+      "KwH": 100,
+      "children": [
+        { "id": "asdlkdel", "SiteName": "Apartment #292", "KwH": 80 },
+        { "id": "sdflas9dld", "SiteName": "Apartment #200", "KwH": 10 },
+        { "id": "239fldmsdf", "SiteName": "Apartment #302", "KwH": 10 }
+      ]
+    },
+    {
+      "id": "aa3asldfld",
+      "SiteName": "Los Angeles",
+      "KwH": 280,
+      "children": [
+        { "id": "asldkfdmxkdf", "SiteName": "Apartment #401", "KwH": 150 },
+        { "id": "asdflrivdss", "SiteName": "Apartment #404", "KwH": 80 },
+        { "id": "aldmdjflvnds44ws", "SiteName": "Apartment #201", "KwH": 20 },
+        { "id": "asdflfdfkds", "SiteName": "Apartment #221", "KwH": 30 }
+      ]
+    },
+    {
+      "id": "bb4234ladsdl",
+      "SiteName": "Seattle",
+      "KwH": 250,
+      "children": [
+        { "id": "dkslfl9sd92lsd", "SiteName": "Apartment #501", "KwH": 150 },
+        { "id": "cmslddldks20dls", "SiteName": "Apartment #421", "KwH": 80 },
+        { "id": "mldoslfd20lsld", "SiteName": "Apartment #441", "KwH": 20 }
+      ]
+    }
+  ]
+}

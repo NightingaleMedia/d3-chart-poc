@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Bird's Eye Energy Summary</h1>
+    <p style="color: white">Scroll to zoom, drag to move</p>
+    <div class="energy-summary--wrap">
+      <svg id="energy-summary-chart" height="450" width="1200"></svg>
+      <div
+        class="energy-summary-tooltip"
+        id="energy-summary--tooltip--energy-summary-chart"
+      >
+        <div class="energy-summary--tooltip__content">
+          <div id="energy-summary--tooltip__date"></div>
+          <div id="energy-summary--tooltip__usage"></div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <h1>Site Comparison</h1>
+    <svg id="energy-site-comparison" height="450" width="1200"></svg>
+    <div class="site-comparison--legend" style="display: flex; gap: 1rem"></div>
+    <br />
+    <h1>Site By Site Energy Breakdown</h1>
+    <svg id="site-breakdown-chart" height="450" width="1200"></svg>
+    <br />
+    <h1>Single Demand Genius Event</h1>
+    <svg class="demand-genius" height="450" width="1200"></svg>
+    <br />
+    <h1>Demand Genius Many Events Comparison</h1>
+    <div class="many-events--wrap">
+      <div class="selection--wrap"></div>
+      <svg class="demand-genius--many" height="450" width="1200"></svg>
+    </div>
+
+    <br />
+    <h1>Demand Genius Past Events</h1>
+    <div style="position: relative" class="dg-past--wrap">
+      <div id="dg-past-event-data"></div>
+      <svg id="dg-past-events" height="450" width="1450"></svg>
+      <br />
+      <div class="dg-past-event--tooltip">
+        <div class="dg-past-event--tooltip__content">
+          <div id="dg-past-event--tooltip__date"></div>
+          <div id="dg-past-event--tooltip__name"></div>
+        </div>
+        <div class="dg-past-event--tooltip__footer">Show Summary</div>
+      </div>
+    </div>
+    <h1>Device Data</h1>
+    <svg id="device-data--chart" height="450" width="1200"></svg>
+    <br />
+    <h1>Green vs. Brown</h1>
+    <canvas id="green-brown-chart" width="800" height="400"></canvas>
+    <h1>Donut Green vs. Brown</h1>
+    <canvas id="donut-energy-chart" width="400" height="400"></canvas>
+    <!-- <svg id="date-range"></svg> -->
+  </body>
+
+  <script type="module" src="charts/index.js"></script>
+  <script type="module" src="charts/__tests__/index.js"></script>
+</html>
