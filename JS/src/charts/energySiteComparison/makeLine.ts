@@ -1,4 +1,12 @@
-import { AxisScale, line, ScaleLinear, ScaleTime, Selection } from "d3";
+import {
+  AxisScale,
+  curveLinear,
+  curveStep,
+  line,
+  ScaleLinear,
+  ScaleTime,
+  Selection,
+} from "d3";
 import { SiteUsage } from "../types/EnergySiteComparison";
 
 type MakeLine__Props = {
@@ -8,6 +16,8 @@ type MakeLine__Props = {
   color: string;
   selector: Selection<SVGGElement, unknown, HTMLElement, any>;
   className: string;
+  id: string;
+  groupId: string;
 };
 // ENERGY LINE
 export const makeLine = ({
@@ -17,8 +27,11 @@ export const makeLine = ({
   color,
   selector,
   className,
+  id,
+  groupId,
 }: MakeLine__Props) => {
   const energyLine = line()
+    .curve(curveStep)
     .x((d: any | SiteUsage) => {
       return xScale(d.timeset);
     })
@@ -28,8 +41,10 @@ export const makeLine = ({
 
   selector
     .append("path")
+    .attr("clip-path", `url(#${groupId})`)
     .datum(data)
     .attr("class", className)
+    .attr("id", id)
     .attr("d", energyLine)
     .attr("stroke", color)
     .attr("fill", "none");

@@ -138,7 +138,6 @@ export function makeManyEvents(svgId, data) {
       const color = interpolateCool(colorDomain(index));
       return {...d, color, colors, id: btoa(d.key)};
     });
-    console.log({datasets});
     createdDataset.forEach((d, index) => {
       const props = {
         data: d.values,

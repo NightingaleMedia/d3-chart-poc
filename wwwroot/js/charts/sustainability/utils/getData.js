@@ -9,7 +9,6 @@ export const getBrownData = () => {
   return result;
 };
 export const getGreenData = () => {
-  const brownData = getBrownData();
   let result = greenData.data.filter((d) => d.type === "green");
   result = result.map((r, index) => ({
     x: r.time,

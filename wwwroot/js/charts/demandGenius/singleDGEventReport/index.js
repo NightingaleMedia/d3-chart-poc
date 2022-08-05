@@ -67,8 +67,8 @@ export function makeSingleDGChart(svgId, data) {
       Math.ceil(Number(RangeHigh) / 10) * 10
     ];
     const kwhRange = [
-      min(data2.map((d) => d.EnergyUsage)) ?? 0,
-      max(data2.map((d) => d.EnergyUsage)) ?? 1e3
+      Math.floor(min(data2.map((d) => d.EnergyUsage)) / 50) * 50,
+      Math.ceil(max(data2.map((d) => d.EnergyUsage)) / 100) * 100
     ];
     const xScale = scaleTime().domain([dataXrange[0] ?? new Date(), dataXrange[1] ?? new Date()]).range([0, width]).nice();
     const tempYScale = scaleLinear().range([height, 0]).domain(tempRange);
@@ -86,7 +86,7 @@ export function makeSingleDGChart(svgId, data) {
       g.selectAll(".tick line").attr("transform", "translate(20,0)").attr("stroke", getColor(ColorAccessor.AXIS_COLOR));
       g.selectAll(".tick:nth-of-type(odd) line").attr("opacity", 0);
       g.selectAll(".tick text").attr("fill", getColor(ColorAccessor.AXIS_LABEL_COLOR));
-      g.selectAll(".tick:first-of-type line, .tick:first-of-type text").attr("opacity", 0);
+      g.selectAll(".tick:first-of-type line, .tick:first-of-type text, .tick:last-of-type line, .tick:last-of-type text").attr("opacity", 0);
     });
     chartG.append("g").attr("class", "x axis").attr("transform", `translate(0, ${height + 10})`).call(xAxis).call((g) => g.selectAll(".tick line, .tick text").attr("text-rendering", "optimizeLegibility").attr("fill", getColor(ColorAccessor.AXIS_LABEL_COLOR)));
     const startEnd = fullChart.append("rect").attr("class", "single-event--event-window").attr("fill", "rgba(105,105,135,0.2)").attr("height", height).attr("width", () => {
@@ -197,7 +197,7 @@ export function makeSingleDGChart(svgId, data) {
     const tracer = chartG.append("g");
     const tracerLineY = tracer.append("rect").attr("class", "single-event--track-line-y").attr("fill", "white").attr("height", height).attr("width", 0.4).attr("x", -100).attr("y", 0);
     const tracerLineX = tracer.append("rect").attr("class", "single-event--track-line-x").attr("height", 0.4).attr("fill", "white").attr("width", width).attr("y", -100);
-    const tracerTextBg = tracer.append("rect").attr("fill", "var(--zen-blue)").attr("width", 75).attr("height", 35).attr("ry", 6).attr("text-anchor", "middle").attr("x", -width).attr("y", -10);
+    const tracerTextBg = tracer.append("rect").attr("fill", "var(--zss-blue)").attr("width", 75).attr("height", 35).attr("ry", 6).attr("text-anchor", "middle").attr("x", -width).attr("y", -10);
     const tracerText = tracer.append("text").attr("fill", "white").attr("text-anchor", "middle").attr("x", tracerLineY.attr("x")).attr("y", 13);
     chartG.append("rect").attr("width", width).attr("height", height).style("cursor", "crosshair").attr("fill", "rgba(0,0,0,0)").on("mousemove", function(event) {
       const hoveredDate = xScale.invert(pointer(event)[0]);

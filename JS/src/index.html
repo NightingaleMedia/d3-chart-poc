@@ -5,33 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Font Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>D3 Charts for Zen</title>
   </head>
   <body>
     <h1>Bird's Eye Energy Summary</h1>
     <p style="color: white">Scroll to zoom, drag to move</p>
-    <div class="energy-summary--wrap">
-      <svg id="energy-summary-chart" height="450" width="1200"></svg>
-      <div
-        class="energy-summary-tooltip"
-        id="energy-summary--tooltip--energy-summary-chart"
-      >
-        <div class="energy-summary--tooltip__content">
-          <div id="energy-summary--tooltip__date"></div>
-          <div id="energy-summary--tooltip__usage"></div>
+    <div id="energy-summary-chart" class="energy-summary--wrap">
+      <div class="energy-summary--chart-wrap">
+        <svg id="energy-summary-chart" height="450" width="1200"></svg>
+        <div
+          class="energy-summary-tooltip"
+          id="energy-summary--tooltip--energy-summary-chart"
+        >
+          <div class="energy-summary--tooltip__content">
+            <div id="energy-summary--tooltip__date"></div>
+            <div id="energy-summary--tooltip__usage"></div>
+          </div>
         </div>
+      </div>
+      <div
+        class="energy-summary--slider mud-slider mud-slider-large mud-slider-warning"
+      >
+        <div></div>
+        <div
+          class="mud-slider-container"
+          id="energy-summary-chart--slider"
+        ></div>
+      </div>
+    </div>
+    <br />
+    <h1>Bird's Eye Energy Summary 2</h1>
+    <p style="color: white">Scroll to zoom, drag to move</p>
+    <div id="energy-summary-chart-2" class="energy-summary--wrap">
+      <div class="energy-summary--chart-wrap">
+        <svg id="energy-summary-chart-2" height="450" width="1200"></svg>
+        <div
+          class="energy-summary-tooltip"
+          id="energy-summary--tooltip--energy-summary-chart-2"
+        >
+          <div class="energy-summary--tooltip__content">
+            <div id="energy-summary--tooltip__date"></div>
+            <div id="energy-summary--tooltip__usage"></div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="energy-summary--slider mud-slider mud-slider-large mud-slider-warning"
+      >
+        <div></div>
+        <div
+          class="mud-slider-container"
+          id="energy-summary-chart-2--slider"
+        ></div>
       </div>
     </div>
     <br />
     <h1>Site Comparison</h1>
-    <svg id="energy-site-comparison" height="450" width="1200"></svg>
+    <svg id="energy-site-comparison-chart" height="450" width="1200"></svg>
     <div class="site-comparison--legend" style="display: flex; gap: 1rem"></div>
     <br />
     <h1>Site By Site Energy Breakdown</h1>
     <svg id="site-breakdown-chart" height="450" width="1200"></svg>
     <br />
     <h1>Single Demand Genius Event</h1>
-    <svg class="demand-genius" height="450" width="1200"></svg>
+    <svg
+      id="dg-event-report--chart"
+      class="demand-genius"
+      height="450"
+      width="1200"
+    ></svg>
     <br />
     <h1>Demand Genius Many Events Comparison</h1>
     <div class="many-events--wrap">
@@ -56,10 +107,26 @@
     <h1>Device Data</h1>
     <svg id="device-data--chart" height="450" width="1200"></svg>
     <br />
+    <h1>Engagement Chart</h1>
+    <svg id="engagement--chart" height="450" width="450"></svg>
+    <br />
+    <h1>14-Day Peak</h1>
+    <svg id="peak-performance--chart" height="150" width="330"></svg>
+    <br />
+    <h1>Green Engagement Chart</h1>
+    <svg id="green-engagement--chart" height="450" width="600"></svg>
+    <br />
+    <h1>Site Energy Usage</h1>
+    <svg id="site-energy-usage--chart" height="450" width="800"></svg>
+    <br />
     <h1>Green vs. Brown</h1>
-    <canvas id="green-brown-chart" width="800" height="400"></canvas>
+    <canvas
+      id="green-brown-comparison--chart"
+      width="800"
+      height="400"
+    ></canvas>
     <h1>Donut Green vs. Brown</h1>
-    <canvas id="donut-energy-chart" width="400" height="400"></canvas>
+    <canvas id="energy-donut--chart" width="400" height="400"></canvas>
     <!-- <svg id="date-range"></svg> -->
   </body>
 

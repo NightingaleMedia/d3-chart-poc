@@ -14,8 +14,12 @@ type EnergySiteUsageSeries = {
 };
 
 export interface SiteUsage extends TimeSeriesDataItem {
+  id: string;
+  parentId: string;
   usage: number;
   timeset: Date | null;
+  //   day hour of year in the format <24hour>-<number of day 0-364>-<YYYY>
+  dayHourOfYear;
   //   day of year in the format <number of day 0-364>-<YYYY>
   dayOfYear: string;
   dateNum: number;

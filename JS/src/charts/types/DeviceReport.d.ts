@@ -1,7 +1,7 @@
 export type DeviceReportDataPoint = {
   timestamp: EpochTimeStamp;
   coolingSetpoint: number;
-  heatingSetpoint: Number;
+  heatingSetpoint: number;
   fanMode?: any;
   dimmerLevel: any;
   humidity: any;
@@ -13,9 +13,18 @@ export type DeviceReportDataPoint = {
     Y: boolean;
     Y1: boolean;
   };
-  mode: any;
+  mode: 0 | 1 | 2 | 3 | 4 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 };
 
+declare interface DeviceActivityReport {
+  device: {
+    deviceId: string;
+    title: string;
+    type: string;
+    sensor: string;
+  };
+  data: DeviceReportDataPoint[];
+}
 export interface DeviceReportDataPointItem extends DeviceReportDataPoint {
   timeset: Date;
   index: number;

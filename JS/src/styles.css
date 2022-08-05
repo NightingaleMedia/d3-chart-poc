@@ -2,25 +2,31 @@ html {
   background-color: rgb(9, 9, 9);
   --zss-blue: #2d7ce0;
   --zss-nominal: rgb(90, 93, 97);
-  --zss-warning: #f16441;
+  --zss-warning: #ff9800;
+  --zss-error: #f14441;
+  --zss-brown: rgb(165 146 119);
   /* --zss-chart-bg: rgb(16, 16, 16); */
-  --zss-chart-bg: rgb(114, 114, 114);
+  --zss-chart-bg: rgb(45, 45, 45);
   --zss-dark-blue: #0b3e9e;
   --zss-green: #09da6e;
   --zss-energy-line: #38feaf;
+  --zss-success: #38feaf;
   --zss-setpoint-line: #fecc38;
   --zss-chart-axis-line: rgba(255, 255, 255, 0.1);
   --zss-chart-axis-text: white;
-  /* --zss-dg-weatherEvent--cold: rgb(0, 144, 163);
-  --zss-dg-weatherEvent--warm: rgb(255, 174, 23);
-  --zss-dg-greenEnergy: #09da6e;
-  --zss-dg-roomRefresh: #005ea7;
-  --zss-dg-drEvent: rgb(67, 0, 44); */
   --zss-dg-roomRefresh: #71cac4;
   --zss-dg-weatherEvent--cold: #2d7ce0;
   --zss-dg-weatherEvent--warm: #ed7f48;
   --zss-dg-greenEnergy: #74bb00;
+  --zss-metric-primary: #ffba01;
+  --zss-metric-font: 'Saira', sans-serif;
   --zss-dg-drEvent: #869d9c;
+  --zss-engagement-bad: linear-gradient(
+    239deg,
+    rgba(237, 23, 23, 1) 0%,
+    rgba(237, 60, 26, 1) 50%,
+    rgba(239, 192, 36, 1) 97%
+  );
   font-family: sans-serif;
   padding: 2rem;
   --mud-typography-h6-size: 1.5rem;
@@ -33,12 +39,21 @@ svg {
   background-color: rgb(9, 9, 9);
   padding: 0.25rem;
 }
+
+path {
+  stroke-linecap: round;
+}
 /* ENERGY SUMMARY */
 .energy-summary--wrap {
+  display: flex;
+}
+
+.energy-summary--chart-wrap {
   position: relative;
 }
 .energy-summary-tooltip {
   position: absolute;
+  text-align: center;
 }
 
 .energy-summary--tooltip__content {
@@ -58,11 +73,20 @@ svg {
 #energy-summary--tooltip__usage {
 }
 
+.energy-summary--slider {
+  display: flex;
+}
+.energy-summary--slider input {
+  transform: rotate(270deg);
+}
+.energy-summary--slider .mud-slider-container {
+  display: flex;
+}
 /* ENERGY BREAKDOWN */
 div.energy-breakdown-chart--tooltip {
   position: absolute;
   text-align: left;
-  width: 120px;
+  width: 150px;
   min-height: 30px;
   padding: 16px;
   font: 16px sans-serif;
@@ -71,6 +95,10 @@ div.energy-breakdown-chart--tooltip {
   border: 1px solid black;
   border-radius: 3px;
   pointer-events: none;
+}
+
+.energy-site-comparison-chart {
+  /* fill: var(--zss-blue); */
 }
 /* single event */
 .single-event--energy-line {
@@ -98,7 +126,7 @@ div.dg-past--wrap {
 }
 
 .dg-past-event--tooltip::after {
-  content: "";
+  content: '';
   height: 30px;
   width: 30px;
   position: absolute;

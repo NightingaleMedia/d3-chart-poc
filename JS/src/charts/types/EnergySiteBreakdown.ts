@@ -1,10 +1,12 @@
 export type EnergySiteBreakdownResponse = {
   data: EnergySiteChild[];
+  threshold: number;
 };
 
 export type EnergySiteChild = {
   id: string;
-  SiteName: string;
+  title: string;
+  parentId?: string;
   KwH: number;
   children?: EnergySiteChild[];
 };

@@ -1,15 +1,20 @@
-import ChartBase from "./ChartBase";
+import ChartBase from './ChartBase';
 
 export type ChartName =
-  | "dgSingleReportChart"
-  | "pastDGEventChart"
-  | "dgManyReportChart"
-  | "energySummaryChart"
-  | "energySiteBreakdownChart"
+  | 'dgSingleReportChart'
+  | 'pastDGEventChart'
+  | 'dgManyReportChart'
+  | 'energySummaryChart'
+  | 'energySiteBreakdownChart'
   // | "brownAreaChart"
-  // | "energyDonutChart"
-  | "deviceDataReport"
-  | "energySiteComparison";
+  | 'energyDonutChart'
+  | 'peakPerformanceChart'
+  | 'engagementChart'
+  | 'deviceDataReport'
+  | 'energySiteComparison'
+  | 'greenEngagement'
+  | 'siteEnergyUsage'
+  | 'greenBrownAreaChart';
 
 export type ChartMap = {
   [k in ChartName]: ChartBase;

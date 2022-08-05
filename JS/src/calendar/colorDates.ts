@@ -8,6 +8,7 @@ export const colorDates = (jsonStringData: string) => {
 
   dateArray.forEach((d) => {
     const formattedDate = moment(d).format("dddd, DD MMMM YYYY");
+    console.log({ formattedDate });
     const elem = document.querySelector(`[aria-label='${formattedDate}']`);
     elem?.classList.add("has-items");
   });

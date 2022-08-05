@@ -1,8 +1,7 @@
-import greenData from "../../../data/greenEnergyUsage.json";
+import greenData from '../../../data/greenEnergyUsage.json';
 
 export const getBrownData = () => {
-  let result = greenData.data.filter((d) => d.type === "brown");
-
+  let result = greenData.data.filter((d) => d.type === 'brown');
   result = result.map((r) => ({
     x: r.time,
     y: r.usage,
@@ -12,9 +11,7 @@ export const getBrownData = () => {
 };
 
 export const getGreenData = () => {
-  const brownData = getBrownData();
-  let result = greenData.data.filter((d) => d.type === "green");
-
+  let result = greenData.data.filter((d) => d.type === 'green');
   result = result.map((r, index) => ({
     x: r.time,
     y: r.usage,

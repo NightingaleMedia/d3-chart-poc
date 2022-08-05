@@ -1,0 +1,25 @@
+import { testDGPastEvents } from './demandGeniusPastEvents.test';
+import { makeDgEventReport } from './demandGeniusReport.test';
+import { testDeviceData } from './deviceDataReport.test';
+import { testEnergyDonutChart } from './energyDonutChart.test';
+import { testEnergySiteBreakdown } from './energySiteBreakdownChart.test';
+import { testEnergySiteComparison } from './energySiteComparison.test';
+import { testEnergySummary } from './energySummaryChart.test';
+import { testEngagementChart } from './engagementChart.test';
+import { testGreenBrownEnergyComparison } from './greenBrownEnergyComparison.test';
+import { testGreenEngagement } from './greenEngagement.test';
+import { testPeakPerformance } from './peakPerformance.test';
+import { testSiteEnergyUsage } from './siteEnergyUsage.test';
+testEnergySiteBreakdown({ callChart: true });
+testDGPastEvents({ callChart: true });
+testEnergySummary({ callChart: true });
+testDeviceData({ callChart: true });
+testEnergySiteComparison({ callChart: true });
+testEngagementChart({ callChart: true });
+testPeakPerformance({ callChart: true });
+testGreenEngagement({ callChart: true });
+testSiteEnergyUsage({ callChart: true });
+testGreenBrownEnergyComparison({ callChart: true });
+testEnergyDonutChart({ callChart: true });
+makeDgEventReport({ callChart: true });
+//# sourceMappingURL=index.js.map

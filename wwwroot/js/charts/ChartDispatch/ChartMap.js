@@ -14,6 +14,18 @@ import {
   generateEnergySummaryChart,
   updateEnergySummaryChart
 } from "../energySummary/energySummaryChart.js";
+import {generateEnergyDonutChart} from "../sustainability/energyDonutChart.js";
+import {
+  makeEngagementChart,
+  updateEngagementChart
+} from "../sustainability/engagementScore/engagementScore.js";
+import {generateGreenBrownAreaChart} from "../sustainability/greenBrownAreaChart.js";
+import {makeGreenEngagement} from "../sustainability/greenEngagement/greenEngagementBar.js";
+import {
+  makePeakPerformance,
+  updatePeakPerformance
+} from "../sustainability/peakPerformance/peakPerformance.js";
+import {makeSiteEnergyUsage} from "../sustainability/siteEnergyUsage/siteEnergyUsage.js";
 import {ChartBase} from "./ChartBase.js";
 const makeManyEvents__Class = new ChartBase({
   name: "Many DG Comparison Chart",
@@ -52,10 +64,11 @@ const energySiteBreakdownChart__Class = new ChartBase({
 const generateEnergySummaryChart__Class = new ChartBase({
   name: "Many Energy Summary Chart",
   chartRender: (id, data) => {
-    generateEnergySummaryChart(id, data);
+    console.log("making many smry: ", data);
+    generateEnergySummaryChart(id, data, {isUpdate: false});
   },
   chartUpdate: (id, data) => {
-    console.log("making many smry: ", data);
+    console.log("updating many smry: ", data);
     updateEnergySummaryChart(id, data);
   }
 });
@@ -63,7 +76,7 @@ const generateEnergySiteComparisonChart__Class = new ChartBase({
   name: "Energy Site Comparison Chart",
   chartRender: (id, data) => {
     generateEnergySiteComparisonChart(id, data);
-    console.log(id, data);
+    console.log("site comparison: ", id, data);
   },
   chartUpdate: (data, id) => {
     console.log(id, data);
@@ -78,12 +91,68 @@ const generateDeviceDataReport__Class = new ChartBase({
     console.log(id, data);
   }
 });
+const generateEngagementChart__Class = new ChartBase({
+  name: "Engagement Chart",
+  chartRender: (id, data) => {
+    makeEngagementChart(id, data);
+  },
+  chartUpdate: (id, data) => {
+    updateEngagementChart(id, data);
+  }
+});
+const generatePeakChart__Class = new ChartBase({
+  name: "Peak Performance Chart",
+  chartRender: (id, data) => {
+    makePeakPerformance(id, data);
+  },
+  chartUpdate: (id, data) => {
+    updatePeakPerformance(id, data);
+  }
+});
+const generateGreenEngagement__Class = new ChartBase({
+  name: "Green Engagement Chart",
+  chartRender: (id, data) => {
+    makeGreenEngagement(id, data);
+  },
+  chartUpdate: (id, data) => {
+  }
+});
+const siteEnergyUsage__Class = new ChartBase({
+  name: "Site Energy Usage",
+  chartRender: (id, data) => {
+    makeSiteEnergyUsage(id, data);
+  },
+  chartUpdate: (id, data) => {
+  }
+});
+const greenBrownEnergy__Class = new ChartBase({
+  name: "Green Brown Energy Comparison",
+  chartRender: (id, data) => {
+    generateGreenBrownAreaChart(id, data);
+  },
+  chartUpdate: (id, data) => {
+  }
+});
+const generateDonutEnergyChart__Class = new ChartBase({
+  name: "Energy Donut Chart",
+  chartRender: (id, data) => {
+    generateEnergyDonutChart(id, data);
+  },
+  chartUpdate: (id, data) => {
+  }
+});
 const chartMap = {
+  siteEnergyUsage: siteEnergyUsage__Class,
+  greenEngagement: generateGreenEngagement__Class,
+  peakPerformanceChart: generatePeakChart__Class,
+  engagementChart: generateEngagementChart__Class,
   dgSingleReportChart: singleDGChart__Class,
   pastDGEventChart: dgPastEventChart__Class,
   dgManyReportChart: makeManyEvents__Class,
   energySummaryChart: generateEnergySummaryChart__Class,
   energySiteBreakdownChart: energySiteBreakdownChart__Class,
+  greenBrownAreaChart: greenBrownEnergy__Class,
+  energyDonutChart: generateDonutEnergyChart__Class,
   energySiteComparison: generateEnergySiteComparisonChart__Class,
   deviceDataReport: generateDeviceDataReport__Class
 };

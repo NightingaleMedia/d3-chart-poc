@@ -1,14 +1,10 @@
 {
   "imports": {
-    "@kurkle/color": "./@kurkle/color.js",
-    "c3": "./c3.js",
     "chart.js/auto": "./chartjs/auto.js",
-    "chartjs-adapter-luxon": "./chartjs-adapter-luxon.js",
     "countup.js": "./countupjs.js",
     "d3": "./d3.js",
     "d3-collection": "./d3-collection.js",
     "lodash": "./lodash.js",
-    "luxon": "./luxon.js",
     "moment": "./moment.js"
   }
 }

@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": "628eb66e796cba0007244c67",
+      "title": "Building 1",
+      "parentId": "628eb63b796cba0007244c65",
+      "level": 3,
+      "type": "Site",
+      "KwH": 1103
+    },
+    {
+      "id": "628eba22796cba0007244c6b",
+      "title": "Building 2",
+      "parentId": "628eb63b796cba0007244c65",
+      "level": 3,
+      "type": "Site",
+      "KwH": 857
+    },
+    {
+      "id": "628eba31796cba0007244c6d",
+      "title": "Building 3",
+      "parentId": "628eb63b796cba0007244c65",
+      "level": 3,
+      "type": "Site",
+      "KwH": 818
+    },
+    {
+      "id": "628eba4b796cba0007244c6f",
+      "title": "LA Building 1",
+      "parentId": "628eb640796cba0007244c66",
+      "level": 3,
+      "type": "Site",
+      "KwH": 1035
+    },
+    {
+      "id": "628eba5b796cba0007244c71",
+      "title": "LA Building 2",
+      "parentId": "628eb640796cba0007244c66",
+      "level": 3,
+      "type": "Site",
+      "KwH": 1216
+    },
+    {
+      "id": "628eba6b796cba0007244c73",
+      "title": "SF Building 1",
+      "parentId": "628eb640796cba0007244c66",
+      "level": 3,
+      "type": "Site",
+      "KwH": 1186
+    },
+    {
+      "id": "628eba78796cba0007244c75",
+      "title": "Seattle Building 1",
+      "parentId": "628eb640796cba0007244c66",
+      "level": 3,
+      "type": "Site",
+      "KwH": 1044
+    }
+  ]
+}

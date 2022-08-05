@@ -56,6 +56,7 @@ export function getXMonthTicks(isGranular) {
   if (isGranular) {
     return timeHour.every(24);
   }
+
   return timeMonth;
 }
 

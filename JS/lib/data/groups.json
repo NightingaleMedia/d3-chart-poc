@@ -1,0 +1,5176 @@
+{
+    "data": [
+        {
+            "id": "5783cfedab43e60300476bc3",
+            "title": "Earth",
+            "level": 0
+        },
+        {
+            "id": "579134d4317e480300da8032",
+            "title": "Zen Newport Beach",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "57e085e213eafa030054e3a6",
+            "title": "California",
+            "parentId": "579134d4317e480300da8032",
+            "level": 2
+        },
+        {
+            "id": "5b10ce23663658040064f7d0",
+            "title": "Newport Beach",
+            "parentId": "57e085e213eafa030054e3a6",
+            "level": 3,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5c9260bf9ce0f00100dc93bd",
+            "title": "Jam Test",
+            "parentId": "5b10ce23663658040064f7d0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5c92639e9ce0f00100dc93c3",
+            "title": "james test",
+            "parentId": "5b10ce23663658040064f7d0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5c93c33dabee010100ada0e5",
+            "title": "test",
+            "parentId": "5b10ce23663658040064f7d0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5c93c7ababee010100ada0ed",
+            "title": "Garrett",
+            "parentId": "5b10ce23663658040064f7d0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5c9a7138454c5501009c127f",
+            "title": "TokenTest",
+            "parentId": "5b10ce23663658040064f7d0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5c9bb8f68fb4fb0100187d99",
+            "title": "Jam Review",
+            "parentId": "5b10ce23663658040064f7d0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ca27e809dc10401000b328d",
+            "title": "9493358550",
+            "parentId": "5b10ce23663658040064f7d0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ca281f79dc10401000b3292",
+            "title": "wiring",
+            "parentId": "5b10ce23663658040064f7d0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ca8e950d2b1cc0100ff67eb",
+            "title": "lakewood",
+            "parentId": "5b10ce23663658040064f7d0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5cae1c2cad5c6b0100b1f6d6",
+            "title": "lakewoord20190410",
+            "parentId": "5b10ce23663658040064f7d0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5db786f1281db2c0043ceb7a",
+            "title": "Zen STG Test",
+            "parentId": "5b10ce23663658040064f7d0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "60ef87eb7a1d64000889febe",
+            "title": "Scott's House",
+            "parentId": "5b10ce23663658040064f7d0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "60f0a60a7a1d64000889fec3",
+            "title": "Scott's House",
+            "parentId": "5b10ce23663658040064f7d0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "60f0a6a97a1d64000889fec4",
+            "title": "Scott's Place",
+            "parentId": "5b10ce23663658040064f7d0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "60feee877a1d64000889fec7",
+            "title": "Building1",
+            "parentId": "5b10ce23663658040064f7d0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5b75d77b1f40971000324d34",
+            "title": "Santa Cruz",
+            "parentId": "57e085e213eafa030054e3a6",
+            "level": 3,
+            "location": {
+                "address": "Santa Cruz, CA, USA",
+                "lat": 36.97411709999999,
+                "lng": -122.03079630000002,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5c817bccce45f5010047ffd4",
+            "title": "jam test",
+            "parentId": "5b75d77b1f40971000324d34",
+            "level": 4,
+            "location": {
+                "address": "Santa Cruz, CA, USA",
+                "lat": 36.97411709999999,
+                "lng": -122.03079630000002,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5cdf02e5aaea1a0100dbb271",
+            "title": "Upgrade Test",
+            "parentId": "5b75d77b1f40971000324d34",
+            "level": 4,
+            "location": {
+                "address": "Santa Cruz, CA, USA",
+                "lat": 36.97411709999999,
+                "lng": -122.03079630000002,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5cf01aefeb0361010006c964",
+            "title": "0 - 10 dimming",
+            "parentId": "5b75d77b1f40971000324d34",
+            "level": 4,
+            "location": {
+                "address": "Santa Cruz, CA, USA",
+                "lat": 36.97411709999999,
+                "lng": -122.03079630000002,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d56ccb114a3abc27862817d",
+            "title": "Cory Site Test",
+            "parentId": "5b75d77b1f40971000324d34",
+            "level": 4,
+            "location": {
+                "address": "Santa Cruz, CA, USA",
+                "lat": 36.97411709999999,
+                "lng": -122.03079630000002,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5b75d78c1f40971000324d36",
+            "title": "Yuba City",
+            "parentId": "57e085e213eafa030054e3a6",
+            "level": 3,
+            "location": {
+                "address": "Yuba City, CA, USA",
+                "lat": 39.1404477,
+                "lng": -121.61691080000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5c9aac5f454c5501009c1285",
+            "title": "Jam Demo",
+            "parentId": "5b75d78c1f40971000324d36",
+            "level": 4,
+            "location": {
+                "address": "Yuba City, CA, USA",
+                "lat": 39.1404477,
+                "lng": -121.61691080000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5fecc6ed9b47503cc595a9dc",
+            "title": "Irvine",
+            "parentId": "57e085e213eafa030054e3a6",
+            "level": 3,
+            "location": {
+                "address": "123 Alhambra, Irvine, CA 92620, USA",
+                "lat": 33.69588139999999,
+                "lng": -117.7527344,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92620",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "610483d77a1d64000889fecc",
+            "title": "CoryHQTest",
+            "parentId": "5fecc6ed9b47503cc595a9dc",
+            "level": 4,
+            "location": {
+                "address": "123 Alhambra, Irvine, CA 92620, USA",
+                "lat": 33.69588139999999,
+                "lng": -117.7527344,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92620",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "6144cf4187db9c000700a76e",
+            "title": "Zen Thermostat #13",
+            "parentId": "5fecc6ed9b47503cc595a9dc",
+            "level": 4,
+            "location": {
+                "address": "123 Alhambra, Irvine, CA 92620, USA",
+                "lat": 33.69588139999999,
+                "lng": -117.7527344,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92620",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5b75c3ff1f40971000324ccb",
+            "title": "USA - QSR",
+            "parentId": "579134d4317e480300da8032",
+            "level": 2
+        },
+        {
+            "id": "5b75c4141f40971000324cce",
+            "title": "Texas",
+            "parentId": "5b75c3ff1f40971000324ccb",
+            "level": 3,
+            "location": {
+                "address": "Texas, USA",
+                "lat": 31.9685988,
+                "lng": -99.90181310000003,
+                "country": "US",
+                "state": "TX",
+                "utc_offset": -300,
+                "timezone": "America/Chicago"
+            }
+        },
+        {
+            "id": "5b75c4211f40971000324cd0",
+            "title": "New York",
+            "parentId": "5b75c3ff1f40971000324ccb",
+            "level": 3,
+            "location": {
+                "address": "New York, NY, USA",
+                "lat": 40.7127753,
+                "lng": -74.0059728,
+                "country": "US",
+                "state": "NY",
+                "utc_offset": -240,
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5b75c42b1f40971000324cd2",
+            "title": "Portland",
+            "parentId": "5b75c3ff1f40971000324ccb",
+            "level": 3,
+            "location": {
+                "address": "Portland, OR, USA",
+                "lat": 45.5122308,
+                "lng": -122.65871850000002,
+                "country": "US",
+                "state": "OR",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5b75c4391f40971000324cd5",
+            "title": "New Mexico",
+            "parentId": "5b75c3ff1f40971000324ccb",
+            "level": 3,
+            "location": {
+                "address": "New Mexico, USA",
+                "lat": 34.5199402,
+                "lng": -105.87009009999997,
+                "country": "US",
+                "state": "NM",
+                "utc_offset": -360,
+                "timezone": "America/Denver"
+            }
+        },
+        {
+            "id": "5c599936d820060100ef81dc",
+            "title": "Hotfix:",
+            "parentId": "5b75c4391f40971000324cd5",
+            "level": 4,
+            "location": {
+                "address": "New Mexico, USA",
+                "lat": 34.5199402,
+                "lng": -105.87009009999997,
+                "country": "US",
+                "state": "NM",
+                "utc_offset": -360,
+                "timezone": "America/Denver"
+            }
+        },
+        {
+            "id": "5b75d94f1f40971000324d43",
+            "title": "Texas",
+            "parentId": "579134d4317e480300da8032",
+            "level": 2
+        },
+        {
+            "id": "5b75d95e1f40971000324d46",
+            "title": "Houston",
+            "parentId": "5b75d94f1f40971000324d43",
+            "level": 3,
+            "location": {
+                "address": "Houston, TX, USA",
+                "lat": 29.7604267,
+                "lng": -95.3698028,
+                "country": "US",
+                "state": "TX",
+                "utc_offset": -300,
+                "timezone": "America/Chicago"
+            }
+        },
+        {
+            "id": "5b75d9681f40971000324d48",
+            "title": "Dallas",
+            "parentId": "5b75d94f1f40971000324d43",
+            "level": 3,
+            "location": {
+                "address": "Dallas, TX, USA",
+                "lat": 32.7766642,
+                "lng": -96.79698789999998,
+                "country": "US",
+                "state": "TX",
+                "utc_offset": -300,
+                "timezone": "America/Chicago"
+            }
+        },
+        {
+            "id": "5ca3b139ba72890100f5cac9",
+            "title": "New Braunfaels",
+            "parentId": "5b75d94f1f40971000324d43",
+            "level": 3,
+            "location": {
+                "address": "New Braunfels, TX, USA",
+                "lat": 29.7030024,
+                "lng": -98.12445309999998,
+                "country": "US",
+                "state": "TX",
+                "utc_offset": -300,
+                "timezone": "America/Chicago"
+            }
+        },
+        {
+            "id": "5ccc82104b5a140100e90454",
+            "title": "Bulk prime test",
+            "parentId": "579134d4317e480300da8032",
+            "level": 2
+        },
+        {
+            "id": "580997e75eb5800300247d92",
+            "title": "Planet Innovation",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5809986f5eb5800300247d97",
+            "title": "Victoria",
+            "parentId": "580997e75eb5800300247d92",
+            "level": 2
+        },
+        {
+            "id": "5809988c5eb5800300247d99",
+            "title": "Planet Innovation",
+            "parentId": "5809986f5eb5800300247d97",
+            "level": 3,
+            "location": {
+                "address": "436 Elgar Rd, Box Hill VIC 3128, Australia",
+                "lat": -37.8180915,
+                "lng": 145.11542710000003,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "580998975eb5800300247d9b",
+            "title": "Zen Den",
+            "parentId": "5809988c5eb5800300247d99",
+            "level": 4,
+            "location": {
+                "address": "436 Elgar Rd, Box Hill VIC 3128, Australia",
+                "lat": -37.8180915,
+                "lng": 145.11542710000003,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "59bb5d8c67a4c60004f6afc5",
+            "title": "Testing",
+            "parentId": "5809988c5eb5800300247d99",
+            "level": 4,
+            "location": {
+                "address": "436 Elgar Rd, Box Hill VIC 3128, Australia",
+                "lat": -37.8180915,
+                "lng": 145.11542710000003,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "58ca07a609863d0400869e5e",
+            "title": "Miyagi Testing",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "58ca07bd09863d0400869e62",
+            "title": "Victoria",
+            "parentId": "58ca07a609863d0400869e5e",
+            "level": 2
+        },
+        {
+            "id": "58ca07d509863d0400869e65",
+            "title": "Planet Innovation",
+            "parentId": "58ca07bd09863d0400869e62",
+            "level": 3,
+            "location": {
+                "address": "436 Elgar Rd, Box Hill VIC 3128, Australia",
+                "lat": -37.8180915,
+                "lng": 145.11542710000003,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "58ca07e209863d0400869e67",
+            "title": "Kevin Testing",
+            "parentId": "58ca07d509863d0400869e65",
+            "level": 4,
+            "location": {
+                "address": "436 Elgar Rd, Box Hill VIC 3128, Australia",
+                "lat": -37.8180915,
+                "lng": 145.11542710000003,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5b7471b51f40971000324bb3",
+            "title": "Zen Red Hill Office Testing",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5b747da51f40971000324bb8",
+            "title": "Zen Test Wall 1",
+            "parentId": "5b7471b51f40971000324bb3",
+            "level": 2
+        },
+        {
+            "id": "5b747df51f40971000324bbb",
+            "title": "OC Rescue Testing",
+            "parentId": "5b747da51f40971000324bb8",
+            "level": 3,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5b747e071f40971000324bbe",
+            "title": "Building Group",
+            "parentId": "5b747df51f40971000324bbb",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5b7c39901f40971000324ea2",
+            "title": "IT Closet",
+            "parentId": "5b7471b51f40971000324bb3",
+            "level": 2
+        },
+        {
+            "id": "5bc8be15a4d04d0f0000ab08",
+            "title": "Sunrise/Sunset Test (melb timezone)",
+            "parentId": "5b7c39901f40971000324ea2",
+            "level": 3,
+            "location": {
+                "address": "Planet Innovation 436 Elgar Rd, Box Hill VIC 3128, Australia",
+                "lat": -37.8180679,
+                "lng": 145.11532850000003,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5bc8be24a4d04d0f0000ab09",
+            "title": "Sunrise/sunset",
+            "parentId": "5bc8be15a4d04d0f0000ab08",
+            "level": 4,
+            "location": {
+                "address": "Planet Innovation 436 Elgar Rd, Box Hill VIC 3128, Australia",
+                "lat": -37.8180679,
+                "lng": 145.11532850000003,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5bd8d301d3d3f219009ca462",
+            "title": "DR tst",
+            "parentId": "5b7c39901f40971000324ea2",
+            "level": 3,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5bdcc6d8d7b8b20f0038b2cb",
+            "title": "GR WiFi",
+            "parentId": "5b7c39901f40971000324ea2",
+            "level": 3,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ca7fa76d2b1cc0100ff67df",
+            "title": "Dev Desk A",
+            "parentId": "5b7471b51f40971000324bb3",
+            "level": 2
+        },
+        {
+            "id": "5ca7faefd2b1cc0100ff67e0",
+            "title": "Schedule Reboot",
+            "parentId": "5ca7fa76d2b1cc0100ff67df",
+            "level": 3,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ca7fc18d2b1cc0100ff67e4",
+            "title": "Ahmad's Desk",
+            "parentId": "5ca7faefd2b1cc0100ff67e0",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5cb8c3fd052d9401006188de",
+            "title": "ZF-320 Testing",
+            "parentId": "5b7471b51f40971000324bb3",
+            "level": 2
+        },
+        {
+            "id": "5cb8c428052d9401006188df",
+            "title": "Red Hill Office",
+            "parentId": "5cb8c3fd052d9401006188de",
+            "level": 3,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5cb8c5a6052d9401006188e3",
+            "title": "1100001587",
+            "parentId": "5cb8c428052d9401006188df",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5cb8c6c5052d9401006188e8",
+            "title": "1100001780",
+            "parentId": "5cb8c428052d9401006188df",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5cddb88baaea1a0100dbb251",
+            "title": "C74518",
+            "parentId": "5cb8c428052d9401006188df",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5cddd2bdaaea1a0100dbb258",
+            "title": "CA1E58",
+            "parentId": "5cb8c428052d9401006188df",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5cddd6b2aaea1a0100dbb263",
+            "title": "CB0BFIX",
+            "parentId": "5cb8c428052d9401006188df",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5cdf21b2aaea1a0100dbb274",
+            "title": "TIMFIXED",
+            "parentId": "5cb8c428052d9401006188df",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5cf06020eb0361010006c969",
+            "title": "C7481F",
+            "parentId": "5cb8c428052d9401006188df",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5cf06d2ceb0361010006c96e",
+            "title": "C74A5F",
+            "parentId": "5cb8c428052d9401006188df",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5cf07565eb0361010006c971",
+            "title": "C74A5FIX",
+            "parentId": "5cb8c428052d9401006188df",
+            "level": 4,
+            "location": {
+                "address": "3158 Red Hill Ave, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5dc45db81234d9537dbde853",
+            "title": "Cory Test",
+            "parentId": "5b7471b51f40971000324bb3",
+            "level": 2
+        },
+        {
+            "id": "5efcd42adcb672abc22cdad9",
+            "title": "Sniffer",
+            "parentId": "5dc45db81234d9537dbde853",
+            "level": 3,
+            "location": {
+                "address": "Foothill Ranch, Lake Forest, CA 92610, USA",
+                "lat": 33.6831832,
+                "lng": -117.6664308,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92610",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5efcd72cdcb67204cb2cdae1",
+            "title": "Test",
+            "parentId": "5efcd42adcb672abc22cdad9",
+            "level": 4,
+            "location": {
+                "address": "Foothill Ranch, Lake Forest, CA 92610, USA",
+                "lat": 33.6831832,
+                "lng": -117.6664308,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92610",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "61bbd3e867fb3500077fbe09",
+            "title": "Demand Genius Test",
+            "parentId": "5b7471b51f40971000324bb3",
+            "level": 2
+        },
+        {
+            "id": "61bbd3fe67fb3500077fbe0a",
+            "title": "Scott's House",
+            "parentId": "61bbd3e867fb3500077fbe09",
+            "level": 3,
+            "location": {
+                "address": "1321 S Shawnee Dr, Santa Ana, CA 92704, USA",
+                "lat": 33.7298016,
+                "lng": -117.9121075,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92704",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "61bbd5a767fb3500077fbe0d",
+            "title": "Test",
+            "parentId": "61bbd3fe67fb3500077fbe0a",
+            "level": 4,
+            "location": {
+                "address": "1321 S Shawnee Dr, Santa Ana, CA 92704, USA",
+                "lat": 33.7298016,
+                "lng": -117.9121075,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92704",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "61bcfbdd67fb3500077fbe0e",
+            "title": "AnotherSite",
+            "parentId": "61bbd3e867fb3500077fbe09",
+            "level": 3,
+            "location": {
+                "address": "1321 W 11th St, Santa Ana, CA 92703, USA",
+                "lat": 33.7544609,
+                "lng": -117.886222,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92703",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "61d4b32367fb3500077fbe10",
+            "title": "Schedule Off Physical Override Test",
+            "parentId": "5b7471b51f40971000324bb3",
+            "level": 2
+        },
+        {
+            "id": "61d4b34867fb3500077fbe11",
+            "title": "wifi thermostats",
+            "parentId": "61d4b32367fb3500077fbe10",
+            "level": 3,
+            "location": {
+                "address": "1321 S Shawnee Dr, Santa Ana, CA 92704, USA",
+                "lat": 33.7298016,
+                "lng": -117.9121075,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92704",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "61d4b75e67fb3500077fbe15",
+            "title": "Wifi Test",
+            "parentId": "61d4b34867fb3500077fbe11",
+            "level": 4,
+            "location": {
+                "address": "1321 S Shawnee Dr, Santa Ana, CA 92704, USA",
+                "lat": 33.7298016,
+                "lng": -117.9121075,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92704",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "61d4bce967fb3500077fbe16",
+            "title": "wifi test",
+            "parentId": "61d4b34867fb3500077fbe11",
+            "level": 4,
+            "location": {
+                "address": "1321 S Shawnee Dr, Santa Ana, CA 92704, USA",
+                "lat": 33.7298016,
+                "lng": -117.9121075,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92704",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "61d4b36567fb3500077fbe13",
+            "title": "zigbee thermostats",
+            "parentId": "61d4b32367fb3500077fbe10",
+            "level": 3,
+            "location": {
+                "address": "1321 S Shawnee Dr, Santa Ana, CA 92704, USA",
+                "lat": 33.7298016,
+                "lng": -117.9121075,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92704",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "61d4bcfa67fb3500077fbe17",
+            "title": "zigbee test",
+            "parentId": "61d4b36567fb3500077fbe13",
+            "level": 4,
+            "location": {
+                "address": "1321 S Shawnee Dr, Santa Ana, CA 92704, USA",
+                "lat": 33.7298016,
+                "lng": -117.9121075,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92704",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "61d89469e898e03e005fe15c",
+            "title": "Demand-Genius Testing",
+            "parentId": "5b7471b51f40971000324bb3",
+            "level": 2
+        },
+        {
+            "id": "61d89481e898e03e005fe15d",
+            "title": "Scott's House",
+            "parentId": "61d89469e898e03e005fe15c",
+            "level": 3,
+            "location": {
+                "address": "1321 S Shawnee Dr, Santa Ana, CA 92704, USA",
+                "lat": 33.7298016,
+                "lng": -117.9121075,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92704",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5be8ee5d9c90af10002c419c",
+            "title": "ZenHQ Community",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5be8ee8d9c90af10002c419d",
+            "title": "Hank O",
+            "parentId": "5be8ee5d9c90af10002c419c",
+            "level": 2
+        },
+        {
+            "id": "5be8ef5c9c90af10002c41a0",
+            "title": "Otley home",
+            "parentId": "5be8ee8d9c90af10002c419d",
+            "level": 3,
+            "location": {
+                "address": "22 Twyford St, Box Hill North VIC 3129, Australia",
+                "lat": -37.8057671,
+                "lng": 145.1385103,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5be9f12ff212410f00a4b7c8",
+            "title": "Living room",
+            "parentId": "5be8ef5c9c90af10002c41a0",
+            "level": 4,
+            "location": {
+                "address": "22 Twyford St, Box Hill North VIC 3129, Australia",
+                "lat": -37.8057671,
+                "lng": 145.1385103,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5becd704035e8f0f005ab4e8",
+            "title": "TV",
+            "parentId": "5be8ef5c9c90af10002c41a0",
+            "level": 4,
+            "location": {
+                "address": "22 Twyford St, Box Hill North VIC 3129, Australia",
+                "lat": -37.8057671,
+                "lng": 145.1385103,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5c6b604411c9d20100d3ef43",
+            "title": "Test",
+            "parentId": "5be8ef5c9c90af10002c41a0",
+            "level": 4,
+            "location": {
+                "address": "22 Twyford St, Box Hill North VIC 3129, Australia",
+                "lat": -37.8057671,
+                "lng": 145.1385103,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5be8ef8d9c90af10002c41a1",
+            "title": "Zen office",
+            "parentId": "5be8ee8d9c90af10002c419d",
+            "level": 3,
+            "location": {
+                "address": "436 Elgar Rd, Box Hill VIC 3128, Australia",
+                "lat": -37.8180915,
+                "lng": 145.11542710000003,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5be9f534f212410f00a4b7c9",
+            "title": "Bike rack",
+            "parentId": "5be8ef8d9c90af10002c41a1",
+            "level": 4,
+            "location": {
+                "address": "436 Elgar Rd, Box Hill VIC 3128, Australia",
+                "lat": -37.8180915,
+                "lng": 145.11542710000003,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5c6b613911c9d20100d3ef44",
+            "title": "Patio test",
+            "parentId": "5be8ee8d9c90af10002c419d",
+            "level": 3,
+            "location": {
+                "address": "22 Twyford St, Box Hill North VIC 3129, Australia",
+                "lat": -37.8057671,
+                "lng": 145.1385103,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5be8eeae9c90af10002c419e",
+            "title": "Michael J",
+            "parentId": "5be8ee5d9c90af10002c419c",
+            "level": 2
+        },
+        {
+            "id": "5be91e549c90af10002c41a5",
+            "title": "50 Lincoln St",
+            "parentId": "5be8eeae9c90af10002c419e",
+            "level": 3,
+            "location": {
+                "address": "50 Lincoln St, Richmond VIC 3121, Australia",
+                "lat": -37.8130599,
+                "lng": 145.002731,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5beab031f212410f00a4b7ce",
+            "title": "Playroom",
+            "parentId": "5be91e549c90af10002c41a5",
+            "level": 4,
+            "location": {
+                "address": "50 Lincoln St, Richmond VIC 3121, Australia",
+                "lat": -37.8130599,
+                "lng": 145.002731,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5becdf27035e8f0f005ab4e9",
+            "title": "GHS Testing",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5bee5788316aee0f00146788",
+            "title": "Philippines",
+            "parentId": "5becdf27035e8f0f005ab4e9",
+            "level": 2
+        },
+        {
+            "id": "5bee57bd316aee0f00146789",
+            "title": "Office",
+            "parentId": "5bee5788316aee0f00146788",
+            "level": 3,
+            "location": {
+                "address": "Cebu City, Cebu, Philippines",
+                "lat": 10.3156992,
+                "lng": 123.88543660000005,
+                "country": "PH",
+                "state": "Central Visayas",
+                "utc_offset": 480,
+                "timezone": "Asia/Manila"
+            }
+        },
+        {
+            "id": "5bee78f3316aee0f0014678d",
+            "title": "Workstation",
+            "parentId": "5bee57bd316aee0f00146789",
+            "level": 4,
+            "location": {
+                "address": "Cebu City, Cebu, Philippines",
+                "lat": 10.3156992,
+                "lng": 123.88543660000005,
+                "country": "PH",
+                "state": "Central Visayas",
+                "utc_offset": 480,
+                "timezone": "Asia/Manila"
+            }
+        },
+        {
+            "id": "5dca6eab3ff11838f0ce0489",
+            "title": "Workstation2",
+            "parentId": "5bee57bd316aee0f00146789",
+            "level": 4,
+            "location": {
+                "address": "Cebu City, Cebu, Philippines",
+                "lat": 10.3156992,
+                "lng": 123.88543660000005,
+                "country": "PH",
+                "state": "Central Visayas",
+                "utc_offset": 480,
+                "timezone": "Asia/Manila"
+            }
+        },
+        {
+            "id": "5ea641a28b86ce5dab923e5a",
+            "title": "Home",
+            "parentId": "5bee57bd316aee0f00146789",
+            "level": 4,
+            "location": {
+                "address": "Cebu City, Cebu, Philippines",
+                "lat": 10.3156992,
+                "lng": 123.88543660000005,
+                "country": "PH",
+                "state": "Central Visayas",
+                "utc_offset": 480,
+                "timezone": "Asia/Manila"
+            }
+        },
+        {
+            "id": "5ea642ff8b86ce716a923e5b",
+            "title": "Home",
+            "parentId": "5bee5788316aee0f00146788",
+            "level": 3,
+            "location": {
+                "address": "Cebu City, Cebu, Philippines",
+                "lat": 10.3156992,
+                "lng": 123.8854366,
+                "country": "PH",
+                "state": "Central Visayas",
+                "utc_offset": 480,
+                "zipcode": null,
+                "timezone": "Asia/Manila"
+            }
+        },
+        {
+            "id": "5ea644228b86cef19d923e5d",
+            "title": "Dining Room",
+            "parentId": "5ea642ff8b86ce716a923e5b",
+            "level": 4,
+            "location": {
+                "address": "Cebu City, Cebu, Philippines",
+                "lat": 10.3156992,
+                "lng": 123.8854366,
+                "country": "PH",
+                "state": "Central Visayas",
+                "utc_offset": 480,
+                "zipcode": null,
+                "timezone": "Asia/Manila"
+            }
+        },
+        {
+            "id": "5ed89fcca0c633d0db3e9705",
+            "title": "Living Room",
+            "parentId": "5ea642ff8b86ce716a923e5b",
+            "level": 4,
+            "location": {
+                "address": "Cebu City, Cebu, Philippines",
+                "lat": 10.3156992,
+                "lng": 123.8854366,
+                "country": "PH",
+                "state": "Central Visayas",
+                "utc_offset": 480,
+                "zipcode": null,
+                "timezone": "Asia/Manila"
+            }
+        },
+        {
+            "id": "5bee60ea316aee0f0014678a",
+            "title": "GHS - Test Organization",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5bee6108316aee0f0014678b",
+            "title": "Philippines",
+            "parentId": "5bee60ea316aee0f0014678a",
+            "level": 2
+        },
+        {
+            "id": "5bee616c316aee0f0014678c",
+            "title": "Office",
+            "parentId": "5bee6108316aee0f0014678b",
+            "level": 3,
+            "location": {
+                "address": "Cebu City, Cebu, Philippines",
+                "lat": 10.3156992,
+                "lng": 123.88543660000005,
+                "country": "PH",
+                "state": "Central Visayas",
+                "utc_offset": 480,
+                "timezone": "Asia/Manila"
+            }
+        },
+        {
+            "id": "5dc3e58654e62e4a09a83a29",
+            "title": "Sample",
+            "parentId": "5bee616c316aee0f0014678c",
+            "level": 4,
+            "location": {
+                "address": "Cebu City, Cebu, Philippines",
+                "lat": 10.3156992,
+                "lng": 123.88543660000005,
+                "country": "PH",
+                "state": "Central Visayas",
+                "utc_offset": 480,
+                "timezone": "Asia/Manila"
+            }
+        },
+        {
+            "id": "5c185ff48a3c5e0f00686a37",
+            "title": "Zen Melbourne Testing",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5c1860838a3c5e0f00686a38",
+            "title": "Kevin Testing",
+            "parentId": "5c185ff48a3c5e0f00686a37",
+            "level": 2
+        },
+        {
+            "id": "5c19281337c83b0f0033c7ce",
+            "title": "CISR test",
+            "parentId": "5c1860838a3c5e0f00686a38",
+            "level": 3,
+            "location": {
+                "address": "50 Lincoln St, Richmond VIC 3121, Australia",
+                "lat": -37.8130599,
+                "lng": 145.00273100000004,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne",
+                "zipcode": "3121"
+            }
+        },
+        {
+            "id": "5c1acc1504d6380f00d5a552",
+            "title": "v2.34 testing",
+            "parentId": "5c1860838a3c5e0f00686a38",
+            "level": 3,
+            "location": {
+                "address": "437 Elgar Rd, Box Hill VIC 3128, Australia",
+                "lat": -37.8175195,
+                "lng": 145.11491990000002,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5c1acc2b04d6380f00d5a553",
+            "title": "4318",
+            "parentId": "5c1acc1504d6380f00d5a552",
+            "level": 4,
+            "location": {
+                "address": "437 Elgar Rd, Box Hill VIC 3128, Australia",
+                "lat": -37.8175195,
+                "lng": 145.11491990000002,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5c1b164904d6380f00d5a55c",
+            "title": "34DC",
+            "parentId": "5c1acc1504d6380f00d5a552",
+            "level": 4,
+            "location": {
+                "address": "437 Elgar Rd, Box Hill VIC 3128, Australia",
+                "lat": -37.8175195,
+                "lng": 145.11491990000002,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5c8b243d27ad030100863b44",
+            "title": "kxw_3.14",
+            "parentId": "5c1acc1504d6380f00d5a552",
+            "level": 4,
+            "location": {
+                "address": "437 Elgar Rd, Box Hill VIC 3128, Australia",
+                "lat": -37.8175195,
+                "lng": 145.11491990000002,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 660,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5c8fbdd5ba438d0100921098",
+            "title": "Test Organization Oleh 22",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5c8fbddeba438d0100921099",
+            "title": "Test Region Oleh",
+            "parentId": "5c8fbdd5ba438d0100921098",
+            "level": 2
+        },
+        {
+            "id": "5d1cb732e0d782069cabfb90",
+            "title": "Test Site Oleh 0307",
+            "parentId": "5c8fbddeba438d0100921099",
+            "level": 3,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d1df07a75257a61eaf8444d",
+            "title": "Test Group",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d1df28775257a6d0ff84451",
+            "title": "Test Sergiy (config)",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d27720e62b0c20e1544fadf",
+            "title": "Test Virtual Monitor",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d27720e62b0c213e544fae4",
+            "title": "Test Virtual Peanut Plug",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d27720e62b0c2225544fae2",
+            "title": "Zen Thermostat #143",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d27720e62b0c23ec044fade",
+            "title": "GenericDevice #124",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d27720e62b0c2585f44fae1",
+            "title": "MultiSwitch #136",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d27720e62b0c25c8444fae3",
+            "title": "GenericDevice #125",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d27720e62b0c26bb244fae0",
+            "title": "GenericDevice #119",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d27720e62b0c2dc5844fae5",
+            "title": "MultiSwitch #136",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d30026017ad5a42c5e46a4f",
+            "title": "Test Thermostat flow - Android 9",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d30694f17ad5a53f1e46a59",
+            "title": "Test 3",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d31e1825bdfb175b6af428a",
+            "title": "Test Android 1",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d31e6375bdfb11192af4294",
+            "title": "Tedt",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d31e9415bdfb12759af4297",
+            "title": "Test Android 7",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d31ec5e5bdfb14639af429a",
+            "title": "Test Android 8",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d35bc50f9207d5b7aaf3a7a",
+            "title": "Test 1636",
+            "parentId": "5d1cb732e0d782069cabfb90",
+            "level": 4,
+            "location": {
+                "address": "CA-1, Morro Bay, CA, USA",
+                "lat": 35.3830129,
+                "lng": -120.85636139999997,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d383f84f9207dfb44af3a7c",
+            "title": "Test Site 1419",
+            "parentId": "5c8fbddeba438d0100921099",
+            "level": 3,
+            "location": {
+                "address": "New York, NY, USA",
+                "lat": 40.7127753,
+                "lng": -74.0059728,
+                "country": "US",
+                "state": "NY",
+                "utc_offset": -300,
+                "zipcode": null,
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5d384446f9207df1ddaf3a7e",
+            "title": "Load Control/Lighting",
+            "parentId": "5d383f84f9207dfb44af3a7c",
+            "level": 4,
+            "location": {
+                "address": "New York, NY, USA",
+                "lat": 40.7127753,
+                "lng": -74.0059728,
+                "country": "US",
+                "state": "NY",
+                "utc_offset": -300,
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5d384459f9207de1caaf3a7f",
+            "title": "Thermostat Securifi 1",
+            "parentId": "5d383f84f9207dfb44af3a7c",
+            "level": 4,
+            "location": {
+                "address": "New York, NY, USA",
+                "lat": 40.7127753,
+                "lng": -74.0059728,
+                "country": "US",
+                "state": "NY",
+                "utc_offset": -300,
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5d384477f9207d9f8aaf3a81",
+            "title": "Thermostat Securifi 2",
+            "parentId": "5d383f84f9207dfb44af3a7c",
+            "level": 4,
+            "location": {
+                "address": "New York, NY, USA",
+                "lat": 40.7127753,
+                "lng": -74.0059728,
+                "country": "US",
+                "state": "NY",
+                "utc_offset": -300,
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5d3844e2f9207d36b7af3a82",
+            "title": "Zen Air",
+            "parentId": "5d383f84f9207dfb44af3a7c",
+            "level": 4,
+            "location": {
+                "address": "New York, NY, USA",
+                "lat": 40.7127753,
+                "lng": -74.0059728,
+                "country": "US",
+                "state": "NY",
+                "utc_offset": -300,
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5dcc44d6626b61c840c7401e",
+            "title": "TestWiFi1311",
+            "parentId": "5d383f84f9207dfb44af3a7c",
+            "level": 4,
+            "location": {
+                "address": "New York, NY, USA",
+                "lat": 40.7127753,
+                "lng": -74.0059728,
+                "country": "US",
+                "state": "NY",
+                "utc_offset": -300,
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5de3ce8da84c7a85dd6d61fb",
+            "title": "WiFi0112-out",
+            "parentId": "5d383f84f9207dfb44af3a7c",
+            "level": 4,
+            "location": {
+                "address": "New York, NY, USA",
+                "lat": 40.7127753,
+                "lng": -74.0059728,
+                "country": "US",
+                "state": "NY",
+                "utc_offset": -300,
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5de66039a84c7abe266d6201",
+            "title": "Test1484",
+            "parentId": "5d383f84f9207dfb44af3a7c",
+            "level": 4,
+            "location": {
+                "address": "New York, NY, USA",
+                "lat": 40.7127753,
+                "lng": -74.0059728,
+                "country": "US",
+                "state": "NY",
+                "utc_offset": -300,
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5de664fca84c7a83f46d6205",
+            "title": "TestWiFi1484-1",
+            "parentId": "5d383f84f9207dfb44af3a7c",
+            "level": 4,
+            "location": {
+                "address": "New York, NY, USA",
+                "lat": 40.7127753,
+                "lng": -74.0059728,
+                "country": "US",
+                "state": "NY",
+                "utc_offset": -300,
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5de7b11da84c7a03426d6208",
+            "title": "TestWiFi0412",
+            "parentId": "5d383f84f9207dfb44af3a7c",
+            "level": 4,
+            "location": {
+                "address": "New York, NY, USA",
+                "lat": 40.7127753,
+                "lng": -74.0059728,
+                "country": "US",
+                "state": "NY",
+                "utc_offset": -300,
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5df8ed66b67b6065d757b3d1",
+            "title": "TestWiFi0412-1",
+            "parentId": "5d383f84f9207dfb44af3a7c",
+            "level": 4,
+            "location": {
+                "address": "New York, NY, USA",
+                "lat": 40.7127753,
+                "lng": -74.0059728,
+                "country": "US",
+                "state": "NY",
+                "utc_offset": -300,
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5e42a3c5a3fdfa4508c86b5c",
+            "title": "TestWiFi1102",
+            "parentId": "5d383f84f9207dfb44af3a7c",
+            "level": 4,
+            "location": {
+                "address": "New York, NY, USA",
+                "lat": 40.7127753,
+                "lng": -74.0059728,
+                "country": "US",
+                "state": "NY",
+                "utc_offset": -300,
+                "zipcode": null,
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5e4581d4a3fdfab35fc86b7a",
+            "title": "Testwifi1302",
+            "parentId": "5d383f84f9207dfb44af3a7c",
+            "level": 4,
+            "location": {
+                "address": "New York, NY, USA",
+                "lat": 40.7127753,
+                "lng": -74.0059728,
+                "country": "US",
+                "state": "NY",
+                "utc_offset": -300,
+                "zipcode": null,
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5d67d6315de77d1605f10bf6",
+            "title": "Test OADR",
+            "parentId": "5c8fbddeba438d0100921099",
+            "level": 3,
+            "location": {
+                "address": "California, USA",
+                "lat": 36.778261,
+                "lng": -119.41793239999998,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d6923da8d34d65b5ccd9260",
+            "title": "Test Oleh",
+            "parentId": "5c8fbddeba438d0100921099",
+            "level": 3,
+            "location": {
+                "address": "Tesla Factory Showroom 45500 Fremont Blvd, Fremont, CA 94538, USA",
+                "lat": 37.4924845,
+                "lng": -121.94462299999998,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d77a0dadc9cca6d49afad68",
+            "title": "Test New timezones",
+            "parentId": "5c8fbddeba438d0100921099",
+            "level": 3,
+            "location": {
+                "address": "California Academy of Sciences 55 Music Concourse Dr, San Francisco, CA 94118, USA",
+                "lat": 37.76986459999999,
+                "lng": -122.46609469999999,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d7a24a2effee1bdb0a6192c",
+            "title": "Test1",
+            "parentId": "5c8fbddeba438d0100921099",
+            "level": 3,
+            "location": {
+                "address": "Destin, FL 32541, USA",
+                "lat": 30.39353369999999,
+                "lng": -86.49578329999997,
+                "country": "US",
+                "state": "FL",
+                "utc_offset": -300,
+                "timezone": "America/Chicago"
+            },
+            "closed": true
+        },
+        {
+            "id": "5d94c0a246d17b7418cb46bc",
+            "title": "Test Oleh 0210 updated",
+            "parentId": "5c8fbddeba438d0100921099",
+            "level": 3,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d94c46246d17b489dcb46bf",
+            "title": "Test group updated",
+            "parentId": "5d94c0a246d17b7418cb46bc",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6801496641781,
+                "lng": -117.87871660321048,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5dcea522b527b278743ad925",
+            "title": "Test Site Eydro",
+            "parentId": "5c8fbddeba438d0100921099",
+            "level": 3,
+            "location": {
+                "address": "Testour, Tunisia",
+                "lat": 36.54990000000001,
+                "lng": 9.442266399999994,
+                "country": "TN",
+                "state": "Beja",
+                "utc_offset": 60,
+                "timezone": "Africa/Tunis"
+            }
+        },
+        {
+            "id": "5ddbcb4770377e6a32dae7c9",
+            "title": "Test Site Reporting",
+            "parentId": "5c8fbddeba438d0100921099",
+            "level": 3,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ddbcb5170377e169fdae7ca",
+            "title": "TestWiFi1311",
+            "parentId": "5ddbcb4770377e6a32dae7c9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ddbcfda70377e5b2edae7cb",
+            "title": "=7+5",
+            "parentId": "5ddbcb4770377e6a32dae7c9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ddbd12b70377e0c47dae7d0",
+            "title": "H60AJ-AF8FX",
+            "parentId": "5ddbcb4770377e6a32dae7c9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ddbd12b70377e3556dae7cc",
+            "title": "GenericDevice124",
+            "parentId": "5ddbcb4770377e6a32dae7c9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ddbd12b70377e3eebdae7cf",
+            "title": "GenericDevice125",
+            "parentId": "5ddbcb4770377e6a32dae7c9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ddbd12b70377e7627dae7cd",
+            "title": "GenericDevice119",
+            "parentId": "5ddbcb4770377e6a32dae7c9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ddbd12b70377ec9f4dae7d1",
+            "title": "MultiSwitch136",
+            "parentId": "5ddbcb4770377e6a32dae7c9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ddbd12b70377eec87dae7ce",
+            "title": "MultiSwitch136",
+            "parentId": "5ddbcb4770377e6a32dae7c9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ddbd12c70377e47e7dae7d5",
+            "title": "ZenThermostat12",
+            "parentId": "5ddbcb4770377e6a32dae7c9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ddbd12c70377e5763dae7d2",
+            "title": "Test Virtual Monitor",
+            "parentId": "5ddbcb4770377e6a32dae7c9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ddbd12c70377e5b23dae7d3",
+            "title": "Zenthermostat112.32",
+            "parentId": "5ddbcb4770377e6a32dae7c9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ddbd12c70377e7c0adae7d4",
+            "title": "ZenThermostat13",
+            "parentId": "5ddbcb4770377e6a32dae7c9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e060ee2b67b60e60957b3e9",
+            "title": "Test Site FW 2.32",
+            "parentId": "5c8fbddeba438d0100921099",
+            "level": 3,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e060f38b67b601c7557b3ea",
+            "title": "GenericDevice124",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e060f39b67b60627757b3eb",
+            "title": "GenericDevice119",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e060f39b67b60852357b3ed",
+            "title": "Zen Thermostat 112.32test",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e060f39b67b60905357b3ec",
+            "title": "MultiSwitch136",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e060f3ab67b601f9457b3ee",
+            "title": "GenericDevice125",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e060f3cb67b60c09157b3ef",
+            "title": "Test Virtual Peanut Plug",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e060f3db67b603bc357b3f3",
+            "title": "ZenThermostat12",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e060f3db67b6056bc57b3f1",
+            "title": "Test Virtual Monitor",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e060f3db67b606bfe57b3f4",
+            "title": "Zen Thermostat #155",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e060f3db67b60f61f57b3f0",
+            "title": "MultiSwitch136",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e060f3db67b60fd9a57b3f2",
+            "title": "ZenThermostat13",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e060f3eb67b605c3257b3f6",
+            "title": "Zen Thermostat #158",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e060f3eb67b60a99457b3f5",
+            "title": "Zen Thermostat #156",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e0b5259b67b6069c857b3fb",
+            "title": "TestWiFi1311",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e176501b67b60632c57b5cf",
+            "title": "TestWiFi0901",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e18708ed702c648f8fbb773",
+            "title": "WiFithermostat1001",
+            "parentId": "5e060ee2b67b60e60957b3e9",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e1f1f196867c274c514cb85",
+            "title": "VRV site test",
+            "parentId": "5c8fbddeba438d0100921099",
+            "level": 3,
+            "location": {
+                "address": "Los Angeles, CA, USA",
+                "lat": 34.0522342,
+                "lng": -118.2436849,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "zipcode": null,
+                "timezone": "America/Nome"
+            }
+        },
+        {
+            "id": "5e1f1f486867c2683814cb86",
+            "title": "Test Group My desk",
+            "parentId": "5e1f1f196867c274c514cb85",
+            "level": 4,
+            "location": {
+                "address": "Los Angeles, CA, USA",
+                "lat": 34.0522342,
+                "lng": -118.2436849,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "zipcode": null,
+                "timezone": "America/Nome"
+            }
+        },
+        {
+            "id": "5e2062fd6867c25b2114cb9d",
+            "title": "Lighting group",
+            "parentId": "5e1f1f196867c274c514cb85",
+            "level": 4,
+            "location": {
+                "address": "Los Angeles, CA, USA",
+                "lat": 34.0522342,
+                "lng": -118.2436849,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "zipcode": null,
+                "timezone": "America/Nome"
+            }
+        },
+        {
+            "id": "5e282891e3f9c31d4f69dbfe",
+            "title": "Test Group box",
+            "parentId": "5e1f1f196867c274c514cb85",
+            "level": 4,
+            "location": {
+                "address": "Los Angeles, CA, USA",
+                "lat": 34.0522342,
+                "lng": -118.2436849,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "zipcode": null,
+                "timezone": "America/Nome"
+            }
+        },
+        {
+            "id": "5e2b14bc14916daf0b94cd95",
+            "title": "Zen Air group",
+            "parentId": "5e1f1f196867c274c514cb85",
+            "level": 4,
+            "location": {
+                "address": "Los Angeles, CA, USA",
+                "lat": 34.0522342,
+                "lng": -118.2436849,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "zipcode": null,
+                "timezone": "America/Nome"
+            }
+        },
+        {
+            "id": "5e2b163e14916d13fb94cd98",
+            "title": "TestWiFi2401",
+            "parentId": "5e1f1f196867c274c514cb85",
+            "level": 4,
+            "location": {
+                "address": "Los Angeles, CA, USA",
+                "lat": 34.0522342,
+                "lng": -118.2436849,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "zipcode": null,
+                "timezone": "America/Nome"
+            }
+        },
+        {
+            "id": "5e2b197014916de8c794cd9d",
+            "title": "TestWiFi2401-1",
+            "parentId": "5e1f1f196867c274c514cb85",
+            "level": 4,
+            "location": {
+                "address": "Los Angeles, CA, USA",
+                "lat": 34.0522342,
+                "lng": -118.2436849,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "zipcode": null,
+                "timezone": "America/Nome"
+            }
+        },
+        {
+            "id": "5ea2bd678b86ceac94923e10",
+            "title": "ZenWiFiThermostat2404",
+            "parentId": "5e1f1f196867c274c514cb85",
+            "level": 4,
+            "location": {
+                "address": "Los Angeles, CA, USA",
+                "lat": 34.0522342,
+                "lng": -118.2436849,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "zipcode": null,
+                "timezone": "America/Nome"
+            }
+        },
+        {
+            "id": "5e4ad4a00d813b2772f73042",
+            "title": "Test 1523",
+            "parentId": "5c8fbddeba438d0100921099",
+            "level": 3,
+            "location": {
+                "address": "California City, CA, USA",
+                "lat": 35.125801,
+                "lng": -117.98590380000002,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d0cbdbcb32aada4cb728bfb",
+            "title": "ZenAir Region",
+            "parentId": "5c8fbdd5ba438d0100921098",
+            "level": 2
+        },
+        {
+            "id": "5d0cbdd1b32aad578c728bfc",
+            "title": "Zen Air Site",
+            "parentId": "5d0cbdbcb32aada4cb728bfb",
+            "level": 3,
+            "location": {
+                "address": "California, USA",
+                "lat": 36.778261,
+                "lng": -119.41793239999998,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5d0cbe52b32aadccb8728bfd",
+            "title": "=7+5",
+            "parentId": "5d0cbdd1b32aad578c728bfc",
+            "level": 4,
+            "location": {
+                "address": "California, USA",
+                "lat": 36.778261,
+                "lng": -119.41793239999998,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e4bdaf70d813bcbfaf73045",
+            "title": "Test HQMVP-1551",
+            "parentId": "5c8fbdd5ba438d0100921098",
+            "level": 2
+        },
+        {
+            "id": "5e4bdb190d813b84baf73046",
+            "title": "Test Site California",
+            "parentId": "5e4bdaf70d813bcbfaf73045",
+            "level": 3,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e4bdb2b0d813b589cf73048",
+            "title": "Test Group Lightings",
+            "parentId": "5e4bdb190d813b84baf73046",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e4bdb370d813bf40ff73049",
+            "title": "Test Group Thermostats 2.32",
+            "parentId": "5e4bdb190d813b84baf73046",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e4d3cd10d813bed68f73071",
+            "title": "Test WiFi1902",
+            "parentId": "5e4bdb190d813b84baf73046",
+            "level": 4,
+            "location": {
+                "address": "Zen Ecosystems 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.679364,
+                "lng": -117.87395300000003,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "92626",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e995685593d28a6b250b555",
+            "title": "Orvibo",
+            "parentId": "5c8fbdd5ba438d0100921098",
+            "level": 2
+        },
+        {
+            "id": "5e9956a2593d281d7a50b556",
+            "title": "Test Site",
+            "parentId": "5e995685593d28a6b250b555",
+            "level": 3,
+            "location": {
+                "address": "California, USA",
+                "lat": 36.778261,
+                "lng": -119.4179324,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e9956b0593d28924350b558",
+            "title": "Test Group Orvibo",
+            "parentId": "5e9956a2593d281d7a50b556",
+            "level": 4,
+            "location": {
+                "address": "California, USA",
+                "lat": 36.778261,
+                "lng": -119.4179324,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -420,
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5f3d4f03b953d15f2d777502",
+            "title": "S",
+            "parentId": "5e995685593d28a6b250b555",
+            "level": 3,
+            "location": {
+                "address": "Pasichna St, L'viv, L'vivs'ka oblast, Ukraine",
+                "lat": 49.8220632,
+                "lng": 24.0752226,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "zipcode": null,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5dc2e22654e62e24f0a83a22",
+            "title": "Test123456789",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5dc2e23154e62e6e52a83a23",
+            "title": "Test123456789",
+            "parentId": "5dc2e22654e62e24f0a83a22",
+            "level": 2
+        },
+        {
+            "id": "5dc2e23c54e62e2a59a83a24",
+            "title": "Test123456789",
+            "parentId": "5dc2e23154e62e6e52a83a23",
+            "level": 3,
+            "location": {
+                "address": "Detroit, MI, USA",
+                "lat": 42.33142699999999,
+                "lng": -83.0457538,
+                "country": "US",
+                "state": "MI",
+                "utc_offset": -300,
+                "timezone": "America/Detroit"
+            }
+        },
+        {
+            "id": "5dc2e24254e62e4d0ba83a25",
+            "title": "Test123456789",
+            "parentId": "5dc2e23c54e62e2a59a83a24",
+            "level": 4,
+            "location": {
+                "address": "Detroit, MI, USA",
+                "lat": 42.33142699999999,
+                "lng": -83.0457538,
+                "country": "US",
+                "state": "MI",
+                "utc_offset": -300,
+                "timezone": "America/Detroit"
+            }
+        },
+        {
+            "id": "5e32e6b16e82476b03c93b9b",
+            "title": "SIGNUP",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5e385094abc4e37872989350",
+            "title": "IOrg",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5e38509dabc4e37872989351",
+            "title": "IReg",
+            "parentId": "5e385094abc4e37872989350",
+            "level": 2
+        },
+        {
+            "id": "5e3850b6abc4e37872989352",
+            "title": "ISite",
+            "parentId": "5e38509dabc4e37872989351",
+            "level": 3,
+            "location": {
+                "address": "Yamanto QLD 4305, Australia",
+                "lat": -27.65,
+                "lng": 152.73333300000002,
+                "country": "AU",
+                "state": "QLD",
+                "utc_offset": 600,
+                "zipcode": "4305",
+                "timezone": "Australia/Brisbane"
+            }
+        },
+        {
+            "id": "5e3850daabc4e37872989354",
+            "title": "IGroup",
+            "parentId": "5e3850b6abc4e37872989352",
+            "level": 4,
+            "location": {
+                "address": "Yamanto QLD 4305, Australia",
+                "lat": -27.65,
+                "lng": 152.73333300000002,
+                "country": "AU",
+                "state": "QLD",
+                "utc_offset": 600,
+                "zipcode": "4305",
+                "timezone": "Australia/Brisbane"
+            }
+        },
+        {
+            "id": "5e385249c282837b130e5bee",
+            "title": "ISite2",
+            "parentId": "5e38509dabc4e37872989351",
+            "level": 3,
+            "location": {
+                "address": "Yamashiro | Hollywood 1999 N Sycamore Ave, Los Angeles, CA 90068, USA",
+                "lat": 34.1057604,
+                "lng": -118.3420926,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": "90068",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e38534678f3117fff4b395c",
+            "title": "ISite3",
+            "parentId": "5e38509dabc4e37872989351",
+            "level": 3,
+            "location": {
+                "address": "Pasichna St, L'viv, L'vivs'ka oblast, Ukraine",
+                "lat": 49.8220632,
+                "lng": 24.07522259999996,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "zipcode": null,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f36121d455822d9e8546",
+            "title": "Zen Ecosystems Oleh Test",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5e54f38621d455b0f59e8547",
+            "title": "California",
+            "parentId": "5e54f36121d455822d9e8546",
+            "level": 2
+        },
+        {
+            "id": "5e54f46221d455223f9e854d",
+            "title": "Costa Mesa",
+            "parentId": "5e54f38621d455b0f59e8547",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f48f21d455252e9e855f",
+            "title": "First Floor",
+            "parentId": "5e54f46221d455223f9e854d",
+            "level": 4,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f49721d45599559e8560",
+            "title": "Second Floor",
+            "parentId": "5e54f46221d455223f9e854d",
+            "level": 4,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f49e21d4553b729e8561",
+            "title": "Kitchen",
+            "parentId": "5e54f46221d455223f9e854d",
+            "level": 4,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f4a521d455868d9e8562",
+            "title": "Gym",
+            "parentId": "5e54f46221d455223f9e854d",
+            "level": 4,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ebc0b2bc281174a9dc3c14a",
+            "title": "ZenWiFiThermostat1305",
+            "parentId": "5e54f46221d455223f9e854d",
+            "level": 4,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5ed7d5d1a0c633034d3e96ec",
+            "title": "ZenWiFiThermostat0306",
+            "parentId": "5e54f46221d455223f9e854d",
+            "level": 4,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5eda33e1a0c63355ff3e9737",
+            "title": "ZenWiFiThermostat0506",
+            "parentId": "5e54f46221d455223f9e854d",
+            "level": 4,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f46321d455079a9e854f",
+            "title": "#3158 Costa Mesa (1)",
+            "parentId": "5e54f38621d455b0f59e8547",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f46321d4551c0a9e8551",
+            "title": "Lviv (1)",
+            "parentId": "5e54f38621d455b0f59e8547",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "zipcode": null,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f46421d4556b429e8553",
+            "title": "Lviv (2)",
+            "parentId": "5e54f38621d455b0f59e8547",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f46521d455064a9e8557",
+            "title": "#3158 Costa Mesa (3)",
+            "parentId": "5e54f38621d455b0f59e8547",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f46521d45551369e8555",
+            "title": "#3158 Costa Mesa (2)",
+            "parentId": "5e54f38621d455b0f59e8547",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f46621d4559d3b9e8559",
+            "title": "Lviv (1)",
+            "parentId": "5e54f38621d455b0f59e8547",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f46721d45519bb9e855d",
+            "title": "Melbourne (1)",
+            "parentId": "5e54f38621d455b0f59e8547",
+            "level": 3,
+            "location": {
+                "address": "Melbourne VIC, Australia",
+                "lat": -37.8136276,
+                "lng": 144.9630576,
+                "country": "AU",
+                "state": "VIC",
+                "zipcode": null,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5f1029ec8e6949c22b733740",
+            "title": "Test Site Oleh",
+            "parentId": "5e54f46721d45519bb9e855d",
+            "level": 4,
+            "location": {
+                "address": "Melbourne VIC, Australia",
+                "lat": -37.8136276,
+                "lng": 144.9630576,
+                "country": "AU",
+                "state": "VIC",
+                "zipcode": null,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5e54f46721d455c6cf9e855b",
+            "title": "Lviv (2)",
+            "parentId": "5e54f38621d455b0f59e8547",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "60018d40a211506302401337",
+            "title": "Test Site Oleh",
+            "parentId": "5e54f38621d455b0f59e8547",
+            "level": 3,
+            "location": {
+                "address": "Lviv, Lviv Oblast, Ukraine, 79000",
+                "lat": 49.839683,
+                "lng": 24.029717,
+                "country": "UA",
+                "state": "Lviv Oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "60018d4ca211502e3e401339",
+            "title": "Test Group 1",
+            "parentId": "60018d40a211506302401337",
+            "level": 4,
+            "location": {
+                "address": "Lviv, Lviv Oblast, Ukraine, 79000",
+                "lat": 49.839683,
+                "lng": 24.029717,
+                "country": "UA",
+                "state": "Lviv Oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "60018d54a21150c9bf40133a",
+            "title": "Test Group 2",
+            "parentId": "60018d40a211506302401337",
+            "level": 4,
+            "location": {
+                "address": "Lviv, Lviv Oblast, Ukraine, 79000",
+                "lat": 49.839683,
+                "lng": 24.029717,
+                "country": "UA",
+                "state": "Lviv Oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "60018d5ca211506dd140133b",
+            "title": "Test Group 3",
+            "parentId": "60018d40a211506302401337",
+            "level": 4,
+            "location": {
+                "address": "Lviv, Lviv Oblast, Ukraine, 79000",
+                "lat": 49.839683,
+                "lng": 24.029717,
+                "country": "UA",
+                "state": "Lviv Oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "60018d66a21150484540133c",
+            "title": "Test Group 4",
+            "parentId": "60018d40a211506302401337",
+            "level": 4,
+            "location": {
+                "address": "Lviv, Lviv Oblast, Ukraine, 79000",
+                "lat": 49.839683,
+                "lng": 24.029717,
+                "country": "UA",
+                "state": "Lviv Oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "600b011c40fe620007762b93",
+            "title": "Zen Thermostat #191",
+            "parentId": "60018d40a211506302401337",
+            "level": 4,
+            "location": {
+                "address": "Lviv, Lviv Oblast, Ukraine, 79000",
+                "lat": 49.839683,
+                "lng": 24.029717,
+                "country": "UA",
+                "state": "Lviv Oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "6006a53f4f83b60007cd8d95",
+            "title": "Sweet Home",
+            "parentId": "5e54f38621d455b0f59e8547",
+            "level": 3,
+            "location": {
+                "address": "Lviv, Lviv Oblast, Ukraine, 79000",
+                "lat": 49.839683,
+                "lng": 24.029717,
+                "country": "UA",
+                "state": "Lviv Oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "6006a57c4f83b60007cd8d9a",
+            "title": "Kitchen",
+            "parentId": "6006a53f4f83b60007cd8d95",
+            "level": 4,
+            "location": {
+                "address": "Lviv, Lviv Oblast, Ukraine, 79000",
+                "lat": 49.839683,
+                "lng": 24.029717,
+                "country": "UA",
+                "state": "Lviv Oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "6006b4ed4f83b60007cd8d9d",
+            "title": "Small Room",
+            "parentId": "6006a53f4f83b60007cd8d95",
+            "level": 4,
+            "location": {
+                "address": "Lviv, Lviv Oblast, Ukraine, 79000",
+                "lat": 49.839683,
+                "lng": 24.029717,
+                "country": "UA",
+                "state": "Lviv Oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "6006b4ed4f83b60007cd8d9e",
+            "title": "Big Room",
+            "parentId": "6006a53f4f83b60007cd8d95",
+            "level": 4,
+            "location": {
+                "address": "Lviv, Lviv Oblast, Ukraine, 79000",
+                "lat": 49.839683,
+                "lng": 24.029717,
+                "country": "UA",
+                "state": "Lviv Oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f39021d45535b29e8548",
+            "title": "New Mexico",
+            "parentId": "5e54f36121d455822d9e8546",
+            "level": 2
+        },
+        {
+            "id": "5e54f59d21d4553a2b9e8575",
+            "title": "#3158 Costa Mesa",
+            "parentId": "5e54f39021d45535b29e8548",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f59d21d45548689e8577",
+            "title": "#3158 Costa Mesa (1)",
+            "parentId": "5e54f39021d45535b29e8548",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f59e21d455f3059e8579",
+            "title": "Lviv (1)",
+            "parentId": "5e54f39021d45535b29e8548",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f59f21d4557d609e857b",
+            "title": "Lviv (2)",
+            "parentId": "5e54f39021d45535b29e8548",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f5a021d45511579e857d",
+            "title": "#3158 Costa Mesa (2)",
+            "parentId": "5e54f39021d45535b29e8548",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f5a121d4550e2d9e857f",
+            "title": "#3158 Costa Mesa (3)",
+            "parentId": "5e54f39021d45535b29e8548",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f5a121d45563e69e8581",
+            "title": "Lviv (1)",
+            "parentId": "5e54f39021d45535b29e8548",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f5a221d4555edc9e8583",
+            "title": "Lviv (2)",
+            "parentId": "5e54f39021d45535b29e8548",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f5a321d455dc069e8585",
+            "title": "Melbourne (1)",
+            "parentId": "5e54f39021d45535b29e8548",
+            "level": 3,
+            "location": {
+                "address": "Melbourne VIC, Australia",
+                "lat": -37.8136276,
+                "lng": 144.9630576,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 600,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5e54f39f21d4555d449e8549",
+            "title": "Pennsylvania",
+            "parentId": "5e54f36121d455822d9e8546",
+            "level": 2
+        },
+        {
+            "id": "5e54f5f221d4557a739e859b",
+            "title": "#3158 Costa Mesa (1)",
+            "parentId": "5e54f39f21d4555d449e8549",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f5f221d45593579e8599",
+            "title": "#3158 Costa Mesa",
+            "parentId": "5e54f39f21d4555d449e8549",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f5f321d45578d89e859d",
+            "title": "Lviv (1)",
+            "parentId": "5e54f39f21d4555d449e8549",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f5f421d4550fda9e85a1",
+            "title": "#3158 Costa Mesa (2)",
+            "parentId": "5e54f39f21d4555d449e8549",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f5f421d455593e9e859f",
+            "title": "Lviv (2)",
+            "parentId": "5e54f39f21d4555d449e8549",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f5f521d455b88e9e85a3",
+            "title": "#3158 Costa Mesa (3)",
+            "parentId": "5e54f39f21d4555d449e8549",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f5f621d4553a0e9e85a7",
+            "title": "Lviv (2)",
+            "parentId": "5e54f39f21d4555d449e8549",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f5f621d4556fe09e85a5",
+            "title": "Lviv (1)",
+            "parentId": "5e54f39f21d4555d449e8549",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f5f721d455fa0e9e85a9",
+            "title": "Melbourne (1)",
+            "parentId": "5e54f39f21d4555d449e8549",
+            "level": 3,
+            "location": {
+                "address": "Melbourne VIC, Australia",
+                "lat": -37.8136276,
+                "lng": 144.9630576,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 600,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5e54f3a821d455084b9e854a",
+            "title": "Idaho",
+            "parentId": "5e54f36121d455822d9e8546",
+            "level": 2
+        },
+        {
+            "id": "5e54f51121d45509149e8563",
+            "title": "#3158 Costa Mesa",
+            "parentId": "5e54f3a821d455084b9e854a",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f51121d4559b749e8565",
+            "title": "#3158 Costa Mesa (1)",
+            "parentId": "5e54f3a821d455084b9e854a",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f51221d45586049e8569",
+            "title": "Lviv (2)",
+            "parentId": "5e54f3a821d455084b9e854a",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f51221d455a6de9e8567",
+            "title": "Lviv (1)",
+            "parentId": "5e54f3a821d455084b9e854a",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f51321d455a9d59e856b",
+            "title": "#3158 Costa Mesa (2)",
+            "parentId": "5e54f3a821d455084b9e854a",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f51421d455158d9e856d",
+            "title": "#3158 Costa Mesa (3)",
+            "parentId": "5e54f3a821d455084b9e854a",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f51521d45506909e856f",
+            "title": "Lviv (1)",
+            "parentId": "5e54f3a821d455084b9e854a",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f51521d45574649e8571",
+            "title": "Lviv (2)",
+            "parentId": "5e54f3a821d455084b9e854a",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f51621d4557ac59e8573",
+            "title": "Melbourne (1)",
+            "parentId": "5e54f3a821d455084b9e854a",
+            "level": 3,
+            "location": {
+                "address": "Melbourne VIC, Australia",
+                "lat": -37.8136276,
+                "lng": 144.9630576,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 600,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5e54f3af21d455336b9e854b",
+            "title": "New York",
+            "parentId": "5e54f36121d455822d9e8546",
+            "level": 2
+        },
+        {
+            "id": "5e54f5c721d455204b9e8587",
+            "title": "#3158 Costa Mesa",
+            "parentId": "5e54f3af21d455336b9e854b",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f5c821d4551bf29e8589",
+            "title": "#3158 Costa Mesa (1)",
+            "parentId": "5e54f3af21d455336b9e854b",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f5c921d455100f9e858b",
+            "title": "Lviv (1)",
+            "parentId": "5e54f3af21d455336b9e854b",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f5c921d455e9f29e858d",
+            "title": "Lviv (2)",
+            "parentId": "5e54f3af21d455336b9e854b",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f5ca21d45577b19e858f",
+            "title": "#3158 Costa Mesa (2)",
+            "parentId": "5e54f3af21d455336b9e854b",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f5cb21d455a9829e8591",
+            "title": "#3158 Costa Mesa (3)",
+            "parentId": "5e54f3af21d455336b9e854b",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f5cc21d45523c59e8595",
+            "title": "Lviv (2)",
+            "parentId": "5e54f3af21d455336b9e854b",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f5cc21d455427e9e8593",
+            "title": "Lviv (1)",
+            "parentId": "5e54f3af21d455336b9e854b",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f5cd21d45542039e8597",
+            "title": "Melbourne (1)",
+            "parentId": "5e54f3af21d455336b9e854b",
+            "level": 3,
+            "location": {
+                "address": "Melbourne VIC, Australia",
+                "lat": -37.8136276,
+                "lng": 144.9630576,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 600,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5e54f3b921d4556f5c9e854c",
+            "title": "Washington",
+            "parentId": "5e54f36121d455822d9e8546",
+            "level": 2
+        },
+        {
+            "id": "5e54f61121d4551dbd9e85ab",
+            "title": "#3158 Costa Mesa",
+            "parentId": "5e54f3b921d4556f5c9e854c",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f61221d45533ad9e85ad",
+            "title": "#3158 Costa Mesa (1)",
+            "parentId": "5e54f3b921d4556f5c9e854c",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f61321d455021a9e85af",
+            "title": "Lviv (1)",
+            "parentId": "5e54f3b921d4556f5c9e854c",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f61321d45533119e85b1",
+            "title": "Lviv (2)",
+            "parentId": "5e54f3b921d4556f5c9e854c",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f61421d455d8a39e85b3",
+            "title": "#3158 Costa Mesa (2)",
+            "parentId": "5e54f3b921d4556f5c9e854c",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f61521d4558f119e85b5",
+            "title": "#3158 Costa Mesa (3)",
+            "parentId": "5e54f3b921d4556f5c9e854c",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5e54f61521d455aef79e85b7",
+            "title": "Lviv (1)",
+            "parentId": "5e54f3b921d4556f5c9e854c",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f61621d45584b39e85b9",
+            "title": "Lviv (2)",
+            "parentId": "5e54f3b921d4556f5c9e854c",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5e54f61721d4550ded9e85bb",
+            "title": "Melbourne (1)",
+            "parentId": "5e54f3b921d4556f5c9e854c",
+            "level": 3,
+            "location": {
+                "address": "Melbourne VIC, Australia",
+                "lat": -37.8136276,
+                "lng": 144.9630576,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 600,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "5ece39f31f1468ac1c42bfe2",
+            "title": "Test ZenDesk API call",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5f35562edc7aa785120dfe1c",
+            "title": "SIGNUP",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5f5b3982e5ea18b89410738e",
+            "title": "Drahunov1",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5fae647f3d1678bc71038e45",
+            "title": "Region",
+            "parentId": "5f5b3982e5ea18b89410738e",
+            "level": 2
+        },
+        {
+            "id": "5fae64913d167801ec038e46",
+            "title": "Site",
+            "parentId": "5fae647f3d1678bc71038e45",
+            "level": 3,
+            "location": {
+                "address": "Pasichna 39 V Pasichna St, 39, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8312209,
+                "lng": 24.0679597,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5fae649c3d1678732f038e48",
+            "title": "Group1",
+            "parentId": "5fae64913d167801ec038e46",
+            "level": 4,
+            "location": {
+                "address": "Pasichna 39 V Pasichna St, 39, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8314977209424,
+                "lng": 24.067428622615033,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5ffaffa59b4750775b95a9de",
+            "title": "Group2",
+            "parentId": "5fae64913d167801ec038e46",
+            "level": 4,
+            "location": {
+                "address": "Pasichna 39 V Pasichna St, 39, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8312209,
+                "lng": 24.0679597,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5ffaffaa9b47507c3595a9df",
+            "title": "Group3",
+            "parentId": "5fae64913d167801ec038e46",
+            "level": 4,
+            "location": {
+                "address": "Pasichna 39 V Pasichna St, 39, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8312209,
+                "lng": 24.0679597,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5f60b95d69432d5684a31daa",
+            "title": "SIGNUP2",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5f61d4730ae2542c3407ab31",
+            "title": "SIGNUP3",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5f6489bd8b154ee98bb432c7",
+            "title": "Region",
+            "parentId": "5f61d4730ae2542c3407ab31",
+            "level": 2
+        },
+        {
+            "id": "5f648ad08b154ee98bb432c8",
+            "title": "Site",
+            "parentId": "5f6489bd8b154ee98bb432c7",
+            "level": 3,
+            "location": {
+                "address": "Pasichna St, Ivano-Frankivs'k, Ivano-Frankivs'ka oblast, Ukraine",
+                "lat": 48.9377517,
+                "lng": 24.6918429,
+                "country": "UA",
+                "state": "Ivano-Frankivs'ka oblast",
+                "zipcode": null,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "5f65d9cc99b125233db8ed2c",
+            "title": "Site2",
+            "parentId": "5f6489bd8b154ee98bb432c7",
+            "level": 3,
+            "location": {
+                "address": "Grace Fellowship Church Shrewsbury 74 E Forrest Ave, Shrewsbury, PA 17361, USA",
+                "lat": 39.7685822,
+                "lng": -76.6734331,
+                "country": "US",
+                "state": "PA",
+                "zipcode": "17361",
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5f65da2e99b125233db8ed2e",
+            "title": "Site3",
+            "parentId": "5f6489bd8b154ee98bb432c7",
+            "level": 3,
+            "location": {
+                "address": "Ip Golub A.m. vulica Kuĺman 1, Minsk 220123, Belarus",
+                "lat": 53.9187727,
+                "lng": 27.584919,
+                "country": "BY",
+                "state": "Minskaja voblasć",
+                "zipcode": "220123",
+                "timezone": "Europe/Minsk"
+            }
+        },
+        {
+            "id": "5f6877d5615ea492e8b88d1e",
+            "title": "SIGNUP4",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5f689ae8156d06e6bafeb82e",
+            "title": "Region",
+            "parentId": "5f6877d5615ea492e8b88d1e",
+            "level": 2
+        },
+        {
+            "id": "5f689b14156d06e6bafeb82f",
+            "title": "Site",
+            "parentId": "5f689ae8156d06e6bafeb82e",
+            "level": 3,
+            "location": {
+                "address": "Grace Fellowship Church Shrewsbury 74 E Forrest Ave, Shrewsbury, PA 17361, USA",
+                "lat": 39.7685822,
+                "lng": -76.6734331,
+                "country": "US",
+                "state": "PA",
+                "zipcode": "17361",
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5f689ff129ca8bee5c75059c",
+            "title": "Group",
+            "parentId": "5f689b14156d06e6bafeb82f",
+            "level": 4,
+            "location": {
+                "address": "Grace Fellowship Church Shrewsbury 74 E Forrest Ave, Shrewsbury, PA 17361, USA",
+                "lat": 39.7685822,
+                "lng": -76.6734331,
+                "country": "US",
+                "state": "PA",
+                "zipcode": "17361",
+                "timezone": "America/New_York"
+            }
+        },
+        {
+            "id": "5f69bdb92bada2d5e19a3acd",
+            "title": "SIGNUP4",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5f899de445fccecf039cfc8d",
+            "title": "Amazon",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5f899ee545fcce82ff9cfc8f",
+            "title": "NJ",
+            "parentId": "5f899de445fccecf039cfc8d",
+            "level": 2
+        },
+        {
+            "id": "5f899eea45fcce1fc19cfc90",
+            "title": "FL",
+            "parentId": "5f899de445fccecf039cfc8d",
+            "level": 2
+        },
+        {
+            "id": "5f899f3445fcce20fb9cfc92",
+            "title": "1",
+            "parentId": "5f899eea45fcce1fc19cfc90",
+            "level": 3,
+            "location": {
+                "address": "Даллас, Техас, Сполучені Штати Америки",
+                "lat": 32.7766642,
+                "lng": -96.79698789999999,
+                "country": "US",
+                "state": "TX",
+                "zipcode": null,
+                "timezone": "America/Chicago"
+            }
+        },
+        {
+            "id": "604f8d7695686b0008168044",
+            "title": "Group",
+            "parentId": "5f899f3445fcce20fb9cfc92",
+            "level": 4,
+            "location": {
+                "address": "Даллас, Техас, Сполучені Штати Америки",
+                "lat": 32.777043067234594,
+                "lng": -96.7946812002472,
+                "country": "US",
+                "state": "TX",
+                "zipcode": null,
+                "timezone": "America/Chicago"
+            }
+        },
+        {
+            "id": "5f899ef145fcce2da59cfc91",
+            "title": "PA",
+            "parentId": "5f899de445fccecf039cfc8d",
+            "level": 2
+        },
+        {
+            "id": "5f91a62f92f0cb645dc61b38",
+            "title": "ZENDESK TEST",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5fae47c63d1678018e038e37",
+            "title": "SDRAHUNOV",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5fb53795adbdac794bd95dd3",
+            "title": "Inspire",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5fb65aa28d9cd24a926945cd",
+            "title": "Region",
+            "parentId": "5fb53795adbdac794bd95dd3",
+            "level": 2
+        },
+        {
+            "id": "5fb65ab18d9cd2754e6945ce",
+            "title": "Test Site upd",
+            "parentId": "5fb65aa28d9cd24a926945cd",
+            "level": 3,
+            "location": {
+                "address": "Calgary, AB, Canada",
+                "lat": 51.04473309999999,
+                "lng": -114.0718831,
+                "country": "CA",
+                "state": "AB",
+                "zipcode": null,
+                "timezone": "America/Edmonton"
+            }
+        },
+        {
+            "id": "5fb65abd8d9cd247d26945d0",
+            "title": "Test Group",
+            "parentId": "5fb65ab18d9cd2754e6945ce",
+            "level": 4,
+            "location": {
+                "address": "Calgary, AB, Canada",
+                "lat": 51.04473309999999,
+                "lng": -114.0718831,
+                "country": "CA",
+                "state": "AB",
+                "zipcode": null,
+                "timezone": "America/Edmonton"
+            }
+        },
+        {
+            "id": "5fca8e389b4750f21f95a9d2",
+            "title": "Cory Test",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "5fcaa7909b475056f495a9d5",
+            "title": "Region",
+            "parentId": "5fca8e389b4750f21f95a9d2",
+            "level": 2
+        },
+        {
+            "id": "5febb20f9b475035bf95a9d9",
+            "title": "Cory Site",
+            "parentId": "5fcaa7909b475056f495a9d5",
+            "level": 3,
+            "location": {
+                "address": "123 Alhambra, Irvine, CA 92620, USA",
+                "lat": 33.69588139999999,
+                "lng": -117.7527344,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92620",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "5febb4ba9b4750430995a9db",
+            "title": "Zigbee",
+            "parentId": "5febb20f9b475035bf95a9d9",
+            "level": 4,
+            "location": {
+                "address": "123 Alhambra, Irvine, CA 92620, USA",
+                "lat": 33.69588139999999,
+                "lng": -117.7527344,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92620",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "600e805440fe620007762b9a",
+            "title": "Test Organization Oleh (Home)",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "600e805740fe620007762b9b",
+            "title": "Test Region Oleh",
+            "parentId": "600e805440fe620007762b9a",
+            "level": 2
+        },
+        {
+            "id": "604b66f83413910007b2677e",
+            "title": "Test Inspire",
+            "parentId": "600e805740fe620007762b9b",
+            "level": 3,
+            "location": {
+                "address": "Lviv, Lviv Oblast, Ukraine, 79000",
+                "lat": 49.839683,
+                "lng": 24.029717,
+                "country": "UA",
+                "state": "Lviv Oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "604b841b3413910007b26782",
+            "title": "Test Group",
+            "parentId": "604b66f83413910007b2677e",
+            "level": 4,
+            "location": {
+                "address": "Lviv, Lviv Oblast, Ukraine, 79000",
+                "lat": 49.839683,
+                "lng": 24.029717,
+                "country": "UA",
+                "state": "Lviv Oblast",
+                "zipcode": "79000",
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "605c9422e0fa5c00097fd1cb",
+            "title": "New Test Site",
+            "parentId": "600e805740fe620007762b9b",
+            "level": 3,
+            "location": {
+                "address": "California City, CA, USA",
+                "lat": 35.125801,
+                "lng": -117.9859038,
+                "country": "US",
+                "state": "CA",
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "605c9451e0fa5c00097fd1cd",
+            "title": "Test Group",
+            "parentId": "605c9422e0fa5c00097fd1cb",
+            "level": 4,
+            "location": {
+                "address": "California City, CA, USA",
+                "lat": 35.125801,
+                "lng": -117.9859038,
+                "country": "US",
+                "state": "CA",
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "606c7ead68f9570007afe52f",
+            "title": "Test Alerts",
+            "parentId": "600e805740fe620007762b9b",
+            "level": 3,
+            "location": {
+                "address": "California City, CA, USA",
+                "lat": 35.125801,
+                "lng": -117.9859038,
+                "country": "US",
+                "state": "CA",
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "606c802268f9570007afe531",
+            "title": "Test_Wifi",
+            "parentId": "606c7ead68f9570007afe52f",
+            "level": 4,
+            "location": {
+                "address": "California City, CA, USA",
+                "lat": 35.125801,
+                "lng": -117.9859038,
+                "country": "US",
+                "state": "CA",
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "606c82f968f9570007afe532",
+            "title": "Test Group zigbee",
+            "parentId": "606c7ead68f9570007afe52f",
+            "level": 4,
+            "location": {
+                "address": "California City, CA, USA",
+                "lat": 35.125801,
+                "lng": -117.9859038,
+                "country": "US",
+                "state": "CA",
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "606d9de868f9570007afe534",
+            "title": "Wifi_office",
+            "parentId": "606c7ead68f9570007afe52f",
+            "level": 4,
+            "location": {
+                "address": "California City, CA, USA",
+                "lat": 35.125801,
+                "lng": -117.9859038,
+                "country": "US",
+                "state": "CA",
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "607701a57957960007a658f1",
+            "title": "Wifi_capture",
+            "parentId": "606c7ead68f9570007afe52f",
+            "level": 4,
+            "location": {
+                "address": "California City, CA, USA",
+                "lat": 35.125801,
+                "lng": -117.9859038,
+                "country": "US",
+                "state": "CA",
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "609a78bc384a5d000772cd84",
+            "title": "1",
+            "parentId": "606c7ead68f9570007afe52f",
+            "level": 4,
+            "location": {
+                "address": "California City, CA, USA",
+                "lat": 35.125801,
+                "lng": -117.9859038,
+                "country": "US",
+                "state": "CA",
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "609a78d565bff94d0618a27e",
+            "title": "2",
+            "parentId": "606c7ead68f9570007afe52f",
+            "level": 4,
+            "location": {
+                "address": "California City, CA, USA",
+                "lat": 35.125801,
+                "lng": -117.9859038,
+                "country": "US",
+                "state": "CA",
+                "zipcode": null,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "6050a03365904648201d66eb",
+            "title": "DRAHUNOV-REF4",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "6050d65079872155c5b07d7b",
+            "title": "Reg",
+            "parentId": "6050a03365904648201d66eb",
+            "level": 2
+        },
+        {
+            "id": "6050d66179872155c5b07d7c",
+            "title": "Site",
+            "parentId": "6050d65079872155c5b07d7b",
+            "level": 3,
+            "location": {
+                "address": "Pasichna St, L'viv, L'vivs'ka oblast, Ukraine",
+                "lat": 49.8220632,
+                "lng": 24.0752226,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "zipcode": null,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "6050d66b79872155c5b07d7e",
+            "title": "Group",
+            "parentId": "6050d66179872155c5b07d7c",
+            "level": 4,
+            "location": {
+                "address": "Pasichna St, L'viv, L'vivs'ka oblast, Ukraine",
+                "lat": 49.8220632,
+                "lng": 24.0752226,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "zipcode": null,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "609a779c384a5d000772cd7e",
+            "title": "Test Organization Oleh",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "609a779f384a5d000772cd7f",
+            "title": "Test Region Oleh",
+            "parentId": "609a779c384a5d000772cd7e",
+            "level": 2
+        },
+        {
+            "id": "609a77a1384a5d000772cd80",
+            "title": "Test Site Oleh updated",
+            "parentId": "609a779f384a5d000772cd7f",
+            "level": 3,
+            "location": {
+                "address": "California, USA",
+                "country": "US",
+                "lat": 36.778261,
+                "lng": -119.41793239999998,
+                "state": "CA",
+                "timezone": "America/Los_Angeles",
+                "utc_offset": -420
+            }
+        },
+        {
+            "id": "609a77a7384a5d000772cd83",
+            "title": "Test Group Oleh updated",
+            "parentId": "609a77a1384a5d000772cd80",
+            "level": 4,
+            "location": {
+                "address": "California, USA",
+                "country": "US",
+                "lat": 36.8,
+                "lng": -119.5,
+                "state": "CA",
+                "timezone": "America/Los_Angeles",
+                "utc_offset": -420
+            }
+        },
+        {
+            "id": "609a7a35384a5d000772cd85",
+            "title": "ZenWiFiThermostat1",
+            "parentId": "609a77a1384a5d000772cd80",
+            "level": 4,
+            "location": {
+                "address": "California, USA",
+                "country": "US",
+                "lat": 36.778261,
+                "lng": -119.41793239999998,
+                "state": "CA",
+                "timezone": "America/Los_Angeles",
+                "utc_offset": -420
+            }
+        },
+        {
+            "id": "609a7ff17ef9de0007389a2e",
+            "title": "GenericDevice119",
+            "parentId": "609a77a1384a5d000772cd80",
+            "level": 4,
+            "location": {
+                "address": "California, USA",
+                "country": "US",
+                "lat": 36.778261,
+                "lng": -119.41793239999998,
+                "state": "CA",
+                "timezone": "America/Los_Angeles",
+                "utc_offset": -420
+            }
+        },
+        {
+            "id": "609a7ff17ef9de0007389a2f",
+            "title": "LIGHTS",
+            "parentId": "609a77a1384a5d000772cd80",
+            "level": 4,
+            "location": {
+                "address": "California, USA",
+                "country": "US",
+                "lat": 36.778261,
+                "lng": -119.41793239999998,
+                "state": "CA",
+                "timezone": "America/Los_Angeles",
+                "utc_offset": -420
+            }
+        },
+        {
+            "id": "609a7ff17ef9de0007389a30",
+            "title": "LIGHTS",
+            "parentId": "609a77a1384a5d000772cd80",
+            "level": 4,
+            "location": {
+                "address": "California, USA",
+                "country": "US",
+                "lat": 36.778261,
+                "lng": -119.41793239999998,
+                "state": "CA",
+                "timezone": "America/Los_Angeles",
+                "utc_offset": -420
+            }
+        },
+        {
+            "id": "609a7ff17ef9de0007389a31",
+            "title": "Zen Thermostat #197",
+            "parentId": "609a77a1384a5d000772cd80",
+            "level": 4,
+            "location": {
+                "address": "California, USA",
+                "country": "US",
+                "lat": 36.778261,
+                "lng": -119.41793239999998,
+                "state": "CA",
+                "timezone": "America/Los_Angeles",
+                "utc_offset": -420
+            }
+        },
+        {
+            "id": "609a8c117ef9de0007389a32",
+            "title": "#3158 Costa Mesa",
+            "parentId": "609a779f384a5d000772cd7f",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "609a8c127ef9de0007389a34",
+            "title": "#3158 Costa Mesa (1)",
+            "parentId": "609a779f384a5d000772cd7f",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "609a8c127ef9de0007389a36",
+            "title": "Lviv (1)",
+            "parentId": "609a779f384a5d000772cd7f",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "609a8c137ef9de0007389a38",
+            "title": "Lviv (2)",
+            "parentId": "609a779f384a5d000772cd7f",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "609a8c147ef9de0007389a3a",
+            "title": "#3158 Costa Mesa (2)",
+            "parentId": "609a779f384a5d000772cd7f",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "609a8c157ef9de0007389a3c",
+            "title": "#3158 Costa Mesa (3)",
+            "parentId": "609a779f384a5d000772cd7f",
+            "level": 3,
+            "location": {
+                "address": "The Liberty Building, 3158 Red Hill Ave #170, Costa Mesa, CA 92626, USA",
+                "lat": 33.6793643,
+                "lng": -117.8739531,
+                "country": "US",
+                "state": "CA",
+                "utc_offset": -480,
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "609a8c157ef9de0007389a3e",
+            "title": "Lviv (1)",
+            "parentId": "609a779f384a5d000772cd7f",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "609a8c177ef9de0007389a40",
+            "title": "Lviv (2)",
+            "parentId": "609a779f384a5d000772cd7f",
+            "level": 3,
+            "location": {
+                "address": "Dzhona Lennona Street, L'viv, L'vivs'ka oblast, Ukraine, 79000",
+                "lat": 49.8807097,
+                "lng": 24.0392828,
+                "country": "UA",
+                "state": "L'vivs'ka oblast",
+                "utc_offset": 120,
+                "timezone": "Europe/Kiev"
+            }
+        },
+        {
+            "id": "609a8c187ef9de0007389a42",
+            "title": "Melbourne (1)",
+            "parentId": "609a779f384a5d000772cd7f",
+            "level": 3,
+            "location": {
+                "address": "Melbourne VIC, Australia",
+                "lat": -37.8136276,
+                "lng": 144.9630576,
+                "country": "AU",
+                "state": "VIC",
+                "utc_offset": 600,
+                "timezone": "Australia/Melbourne"
+            }
+        },
+        {
+            "id": "610a66936dd0db00072fb866",
+            "title": "Ahmad",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "610a66a26dd0db00072fb867",
+            "title": "California",
+            "parentId": "610a66936dd0db00072fb866",
+            "level": 2
+        },
+        {
+            "id": "610a66da6dd0db00072fb868",
+            "title": "Irvine",
+            "parentId": "610a66a26dd0db00072fb867",
+            "level": 3,
+            "location": {
+                "address": "14130 Culver Dr, Irvine, CA 92604, USA",
+                "lat": 33.7075851,
+                "lng": -117.7821985,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92604",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "61434a4987db9c000700a76b",
+            "title": "wifiTestAfterDemoMigration",
+            "parentId": "610a66da6dd0db00072fb868",
+            "level": 4,
+            "location": {
+                "address": "14130 Culver Dr, Irvine, CA 92604, USA",
+                "lat": 33.7075851,
+                "lng": -117.7821985,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92604",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "6145020b87db9c000700a76f",
+            "title": "outOfRangeAlert",
+            "parentId": "610a66da6dd0db00072fb868",
+            "level": 4,
+            "location": {
+                "address": "14130 Culver Dr, Irvine, CA 92604, USA",
+                "lat": 33.7075851,
+                "lng": -117.7821985,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92604",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "6169c048e64a080007b50830",
+            "title": "testReport",
+            "parentId": "610a66da6dd0db00072fb868",
+            "level": 4,
+            "location": {
+                "address": "14130 Culver Dr, Irvine, CA 92604, USA",
+                "lat": 33.7075851,
+                "lng": -117.7821985,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92604",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "6171b2c5e64a080007b50834",
+            "title": "firefoxMobile",
+            "parentId": "610a66da6dd0db00072fb868",
+            "level": 4,
+            "location": {
+                "address": "14130 Culver Dr, Irvine, CA 92604, USA",
+                "lat": 33.7075851,
+                "lng": -117.7821985,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92604",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "61e1e1aac2a2903e2cb185b1",
+            "title": "TestSiteAgain",
+            "parentId": "610a66a26dd0db00072fb867",
+            "level": 3,
+            "location": {
+                "address": "DönerG Mediterranean Grill-Santa Ana 121 E Memory Ln Space 3D, Santa Ana, CA 92705, USA",
+                "lat": 33.77318059999999,
+                "lng": -117.8665479,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92705",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "61e1e88e67fb3500077fbe4d",
+            "title": "test",
+            "parentId": "610a66a26dd0db00072fb867",
+            "level": 3,
+            "location": {
+                "address": "123 Spectacle, Irvine, CA 92618, USA",
+                "lat": 33.6792365,
+                "lng": -117.7203191,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92618",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "61e1eace524c350e1023eb20",
+            "title": "Donerg",
+            "parentId": "610a66a26dd0db00072fb867",
+            "level": 3,
+            "location": {
+                "address": "DönerG Mediterranean Grill-Santa Ana 121 E Memory Ln Space 3D, Santa Ana, CA 92705, USA",
+                "lat": 33.77318059999999,
+                "lng": -117.8665479,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92705",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "61e1eb86ffb9d14764c91d24",
+            "title": "DonerG Santa Ana",
+            "parentId": "610a66a26dd0db00072fb867",
+            "level": 3,
+            "location": {
+                "address": "DonerG Turkish & Mediterranean Grill - Irvine 3800 Barranca Pkwy, Irvine, CA 92606, USA",
+                "lat": 33.68434909999999,
+                "lng": -117.8122375,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "92606",
+                "timezone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "61ef240a76e1b50007da8385",
+            "title": "Arizona",
+            "parentId": "610a66936dd0db00072fb866",
+            "level": 2
+        },
+        {
+            "id": "61ef247176e1b50007da8386",
+            "title": "Phoenix Inn",
+            "parentId": "61ef240a76e1b50007da8385",
+            "level": 3,
+            "location": {
+                "address": "8152 N Black Canyon Hwy, Phoenix, AZ 85051, USA",
+                "lat": 33.5564792,
+                "lng": -112.1140293,
+                "country": "US",
+                "state": "AZ",
+                "zipcode": "85051",
+                "timezone": "America/Phoenix"
+            }
+        },
+        {
+            "id": "61ef24c176e1b50007da8388",
+            "title": "unit 200",
+            "parentId": "61ef247176e1b50007da8386",
+            "level": 4,
+            "location": {
+                "address": "8152 N Black Canyon Hwy, Phoenix, AZ 85051, USA",
+                "lat": 33.5564792,
+                "lng": -112.1140293,
+                "country": "US",
+                "state": "AZ",
+                "zipcode": "85051",
+                "timezone": "America/Phoenix"
+            }
+        },
+        {
+            "id": "6160b793b1aa00000792481b",
+            "title": "Zen Ecosystems",
+            "parentId": "5783cfedab43e60300476bc3",
+            "level": 1
+        },
+        {
+            "id": "6160b832b1aa00000792481d",
+            "title": "NorCal",
+            "parentId": "6160b793b1aa00000792481b",
+            "level": 2
+        },
+        {
+            "id": "6160b85db1aa00000792481e",
+            "title": "San Mateo",
+            "parentId": "6160b832b1aa00000792481d",
+            "level": 3,
+            "location": {
+                "address": "50 S San Mateo Dr, San Mateo, CA 94401, USA",
+                "lat": 37.56603450000001,
+                "lng": -122.326385,
+                "country": "US",
+                "state": "CA",
+                "zipcode": "94401",
+                "timezone": "America/Los_Angeles"
+            }
+        }
+    ]
+}
