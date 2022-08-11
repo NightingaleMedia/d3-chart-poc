@@ -21,6 +21,9 @@ import {
   utcFormat,
   timeHour,
   curveBasis,
+  utcHours,
+  scaleUtc,
+  timeDay,
 } from 'd3';
 import {
   DGEventDataPoint,
@@ -31,6 +34,8 @@ import getColor, { ColorAccessor } from './utils/getColor';
 import { transformData } from './utils/transformData';
 import { DeviceReportDataPointItem } from '../../types/DeviceReport';
 import { getMode } from './utils/getMode';
+import moment from 'moment';
+import { getOutOfRange } from './utils/getOutOfRange';
 
 export function generateDeviceDataReport(svgId, dataObject) {
   let data = dataObject.data;
@@ -67,14 +72,14 @@ export function generateDeviceDataReport(svgId, dataObject) {
     .attr('ry', 5);
 
   // clipPath is used to keep line and area from moving outside of plot area when user zooms/scrolls/brushes
-
+  const getUtc = (value: number): Date => moment.utc(value).toDate();
   const dateParser = timeParse('%_m/%e/%Y, %I:%M:%S %p');
   const dateFormat = timeFormat('%_I:%M %p');
   const toolTipDateFormat = timeFormat('%_I:%M %p');
 
   const xAccessor = (d: DeviceReportDataPointItem): Date | null => {
     if (d) {
-      const titleString = dateParser(new Date(d.timestamp).toLocaleString());
+      const titleString = moment.utc(d.timestamp).toDate();
       return titleString;
     } else return null;
   };
@@ -83,12 +88,16 @@ export function generateDeviceDataReport(svgId, dataObject) {
 
   const deviceData: DeviceReportDataPointItem[] = constructedData.data
     .sort((a, b) => a.timestamp - b.timestamp)
-    .map((d, i) => ({
-      index: i,
-      timeset:
-        dateParser(`${new Date(d.timestamp)?.toLocaleString()}`) ?? new Date(),
-      ...d,
-    }));
+    .map((d, i) => {
+      // console.log(d.timestamp);
+      // console.log(moment.utc(d.timestamp).format('M/D/YYYY, h:mm:ss A'));
+      // console.log(`${new Date(d.timestamp)?.toLocaleString()}`);
+      return {
+        index: i,
+        timeset: getUtc(d.timestamp) ?? new Date(),
+        ...d,
+      };
+    });
 
   var dataXrange = extent(deviceData, (d) => d.timeset);
 
@@ -106,7 +115,7 @@ export function generateDeviceDataReport(svgId, dataObject) {
 
   var tempRange = [RangeLow - 5, RangeHigh + 6];
 
-  const xScale = scaleTime()
+  const xScale = scaleUtc()
     .domain([dataXrange[0] ?? new Date(), dataXrange[1] ?? new Date()])
     .range([0, width]);
 
@@ -121,7 +130,7 @@ export function generateDeviceDataReport(svgId, dataObject) {
   var xAxis = axisBottom(xScale)
     .scale(xScale)
     .ticks(10)
-    .tickFormat((d: any) => dateFormat(d));
+    .tickFormat((d: any) => moment.utc(d).format('h:mma'));
 
   var yRightAxis = axisRight(tempYScale)
     .scale(tempYScale)
@@ -132,6 +141,29 @@ export function generateDeviceDataReport(svgId, dataObject) {
   // .attr("transform", `translate(${width},0)`);
 
   // KWH Line
+  const OORBAR = chartG
+    .selectAll('rect')
+    .data(deviceData)
+    .enter()
+    .append('rect')
+    .attr('height', height)
+    // .attr(
+    //   'width',
+    //   (d) => xScale(timeHour.offset(d.timeset)) - xScale(d.timeset)
+    // )
+    .attr('width', '5px')
+    .attr('opacity', 0.2)
+    .attr('y', 0)
+    .attr('fill', (d) => {
+      const outOfRange = getOutOfRange(d);
+
+      if (outOfRange) {
+        return 'var(--zss-warning)';
+      } else {
+        return `rgba(0,0,0,0)`;
+      }
+    })
+    .attr('x', (d) => xScale(d.timeset));
 
   chartG
     .append('g')
@@ -262,8 +294,10 @@ export function generateDeviceDataReport(svgId, dataObject) {
     g.attr('class', 'xMonthAxis').call(
       axisTop(x)
         .scale(x)
-        .ticks(timeHour.every(24))
-        .tickFormat(utcFormat('%a %-m/%d'))
+        .ticks(1)
+        // .ticks(timeHour.every(24))
+        .tickFormat((d: number) => moment(d).format('ddd M/YY'))
+        // .tickFormat(utcFormat('%a %-m/%d'))
         .tickSize(-height - margin.bottom - margin.top + 80)
     );
 
@@ -327,7 +361,6 @@ export function generateDeviceDataReport(svgId, dataObject) {
     .attr('fill', (d: string): any => {
       return {
         'Cooling Setpoint': getColor(ColorAccessor.COOLING_TEMP_COLOR),
-
         'Ambient Temp': getColor(ColorAccessor.AMBIENT_TEMP_COLOR),
         'Heating Setpoint': getColor(ColorAccessor.HEATING_TEMP_COLOR),
         Mode: getColor(ColorAccessor.FAN_COLOR),
@@ -440,9 +473,7 @@ export function generateDeviceDataReport(svgId, dataObject) {
 
       tracerText
         .attr('x', pointer(event)[0])
-        .text(
-          toolTipDateFormat(closestDataPoint?.timeset ?? new Date()) ?? 'N/A'
-        );
+        .text(moment.utc(closestDataPoint?.timestamp).format('h:mma') ?? 'N/A');
       tracerTextBg.attr('x', pointer(event)[0] - 38);
 
       updateLegendText(closestDataPoint as DeviceReportDataPointItem);

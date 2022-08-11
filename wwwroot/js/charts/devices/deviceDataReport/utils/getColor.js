@@ -13,7 +13,7 @@ const getColor = (accessor) => ({
   AMBIENT_TEMP_COLOR: "var(--zss-setpoint-line)",
   HEATING_TEMP_COLOR: "var(--zss-error)",
   COOLING_TEMP_COLOR: "var(--zss-blue)",
-  FAN_COLOR: "var(--zss-blue)",
+  FAN_COLOR: "var(--zss-green)",
   AXIS_COLOR: "var(--zss-chart-axis-line)",
   AXIS_LABEL_COLOR: "white"
 })[accessor];

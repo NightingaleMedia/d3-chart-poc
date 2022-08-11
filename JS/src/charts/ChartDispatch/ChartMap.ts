@@ -1,6 +1,7 @@
 import { makeManyEvents } from '../demandGenius/manyDGEventsComparison/manyDGEventsComparison';
 import { makeSingleDGChart } from '../demandGenius/singleDGEventReport';
 import { generateDeviceDataReport } from '../devices/deviceDataReport/deviceDataReport';
+import { generateDeviceDataTable } from '../devices/deviceDataReport/deviceDataTable';
 import {
   makeDGPastEventChart,
   updateDgPastEventsChart,
@@ -93,6 +94,7 @@ const generateDeviceDataReport__Class = new ChartBase({
   name: 'Device Data Report Chart',
   chartRender: (id, data) => {
     generateDeviceDataReport(id, data);
+    generateDeviceDataTable(id, data);
   },
   chartUpdate: (data, id) => {
     console.log(id, data);
