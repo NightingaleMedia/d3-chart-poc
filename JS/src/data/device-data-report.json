@@ -1,303 +1,4634 @@
-{
-  "data": [
+[
     {
-      "device": {
-        "deviceId": "00a80000-5d97-0015-ee20-08d85b5f98b8",
-        "title": "3506-01-Back Office",
+        "deviceId": "251176216232112-19",
+        "title": "Precinct 122 UP",
         "type": "Thermostat",
-        "sensor": null
-      },
-      "fields": [
-        "timestamp",
-        "coolingSetpoint",
-        "heatingSetpoint",
-        "localTemperature",
-        "dimmerLevel",
-        "humidity",
-        "mode",
-        "fanMode",
-        "manualOverride",
-        "relay"
-      ],
-      "values": [
-        [1659377250070, 71.6, 50, 76.3, null, 45, 0, 2, true, []],
-        [1659377550687, 71.6, 50, 76.5, null, 45, 0, 2, true, []],
-        [1659377850916, 71.6, 50, 76.6, null, 45, 0, 2, true, []],
-        [1659378451805, 71.6, 50, 77.2, null, 44, 0, 2, true, []],
-        [1659378752484, 71.6, 50, 77.4, null, 43, 0, 2, true, []],
-        [1659379052481, 71.6, 50, 77.5, null, 43, 0, 2, true, []],
-        [1659379353142, 71.6, 50, 77.4, null, 43, 0, 2, true, []],
-        [1659379653403, 71.6, 50, 77.2, null, 43, 0, 2, true, []],
-        [1659379954070, 71.6, 50, 77, null, 43, 0, 2, true, []],
-        [1659380555006, 71.6, 50, 76.8, null, 44, 0, 2, true, []],
-        [1659380854828, 71.6, 50, 76.6, null, 44, 1, 2, true, []],
-        [1659381155367, 71.6, 50, 76.5, null, 44, 1, 2, true, []],
-        [1659381455605, 71.6, 50, 76.5, null, 44, 1, 2, true, []],
-        [1659381756212, 71.6, 50, 76.6, null, 43, 1, 2, true, []],
-        [1659382056307, 71.6, 50, 76.5, null, 43, 1, 2, true, []],
-        [1659382357077, 71.6, 50, 76.6, null, 43, 1, 2, true, []],
-        [1659382657386, 71.6, 50, 76.6, null, 44, 1, 2, true, []],
-        [1659382957478, 71.6, 50, 76.8, null, 44, 1, 2, true, []],
-        [1659383258227, 71.6, 50, 76.8, null, 44, 1, 2, true, []],
-        [1659383558729, 71.6, 50, 76.8, null, 44, 1, 2, true, []],
-        [1659383858830, 71.6, 50, 77, null, 44, 2, 2, true, []],
-        [1659384159074, 71.6, 50, 77, null, 44, 2, 2, true, []],
-        [1659384459594, 71.6, 50, 77, null, 43, 2, 2, true, []],
-        [1659384759836, 71.6, 50, 77, null, 43, 2, 2, true, []],
-        [1659385059831, 71.6, 50, 77.2, null, 43, 2, 2, true, []],
-        [1659385661803, 71.6, 50, 77.2, null, 43, 2, 2, true, []],
-        [1659385962188, 71.6, 50, 77.7, null, 42, 2, 2, true, []],
-        [1659386262256, 71.6, 50, 77.9, null, 42, 2, 2, true, []],
-        [1659386563025, 71.6, 50, 78.3, null, 42, 2, 2, true, []],
-        [1659386862353, 71.6, 50, 78.3, null, 42, 2, 2, true, []],
-        [1659387162865, 71.6, 50, 78.4, null, 41, 3, 2, true, []],
-        [1659387524386, 71.6, 50, 78.4, null, 41, 3, 2, true, []],
-        [1659387524545, 71.6, 50, 78.6, null, 41, 3, 2, true, []],
-        [1659387838645, 71.6, 50, 79, null, 41, 3, 2, true, []],
-        [1659388139064, 71.6, 50, 79.3, null, 41, 3, 2, true, []],
-        [1659388439448, 71.6, 50, 79.3, null, 42, 3, 2, true, []],
-        [1659388739989, 71.6, 50, 79.5, null, 41, 3, 2, true, []],
-        [1659389040786, 71.6, 50, 79.5, null, 41, 3, 2, true, []],
-        [1659389363599, 71.6, 50, 79.5, null, 41, 3, 2, true, []],
-        [1659389721734, 71.6, 50, 79.5, null, 41, 3, 2, true, []],
-        [1659389941118, 71.6, 50, 79.5, null, 40, 4, 2, true, []],
-        [1659390241817, 71.6, 50, 79.3, null, 41, 4, 2, true, []],
-        [1659390542103, 71.6, 50, 79.3, null, 41, 4, 2, true, []],
-        [1659390842035, 71.6, 50, 79, null, 41, 4, 2, true, []],
-        [1659391143030, 71.6, 50, 79, null, 42, 4, 2, true, []],
-        [1659391442943, 71.6, 50, 79, null, 42, 4, 2, true, []],
-        [1659391743630, 71.6, 50, 79, null, 49, 4, 2, true, []],
-        [1659392043267, 71.6, 50, 78.8, null, 47, 4, 2, true, []],
-        [1659392297931, 71.6, 50, 78.8, null, 48, 4, 1, true, []],
-        [1659392298992, 71.6, 50, 78.8, null, 48, 4, 1, true, ["G"]],
-        [1659392301424, 71.6, 50, 78.8, null, 48, 5, 2, true, ["G"]],
-        [1659392310385, 71.6, 50, 78.8, null, 48, 5, 2, true, ["G"]],
-        [1659392313770, 71.6, 50, 78.8, null, 47, 5, 2, true, ["G", "Y1"]],
-        [1659392314442, 69.8, 50, 78.8, null, 47, 5, 2, true, ["G", "Y1"]],
-        [1659392383291, 71.6, 50, 78.8, null, 47, 5, 2, true, ["G", "Y1"]],
-        [1659392689471, 71.6, 50, 78.1, null, 44, 5, 2, true, ["G", "Y1"]],
-        [1659392990098, 71.6, 50, 76.8, null, 41, 5, 2, true, ["G", "Y1"]],
-        [1659393290014, 71.6, 50, 75.9, null, 39, 5, 2, true, ["G", "Y1"]],
-        [1659393891307, 71.6, 50, 74.1, null, 38, 5, 2, true, ["G", "Y1"]],
-        [1659394191171, 71.6, 50, 73.4, null, 39, 5, 2, true, ["G", "Y1"]],
-        [1659394791298, 71.6, 50, 72.3, null, 39, 6, 2, true, ["G", "Y1"]],
-        [1659394820757, 71.6, 50, 72.1, null, 39, 6, 2, true, ["G", "Y1"]],
-        [1659394821741, 71.6, 50, 72.1, null, 39, 6, 2, true, []],
-        [1659395137055, 71.6, 50, 72.3, null, 40, 6, 2, true, []],
-        [1659395437219, 71.6, 50, 72.9, null, 40, 6, 2, true, []],
-        [1659395737446, 71.6, 50, 73.2, null, 41, 6, 2, true, []],
-        [1659396638140, 71.6, 50, 73.9, null, 42, 6, 2, true, []],
-        [1659397238830, 71.6, 50, 74.5, null, 42, 6, 2, true, []],
-        [1659397539322, 71.6, 50, 74.8, null, 42, 6, 2, true, []],
-        [1659398139615, 71.6, 50, 75.6, null, 42, 6, 2, true, []],
-        [1659398440106, 71.6, 50, 75.9, null, 41, 7, 2, true, []],
-        [1659398740360, 71.6, 50, 76.1, null, 41, 7, 2, true, []],
-        [1659399040735, 71.6, 50, 76.3, null, 41, 7, 2, true, []],
-        [1659399341074, 71.6, 50, 76.6, null, 41, 7, 2, true, []],
-        [1659399642066, 71.6, 50, 76.8, null, 41, 7, 2, true, []],
-        [1659399942212, 71.6, 50, 77.2, null, 41, 7, 2, true, []],
-        [1659400242438, 71.6, 50, 77.2, null, 41, 7, 2, true, []],
-        [1659400542880, 71.6, 50, 77.2, null, 41, 7, 2, true, []],
-        [1659401143798, 71.6, 50, 77.7, null, 41, 7, 2, true, []],
-        [1659401444053, 71.6, 50, 77.5, null, 41, 7, 2, true, []],
-        [1659401744307, 71.6, 50, 77.7, null, 41, 8, 2, true, []],
-        [1659402045378, 71.6, 50, 77.5, null, 41, 8, 2, true, []],
-        [1659402346098, 71.6, 50, 77.5, null, 41, 8, 2, true, []],
-        [1659402645589, 71.6, 50, 77.4, null, 41, 8, 2, true, []],
-        [1659402945747, 71.6, 50, 77.4, null, 41, 8, 2, true, []],
-        [1659403546795, 71.6, 50, 77.2, null, 42, 8, 2, true, []],
-        [1659403847183, 71.6, 50, 77.2, null, 41, 8, 2, true, []],
-        [1659404147479, 71.6, 50, 77.2, null, 41, 8, 2, true, []],
-        [1659404447886, 71.6, 50, 77.2, null, 41, 8, 2, true, []],
-        [1659404748438, 71.6, 50, 77.2, null, 41, 8, 2, true, []],
-        [1659405048528, 71.6, 50, 77.2, null, 41, 9, 2, true, []],
-        [1659405348882, 71.6, 50, 77.2, null, 41, 9, 2, true, []],
-        [1659405649983, 71.6, 50, 77.2, null, 41, 9, 2, true, []],
-        [1659405949581, 71.6, 50, 77.2, null, 41, 9, 2, true, []],
-        [1659406550692, 71.6, 50, 77.2, null, 41, 9, 2, true, []],
-        [1659406851136, 71.6, 50, 77.2, null, 41, 9, 2, true, []],
-        [1659407451953, 71.6, 50, 77.5, null, 40, 9, 2, true, []],
-        [1659407752202, 71.6, 50, 78.1, null, 40, 9, 2, true, []],
-        [1659408352687, 71.6, 50, 78.6, null, 39, 9, 2, true, []],
-        [1659408653084, 71.6, 50, 78.8, null, 39, 9, 2, true, []],
-        [1659409254069, 71.6, 50, 78.3, null, 39, 10, 2, true, []],
-        [1659409554176, 71.6, 50, 78.4, null, 39, 10, 2, true, []],
-        [1659409854452, 71.6, 50, 78.3, null, 39, 10, 2, true, []],
-        [1659410154904, 71.6, 50, 78.3, null, 39, 10, 2, true, []],
-        [1659410455341, 71.6, 50, 78.4, null, 39, 10, 2, true, []],
-        [1659410756477, 71.6, 50, 78.4, null, 39, 10, 2, true, []],
-        [1659411056257, 71.6, 50, 78.4, null, 39, 10, 2, true, []],
-        [1659411356031, 71.6, 50, 78.6, null, 39, 10, 2, true, []],
-        [1659411656421, 71.6, 50, 78.6, null, 39, 10, 2, true, []],
-        [1659411956759, 71.6, 50, 78.1, null, 40, 10, 2, true, []],
-        [1659412257049, 71.6, 50, 77.9, null, 40, 11, 2, true, []],
-        [1659412557037, 71.6, 50, 77.7, null, 40, 11, 2, true, []],
-        [1659412857590, 71.6, 50, 77.5, null, 40, 11, 2, false, []],
-        [1659413157755, 71.6, 50, 77.4, null, 40, 11, 2, false, []],
-        [1659413458380, 71.6, 50, 77.2, null, 40, 11, 2, false, []],
-        [1659414059796, 71.6, 50, 77, null, 41, 11, 2, false, []],
-        [1659414660685, 71.6, 50, 76.8, null, 42, 11, 2, false, []],
-        [1659415261374, 71.6, 50, 76.6, null, 43, 11, 2, false, []],
-        [1659415561398, 71.6, 50, 76.6, null, 43, 11, 2, false, []],
-        [1659415861417, 71.6, 50, 76.5, null, 44, 11, 2, false, []],
-        [1659416164558, 71.6, 50, 76.5, null, 44, 12, 2, false, []],
-        [1659416462146, 71.6, 50, 76.5, null, 45, 12, 2, false, []],
-        [1659416763330, 71.6, 50, 76.5, null, 45, 12, 2, false, []],
-        [1659417063140, 71.6, 50, 76.3, null, 46, 12, 2, false, []],
-        [1659417363664, 71.6, 50, 76.5, null, 46, 12, 2, false, []],
-        [1659417964824, 71.6, 50, 77.4, null, 47, 12, 2, false, []],
-        [1659418264684, 71.6, 50, 77.5, null, 47, 12, 2, false, []],
-        [1659418865484, 71.6, 50, 77.9, null, 47, 12, 2, false, []],
-        [1659419165742, 71.6, 50, 77.9, null, 48, 12, 2, false, []],
-        [1659419766417, 71.6, 50, 77.9, null, 48, 12, 2, false, []],
-        [1659420067597, 71.6, 50, 78.1, null, 49, 12, 2, false, []],
-        [1659420668110, 71.6, 50, 78.1, null, 49, 12, 2, false, []],
-        [1659420968477, 71.6, 50, 78.1, null, 49, 0, 2, false, []],
-        [1659421268176, 71.6, 50, 78.1, null, 50, 0, 2, false, []],
-        [1659421568523, 71.6, 50, 78.1, null, 50, 0, 2, false, []],
-        [1659421868825, 71.6, 50, 77.9, null, 50, 0, 2, false, []],
-        [1659422169286, 71.6, 50, 77.7, null, 51, 0, 2, false, []],
-        [1659422469297, 71.6, 50, 77.5, null, 51, 0, 2, false, []],
-        [1659423070729, 71.6, 50, 77, null, 52, 0, 2, false, []],
-        [1659423370874, 71.6, 50, 77, null, 52, 0, 2, false, []],
-        [1659423671129, 71.6, 50, 76.8, null, 52, 0, 2, false, []],
-        [1659423971433, 71.6, 50, 76.8, null, 50, 0, 2, false, []],
-        [1659424272327, 71.6, 50, 76.6, null, 49, 0, 2, false, []],
-        [1659424872370, 71.6, 50, 76.5, null, 49, 0, 2, false, []],
-        [1659425173242, 71.6, 50, 76.5, null, 48, 0, 2, false, []],
-        [1659425474072, 71.6, 50, 76.5, null, 48, 0, 2, false, []],
-        [1659425773983, 71.6, 50, 76.5, null, 48, 0, 2, false, []],
-        [1659426074110, 71.6, 50, 76.3, null, 48, 0, 2, false, []],
-        [1659426374436, 71.6, 50, 76.3, null, 48, 0, 2, false, []],
-        [1659426675050, 71.6, 50, 76.1, null, 48, 0, 2, false, []],
-        [1659426975600, 71.6, 50, 76.1, null, 49, 0, 2, false, []],
-        [1659427275167, 71.6, 50, 76.1, null, 48, 0, 2, false, []],
-        [1659427575619, 71.6, 50, 76.1, null, 50, 0, 2, false, []],
-        [1659427875816, 71.6, 50, 76.5, null, 50, 0, 2, false, []],
-        [1659428176450, 71.6, 50, 77, null, 49, 0, 2, false, []],
-        [1659428777708, 71.6, 50, 77.4, null, 49, 0, 2, false, []],
-        [1659429077450, 71.6, 50, 77.5, null, 49, 0, 2, false, []],
-        [1659429377700, 71.6, 50, 77.5, null, 48, 0, 2, false, []],
-        [1659429678462, 71.6, 50, 77.5, null, 48, 0, 2, false, []],
-        [1659429978990, 71.6, 50, 77.5, null, 48, 0, 2, false, []],
-        [1659430279085, 71.6, 50, 77.7, null, 48, 0, 2, false, []],
-        [1659430579370, 71.6, 50, 77.7, null, 48, 0, 2, false, []],
-        [1659430880013, 71.6, 50, 77.7, null, 48, 0, 2, false, []],
-        [1659431180386, 71.6, 50, 77.7, null, 48, 0, 2, false, []],
-        [
-          1659431480546,
-          71.6,
-          50,
-          77.7,
-          null,
-          48,
-          0,
-          2,
-          false,
-          ["W1", "G", "Y1", "Y2"]
-        ],
-        [1659431780966, 71.6, 50, 77.5, null, 48, 1, 2, false, []],
-        [1659432081150, 71.6, 50, 77.7, null, 48, 1, 2, false, []],
-        [1659432381513, 71.6, 50, 77.5, null, 48, 1, 2, false, []],
-        [1659432682657, 71.6, 50, 77.2, null, 48, 1, 2, false, []],
-        [1659433282615, 71.6, 50, 76.8, null, 48, 1, 2, false, []],
-        [1659433583079, 71.6, 50, 76.6, null, 48, 1, 2, false, []],
-        [1659433883865, 71.6, 50, 76.6, null, 48, 1, 2, false, []],
-        [1659434183871, 71.6, 50, 76.5, null, 48, 1, 2, false, []],
-        [1659434483842, 71.6, 50, 76.3, null, 49, 1, 2, false, []],
-        [1659434784571, 71.6, 50, 76.3, null, 49, 1, 2, false, []],
-        [1659435085129, 71.6, 50, 76.1, null, 48, 1, 2, false, []],
-        [1659435385338, 71.6, 50, 76.1, null, 49, 1, 2, false, []],
-        [1659435685659, 71.6, 50, 75.9, null, 49, 1, 2, false, []],
-        [1659435985962, 71.6, 50, 75.9, null, 49, 1, 2, false, []],
-        [1659436286222, 71.6, 50, 75.9, null, 49, 1, 2, false, []],
-        [1659436586426, 71.6, 50, 75.7, null, 49, 1, 2, false, []],
-        [1659436887088, 71.6, 50, 75.7, null, 49, 1, 2, false, []],
-        [1659437187584, 71.6, 50, 75.7, null, 49, 1, 2, false, []],
-        [1659437487264, 71.6, 50, 75.6, null, 49, 1, 2, false, []],
-        [1659437787781, 71.6, 50, 75.6, null, 49, 1, 2, false, []],
-        [1659438088776, 71.6, 50, 75.6, null, 49, 2, 2, false, []],
-        [1659438388785, 71.6, 50, 75.6, null, 49, 2, 2, false, []],
-        [1659438689055, 71.6, 50, 75.6, null, 49, 2, 2, false, []],
-        [1659438988972, 71.6, 50, 75.6, null, 49, 2, 2, false, []],
-        [1659439289939, 71.6, 50, 76.1, null, 49, 2, 2, false, []],
-        [1659439590462, 71.6, 50, 76.5, null, 49, 2, 2, false, []],
-        [1659439890516, 71.6, 50, 76.6, null, 49, 2, 2, false, []],
-        [1659440491110, 71.6, 50, 76.8, null, 48, 2, 2, false, []],
-        [1659440791655, 71.6, 50, 77, null, 48, 2, 2, false, []],
-        [1659441092011, 71.6, 50, 77, null, 48, 2, 2, false, []],
-        [1659441391895, 71.6, 50, 77, null, 48, 2, 2, false, []],
-        [1659441693138, 71.6, 50, 77, null, 48, 2, 2, false, []],
-        [1659441992764, 71.6, 50, 77, null, 48, 2, 2, false, []],
-        [1659442293286, 71.6, 50, 77.2, null, 48, 2, 2, false, []],
-        [1659442593748, 71.6, 50, 77.2, null, 48, 2, 2, false, []],
-        [1659442894076, 71.6, 50, 77.2, null, 48, 2, 2, false, []],
-        [1659443194979, 71.6, 50, 77.2, null, 48, 2, 2, false, []],
-        [1659443494636, 71.6, 50, 77.2, null, 48, 2, 2, false, []],
-        [1659443795329, 71.6, 50, 77.2, null, 48, 2, 2, false, []],
-        [1659444095800, 71.6, 50, 77, null, 48, 2, 2, false, []],
-        [1659444395578, 71.6, 50, 76.8, null, 48, 2, 2, false, []],
-        [1659444695991, 71.6, 50, 76.5, null, 48, 3, 2, false, []],
-        [1659444996503, 71.6, 50, 76.3, null, 49, 3, 2, false, []],
-        [1659445297028, 71.6, 50, 76.3, null, 49, 3, 2, false, []],
-        [1659445897822, 71.6, 50, 75.9, null, 49, 3, 2, false, []],
-        [1659446799029, 71.6, 50, 75.6, null, 49, 3, 2, false, []],
-        [1659447100302, 71.6, 50, 75.6, null, 49, 3, 2, false, []],
-        [1659447700088, 71.6, 50, 75.4, null, 50, 3, 2, false, []],
-        [1659448000176, 71.6, 50, 75.4, null, 50, 3, 2, false, []],
-        [1659448300285, 71.6, 50, 75.2, null, 49, 3, 2, false, []],
-        [1659448600625, 71.6, 50, 75.2, null, 49, 3, 2, false, []],
-        [1659448693434, 71.6, 50, 75.2, null, 49, 3, 2, false, []],
-        [1659448901018, 71.6, 50, 75.2, null, 50, 3, 2, false, []],
-        [1659449201240, 71.6, 50, 75.2, null, 49, 3, 2, false, []],
-        [1659449802144, 71.6, 50, 75, null, 50, 3, 2, false, []],
-        [1659450102334, 71.6, 50, 75, null, 50, 3, 2, false, []],
-        [1659450403329, 71.6, 50, 75.2, null, 50, 3, 2, false, []],
-        [1659450703675, 71.6, 50, 75.6, null, 50, 3, 2, false, []],
-        [1659451003482, 71.6, 50, 75.9, null, 50, 3, 2, false, []],
-        [1659451303906, 71.6, 50, 76.1, null, 49, 3, 2, false, []],
-        [1659451604380, 71.6, 50, 76.3, null, 49, 3, 2, false, []],
-        [1659451905014, 71.6, 50, 76.5, null, 49, 4, 2, false, []],
-        [1659452204679, 71.6, 50, 76.6, null, 49, 4, 2, false, []],
-        [1659452453545, 71.6, 50, 76.8, null, 49, 4, 2, false, []],
-        [1659452460763, 71.6, 50, 76.8, null, 49, 4, 2, false, ["G", "Y1"]],
-        [1659452760782, 71.6, 50, 76.1, null, 46, 4, 2, false, ["G", "Y1"]],
-        [1659453061748, 71.6, 50, 74.5, null, 42, 4, 2, false, ["G", "Y1"]],
-        [1659453361801, 71.6, 50, 73, null, 40, 4, 2, false, ["G", "Y1"]],
-        [1659453661517, 71.6, 50, 72, null, 39, 4, 2, false, ["G", "Y1"]],
-        [1659453766875, 71.6, 50, 71.6, null, 39, 4, 2, false, []],
-        [1659454066832, 71.6, 50, 72, null, 39, 4, 2, false, []],
-        [1659454337349, 71.6, 50, 72.9, null, 39, 4, 2, false, ["G", "Y1"]],
-        [1659454637365, 71.6, 50, 72.3, null, 41, 4, 2, false, ["G", "Y1"]],
-        [1659454787751, 71.6, 50, 71.6, null, 41, 4, 2, false, []],
-        [1659455087919, 71.6, 50, 71.4, null, 41, 4, 2, false, []],
-        [1659455388492, 71.6, 50, 72, null, 41, 4, 2, false, []],
-        [1659455688999, 71.6, 50, 72.3, null, 42, 4, 2, false, []],
-        [1659455989972, 71.6, 50, 72.5, null, 43, 4, 2, false, []],
-        [1659456289536, 71.6, 50, 72.7, null, 44, 4, 2, false, []],
-        [1659456484957, 71.6, 50, 72.9, null, 44, 4, 2, false, ["G", "Y1"]],
-        [1659456785344, 71.6, 50, 72.3, null, 46, 4, 2, false, ["G", "Y1"]],
-        [1659456995614, 71.6, 50, 71.6, null, 45, 6, 2, false, []],
-        [1659457296084, 71.6, 50, 71.4, null, 46, 6, 2, false, []],
-        [1659458197235, 71.6, 50, 72.1, null, 50, 6, 2, false, []],
-        [1659458497442, 71.6, 50, 72.3, null, 51, 6, 2, false, []],
-        [1659459098457, 71.6, 50, 72.7, null, 52, 6, 2, false, []],
-        [1659459188608, 71.6, 50, 72.9, null, 52, 6, 2, false, ["G", "Y1"]],
-        [1659459488834, 71.6, 50, 72.5, null, 51, 6, 2, false, ["G", "Y1"]],
-        [1659459774258, 71.6, 50, 71.6, null, 48, 6, 2, false, []],
-        [1659460074652, 71.6, 50, 71.4, null, 49, 6, 2, false, []],
-        [1659460675147, 71.6, 50, 72, null, 51, 6, 2, false, []],
-        [1659460975475, 71.6, 50, 72.3, null, 52, 6, 2, false, []],
-        [1659461276060, 71.6, 50, 72.3, null, 52, 6, 2, false, []],
-        [1659461576215, 71.6, 50, 72.9, null, 53, 6, 2, false, ["G", "Y1"]],
-        [1659461576256, 71.6, 50, 72.9, null, 53, 6, 2, false, ["G"]],
-        [1659461876859, 71.6, 50, 72.9, null, 51, 6, 2, false, ["G", "Y1"]],
-        [1659462176951, 71.6, 50, 72.5, null, 48, 6, 2, false, ["G", "Y1"]],
-        [1659462477270, 71.6, 50, 72.1, null, 47, 6, 2, false, ["G", "Y1"]],
-        [1659463003422, 71.6, 50, 71.6, null, 46, 6, 2, false, []],
-        [1659463303652, 71.6, 50, 71.8, null, 47, 6, 2, false, []],
-        [1659463604241, 71.6, 50, 72.7, null, 48, 6, 2, false, []]
-      ]
+        "sensor": "",
+        "deviceReportDataPoints": [
+            {
+                "timeStamp": "2022-08-09T00:00:02",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T00:05:04",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T00:12:09",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T00:17:44",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T00:22:08",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T00:27:42",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T00:30:27",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T00:36:11",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T00:40:32",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T00:46:14",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T00:50:55",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T00:58:35",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T01:00:56",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T01:06:21",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T01:11:55",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T01:16:48",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T01:22:23",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T01:25:52",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T01:31:28",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T01:37:17",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T01:43:33",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T01:46:20",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T01:51:55",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T01:57:29",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T02:00:30",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T02:05:56",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T02:11:34",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T02:17:08",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T02:22:21",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T02:27:10",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T02:32:30",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T02:35:28",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T02:40:54",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T02:46:34",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T02:52:37",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T02:55:10",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T03:00:59",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T03:06:39",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T03:11:46",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T03:17:20",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T03:20:08",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T03:25:54",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T03:31:29",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T03:36:43",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T03:42:04",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T03:46:15",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T03:52:09",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T03:57:30",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T04:00:13",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T04:07:14",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T04:10:01",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T04:15:49",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T04:24:11",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T04:26:44",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T04:33:18",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T04:36:06",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T04:41:45",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T04:46:41",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T04:51:50",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T04:56:38",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T05:01:31",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T05:06:24",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 76.1,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T05:11:21",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T05:16:38",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T05:21:16",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T05:26:09",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T05:31:29",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T05:36:50",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T05:42:49",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T05:45:23",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T05:50:57",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T05:56:46",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T06:01:52",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T06:07:27",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T06:10:28",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T06:15:14",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T06:20:21",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T06:25:47",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T06:31:22",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T06:37:06",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T06:42:36",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T06:45:08",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T06:52:28",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T06:55:16",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T07:00:32",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T07:06:20",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T07:12:28",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T07:15:15",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T07:20:36",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T07:26:23",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T07:31:44",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T07:37:18",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T07:40:06",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T07:45:37",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T07:50:29",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T07:58:23",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T08:01:10",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T08:06:45",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T08:12:28",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T08:15:16",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T08:21:48",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T08:25:03",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T08:30:37",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T08:35:34",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T08:40:19",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T08:47:28",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T08:50:15",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T08:56:04",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T09:01:30",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T09:07:11",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T09:10:10",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T09:15:30",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T09:21:05",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T09:26:48",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T09:32:32",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T09:35:19",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T09:41:13",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T09:46:48",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T09:52:31",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T09:55:19",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T10:01:05",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T10:06:40",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T10:12:11",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T10:15:06",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T10:22:23",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T10:25:24",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T10:31:36",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T10:36:29",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T10:42:10",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T10:45:00",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T10:50:48",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T10:56:23",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T11:00:33",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T11:08:40",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T11:11:14",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T11:16:48",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T11:21:10",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T11:26:09",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T11:31:43",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T11:37:18",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T11:41:35",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T11:47:09",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T11:52:44",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T11:55:32",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T12:01:14",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T12:07:03",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T12:12:38",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T12:15:25",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T12:21:56",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T12:26:48",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T12:32:44",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T12:35:29",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T12:41:04",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T12:46:39",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T12:52:18",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T12:55:19",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T13:01:22",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T13:06:42",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T13:11:14",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T13:16:07",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T13:21:54",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T13:26:46",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T13:31:39",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T13:40:01",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T13:45:29",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T13:51:03",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T13:56:38",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T14:01:44",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T14:07:19",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T14:10:06",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T14:18:44",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T14:21:17",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T14:27:05",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T14:32:12",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T14:37:47",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T14:40:34",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T14:45:54",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T14:51:31",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T14:56:10",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T15:00:21",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T15:05:55",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T15:11:30",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T15:16:22",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T15:21:29",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T15:30:05",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T15:35:39",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T15:40:32",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T15:47:02",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T15:51:55",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.2,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T15:57:03",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T16:02:50",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T16:05:37",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T16:10:30",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T16:16:33",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T16:21:54",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T16:27:25",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T16:30:13",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T16:35:57",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T16:42:27",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T16:45:14",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T16:50:49",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T16:56:37",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T17:01:30",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T17:07:04",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T17:12:39",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T17:15:26",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T17:21:14",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T17:27:46",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T17:30:14",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T17:36:32",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T17:41:36",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T17:47:10",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T17:50:19",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T17:55:34",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T18:01:23",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T18:06:15",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T18:10:40",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T18:18:35",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T18:21:36",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T18:26:57",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T18:32:31",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T18:39:43",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T18:42:31",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T18:45:18",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T18:50:52",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T18:56:27",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T19:01:33",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T19:06:40",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T19:11:42",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T19:16:49",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T20:29:56",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 74.3,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T20:30:20",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T20:35:02",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T20:40:05",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T20:46:00",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T20:52:01",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T20:58:01",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T21:00:35",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T21:06:37",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T21:12:11",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T21:17:18",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T21:20:03",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T21:25:47",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T21:34:18",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T21:36:23",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T21:42:19",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T21:45:06",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T21:51:37",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T21:56:30",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T22:01:37",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T22:08:51",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T22:11:38",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T22:17:13",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T22:20:01",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T22:26:40",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T22:31:39",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T22:36:54",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T22:42:01",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T22:46:54",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T22:51:19",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T22:56:53",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T23:05:23",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T23:12:39",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T23:15:28",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T23:21:17",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T23:29:36",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T23:32:46",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T23:35:19",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T23:41:22",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T23:46:50",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T23:52:54",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            },
+            {
+                "timeStamp": "2022-08-09T23:55:27",
+                "coolingSetPoint": 69.0,
+                "heatingSetPoint": 80.0,
+                "fanMode": "Auto Low",
+                "dimmerLevel": 0,
+                "humidity": 0,
+                "localTemperature": 75.9,
+                "relay": {
+                    "w1": false,
+                    "w2": false,
+                    "y1": false,
+                    "y2": false,
+                    "g": false
+                },
+                "mode": 0
+            }
+        ]
     }
-  ]
-}
+]

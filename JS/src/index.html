@@ -119,17 +119,29 @@
     <h1>Site Energy Usage</h1>
     <svg id="site-energy-usage--chart" height="450" width="800"></svg>
     <br />
-    <h1>Green vs. Brown</h1>
-    <canvas
-      id="green-brown-comparison--chart"
-      width="800"
-      height="400"
-    ></canvas>
-    <h1>Donut Green vs. Brown</h1>
-    <canvas id="energy-donut--chart" width="400" height="400"></canvas>
+    <div class="sustainability--wrap">
+      <div>
+        <h1>Donut Green vs. Brown</h1>
+        <canvas id="energy-donut--chart" width="400" height="400"></canvas>
+      </div>
+      <div>
+        <h1>Green vs. Brown</h1>
+        <canvas
+          id="green-brown-comparison--chart"
+          width="800"
+          height="400"
+        ></canvas>
+      </div>
+    </div>
     <!-- <svg id="date-range"></svg> -->
   </body>
-
+  <style>
+    .sustainability--wrap {
+      display: grid;
+      grid-template-columns: 20% auto;
+      gap: 2rem;
+    }
+  </style>
   <script type="module" src="charts/index.js"></script>
   <script type="module" src="charts/__tests__/index.js"></script>
 </html>
