@@ -13,20 +13,15 @@ let SVG;
 let CHART_G;
 let x, y;
 export const makeSiteEnergyUsage = (svgId, responseData) => {
-  console.log({responseData});
   SVG = select(`svg#${svgId}`);
   const BAR_WIDTH = 50;
   const PAD = 15;
   const BAR_Y_OFFSET = 10;
-  var margin = {top: 30, right: 10, bottom: 30, left: 30}, tooltipHeight = 0, tooltipWidth = Number(SVG.attr("width")) - margin.left - margin.right, width = +Number(SVG.attr("width")) - margin.left - margin.right, height = +Number(SVG.attr("height")) - margin.top - margin.bottom;
+  var margin = {top: 30, right: 10, bottom: 30, left: 30}, width = +Number(SVG.attr("width")) - margin.left - margin.right, height = +Number(SVG.attr("height")) - margin.top - margin.bottom;
   SVG.style("cursor", "crosshair");
   CHART_G = SVG.append("g").attr("id", `green-engagement--${svgId}`).attr("transform", `translate(${margin.left}, 0)`);
   CHART_G.append("rect").attr("width", width).attr("height", height).attr("transform", `translate(5, ${margin.top})`).attr("fill", "var(--zss-chart-bg)").attr("ry", 7);
-  const renderedData = responseData.reduce((arr, i) => {
-    let falseArray = [];
-    i.children.forEach((child) => falseArray.push(child));
-    return [...falseArray, ...arr];
-  }, []).sort((a, b) => b.title - a.title);
+  const renderedData = responseData.data.sort((a, b) => a.title.localeCompare(b.title));
   const data = renderedData.map((d, i) => {
     return {
       index: i,
@@ -40,9 +35,10 @@ export const makeSiteEnergyUsage = (svgId, responseData) => {
   x = scaleBand().domain(data.map((d) => d.id)).range([0, width]).padding(0.5);
   y = scaleLinear().domain(aggregateYRange).range([0, -height]);
   const xAxis = (g, x2) => {
-    g.attr("transform", `translate(${PAD + margin.left + 5}, ${height + margin.top})`).call(axisBottom(x2).scale(x2).tickSize(5).ticks(10).tickFormat((d) => d.title));
+    g.attr("transform", `translate(${PAD + margin.left + 5}, ${height + margin.top})`).call(axisBottom(x2).scale(x2).ticks(10).tickFormat((d) => d.title));
     g.select(".domain").remove();
-    g.selectAll(".tick text, .tick line").attr("font-size", "0.85rem").attr("fill", "white").style("text-align", "left").attr("stroke", "none");
+    g.selectAll("text").style("font-size", "1rem");
+    g.selectAll(".tick text, .tick line").attr("fill", "white").style("text-align", "left").attr("stroke", "none");
   };
   const yAxis = (g, y2) => {
     g.attr("transform", `translate(${-margin.left}, ${height + margin.top})`).call(axisRight(y2).scale(y2).tickSize(-width + 70).ticks(5));

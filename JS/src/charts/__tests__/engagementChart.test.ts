@@ -20,5 +20,5 @@ export const testEngagementChart = async (options: any) => {
       testMap.engagementChart.divId
     );
   }
-  setInterval(updateData, 3000);
+  // setInterval(updateData, 3000);
 };

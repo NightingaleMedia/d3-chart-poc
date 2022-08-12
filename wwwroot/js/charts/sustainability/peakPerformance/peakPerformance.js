@@ -4,9 +4,11 @@ import {
   curveNatural,
   extent,
   line,
+  pointer,
   scaleLinear,
   scaleTime,
   select,
+  timeFormat,
   timeParse
 } from "../../../_snowpack/pkg/d3.js";
 const fakeData = {
@@ -85,8 +87,9 @@ const fakeData = {
 };
 let SVG;
 let CHART_G;
-export function makePeakPerformance(svgId, data = {percent: 35}) {
+export function makePeakPerformance(svgId, data) {
   SVG = select(`svg#${svgId}`);
+  var Tooltip = select("body").append("div").style("opacity", 0).attr("class", "tooltip").attr("id", `tooltip--${svgId}`);
   var margin = {left: 20, top: 0, bottom: 20, right: 20};
   var width = SVG.attr("width") - margin.left - margin.right;
   var height = SVG.attr("height") - margin.top - margin.bottom;
@@ -100,7 +103,7 @@ export function makePeakPerformance(svgId, data = {percent: 35}) {
     timeset: dateParser(d.time)
   }));
   const peakData = makeData(fakeData.data);
-  const dataXrange = extent(peakData, (d) => d.timeset);
+  const dataXrange = extent(peakData, (d) => d.timeset ?? new Date());
   const dataYrange = [0, 140];
   const xScale = scaleTime().domain(dataXrange).range([0, width]);
   const yScale = scaleLinear().domain(dataYrange).range([height, 0]);
@@ -113,6 +116,20 @@ export function makePeakPerformance(svgId, data = {percent: 35}) {
   CHART_G.append("path").datum(peakData).attr("d", compareLine).attr("fill", "none").attr("stroke-width", "6px").attr("stroke", "var(--zss-nominal)");
   CHART_G.append("path").datum(peakData.filter((d) => d.d1 != null)).attr("d", dataLine).attr("fill", "none").attr("stroke-width", "9px").attr("stroke", "var(--zss-green)");
   CHART_BG.transition().duration(1e3).attr("height", height + margin.top + margin.bottom);
+  const tracerG = CHART_G.append("g").attr("transform", `translate(${margin.left},${-margin.top})`);
+  const tracerLineY = tracerG.append("rect").attr("opacity", 0).attr("class", "single-event--track-line-y").attr("fill", "white").attr("height", height).attr("width", 0.5).attr("transform", `translate(${-margin.left}, ${margin.top + 7})`);
+  const tracerLineX = tracerG.append("rect").attr("opacity", 0).attr("class", "single-event--track-line-y").attr("fill", "white").attr("height", 0.5).attr("width", width).attr("transform", `translate(${-margin.left}, 0)`);
+  const tracerText = tracerG.append("text").attr("opacity", 0).attr("fill", "white").attr("text-anchor", "middle").attr("x", tracerLineY.attr("x")).attr("y", height + margin.bottom - 12);
+  const formatTime = timeFormat("%_m/%d");
+  CHART_G.append("rect").attr("width", width).attr("height", height).style("cursor", "none").attr("fill", "rgba(0,0,0,0)").on("mousemove", function(event) {
+    tracerLineY.attr("x", pointer(event)[0]);
+    tracerLineX.attr("y", pointer(event)[1]);
+    tracerText.attr("x", pointer(event)[0] - 35).text(`${formatTime(xScale.invert(pointer(event)[0]))} | ${yScale.invert(pointer(event)[1]).toFixed(1)} kWh`);
+  }).on("mouseover", () => {
+    [tracerLineY, tracerLineX, tracerText].forEach((d) => d.attr("opacity", 1));
+  }).on("mouseout", () => {
+    [tracerLineY, tracerLineX, tracerText].forEach((d) => d.attr("opacity", 0));
+  });
 }
 export const updatePeakPerformance = (svgId, data) => {
   SVG.select(`#chart-group--${svgId}--peak-performance`).remove();

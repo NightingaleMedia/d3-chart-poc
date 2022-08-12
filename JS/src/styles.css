@@ -214,3 +214,61 @@ th {
 td {
   padding: 5px;
 }
+
+/* DEVICE DATA TABLE */
+.device-data__table--wrap {
+  overflow-y: scroll;
+  max-height: 880px;
+  max-width: 768px;
+  margin: auto;
+}
+.device-data__table--wrap .table {
+  padding: 1rem;
+  margin: auto;
+}
+.device-data__table--wrap .table__header,
+.device-data__table--wrap .table__row {
+  color: white;
+  display: grid;
+  grid-template-columns: auto repeat(3, 150px) 80px 50px;
+}
+.device-data__table--wrap .table__header--cell {
+  border: 1px solid rgb(120, 120, 120);
+  background-color: rgb(22, 22, 22);
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.device-data__table--wrap .table__body--cell {
+  border-bottom: 1px solid rgb(120, 120, 120);
+  border-left: 1px solid rgb(120, 120, 120);
+  background-color: var(--zss-chart-bg);
+  padding: 5px;
+}
+
+.device-data__table--wrap .table__body--cell:last-of-type {
+  border-right: 1px solid rgb(120, 120, 120);
+}
+
+.device-data__table--wrap .table__row.outOfRange > .table__body--cell {
+  background-color: #6a6a6a;
+}
+
+.device-data__table--wrap .table__row.outOfRange {
+  border: 1px solid rgb(243, 44, 44);
+}
+
+.device-data__table--wrap .center {
+  text-align: center;
+}
+.device-data__table--wrap .table__body--cell.coolingSetpoint {
+  color: var(--zss-blue);
+}
+
+.device-data__table--wrap .table__body--cell.heatingSetpoint {
+  color: var(--zss-error);
+}
+.device-data__table--wrap .table__body--cell.localTemperature {
+  color: var(--zss-setpoint-line);
+  font-weight: 600;
+}

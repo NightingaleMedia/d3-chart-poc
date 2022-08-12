@@ -4,39 +4,39 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    src: "/",
+    src: '/',
   },
   plugins: [
     /* ... */
-    ["@snowpack/plugin-typescript"],
+    ['@snowpack/plugin-typescript'],
   ],
   packageOptions: {
     /* ... */
-    source: "local",
+    source: 'local',
   },
   devOptions: {
     /* ... */
   },
   buildOptions: {
-    out: "../wwwroot/js/",
+    out: '../wwwroot/js/',
     clean: true,
     // ssr: true,
   },
   exclude: [
-    ".git/",
-    ".gitignore",
-    "package.json",
-    "scripts/*",
-    "src/_zOld/*",
-    "node_modules/*",
-    "package-lock.json",
-    "Procfile",
-    "static.json",
-    ".env",
-    "**.html",
-    "*/**/__tests__/*",
-    "**.css",
-    "src/index.php",
-    "src/favicon.ico",
+    '.git/',
+    '.gitignore',
+    'package.json',
+    'scripts/*',
+    'src/_zOld/*',
+    'node_modules/*',
+    'package-lock.json',
+    'Procfile',
+    'static.json',
+    '.env',
+    '**.html',
+    '*/**/__tests__/*',
+    '**.css',
+    'src/index.php',
+    'src/favicon.ico',
   ],
 };

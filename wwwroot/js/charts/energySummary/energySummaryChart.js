@@ -135,7 +135,7 @@ export const generateEnergySummaryChart = (svgId, responseData, options) => {
     select(this).attr("opacity", 0.9);
     tooltipDiv.transition().duration(500).style("opacity", 1).style("left", `${pointer(event)[0] - 10}px`);
     toolTipDateDiv.text(() => hourFormat(d.timeset ?? new Date()));
-    toolTipUsageDiv.text(`${d.usage} kwh`);
+    toolTipUsageDiv.text(`${d.usage.toFixed(0)} kwh`);
   }).on("mouseout", function(event, d) {
     select(this).attr("opacity", 1);
   });
@@ -182,12 +182,9 @@ export const generateEnergySummaryChart = (svgId, responseData, options) => {
       const f = timeFormat("%m/%d");
       return f(d.timeset ?? new Date());
     });
-    toolTipUsageDiv.text(`${d.usage} kwh`);
+    toolTipUsageDiv.text(`${d.usage.toFixed(0)} kwh`);
   }).on("mouseout", function(event, d) {
     select(this).attr("opacity", 1);
-  });
-  bars.on("click", function(event, d) {
-    SVG.call(zoomHandler).transition().duration(220).call(zoomHandler.scaleTo, 14).transition().duration(220).call(zoomHandler.translateTo, x(d.timeset), 0);
   });
 };
 export const updateEnergySummaryChart = (svgId, data) => {

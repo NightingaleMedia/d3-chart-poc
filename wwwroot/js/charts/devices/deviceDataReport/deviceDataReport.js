@@ -6,7 +6,6 @@ import {
   min,
   max,
   scaleLinear,
-  scaleTime,
   scaleBand,
   extent,
   axisBottom,
@@ -16,11 +15,14 @@ import {
   leastIndex,
   curveStep,
   axisTop,
-  utcFormat,
-  timeHour
+  curveBasis,
+  scaleUtc
 } from "../../../_snowpack/pkg/d3.js";
 import getColor, {ColorAccessor} from "./utils/getColor.js";
 import {transformData} from "./utils/transformData.js";
+import {getMode} from "./utils/getMode.js";
+import moment from "../../../_snowpack/pkg/moment.js";
+import {getOutOfRange} from "./utils/getOutOfRange.js";
 export function generateDeviceDataReport(svgId, dataObject) {
   let data = dataObject.data;
   var svg = select(`svg#${svgId}`), margin = {top: 30, right: 50, bottom: 30, left: 50}, legendHeight = 50, legendWidth = 728, width = +svg.attr("width") - margin.left - margin.right, height = +svg.attr("height") - margin.top - margin.bottom - legendHeight;
@@ -29,22 +31,25 @@ export function generateDeviceDataReport(svgId, dataObject) {
   const chartG = svg.append("g").attr("transform", `translate(${margin.left}, ${margin.top})`);
   const fullChart = chartG.append("g").attr("height", height).attr("width", width);
   fullChart.append("rect").attr("height", height).attr("width", width).attr("fill", "var(--zss-chart-bg)").attr("ry", 5);
+  const getUtc = (value) => moment.utc(value).toDate();
   const dateParser = timeParse("%_m/%e/%Y, %I:%M:%S %p");
   const dateFormat = timeFormat("%_I:%M %p");
   const toolTipDateFormat = timeFormat("%_I:%M %p");
   const xAccessor = (d) => {
     if (d) {
-      const titleString = dateParser(new Date(d.timestamp).toLocaleString());
+      const titleString = moment.utc(d.timestamp).toDate();
       return titleString;
     } else
       return null;
   };
   const constructedData = transformData(data[0]);
-  const deviceData = constructedData.data.sort((a, b) => a.timestamp - b.timestamp).map((d, i) => ({
-    index: i,
-    timeset: dateParser(`${new Date(d.timestamp)?.toLocaleString()}`) ?? new Date(),
-    ...d
-  }));
+  const deviceData = constructedData.data.sort((a, b) => a.timestamp - b.timestamp).map((d, i) => {
+    return {
+      index: i,
+      timeset: getUtc(d.timestamp) ?? new Date(),
+      ...d
+    };
+  });
   var dataXrange = extent(deviceData, (d) => d.timeset);
   const HighLocal = Number(max(deviceData.map((d) => d.localTemperature)));
   const LowLocal = Number(min(deviceData.map((d) => d.localTemperature)));
@@ -55,21 +60,32 @@ export function generateDeviceDataReport(svgId, dataObject) {
   const RangeHigh = max([HighLocal, HighCooling, HighHeat]) ?? 0;
   const RangeLow = min([LowLocal, LowCooling, LowHeat]) ?? 0;
   var tempRange = [RangeLow - 5, RangeHigh + 6];
-  const xScale = scaleTime().domain([dataXrange[0] ?? new Date(), dataXrange[1] ?? new Date()]).range([0, width]);
+  const xScale = scaleUtc().domain([dataXrange[0] ?? new Date(), dataXrange[1] ?? new Date()]).range([0, width]);
   const tempYScale = scaleLinear().range([height, 0]).domain(tempRange);
   const NUM_Y_LINES = 10;
-  const fanScaleY = scaleLinear().domain([0, 10]).range([40, height / 3]);
-  var xAxis = axisBottom(xScale).scale(xScale).ticks(10).tickFormat((d) => dateFormat(d));
+  const fanScaleY = scaleLinear().domain([0, 10]).range([margin.bottom + 12, height / 4]);
+  var xAxis = axisBottom(xScale).scale(xScale).ticks(10).tickFormat((d) => moment.utc(d).format("h:mma"));
   var yRightAxis = axisRight(tempYScale).scale(tempYScale).ticks(NUM_Y_LINES).tickFormat((d) => d + "°").tickSizeOuter(1);
+  const OORBAR = chartG.selectAll("rect").data(deviceData).enter().append("rect").attr("height", height).attr("width", "5px").attr("opacity", 0.2).attr("y", 0).attr("fill", (d) => {
+    const outOfRange = getOutOfRange(d);
+    if (outOfRange) {
+      return "var(--zss-warning)";
+    } else {
+      return `rgba(0,0,0,0)`;
+    }
+  }).attr("x", (d) => xScale(d.timeset));
   chartG.append("g").attr("class", "x axis").attr("transform", `translate(0, ${height + 10})`).call(xAxis).call((g) => {
     g.selectAll(".tick line, .tick text").attr("text-rendering", "optimizeLegibility").attr("fill", getColor(ColorAccessor.AXIS_LABEL_COLOR));
     g.selectAll(".domain").remove();
   });
   const coolingSetpointLine = line().curve(curveStep).x((d) => xScale(d.timeset)).y((d) => tempYScale(d.coolingSetpoint));
-  const ambientTempLine = line().curve(curveStep).x((d) => xScale(d.timeset)).y((d) => tempYScale(d.localTemperature));
+  const ambientTempLine = line().curve(curveBasis).x((d) => xScale(d.timeset)).y((d) => tempYScale(d.localTemperature));
   const heatingTempLine = line().curve(curveStep).x((d) => xScale(d.timeset)).y((d) => tempYScale(d.heatingSetpoint));
   const fanLine = line().curve(curveStep).x((d) => xScale(d.timeset)).y((d) => {
     return -fanScaleY(d.fanMode);
+  });
+  const modeLine = line().curve(curveStep).x((d) => xScale(d.timeset)).y((d) => {
+    return -fanScaleY(d.mode);
   });
   var areaFunc = area().x((d) => d.timestamp).y((d) => d.coolingSetpoint);
   chartG.append("path").datum(deviceData).attr("d", areaFunc);
@@ -77,6 +93,7 @@ export function generateDeviceDataReport(svgId, dataObject) {
     chartG.append("path").datum(deviceData).attr("d", fanLine).attr("stroke-width", "2px").attr("stroke", getColor(ColorAccessor.FAN_COLOR)).attr("transform", `translate(0, ${height + 38})`);
   }
   chartG.append("path").datum(deviceData).attr("d", heatingTempLine).attr("stroke-width", "2px").attr("stroke", getColor(ColorAccessor.HEATING_TEMP_COLOR)).attr("fill", "none");
+  chartG.append("path").datum(deviceData).attr("d", modeLine).attr("stroke-width", "1px").style("stroke-dasharray", "5, 2").attr("stroke", getColor(ColorAccessor.FAN_COLOR)).attr("transform", `translate(0, ${height + 38})`).attr("fill", "none");
   chartG.append("path").datum(deviceData).attr("d", coolingSetpointLine).attr("stroke-width", "2px").attr("stroke", getColor(ColorAccessor.COOLING_TEMP_COLOR)).attr("fill", "none");
   chartG.append("path").datum(deviceData).attr("stroke-width", "3px").attr("d", ambientTempLine).attr("stroke", getColor(ColorAccessor.AMBIENT_TEMP_COLOR)).attr("fill", "none");
   chartG.append("g").attr("class", "y axis right").call(yRightAxis).call((g) => g.selectAll(".tick text").attr("transform", `translate(-30,0)`).attr("fill", getColor(ColorAccessor.AXIS_LABEL_COLOR))).call((g) => {
@@ -85,7 +102,7 @@ export function generateDeviceDataReport(svgId, dataObject) {
     g.selectAll(".domain").remove();
   });
   const x1MonthAxis = (g, x) => {
-    g.attr("class", "xMonthAxis").call(axisTop(x).scale(x).ticks(timeHour.every(24)).tickFormat(utcFormat("%a %-m/%d")).tickSize(-height - margin.bottom - margin.top + 80));
+    g.attr("class", "xMonthAxis").call(axisTop(x).scale(x).ticks(1).tickFormat((d) => moment(d).format("ddd M/YY")).tickSize(-height - margin.bottom - margin.top + 80));
     g.selectAll(".tick line").attr("transform", `translate(${0}, ${12})`).attr("stroke-width", 1).attr("stroke-opacity", 1).attr("stroke", "var(--zss-chart-axis-line)");
     g.selectAll(".tick text").attr("fill", "white").attr("opacity", "1").attr("text-anchor", "start").attr("transform", "translate(-28,-10)").style("font-size", "1rem");
     g.selectAll(".domain").remove();
@@ -93,7 +110,12 @@ export function generateDeviceDataReport(svgId, dataObject) {
   const mx = chartG.append("g").call(x1MonthAxis, xScale);
   const legend = svg.selectAll("legendBox").data([1]).enter().append("g");
   const legendBox = legend.append("g").attr("x", 0).attr("y", height + legendHeight + 10);
-  const LegendKeys = ["Cooling Setpoint", "Heating Setpoint", "Ambient Temp"];
+  const LegendKeys = [
+    "Cooling Setpoint",
+    "Heating Setpoint",
+    "Ambient Temp",
+    "Mode"
+  ];
   if (SHOW_FAN) {
     LegendKeys.push("Fan");
   }
@@ -103,9 +125,9 @@ export function generateDeviceDataReport(svgId, dataObject) {
   const colorLabels = legendSection.selectAll("labels").data(LegendKeys).enter().append("rect").attr("ry", 3).attr("fill", (d) => {
     return {
       "Cooling Setpoint": getColor(ColorAccessor.COOLING_TEMP_COLOR),
-      Fan: getColor(ColorAccessor.FAN_COLOR),
       "Ambient Temp": getColor(ColorAccessor.AMBIENT_TEMP_COLOR),
-      "Heating Setpoint": getColor(ColorAccessor.HEATING_TEMP_COLOR)
+      "Heating Setpoint": getColor(ColorAccessor.HEATING_TEMP_COLOR),
+      Mode: getColor(ColorAccessor.FAN_COLOR)
     }[d];
   }).attr("height", 20).attr("x", (d, i) => {
     const v = legendWidth / 4;
@@ -124,13 +146,16 @@ export function generateDeviceDataReport(svgId, dataObject) {
   const updateLegendText = (datapoint) => {
     legendText.text((u) => {
       if (u == "Cooling Setpoint") {
-        return `Cooling Setpoint:  ${datapoint.coolingSetpoint}° F`;
+        return `Cold Set:  ${datapoint.coolingSetpoint}° F`;
       }
       if (u == "Heating Setpoint") {
-        return `Heating Setpoint:  ${datapoint.heatingSetpoint}° F`;
+        return `Heat Set:  ${datapoint.heatingSetpoint}° F`;
       }
       if (u == "Fan") {
         return `Fan:  ${datapoint.fanMode}`;
+      }
+      if (u == "Mode") {
+        return `Mode: ${getMode(datapoint.mode)} (${datapoint.mode})`;
       }
       if (u == "Ambient Temp") {
         return `Indoor:  ${datapoint.localTemperature}° F`;
@@ -151,7 +176,7 @@ export function generateDeviceDataReport(svgId, dataObject) {
     const closestDataPoint = deviceData[closestIndex ?? 0];
     tracerLineX.attr("y", pointer(event)[1]);
     tracerLineY.attr("x", pointer(event)[0]);
-    tracerText.attr("x", pointer(event)[0]).text(toolTipDateFormat(closestDataPoint?.timeset ?? new Date()) ?? "N/A");
+    tracerText.attr("x", pointer(event)[0]).text(moment.utc(closestDataPoint?.timestamp).format("h:mma") ?? "N/A");
     tracerTextBg.attr("x", pointer(event)[0] - 38);
     updateLegendText(closestDataPoint);
     return;

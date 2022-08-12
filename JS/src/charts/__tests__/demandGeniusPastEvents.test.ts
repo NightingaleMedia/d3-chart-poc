@@ -1,6 +1,6 @@
-import dgPastEvents from "../../data/dg-events.json";
-import { callChartFromBlazor } from "../ChartDispatch";
-import { setupTestDivs, testMap } from "./setup.test";
+import dgPastEvents from '../../data/dg-events.json';
+import { callChartFromBlazor } from '../ChartDispatch';
+import { setupTestDivs, testMap } from './setup.test';
 
 const dataToAppend = dgPastEvents;
 export const testDGPastEvents = (options: any) => {
@@ -9,20 +9,20 @@ export const testDGPastEvents = (options: any) => {
 
   const updateData = async () => {
     const newData = await fetch(
-      "https://zen-fake-backend.herokuapp.com/demand-genius",
+      'https://zen-fake-backend.herokuapp.com/demand-genius'
     ).then((res) => res.json());
 
     myDiv.dataset.chartData = JSON.stringify(newData);
   };
 
-  // updateData();
-  setInterval(updateData, 10000);
+  updateData();
+  // setInterval(updateData, 10000);
 
   if (options.callChart) {
     callChartFromBlazor(
-      "pastDGEventChart",
+      'pastDGEventChart',
       testMap.dgPastEvents.chartId,
-      testMap.dgPastEvents.divId,
+      testMap.dgPastEvents.divId
     );
   }
 };

@@ -61,11 +61,11 @@ export function makeBreakdownChart(svgId, initData) {
               </div>
             `).style("left", `${pointer(e)[0] - 10}px`).style("top", e.pageY + "px");
     selectAll(`.child-${d.parentId}`).transition().duration(50).attr("opacity", "1").attr("cursor", "pointer");
-  }).on("mouseout", function(e, d) {
+  }).on("mouseleave", function(e, d) {
     divTooltip.style("opacity", "0");
-    selectAll(`.child-${d.parentId}`).transition().duration(50).attr("opacity", "0.8");
+    selectAll(`.child-${d.parentId}`).attr("opacity", "0.8");
   });
-  svg.on("mouseout", function(e, d) {
+  svg.on("mouseleave", function(e, d) {
     divTooltip.style("opacity", "0");
   });
 }
