@@ -317,16 +317,6 @@ function min(values, valueof) {
   return min;
 }
 
-function* flatten(arrays) {
-  for (const array of arrays) {
-    yield* array;
-  }
-}
-
-function merge(arrays) {
-  return Array.from(flatten(arrays));
-}
-
 function minIndex(values, valueof) {
   let min;
   let minIndex = -1;
@@ -348,6 +338,16 @@ function minIndex(values, valueof) {
     }
   }
   return minIndex;
+}
+
+function* flatten(arrays) {
+  for (const array of arrays) {
+    yield* array;
+  }
+}
+
+function merge(arrays) {
+  return Array.from(flatten(arrays));
 }
 
 function mode(values, valueof) {

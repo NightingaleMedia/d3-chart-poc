@@ -14,7 +14,8 @@ export type ChartName =
   | 'energySiteComparison'
   | 'greenEngagement'
   | 'siteEnergyUsage'
-  | 'greenBrownAreaChart';
+  | 'greenBrownAreaChart'
+  | 'consumerScheduleTimeline';
 
 export type ChartMap = {
   [k in ChartName]: ChartBase;

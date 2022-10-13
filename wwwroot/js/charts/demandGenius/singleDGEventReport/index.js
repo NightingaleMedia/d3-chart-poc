@@ -200,6 +200,7 @@ export function makeSingleDGChart(svgId, data) {
     const tracerTextBg = tracer.append("rect").attr("fill", "var(--zss-blue)").attr("width", 75).attr("height", 35).attr("ry", 6).attr("text-anchor", "middle").attr("x", -width).attr("y", -10);
     const tracerText = tracer.append("text").attr("fill", "white").attr("text-anchor", "middle").attr("x", tracerLineY.attr("x")).attr("y", 13);
     chartG.append("rect").attr("width", width).attr("height", height).style("cursor", "crosshair").attr("fill", "rgba(0,0,0,0)").on("mousemove", function(event) {
+      [tracerLineX, tracerLineY, tracerText, tracerTextBg].forEach((v) => v.attr("opacity", 1));
       const hoveredDate = xScale.invert(pointer(event)[0]);
       const getDistanceFromHoveredDate = (d) => Math.abs(xAccessor(d) - hoveredDate);
       const closestIndex = leastIndex(data2, (a, b) => {
@@ -212,6 +213,9 @@ export function makeSingleDGChart(svgId, data) {
       tracerTextBg.attr("x", pointer(event)[0] - 38).text(closestDataPoint?.Time ?? "");
       updateLegendText(closestDataPoint);
       return;
+    });
+    chartG.on("mouseout", () => {
+      [tracerLineX, tracerLineY, tracerText, tracerTextBg].forEach((v) => v.attr("opacity", 0));
     });
   };
   const theData = singleEvent;

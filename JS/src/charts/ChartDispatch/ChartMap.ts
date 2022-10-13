@@ -1,3 +1,4 @@
+import { generateConsumerScheduleTimeline } from '../consumerSchedule/consumerScheduleTimeline';
 import { makeManyEvents } from '../demandGenius/manyDGEventsComparison/manyDGEventsComparison';
 import { makeSingleDGChart } from '../demandGenius/singleDGEventReport';
 import { generateDeviceDataReport } from '../devices/deviceDataReport/deviceDataReport';
@@ -154,9 +155,20 @@ const generateDonutEnergyChart__Class = new ChartBase({
     // updateGreenEngagement(id, data);
   },
 });
+const generateConsumerSchedule__Class = new ChartBase({
+  name: 'Consumer Schedule Timeline',
+  chartRender: (id, data) => {
+    generateConsumerScheduleTimeline(id, data);
+  },
+  chartUpdate: (id, data) => {
+    // updateGreenEngagement(id, data);
+  },
+});
 
 const chartMap: ChartMap = {
   // single dg report
+  consumerScheduleTimeline: generateConsumerSchedule__Class,
+  energySiteBreakdownChart: energySiteBreakdownChart__Class,
   siteEnergyUsage: siteEnergyUsage__Class,
   greenEngagement: generateGreenEngagement__Class,
   peakPerformanceChart: generatePeakChart__Class,
@@ -165,12 +177,13 @@ const chartMap: ChartMap = {
   pastDGEventChart: dgPastEventChart__Class,
   dgManyReportChart: makeManyEvents__Class,
   energySummaryChart: generateEnergySummaryChart__Class,
-  energySiteBreakdownChart: energySiteBreakdownChart__Class,
+
   greenBrownAreaChart: greenBrownEnergy__Class,
-  // brownAreaChart: generateBrownAreaChart__Class,
+
   energyDonutChart: generateDonutEnergyChart__Class,
   energySiteComparison: generateEnergySiteComparisonChart__Class,
   deviceDataReport: generateDeviceDataReport__Class,
+  // brownAreaChart: generateBrownAreaChart__Class,
 };
 
 export const getChartImpl = (name: ChartName): ChartBase => {
