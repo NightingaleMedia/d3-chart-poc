@@ -6,6 +6,10 @@ export const setupTestDivs = (DIV_ID) => {
 };
 
 export const testMap = {
+  consumerSchedule: {
+    divId: `consumer-schedule--data`,
+    chartId: `test-chart`,
+  },
   energyBreakdown: {
     divId: `site-breakdown-chart--data`,
     chartId: `site-breakdown-chart`,

@@ -1,7 +1,7 @@
 export type DeviceReportDataPoint = {
-  timestamp: EpochTimeStamp;
-  coolingSetpoint: number;
-  heatingSetpoint: number;
+  timeStamp: string | EpochTimeStamp;
+  coolingSetPoint: number;
+  heatingSetPoint: number;
   fanMode?: any;
   dimmerLevel: any;
   humidity: any;
@@ -23,7 +23,7 @@ declare interface DeviceActivityReport {
     type: string;
     sensor: string;
   };
-  data: DeviceReportDataPoint[];
+  deviceReportDataPoints: DeviceReportDataPoint[];
 }
 export interface DeviceReportDataPointItem extends DeviceReportDataPoint {
   timeset: Date;

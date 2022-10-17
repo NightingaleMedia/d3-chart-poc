@@ -32,13 +32,19 @@ import {
 
 import getColor, { ColorAccessor } from './utils/getColor';
 import { transformData } from './utils/transformData';
-import { DeviceReportDataPointItem } from '../../types/DeviceReport';
+import {
+  DeviceActivityReport,
+  DeviceReportDataPointItem,
+} from '../../types/DeviceReport';
 import { getMode } from './utils/getMode';
 import moment from 'moment';
 import { getOutOfRange } from './utils/getOutOfRange';
 
-export function generateDeviceDataReport(svgId, dataObject) {
-  let data = dataObject.data;
+export function generateDeviceDataReport(
+  svgId,
+  dataObject: DeviceActivityReport[]
+) {
+  let data = dataObject[0];
   var svg = select(`svg#${svgId}`),
     margin = { top: 30, right: 50, bottom: 30, left: 50 },
     legendHeight = 50,
@@ -79,25 +85,26 @@ export function generateDeviceDataReport(svgId, dataObject) {
 
   const xAccessor = (d: DeviceReportDataPointItem): Date | null => {
     if (d) {
-      const titleString = moment.utc(d.timestamp).toDate();
+      const titleString = moment.utc(d.timeStamp).toDate();
       return titleString;
     } else return null;
   };
 
-  const constructedData = transformData(data[0]);
+  // const constructedData = transformData(data[0]);
 
-  const deviceData: DeviceReportDataPointItem[] = constructedData.data
-    .sort((a, b) => a.timestamp - b.timestamp)
+  data?.deviceReportDataPoints.forEach((d, i) => {
+    d.timeStamp = Date.parse(d.timeStamp as string);
+  });
+
+  const deviceData: DeviceReportDataPointItem[] = data?.deviceReportDataPoints
+    .sort((a, b) => (a.timeStamp as number) - (b.timeStamp as number))
     .map((d, i) => {
-      // console.log(d.timestamp);
-      // console.log(moment.utc(d.timestamp).format('M/D/YYYY, h:mm:ss A'));
-      // console.log(`${new Date(d.timestamp)?.toLocaleString()}`);
       return {
         index: i,
-        timeset: getUtc(d.timestamp) ?? new Date(),
+        timeset: getUtc(d.timeStamp as number) ?? new Date(),
         ...d,
       };
-    });
+    }) as DeviceReportDataPointItem[];
 
   var dataXrange = extent(deviceData, (d) => d.timeset);
 
@@ -105,10 +112,10 @@ export function generateDeviceDataReport(svgId, dataObject) {
 
   const HighLocal = Number(max(deviceData.map((d) => d.localTemperature)));
   const LowLocal = Number(min(deviceData.map((d) => d.localTemperature)));
-  const HighCooling = Number(max(deviceData.map((d) => d.coolingSetpoint)));
-  const LowCooling = Number(min(deviceData.map((d) => d.coolingSetpoint)));
-  const HighHeat = Number(max(deviceData.map((d) => d.heatingSetpoint)));
-  const LowHeat = Number(min(deviceData.map((d) => d.heatingSetpoint)));
+  const HighCooling = Number(max(deviceData.map((d) => d.coolingSetPoint)));
+  const LowCooling = Number(min(deviceData.map((d) => d.coolingSetPoint)));
+  const HighHeat = Number(max(deviceData.map((d) => d.heatingSetPoint)));
+  const LowHeat = Number(min(deviceData.map((d) => d.heatingSetPoint)));
 
   const RangeHigh = max([HighLocal, HighCooling, HighHeat]) ?? 0;
   const RangeLow = min([LowLocal, LowCooling, LowHeat]) ?? 0;
@@ -179,10 +186,10 @@ export function generateDeviceDataReport(svgId, dataObject) {
     });
 
   // COOLING SETPOINT LINE
-  const coolingSetpointLine = line()
+  const coolingSetPointLine = line()
     .curve(curveStep)
     .x((d: any) => xScale(d.timeset))
-    .y((d: any) => tempYScale(d.coolingSetpoint));
+    .y((d: any) => tempYScale(d.coolingSetPoint));
 
   // Ambient Temp Line
   const ambientTempLine = line()
@@ -194,7 +201,7 @@ export function generateDeviceDataReport(svgId, dataObject) {
   const heatingTempLine = line()
     .curve(curveStep)
     .x((d: any) => xScale(d.timeset))
-    .y((d: any) => tempYScale(d.heatingSetpoint));
+    .y((d: any) => tempYScale(d.heatingSetPoint));
 
   // FANLINE
   const fanLine = line()
@@ -212,8 +219,8 @@ export function generateDeviceDataReport(svgId, dataObject) {
     });
 
   var areaFunc = area()
-    .x((d: any) => d.timestamp)
-    .y((d: any) => d.coolingSetpoint);
+    .x((d: any) => d.timeStamp)
+    .y((d: any) => d.coolingSetPoint);
 
   chartG
     .append('path')
@@ -253,7 +260,7 @@ export function generateDeviceDataReport(svgId, dataObject) {
   chartG
     .append('path')
     .datum(deviceData)
-    .attr('d', coolingSetpointLine as any)
+    .attr('d', coolingSetPointLine as any)
     .attr('stroke-width', '2px')
     .attr('stroke', getColor(ColorAccessor.COOLING_TEMP_COLOR))
     .attr('fill', 'none');
@@ -325,8 +332,8 @@ export function generateDeviceDataReport(svgId, dataObject) {
     .attr('y', height + legendHeight + 10);
 
   const LegendKeys = [
-    'Cooling Setpoint',
-    'Heating Setpoint',
+    'Cooling SetPoint',
+    'Heating SetPoint',
     'Ambient Temp',
     'Mode',
   ];
@@ -360,9 +367,9 @@ export function generateDeviceDataReport(svgId, dataObject) {
     .attr('ry', 3)
     .attr('fill', (d: string): any => {
       return {
-        'Cooling Setpoint': getColor(ColorAccessor.COOLING_TEMP_COLOR),
+        'Cooling SetPoint': getColor(ColorAccessor.COOLING_TEMP_COLOR),
         'Ambient Temp': getColor(ColorAccessor.AMBIENT_TEMP_COLOR),
-        'Heating Setpoint': getColor(ColorAccessor.HEATING_TEMP_COLOR),
+        'Heating SetPoint': getColor(ColorAccessor.HEATING_TEMP_COLOR),
         Mode: getColor(ColorAccessor.FAN_COLOR),
       }[d];
     })
@@ -395,11 +402,11 @@ export function generateDeviceDataReport(svgId, dataObject) {
 
   const updateLegendText = (datapoint: DeviceReportDataPointItem) => {
     legendText.text((u: any): any => {
-      if (u == 'Cooling Setpoint') {
-        return `Cold Set:  ${datapoint.coolingSetpoint}° F`;
+      if (u == 'Cooling SetPoint') {
+        return `Cold Set:  ${datapoint.coolingSetPoint}° F`;
       }
-      if (u == 'Heating Setpoint') {
-        return `Heat Set:  ${datapoint.heatingSetpoint}° F`;
+      if (u == 'Heating SetPoint') {
+        return `Heat Set:  ${datapoint.heatingSetPoint}° F`;
       }
       if (u == 'Fan') {
         return `Fan:  ${datapoint.fanMode}`;
@@ -456,6 +463,9 @@ export function generateDeviceDataReport(svgId, dataObject) {
     .style('cursor', 'crosshair')
     .attr('fill', 'rgba(0,0,0,0)')
     .on('mousemove', function (event) {
+      [tracerLineX, tracerLineY, tracerText, tracerTextBg].forEach((v) =>
+        v.attr('opacity', 1)
+      );
       const hoveredDate = xScale.invert(pointer(event)[0]) as any;
 
       const getDistanceFromHoveredDate = (d) =>
@@ -473,12 +483,17 @@ export function generateDeviceDataReport(svgId, dataObject) {
 
       tracerText
         .attr('x', pointer(event)[0])
-        .text(moment.utc(closestDataPoint?.timestamp).format('h:mma') ?? 'N/A');
+        .text(moment.utc(closestDataPoint?.timeStamp).format('h:mma') ?? 'N/A');
       tracerTextBg.attr('x', pointer(event)[0] - 38);
-
       updateLegendText(closestDataPoint as DeviceReportDataPointItem);
       return;
     });
+
+  chartG.on('mouseout', () => {
+    [tracerLineX, tracerLineY, tracerText, tracerTextBg].forEach((v) =>
+      v.attr('opacity', 0)
+    );
+  });
 }
 //  csv(demandGenius).then((d) => render(d));
 

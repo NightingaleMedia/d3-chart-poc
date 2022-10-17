@@ -30,6 +30,7 @@ export const makeDGPastEventChart = (svgId, initData) => {
   const tooltipBox = chartG.append("g").attr("class", "tooltip-group");
   tooltipBox.append("rect").attr("height", tooltipHeight).attr("width", 150).attr("fill", "steelBlue").attr("class", "tooltip-box").attr("opacity", 0).attr("ry", 3).attr("y", Number(chartG.attr("height")) + margin.top + 10);
   const tooltipDiv = select(".dg-past-event--tooltip").style("top", `${Number(chartG.attr("height")) + margin.top + 40}px`);
+  console.log(tooltipDiv);
   const toolTipDateDiv = tooltipDiv.select("#dg-past-event--tooltip__date");
   const toolTipNameDiv = tooltipDiv.select("#dg-past-event--tooltip__name");
   const parseTime = timeParse("%m/%d/%Y");

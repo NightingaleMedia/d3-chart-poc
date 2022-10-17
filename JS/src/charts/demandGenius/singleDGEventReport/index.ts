@@ -508,6 +508,9 @@ export function makeSingleDGChart(svgId: string, data: any) {
       .style('cursor', 'crosshair')
       .attr('fill', 'rgba(0,0,0,0)')
       .on('mousemove', function (event) {
+        [tracerLineX, tracerLineY, tracerText, tracerTextBg].forEach((v) =>
+          v.attr('opacity', 1)
+        );
         const hoveredDate = xScale.invert(pointer(event)[0]) as any;
 
         const getDistanceFromHoveredDate = (d) =>
@@ -533,6 +536,12 @@ export function makeSingleDGChart(svgId: string, data: any) {
         updateLegendText(closestDataPoint as DGEventDataPointItem);
         return;
       });
+
+    chartG.on('mouseout', () => {
+      [tracerLineX, tracerLineY, tracerText, tracerTextBg].forEach((v) =>
+        v.attr('opacity', 0)
+      );
+    });
   };
   //  csv(demandGenius).then((d) => render(d));
   const theData: DGEventDataPoint[] = singleEvent as DGEventDataPoint[];

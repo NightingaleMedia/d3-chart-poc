@@ -77,6 +77,7 @@ export const makeDGPastEventChart = (
     'top',
     `${Number(chartG.attr('height')) + margin.top + 40}px`
   );
+
   const toolTipDateDiv = tooltipDiv.select('#dg-past-event--tooltip__date');
   const toolTipNameDiv = tooltipDiv.select('#dg-past-event--tooltip__name');
 
@@ -287,12 +288,12 @@ export const makeDGPastEventChart = (
     .attr('y', (d) => `${(yScale(d.keyIndex) ?? 0) + 4.5}`)
     .attr('x', (d) => xScale(d.timeset) + 56);
 
-  selectAll('.dg-square, .dg-icon, .dg-circle, .dg-number')
-    .transition()
-    .duration(100)
-    // .delay((d, i = 1) => 100 * (i / 1000))
-    .attr('opacity', 1)
-    .ease();
+  // selectAll('.dg-square, .dg-icon, .dg-circle, .dg-number')
+  //   .transition()
+  //   .duration(100)
+  //   // .delay((d, i = 1) => 100 * (i / 1000))
+  //   .attr('opacity', 1)
+  //   .ease();
 
   selectAll('.dg-icon, .dg-square').on('click', function (d, e: any) {
     let a = document.createElement('a');
