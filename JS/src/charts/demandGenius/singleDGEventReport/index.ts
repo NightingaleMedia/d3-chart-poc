@@ -19,10 +19,6 @@ import {
   symbolDiamond,
   leastIndex,
   curveStep,
-  Area,
-  curveStepBefore,
-  curveBundle,
-  curveCardinal,
   curveCatmullRom,
 } from 'd3';
 import {

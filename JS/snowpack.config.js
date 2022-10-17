@@ -33,7 +33,6 @@ module.exports = {
     'Procfile',
     'static.json',
     '.env',
-    '**.html',
     '*/**/__tests__/*',
     '**.css',
     'src/index.php',
