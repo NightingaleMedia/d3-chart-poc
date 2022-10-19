@@ -8,7 +8,7 @@ export const setupTestDivs = (DIV_ID) => {
 export const testMap = {
   consumerSchedule: {
     divId: `consumer-schedule--data`,
-    chartId: `test-chart`,
+    chartId: `schedule--wrap`,
   },
   energyBreakdown: {
     divId: `site-breakdown-chart--data`,

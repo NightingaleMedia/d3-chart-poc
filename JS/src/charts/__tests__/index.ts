@@ -1,5 +1,5 @@
 import { testConsumerSchedule } from './consumerSchedule.test';
-import { testDGPastEvents } from './demandGeniusPastEvents.test copy';
+import { testDGPastEvents } from './demandGeniusPastEvents.test';
 import { makeDgEventReport } from './demandGeniusReport.test';
 import { testDeviceData } from './deviceDataReport.test';
 import { testEnergyDonutChart } from './energyDonutChart.test';
@@ -22,6 +22,6 @@ testPeakPerformance({ callChart: true });
 testGreenEngagement({ callChart: true });
 testSiteEnergyUsage({ callChart: true });
 testConsumerSchedule({ callChart: true });
-// testGreenBrownEnergyComparison({ callChart: true });
-// testEnergyDonutChart({ callChart: true });
+testGreenBrownEnergyComparison({ callChart: true });
+testEnergyDonutChart({ callChart: true });
 makeDgEventReport({ callChart: true });

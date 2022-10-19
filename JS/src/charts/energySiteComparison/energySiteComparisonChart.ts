@@ -45,7 +45,8 @@ export const generateEnergySiteComparisonChart = (
   svgId,
   renderData: Record<string, any>
 ) => {
-  const jsonData = renderData.data;
+  // const jsonData = renderData.data;
+  const jsonData = siteEvents.data as Record<string, any>;
 
   var svg = select(`svg#${svgId}`),
     margin = { top: 30, right: 10, bottom: 30, left: 30 },
@@ -254,7 +255,7 @@ export const generateEnergySiteComparisonChart = (
   const makeLegend = () => {
     let i = 0;
     jsonData.forEach((d, key) => {
-      select('.site-comparison--legend')
+      select(`${svgId}+div.site-comparison--legend`)
         .append('div')
         .attr('id', d.id)
         .style('background-color', getColor(key)).html(`
@@ -354,6 +355,8 @@ export const generateEnergySiteComparisonChart = (
             .x((d: any) => getXWidth(d, xz, 'x', isGranular))
             .y((d: any) => y(d.usage) + height - 30)
         );
+      gy.call(yAxis, y);
+      y.domain(aggregateYRange);
     }
   }
 

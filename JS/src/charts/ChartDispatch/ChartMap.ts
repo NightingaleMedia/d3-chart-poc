@@ -43,7 +43,7 @@ const singleDGChart__Class = new ChartBase({
   name: 'Single Demand Genius Report',
   chartRender: (id, data) => makeSingleDGChart(id, data),
   chartUpdate: (data) => {
-    console.log(this);
+    // console.log(this);
   },
 });
 
@@ -53,7 +53,7 @@ const dgPastEventChart__Class = new ChartBase({
     makeDGPastEventChart(id, data);
   },
   chartUpdate: (id, data) => {
-    console.log({ id, data });
+    // console.log({ id, data });
     updateDgPastEventsChart(id, data);
   },
 });
@@ -71,12 +71,12 @@ const energySiteBreakdownChart__Class = new ChartBase({
 const generateEnergySummaryChart__Class = new ChartBase({
   name: 'Many Energy Summary Chart',
   chartRender: (id, data) => {
-    console.log('making many smry: ', data);
+    // console.log('making many smry: ', data);
     // generateEnergySummaryChart(id, data);
     generateEnergySummaryChart(id, data, { isUpdate: false });
   },
   chartUpdate: (id: string, data: any) => {
-    console.log('updating many smry: ', data);
+    // console.log('updating many smry: ', data);
     updateEnergySummaryChart(id, data);
   },
 });
@@ -85,10 +85,9 @@ const generateEnergySiteComparisonChart__Class = new ChartBase({
   name: 'Energy Site Comparison Chart',
   chartRender: (id, data) => {
     generateEnergySiteComparisonChart(id, data);
-    console.log('site comparison: ', id, data);
   },
   chartUpdate: (data, id) => {
-    console.log(id, data);
+    // console.log(id, data);
   },
 });
 const generateDeviceDataReport__Class = new ChartBase({
@@ -98,7 +97,8 @@ const generateDeviceDataReport__Class = new ChartBase({
     generateDeviceDataTable(id, data);
   },
   chartUpdate: (data, id) => {
-    console.log(id, data);
+    console.log('update device data report');
+    // console.log(id, data);
   },
 });
 const generateEngagementChart__Class = new ChartBase({

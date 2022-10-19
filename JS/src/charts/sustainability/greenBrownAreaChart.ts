@@ -7,7 +7,7 @@ import {
 import Chart from 'chart.js/auto';
 import moment from 'moment';
 import { getVariableValue } from '../../utils/getVariableValue';
-
+import { getBrownData, getGreenData } from './utils/getData';
 const getConfig = ({ brownEnergy, greenEnergy }): ChartConfiguration => {
   return {
     type: 'line',
@@ -15,7 +15,7 @@ const getConfig = ({ brownEnergy, greenEnergy }): ChartConfiguration => {
       datasets: [
         {
           label: 'Green Energy',
-          data: greenEnergy as any,
+          data: getGreenData() as any,
           backgroundColor: getVariableValue('--zss-green'),
           pointStyle: 'line',
           fill: true,
@@ -24,7 +24,7 @@ const getConfig = ({ brownEnergy, greenEnergy }): ChartConfiguration => {
         },
         {
           label: 'Carbon Energy',
-          data: brownEnergy as any,
+          data: getBrownData() as any,
           backgroundColor: getVariableValue('--zss-brown'),
           pointStyle: 'line',
           fill: true,

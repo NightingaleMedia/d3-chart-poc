@@ -34,5 +34,5 @@ export const transformData = ({
     }
   );
 
-  return { device, data };
+  return { device, deviceReportDataPoints: data };
 };

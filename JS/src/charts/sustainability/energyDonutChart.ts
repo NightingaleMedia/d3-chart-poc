@@ -73,8 +73,6 @@ const getConfig = (data): ChartConfiguration => {
   };
 };
 export const generateEnergyDonutChart = (canvasId = '', data) => {
-  console.log('chart donut...');
-
   let ctx = document.getElementById(canvasId) as HTMLCanvasElement;
   ctx = ctx.getContext('2d') as any;
   const myChart = new Chart(ctx, getConfig(data));

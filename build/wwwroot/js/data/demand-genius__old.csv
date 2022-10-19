@@ -1,0 +1,23 @@
+Time,EnergyUsage,SetPoint,Fan,EventWindow
+11:00 AM,72,70,1,false
+11:15 AM,73,71,2,false
+11:30 AM,72,70,0,false
+11:45 AM,76,66,0,false
+12:00 PM,74,69,2,true
+12:15 PM,70,68,2,true
+12:30 PM,72,68,0,true
+12:45 PM,72,68,0,true
+1:00 PM,72,68,1,true
+1:15 PM,71,69,1,true
+1:30 PM,71,69,1,true
+1:45 PM,72,69,0,true
+2:00 PM,72,68,0,true
+2:15 PM,72,68,1,true
+2:30 PM,72,69,1,true
+2:45 PM,72,70,2,true
+3:00 PM,71,70,0,true
+3:15 PM,71,71,0,false
+3:30 PM,70,72,1,false
+3:45 PM,70,72,0,false
+4:00 PM,70,71,1,false
+4:15 PM,71,73,0,false

@@ -77,8 +77,6 @@ export const makeSiteEnergyUsage = (
     };
   });
 
-  console.log({ data });
-
   const yMax = Math.ceil(max(data, (d: any) => Number(d.KwH)) ?? 0);
   const padY = yMax * 0.4;
   const aggregateYRange = [0, yMax + padY];

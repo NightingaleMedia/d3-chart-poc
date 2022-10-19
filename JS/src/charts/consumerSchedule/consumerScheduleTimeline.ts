@@ -151,22 +151,41 @@ export const generateConsumerScheduleTimeline = (
   svgId: string,
   initData: ConsumerScheduleRequest
 ) => {
-  const wrap = select('div.schedule--wrap');
-  console.log(svgId);
+  const wrap = select(`div#${svgId}`);
+
   svg = wrap.append('svg').attr('id', `schedule--${svgId}`);
 
-  var margin = { top: 0, right: 0, bottom: 0, left: 0 },
+  var margin = { top: 5, right: 5, bottom: 5, left: 5 },
     width = 650,
     height = 50;
   // console.log("setup...");
 
-  svg.attr('width', width).attr('height', height);
+  svg
+    // .attr('width', width)
+    // .attr('height', height)
+    .attr('width', width - margin.left - margin.right)
+    .attr('height', height - margin.top - margin.bottom);
+  // .attr('stroke', 'white')
+  // .attr('stroke-width', 1.5);
+
   chartG = svg
     .append('g')
     .attr('class', `chart-group--${svgId}`)
-    .attr('transform', `translate(${margin.left}, ${margin.top})`)
-    .attr('width', width)
-    .attr('height', height);
+    // .attr('transform', `translate(${margin.left}, ${margin.top})`)
+    .attr('width', width - margin.left - margin.right)
+    .attr('height', height - margin.top - margin.bottom);
+
+  const fullRect = svg
+    .append('rect')
+    .attr('class', 'full-rect')
+    .attr('width', Number(chartG.attr('width')) - 2)
+    .attr('height', Number(chartG.attr('height')) - 2)
+    .attr('stroke', 'white')
+    .attr('stroke-width', 1)
+    .attr('transform', `translate(1,1)`)
+    .attr('fill', 'rgba(0,0,0,0)')
+    .style('pointer-events', 'none');
+
   const transformedData = transformData(initData.data, initData.day);
 
   let data = transformedData.schedules
@@ -178,9 +197,10 @@ export const generateConsumerScheduleTimeline = (
 
   const off_rectangles = get_gaps(data);
   // data = [...off_rectangles, ...data];
-  xScale = scaleUtc().domain([1, 24]).range([0, width]).nice();
-
-  console.log(xScale(18));
+  xScale = scaleUtc()
+    .domain([1, 24])
+    .range([0, Number(chartG.attr('width'))])
+    .nice();
 
   const onSlots = chartG.selectAll('timing-section').data(data).enter();
   const offSlots = chartG.selectAll('off-square').data(off_rectangles).enter();
@@ -195,14 +215,13 @@ export const generateConsumerScheduleTimeline = (
     .attr('x', (d) => {
       return xScale(d.hourStart);
     })
-    .attr('y', 0)
-    .attr('height', height - 8)
+    // .attr('y', margin.bottom)
+    .attr('height', Number(chartG.attr('height')))
     .attr('width', (d) => xScale(d.hourEnd) - xScale(d.hourStart))
     .attr('fill', (d) => {
       console.log(d);
       return d.mode == 'off' ? 'grey' : 'var(--zss-dg-roomRefresh)';
     })
-    .attr('transform', `translate(0,4)`)
     .attr('stroke', 'white')
     .attr('stroke-width', 1.5);
 
@@ -211,8 +230,9 @@ export const generateConsumerScheduleTimeline = (
     .append('text')
     .style('pointer-events', 'none')
     .attr('text-anchor', 'middle')
+    .attr('stroke-width', 1)
     .text((d) => d.heatingSetpoint)
-    .attr('y', height / 2 + 5)
+    .attr('y', height / 2)
     .attr('x', (d) => {
       const barWidth = xScale(d.hourEnd) - xScale(d.hourStart);
       return xScale(d.hourStart) + barWidth / 2;
@@ -227,11 +247,11 @@ export const generateConsumerScheduleTimeline = (
     .attr('x', (d) => {
       return xScale(d.hourStart);
     })
-    .attr('y', 0)
-    .attr('height', height - 8)
+    // .attr('y', margin.bottom)
+    .attr('height', Number(chartG.attr('height')))
     .attr('width', (d) => xScale(d.hourEnd) - xScale(d.hourStart))
     .attr('fill', 'var(--zss-nominal)')
-    .attr('transform', `translate(0,4)`)
+
     .attr('stroke', 'white')
     .attr('stroke-width', 1.5);
 
@@ -244,9 +264,10 @@ export const generateConsumerScheduleTimeline = (
     .attr('class', 'schedule-item-text off')
     .append('text')
     .attr('text-anchor', 'middle')
+    .attr('stroke-width', 1)
     .style('pointer-events', 'none')
     .text('Off')
-    .attr('y', height / 2 + 5)
+    .attr('y', height / 2)
     .attr('x', (d) => {
       const barWidth = xScale(d.hourEnd) - xScale(d.hourStart);
       return xScale(d.hourStart) + barWidth / 2;

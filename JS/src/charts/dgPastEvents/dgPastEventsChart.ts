@@ -218,7 +218,7 @@ export const makeDGPastEventChart = (
     .attr('width', SINGLE_EVENT_LW - 5)
     .attr('height', SINGLE_EVENT_LW - 5)
     .style('cursor', 'pointer')
-    .attr('opacity', 0)
+    .attr('opacity', 1)
     .attr('fill', (d) => colorMap(d.type))
     .attr('class', 'dg-square')
     .on('mouseover', function (event, d: any) {
@@ -246,7 +246,7 @@ export const makeDGPastEventChart = (
     .style('cursor', 'pointer')
     .attr('viewBox', `0 0 35 35`)
     .attr('class', 'dg-icon')
-    .attr('opacity', 0)
+    .attr('opacity', 1)
     .attr('y', (d) => yScale(d.keyIndex) ?? '0')
     .attr('x', (d) => xScale(d.timeset) + SINGLE_EVENT_LW / 2);
 
@@ -264,7 +264,7 @@ export const makeDGPastEventChart = (
     .enter()
     .append('circle')
     .attr('class', 'dg-circle')
-    .attr('opacity', 0)
+    .attr('opacity', 1)
     .attr('fill', 'var(--zss-blue)')
     .attr('stroke', 'var(--zss-chart-bg)')
     .attr('stroke-width', 2)
@@ -282,7 +282,7 @@ export const makeDGPastEventChart = (
     .attr('text-anchor', 'middle')
     .attr('stroke', 0)
     .attr('class', 'dg-number')
-    .attr('opacity', 0)
+    .attr('opacity', 1)
     .attr('font-size', '13')
     .attr('font-weight', '600')
     .attr('y', (d) => `${(yScale(d.keyIndex) ?? 0) + 4.5}`)

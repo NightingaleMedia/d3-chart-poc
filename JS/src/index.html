@@ -22,29 +22,6 @@
         background-color: red;
       }
     </style>
-    <div style="height: 500px; background-color: white">
-      <div class="device-mode--switch">
-        <input
-          type="radio"
-          id="device-mode--cool"
-          class="cool"
-          name="device-mode"
-        />
-        <input
-          type="radio"
-          class="off"
-          id="device-mode--off"
-          value="off"
-          name="device-mode"
-        />
-        <input
-          type="radio"
-          id="device-mode--heat"
-          class="heat"
-          name="device-mode"
-        />
-      </div>
-    </div>
     <h1>Bird's Eye Energy Summary</h1>
     <p style="color: white">Scroll to zoom, drag to move</p>
     <div id="energy-summary-chart" class="energy-summary--wrap">
@@ -174,7 +151,10 @@
         ></canvas>
       </div>
     </div>
-    <div style="width: 100%" class="schedule--wrap"></div>
+    <div>
+      <h1>Device Schedule</h1>
+      <div style="width: 100%" id="schedule--wrap"></div>
+    </div>
   </body>
 
   <style>

@@ -11,7 +11,7 @@ export const testDGPastEvents = (options: any) => {
     const newData = await fetch(
       'https://zen-fake-backend.herokuapp.com/demand-genius'
     ).then((res) => res.json());
-    console.log({ newData });
+    // console.log({ newData });
     myDiv.dataset.chartData = JSON.stringify(newData);
   };
 

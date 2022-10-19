@@ -1,6 +1,6 @@
-import { ChartBase } from "./ChartBase";
-import { chartObserver } from "./chartObserver.js";
-import { ChartName } from "./types";
+import { ChartBase } from './ChartBase';
+import { chartObserver } from './chartObserver.js';
+import { ChartName } from './types';
 
 type DispatchProps = {
   chartName: ChartName;
@@ -20,7 +20,7 @@ export class ChartDispatch {
     this._chartBase = chartBase;
 
     this._dataElement = document.querySelector(
-      `#${this._dataElementId}`,
+      `#${this._dataElementId}`
     ) as Element;
     // console.log("this data: ", this.getData());
     this.data = this.getData();
@@ -33,7 +33,7 @@ export class ChartDispatch {
   }
 
   callChart() {
-    console.log("call chart: ", this.data);
+    // console.log("call chart: ", this.data);
     this._chartBase.render(this._chartId, this.data);
   }
 
@@ -46,8 +46,8 @@ export class ChartDispatch {
   }
 
   updateChart(d: MutationRecord) {
-    console.log("updating: " + this._chartBase._name);
-    console.log("with data: ", this.data);
+    console.log('updating: ' + this._chartBase._name);
+    // console.log('with data: ', this.data);
     this._chartBase.update(this.data, this._chartId);
   }
 }

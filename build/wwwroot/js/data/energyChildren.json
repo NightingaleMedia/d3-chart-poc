@@ -1,0 +1,131 @@
+{
+  "data": [
+    {
+      "id": "628eb66e796cba0007244c67",
+      "title": "Building 1",
+      "parentId": "628eb63b796cba0007244c65",
+      "level": 3,
+      "type": "Site",
+      "KwH": 959,
+      "children": [
+        {
+          "id": "628eb68e796cba0007244c69",
+          "title": "Apartment #101",
+          "parentId": "628eb66e796cba0007244c67",
+          "level": 4,
+          "KwH": 135,
+          "type": "Group"
+        },
+        {
+          "id": "628fd930796cba0007244c81",
+          "title": "Apartment #102",
+          "parentId": "628eb66e796cba0007244c67",
+          "level": 4,
+          "KwH": 162,
+          "type": "Group"
+        },
+        {
+          "id": "628fd938796cba0007244c82",
+          "title": "Apartment #103",
+          "parentId": "628eb66e796cba0007244c67",
+          "level": 4,
+          "KwH": 286,
+          "type": "Group"
+        },
+        {
+          "id": "628fd941796cba0007244c83",
+          "title": "Apartment #104",
+          "parentId": "628eb66e796cba0007244c67",
+          "level": 4,
+          "KwH": 167,
+          "type": "Group"
+        },
+        {
+          "id": "628fd94a796cba0007244c84",
+          "title": "Apartment #105",
+          "parentId": "628eb66e796cba0007244c67",
+          "level": 4,
+          "KwH": 209,
+          "type": "Group"
+        }
+      ]
+    },
+    {
+      "id": "628eba22796cba0007244c6b",
+      "title": "Building 2",
+      "parentId": "628eb63b796cba0007244c65",
+      "level": 3,
+      "type": "Site",
+      "KwH": 376,
+      "children": [
+        {
+          "id": "628fd957796cba0007244c85",
+          "title": "Apartment #201",
+          "parentId": "628eba22796cba0007244c6b",
+          "level": 4,
+          "KwH": 112,
+          "type": "Group"
+        },
+        {
+          "id": "628fd95f796cba0007244c86",
+          "title": "Apartment #202",
+          "parentId": "628eba22796cba0007244c6b",
+          "level": 4,
+          "KwH": 155,
+          "type": "Group"
+        },
+        {
+          "id": "628fd96e796cba0007244c87",
+          "title": "Apartment #203",
+          "parentId": "628eba22796cba0007244c6b",
+          "level": 4,
+          "KwH": 109,
+          "type": "Group"
+        }
+      ]
+    },
+    {
+      "id": "628eba31796cba0007244c6d",
+      "title": "Building 3",
+      "parentId": "628eb63b796cba0007244c65",
+      "level": 3,
+      "type": "Site",
+      "KwH": 780,
+      "children": [
+        {
+          "id": "628fd98d796cba0007244c88",
+          "title": "Apartment #301",
+          "parentId": "628eba31796cba0007244c6d",
+          "level": 4,
+          "KwH": 101,
+          "type": "Group"
+        },
+        {
+          "id": "628fd993796cba0007244c89",
+          "title": "Apartment #302",
+          "parentId": "628eba31796cba0007244c6d",
+          "level": 4,
+          "KwH": 182,
+          "type": "Group"
+        },
+        {
+          "id": "628fd99a796cba0007244c8a",
+          "title": "Apartment #303",
+          "parentId": "628eba31796cba0007244c6d",
+          "level": 4,
+          "KwH": 225,
+          "type": "Group"
+        },
+        {
+          "id": "628fd9a0796cba0007244c8b",
+          "title": "Apartment #304",
+          "parentId": "628eba31796cba0007244c6d",
+          "level": 4,
+          "KwH": 272,
+          "type": "Group"
+        }
+      ]
+    }
+  ],
+  "threshold": 200
+}
