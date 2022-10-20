@@ -55,6 +55,8 @@ const daysObj = {
   },
 };
 
+const offColor = 'rgba(255,255,255,0.1)';
+
 const get_gaps = (data: ConsumerScheduleItem['schedules']) => {
   console.log(data);
   let existing_hours: any[] = Array.from(new Array(24), (x, i) => null);
@@ -85,7 +87,7 @@ const get_gaps = (data: ConsumerScheduleItem['schedules']) => {
       temp_obj.push(null);
     }
   });
-  console.log({ temp_obj });
+  temp_obj = [...new Set(temp_obj)];
   temp_obj = temp_obj
     .filter((i) => i)
     .map((i, index) => {
@@ -152,37 +154,47 @@ export const generateConsumerScheduleTimeline = (
   initData: ConsumerScheduleRequest
 ) => {
   const wrap = select(`div#${svgId}`);
+  var width = 600;
+  const height = 50;
 
-  svg = wrap.append('svg').attr('id', `schedule--${svgId}`);
+  svg = wrap
+    .append('svg')
+    .attr('id', `schedule--${svgId}`)
+    .attr('preserveAspectRatio', 'xMinYMin meet')
+    .attr('viewBox', `0 0 600 50`)
+    .attr('class', 'schedule--svg');
 
-  var margin = { top: 5, right: 5, bottom: 5, left: 5 },
-    width = 650,
-    height = 50;
+  var margin = { top: 5, right: 5, bottom: 5, left: 5 };
+  // const width = Number(wrap.attr('width'));
+  // const height = Number(wrap.attr('height'));
+
   // console.log("setup...");
 
-  svg
-    // .attr('width', width)
-    // .attr('height', height)
-    .attr('width', width - margin.left - margin.right)
-    .attr('height', height - margin.top - margin.bottom);
+  console.log({ height, width });
+
+  svg;
+  // .attr('width', width)
+  // .attr('height', height)
+  // .attr('width', width - margin.left - margin.right)
+  // .attr('height', height - margin.top - margin.bottom);
   // .attr('stroke', 'white')
   // .attr('stroke-width', 1.5);
 
   chartG = svg
     .append('g')
     .attr('class', `chart-group--${svgId}`)
-    // .attr('transform', `translate(${margin.left}, ${margin.top})`)
+    .attr('transform', `translate(${margin.left}, ${margin.top})`)
     .attr('width', width - margin.left - margin.right)
     .attr('height', height - margin.top - margin.bottom);
 
   const fullRect = svg
     .append('rect')
     .attr('class', 'full-rect')
-    .attr('width', Number(chartG.attr('width')) - 2)
-    .attr('height', Number(chartG.attr('height')) - 2)
+    .attr('width', Number(chartG.attr('width')))
+    .attr('height', Number(chartG.attr('height')))
     .attr('stroke', 'white')
     .attr('stroke-width', 1)
-    .attr('transform', `translate(1,1)`)
+    .attr('transform', `translate(${margin.left}, ${margin.top})`)
     .attr('fill', 'rgba(0,0,0,0)')
     .style('pointer-events', 'none');
 
@@ -197,6 +209,8 @@ export const generateConsumerScheduleTimeline = (
 
   const off_rectangles = get_gaps(data);
   // data = [...off_rectangles, ...data];
+
+  console.log({ data, off_rectangles });
   xScale = scaleUtc()
     .domain([1, 24])
     .range([0, Number(chartG.attr('width'))])
@@ -220,7 +234,7 @@ export const generateConsumerScheduleTimeline = (
     .attr('width', (d) => xScale(d.hourEnd) - xScale(d.hourStart))
     .attr('fill', (d) => {
       console.log(d);
-      return d.mode == 'off' ? 'grey' : 'var(--zss-dg-roomRefresh)';
+      return d.mode == 'off' ? offColor : 'var(--zss-dg-roomRefresh)';
     })
     .attr('stroke', 'white')
     .attr('stroke-width', 1.5);
@@ -250,7 +264,7 @@ export const generateConsumerScheduleTimeline = (
     // .attr('y', margin.bottom)
     .attr('height', Number(chartG.attr('height')))
     .attr('width', (d) => xScale(d.hourEnd) - xScale(d.hourStart))
-    .attr('fill', 'var(--zss-nominal)')
+    .attr('fill', offColor)
 
     .attr('stroke', 'white')
     .attr('stroke-width', 1.5);
